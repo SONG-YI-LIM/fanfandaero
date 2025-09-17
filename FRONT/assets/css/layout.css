@@ -123,10 +123,13 @@
 
 /* WRAP */
 #wrap { padding-top: 174px; } 
+@media(max-width:1024px) {
+    #wrap {padding-top: 110px; }
+}
 
 /* CONTAINER */
 #container:focus { outline-offset: var(--outline-offset, 4px); outline: var(--outline, 2px solid #246bebcc); } 
-#container .contents { display: flex; justify-content: space-between; gap: 80px; margin-right: auto; margin-bottom: 80px; margin-left: auto; padding-right: 24px; padding-left: 24px; width: 100%; max-width: 1620px; } 
+#container .contents { display: flex; justify-content: space-between; gap: 80px; margin-right: auto; margin-bottom: 80px; margin-left: auto; padding-right: 24px; padding-left: 24px; width: 100%; max-width: 1668px; } 
 #container .contents > div { flex: 1; } 
 #container .contents > #lnb { flex: 0 0 240px; margin-top: 176px; } 
 #container .contents > .inner { overflow: hidden; padding: 0; width: 100%; max-width: 100%; } 
