@@ -15,7 +15,7 @@
 .csBox > a.cs02 dt:before { background-image: url(../images/main/intro-ico-cs02.png); }
 .csBox > a.cs03 dt:before { background-image: url(../images/main/intro-ico-cs03.png); }
 .csBox dd { padding-left: 48px; font-size: 17px; color: var(--color-gray-70); }
-.introNotice {margin-top:540px; width:580px;}
+.introNotice {position:relative; margin-top:540px; width:580px;}
 .introNotice .noticeTitArea {padding-bottom:6px; border-bottom:1px solid var(--color-base);}
 .introNotice .noticeTitArea .tit {display:block; line-height:1.5; font-size:27px; font-weight:700;}
 .introNotice .introMore {position:absolute; top:11px; right:0; line-height:1.5; font-size:15px; color:var(--color-gray-70);}
@@ -46,7 +46,7 @@
     .csBox {display:flex; gap:16px; order:2; position:initial; margin-top:24px; padding:0 50px;}
     .csBox img {display: none;}
     .csBox > a {flex:1; position:initial;}
-    .introNotice {position:relative; left:initial; bottom:initial; margin-top:30px; padding:0 50px; width:100%;}
+    .introNotice {margin-top:30px; padding:0 50px; width:100%;}
     .introNotice .introMore {right:50px;}
 }
 @media (max-width: 1260px) {

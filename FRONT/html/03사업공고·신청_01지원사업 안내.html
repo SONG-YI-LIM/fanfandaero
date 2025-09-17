@@ -336,7 +336,7 @@
 						<!-- supportProgramList -->
 						<ul class="supportProgramList">
 							<li>
-								<div>
+								<div class="infoBox">
 									<!-- badgeArea -->
 									<div class="badgeArea">
 										<div>
@@ -351,13 +351,83 @@
 									<em>· 지원규모 : 3,000</em>
 									<span>모집기간 : 2025-03-21 ~ 2025-12-31</span>
 								</div>
-								<div>
-									<button type="button">링크복사</button>
-									<button type="button">사업신청</button>
+								<div class="btnBox">
+									<button type="button" class="btn bgSecond">링크복사</button>
+									<button type="button" class="btn bgPrima">사업신청</button>
+								</div>
+							</li>
+							<li>
+								<div class="infoBox">
+									<!-- badgeArea -->
+									<div class="badgeArea">
+										<div>
+											<span class="badge">지원</span>
+											<span class="badge v7">소상공인</span>
+											<span class="badge">홍보·마케팅</span>
+										</div>
+									</div>
+									<!--// badgeArea -->
+									<strong>소상공인 콘텐츠 제작지원사업</strong>
+									<p>· 소상공인 업종과 상품 유형을 고려하여 맞춤형 영상 제작 지원</p>
+									<em>· 지원규모 : 1,800</em>
+									<span>모집기간 : 2025-03-21 ~ 2025-12-31</span>
+								</div>
+								<div class="btnBox">
+									<button type="button" class="btn bgSecond">링크복사</button>
+									<button type="button" class="btn bgPrima">사업신청</button>
+								</div>
+							</li>
+							<li>
+								<div class="infoBox">
+									<!-- badgeArea -->
+									<div class="badgeArea">
+										<div>
+											<span class="badge">2025년</span>
+											<span class="badge v7">소상공인</span>
+											<span class="badge v8">중소기업</span>
+											<span class="badge">홍보·마케팅</span>
+										</div>
+									</div>
+									<!--// badgeArea -->
+									<strong>SNS 활용 패키지 지원사업</strong>
+									<p>· SNS 채널 타겟 광고 및 분석 지원</p>
+									<em>· 지원규모 : 750</em>
+									<span>모집기간 : 2025-03-26 ~ 2025-12-31</span>
+								</div>
+								<div class="btnBox">
+									<button type="button" class="btn bgSecond">링크복사</button>
+									<button type="button" class="btn bgPrima">사업신청</button>
+								</div>
+							</li>
+							<li>
+								<div class="infoBox">
+									<!-- badgeArea -->
+									<div class="badgeArea">
+										<div>
+											<span class="badge">2025년</span>
+											<span class="badge v7">소상공인</span>
+											<span class="badge">홍보·마케팅</span>
+										</div>
+									</div>
+									<!--// badgeArea -->
+									<strong>소상공인 홍보 지원사업</strong>
+									<p>· 검색 광고 및 매체 홍보를 통해 소상공인 제품 인지도 제고</p>
+									<em>· 지원규모 : 300</em>
+									<span>모집기간 : 2025-03-11 ~ 2025-12-31</span>
+								</div>
+								<div class="btnBox">
+									<button type="button" class="btn bgSecond">자세히보기</button>
 								</div>
 							</li>
 						</ul>
 						<!--// supportProgramList -->
+						<!-- btnBottom -->
+						<div class="btnBottom">
+							<div>
+								<button type="button" class="btnBor btnMore">지원사업 더보기 (1/2)</button>
+							</div>
+						</div>
+						<!--// btnBottom -->
 					</div>
 					<!-- side -->
 					<div class="side">
@@ -367,98 +437,67 @@
                                 <button type="button" class="btn bgSecond btnIco btnReset">초기화</button>
                             </div>
 							<div class="searchArea">
+								<dl>
+                                    <dt>년도</dt>
+                                    <dd>
+                                        <select title="년도">
+											<option value="">선택</option>
+											<option value="">2025</option>
+										</select>
+                                    </dd>
+                                </dl>
                                 <dl>
-                                    <dt>인증종류</dt>
+                                    <dt>대상</dt>
                                     <dd>
                                         <!-- checkbox -->
                                         <div class="checkboxWrap">
-                                            <div class="checkbox">
+                                            <div class="checkbox mn83">
                                                 <input type="checkbox" name="chk01" id="chk0101">
                                                 <label for="chk0101">전체</label>
                                             </div>
                                             <div class="checkbox">
                                                 <input type="checkbox" name="chk01" id="chk0102">
-                                                <label for="chk0102">국내인증</label>
+                                                <label for="chk0102">중소기업</label>
                                             </div>
                                             <div class="checkbox">
-                                                <input type="checkbox" name="chk01" id="chk0102">
-                                                <label for="chk0102">국제인증</label>
+                                                <input type="checkbox" name="chk01" id="chk0103">
+                                                <label for="chk0103">소상공인</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <input type="checkbox" name="chk01" id="chk0104">
+                                                <label for="chk0104">기타</label>
                                             </div>
                                         </div>
                                         <!--// checkbox -->
                                     </dd>
                                 </dl>
                                 <dl>
-                                    <dt>인증명</dt>
+                                    <dt>유형</dt>
                                     <dd>
-                                        <div class="flexCol">
-                                            <!-- checkbox -->
-                                            <div class="checkboxWrap column">
-                                                <div class="checkbox">
-                                                    <input type="checkbox" name="chk02" id="chk0201">
-                                                    <label for="chk0201">전체</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" name="chk02" id="chk0202">
-                                                    <label for="chk0202">인증명</label>
-                                                </div>
+                                        <!-- checkbox -->
+                                        <div class="checkboxWrap">
+                                            <div class="checkbox">
+                                                <input type="checkbox" name="chk02" id="chk0201">
+                                                <label for="chk0201">홍보·마케팅</label>
                                             </div>
-                                            <!--// checkbox -->
-                                            <div>
-                                                <select title="선택">
-                                                    <option value="">선택</option>
-                                                </select>
+                                            <div class="checkbox">
+                                                <input type="checkbox" name="chk02" id="chk0202">
+                                                <label for="chk0202">유통·판로</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <input type="checkbox" name="chk02" id="chk0203">
+                                                <label for="chk0203">교육·컨설팅</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <input type="checkbox" name="chk02" id="chk0204">
+                                                <label for="chk0204">인프라</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <input type="checkbox" name="chk02" id="chk0205">
+                                                <label for="chk0205">사후관리</label>
                                             </div>
                                         </div>
-                                    </dd>
-                                </dl>
-                                <dl>
-                                    <dt>기간</dt>
-                                    <dd>
-                                        <div class="flexCol">
-                                            <!-- checkbox -->
-                                            <div class="checkboxWrap column">
-                                                <div class="checkbox">
-                                                    <input type="checkbox" name="chk03" id="chk0301">
-                                                    <label for="chk0301">전체</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" name="chk03" id="chk0302">
-                                                    <label for="chk0302">기간설정</label>
-                                                </div>
-                                            </div>
-                                            <!--// checkbox -->
-                                            <div>
-                                                <p class="schTit">시작일</p>
-                                            </div>
-                                            <div>
-                                                <div class="date">
-                                                    <input type="text" title="시작날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <p class="schTit">종료일</p>
-                                            </div>
-                                            <div>
-                                                <div class="date">
-                                                    <input type="text" title="종료날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
-                                                </div>
-                                            </div>
-                                            <!-- checkbox -->
-                                            <div class="checkboxWrap">
-                                                <div class="checkbox">
-                                                    <input type="checkbox" name="chk04" id="chk0401">
-                                                    <label for="chk0401">특정년도</label>
-                                                </div>
-                                            </div>
-                                            <!--// checkbox -->
-                                            <div>
-                                                <select title="년도">
-                                                    <option value="">선택</option>
-                                                    <option value="">2025</option>
-                                                </select>
-                                            </div>
-                                        </div>
+                                        <!--// checkbox -->
                                     </dd>
                                 </dl>
 								<button type="button" class="btn lg">검색</button>

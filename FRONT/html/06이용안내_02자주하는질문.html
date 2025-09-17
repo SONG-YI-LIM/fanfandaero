@@ -315,15 +315,18 @@
 					<div class="cont">
 						<!-- categoryList -->
 						<div class="categoryList">
-							<ul>
-								<li><a href="" class="curr">전체</a></li>
-								<li><a href="">비밀번호(로그인)</a></li>
-								<li><a href="">지원사업</a></li>
-								<li><a href="">제출 서류 양식/제출 필수 자료</a></li>
-								<li><a href="">사업자등록번호</a></li>
-								<li><a href="">상품</a></li>
-								<li><a href="">기타</a></li>
-							</ul>
+							<div class="categorySwiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide"><a href="" class="curr">전체</a></div>
+									<div class="swiper-slide"><a href="">비밀번호(로그인)</a></div>
+									<div class="swiper-slide"><a href="">지원사업</a></div>
+									<div class="swiper-slide"><a href="">제출 서류 양식/제출 필수 자료</a></div>
+									<div class="swiper-slide"><a href="">사업자등록번호</a></div>
+									<div class="swiper-slide"><a href="">상품</a></div>
+									<div class="swiper-slide"><a href="">기타</a></div>
+								</div>
+								<div class="swiper-button-next">다음</div>
+							</div>
 						</div>
 						<!--// categoryList -->
 						<!-- accordion -->
@@ -480,6 +483,16 @@
 		</div>
 	</footer>
 	<!--// footer -->
+	<script>
+		var swiper = new Swiper(".categorySwiper", {
+		slidesPerView: "auto",
+		spaceBetween: 5,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		});
+	</script>
 </div>
 <!--// wrap -->
 </body>
