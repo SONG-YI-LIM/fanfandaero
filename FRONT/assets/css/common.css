@@ -11,7 +11,7 @@ url("../fonts/PretendardGOV-Bold.woff") format('woff'),}
 url("../fonts/TimesNewerRoman-Regular.woff") format('woff'),}
 
 * { margin:0; padding:0; box-sizing:border-box } 
-html {line-height: 1.5; font-family: "Pretendard GOV", sans-serif; overflow-x:hidden} 
+html {line-height: 1.5; font-family: "Pretendard GOV", sans-serif; overflow-x: hidden; } 
 body { position:relative; overflow-y:auto; font-size: 17px; color:var(--color-base, #1d1d1d); } 
 body, div, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, a, button, select, ul, li, span, em, label, :before, :after {margin:0; padding:0;line-height: 1.5;letter-spacing: inherit; font-family: inherit; -webkit-text-size-adjust: none; } 
 span, strong, em, a, button {font-size: 100%; color: inherit; } 
