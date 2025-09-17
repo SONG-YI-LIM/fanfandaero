@@ -75,6 +75,7 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 .flexWrap > span { min-width: 16px; text-align: center; line-height: 48px; font-size: 15px; color: var(--color-gray-70); }
 .flexWrap > .btn { white-space: nowrap; } 
 .flexWrap.email { max-width: 750px; }
+.flexWrap.email .emailId { flex: none; display: flex; align-items: center; gap: 10px; }
 .flexWrap.phone { max-width: 475px; }
 .flexWrap.jcC { justify-content: center; }
 .flexWrap.jcFE { justify-content: flex-end; }
@@ -90,7 +91,17 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 .addr { flex-direction: column; align-items: flex-start; width: 770px; color: var(--color-gray-60); } 
 .addr .post { max-width: 334px; } 
 .addr .post + div { width: 100%; max-width: 100%; } 
-.addr .post + div input { max-width: 380px; } 
+.addr .post + div input { max-width: 380px; }
+@media (max-width: 767px) {
+    .flexWrap > div { width: 100%; max-width: 100%;}
+    .flexWrap > select { width: 100%; max-width: 100%; }
+    .flexWrap.email { flex-direction: column; max-width: 100%; }
+    .flexWrap.email .emailId { width: 100%; max-width: 100%; }
+    .flexWrap.email .emailId > div { width: 100%; }
+    .flexWrap.email .emailId > div input { max-width: 100%; }
+
+    .formTable .flexWrap > div :is(input, select) { max-width: 100%; }
+}
 
 /* 버튼 */
 *[class^=btn] { color: inherit; cursor: pointer; } 
@@ -662,7 +673,7 @@ v9 고객지원
     .formTable > dl > dd { padding: 16px 0; }
     .formTable [class*="checkbox"]:not(.checkboxWrap) input + label { line-height: 1.5; font-size: 15px; }
     .formTable [class*="checkbox"]:not(.checkboxWrap) input + label::before { top: 1px; }
-}
+} 
 
 /*** 로그인 ***/
 /* 로그인 */
@@ -765,7 +776,12 @@ v9 고객지원
 .agreeChkAll { display: flex; align-items: center; justify-content: space-between; padding: 16px 30px; border-radius: 8px; ; background: #E8EBF2; } 
 .grayBox + .joinType { margin-top: 40px; } 
 .bottomTxt { margin-top: 24px; color: #555; } 
-.bottomTxt ol, .bottomTxt ul { margin-top: 16px; } 
+.bottomTxt ol, .bottomTxt ul { margin-top: 16px; }
+@media (max-width: 767px) {
+    .grayBox + .formTable { margin-top: 16px; } 
+    .grayBox { padding: 16px; }
+    .whiteBox { padding: 16px; }
+}
 
 /* 회원정보입력 */
 .req { position: relative; overflow: hidden; } 
@@ -945,7 +961,7 @@ v9 고객지원
 .formCol input { width: 100%; }
 
 /* 회원정보 */
-.userInfo { display: flex; gap: 14px; padding: 24px 30px; border-radius: 16px; background: #E2EEEF; }
+.userInfo { display: flex; flex-wrap: wrap; gap: 14px; padding: 24px 30px; border-radius: 16px; background: #E2EEEF; }
 .userInfo .user { display: flex; align-items: center; gap: 24px; padding: 16px 24px; border-radius: 8px; width: 400px; background: var(--color-white); }
 .userInfo .user img { width: 60px; height: 60px; }
 .userInfo .user .detail ul { display: flex; gap: 5px; margin-bottom: 10px; }
@@ -998,6 +1014,11 @@ tr.expanded.children td.tableChk .checkbox { display: flex; }
 table.treetable tr.collapsed span.indenter a,
 table.treetable tr.expanded span.indenter a { display: inline-flex; align-items: center; margin-right: 5px; width: 16px; height: 16px; text-indent: -9999px; background: url(../images/content/ico-expand.png) no-repeat center/100% auto; }
 @media (max-width: 767px) {
+    .userInfo { padding: 24px; }
+    .userInfo .user { padding: 16px; width: 100%; }
+    .userInfo dl { flex: none; gap: 25px; padding: 10px 10px 8px; width: calc(50% - 7px); }
+    .userInfo dl dd { font-size: 21px; }
+
     .halfArea > * { width: 100%; }
 }
 
