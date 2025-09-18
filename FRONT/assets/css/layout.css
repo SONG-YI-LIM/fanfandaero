@@ -87,15 +87,15 @@
 .gnbMob .subDepth > ul li.hasDepth > ul { display: none; } 
 .btnHamCls { top: 0; right: 0; z-index: 50; background-image: url(../images/component/ico-layer-close.svg); background-size: 24px;} 
 @media (min-width: 1025px){
- .btnMobLi { display: none !important; } 
- }
+    .btnMobLi { display: none !important; }
+}
 @media (max-width: 1024px){
- #gnb { display: none; } 
- #header { border-bottom: 1px solid var(--color-gray-40); } 
- .headBody .util { gap: 8px; } 
- .headBody .util > li > :is(a, button) { flex-direction: column; align-items: center; gap: 12px; padding: 4px 12px; } 
- .headBody .util > li > :is(a, button)::before { height: 24px; } 
- }
+    #gnb { display: none; } 
+    #header { border-bottom: 1px solid var(--color-gray-40); } 
+    .headBody .util { gap: 8px; } 
+    .headBody .util > li > :is(a, button) { flex-direction: column; align-items: center; gap: 12px; padding: 4px 12px; } 
+    .headBody .util > li > :is(a, button)::before { height: 24px; }
+}
 
 /* SEARCH */
 .headSearch { display: none; position: fixed; top: 174px; left: 0; z-index: 500; padding: 110px 0 120px; border-bottom: 1px solid var(--color-gray-30); width: 100%; background-color: #fff; } 
@@ -199,10 +199,8 @@
 #quickmenu .quick li.m4::before { background-image: url(../images/common/ico-quick04.png); } 
 #quickmenu button { display: flex; margin: 16px auto 0; border-radius: 100%; width: 30px; height: 30px; } 
 #quickmenu .btnTop { background: #333 url(../images/common/btn-top.png) no-repeat center / 20px; } 
-#quickmenu .btnQuick { background: #333 url(../images/common/btn-quick-off.png) no-repeat center / 8px; } 
-
-
-
+#quickmenu .btnQuick { background: #333 url(../images/common/btn-quick-on.png) no-repeat center / 10px; } 
+#quickmenu .quick.open .btnQuick { background: #333 url(../images/common/btn-quick-off.png) no-repeat center / 8px; }
 
 @media (min-width: 1161px) { } 
 @media (max-width: 1160px) { } 
