@@ -412,6 +412,17 @@ const fn_Content = () => {
 		});
 	})
 
+    // 회원가입 step
+    let stepSwiper = new Swiper(".stepSwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 20,
+        breakpoints: {
+            799: {
+                allowTouchMove: false,
+            }
+        }
+    });
+
     $('#agreeAll').click(function(){
 		let isCheck = $(this).is(':checked');
 		if(isCheck) {
