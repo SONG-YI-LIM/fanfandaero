@@ -23,7 +23,10 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 @media (min-width: 1161px){ 
     .titArea .btnTxt.download { display: none; }
 }
-
+@media (max-width: 1160px) {
+    h2 { font-size: 34px; }
+    h3 { font-size: 21px; }
+}
 @media (max-width: 767px){ 
     .titArea .btnTxt.download { display: block; }
 
@@ -209,10 +212,10 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 .pagination .pagingBtn input:disabled { border-color: var(--color-gray-40); color: var(--color-gray-60); background: var(--color-gray-30); } 
 .pagination .pagingBtn .btn { margin-left: 16px; } 
 .pagination.mobile {display:none;}
-@media(max-width:767px){
+/* @media(max-width:767px){
     .pagination:not(.mobile) {display:none;}
     .pagination.mobile {display:flex;}
-}
+} */
 
 /* 탭 (Tab) */
 .tab .tabTit ul { display: inline-flex; align-items: stretch; gap: 5px; width: 100%; } 
@@ -348,7 +351,8 @@ select:disabled, .select.disabled > button { background-image: url(../images/com
 .tableTop > .right { display: flex; align-items: center; gap: 10px; }
 .tableTop > .right { margin-left: auto; }
 
-table { table-layout: fixed; width: auto; max-width: none; min-width: 100%; } 
+table { table-layout: fixed; width: auto; max-width: none; min-width: 100%; }
+.colTable { overflow-x: auto; }
 .colTable th { padding: 5px 16px; border-bottom: 1px solid var(--color-secondary-30); text-align: center; font-size: 15px; color: #fff; background-color: #8997A6; }
 .colTable td { padding: 12px 16px; border-bottom: 1px solid var(--color-gray-30); line-height: 22px; font-size: 15px; color: var(--color-gray-70); } 
 .colTable th + th, .colTable td + td { border-left: 1px solid var(--color-gray-40); } 
@@ -363,6 +367,9 @@ table { table-layout: fixed; width: auto; max-width: none; min-width: 100%; }
 .rowTable tr { border-bottom: 1px solid var(--color-gray-30); } 
 .rowTable th { padding: 8px 16px; border-right: 1px solid var(--color-secondary-30); text-align: left; font-size: 15px; background: var(--color-secondary-5); } 
 .rowTable td { padding: 12px 16px; color: var(--color-gray-70); }
+@media (max-width: 767px) {
+    table { width: 100%; }
+}
 
 /* 툴팁 (tooltip) */
 .btnTooltip { display: flex; align-items: center; justify-content: center; border: 0; background-color: transparent; } 
@@ -442,8 +449,12 @@ body.tooltipOn .subCont > div { overflow: visible; }
 .subTop.v6:before { background-image: url(../images/content/bg-subtop06.png); } 
 .subTop.v8:before { background-image: url(../images/content/bg-subtop08.png); } 
 .subTop.v9:before { background-image: url(../images/content/bg-subtop09.png); } 
-@media(max-width:767px) {
+@media (max-width: 1160px) {
     .subTop .titArea { margin-bottom: 16px; }
+    .subTop:before { display: none; }
+}
+@media(max-width:767px) {
+    
 } 
 
 /*
@@ -472,9 +483,6 @@ v9 고객지원
 .searchArea dl.open dt:after { transform: rotate(180deg); }
 .searchArea dl dd { padding-top: 12px;}
 .searchArea dl dd input { width: 100%; }
-@media (max-width: 767px){ 
-    .subTop:before { display: none; }
-}
 
 /* 검색영역 */
 .srchBox {margin-bottom:32px; padding:24px; border-radius:6px; background:#F1F7F8;}
@@ -940,18 +948,25 @@ v9 고객지원
 .mdArea { display: flex; gap: 40px; }
 .mdArea .lt { flex: 1; }
 .mdArea .rt { width: 260px; }
+@media (max-width: 1280px) {
+    .act .bot { flex-direction: column; align-items: flex-start; }
+    .act .bot button {  margin-left: auto; }
+    .goArea { flex-direction: column; margin-top: 0; height: 100%; }
+    .goArea img { max-width: 200px; }
+    .goArea .goBox { height: 100%; }
+}
 @media (max-width: 1160px) {
+    .supportStatus { padding: 20px 15px; }
     .supportStatus dl { flex: none; width: calc(50% - 7px); }
+    .act { padding: 32px; }
+    .act p { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; min-height: 54px; white-space: inherit; }
 } 
 @media (max-width: 767px) {
     .supportStatus { padding: 10px 16px; }
     .actBox h3 { margin-bottom: 10px; }
     .actSwiper { margin-top: -38px; padding-top: 38px; }
     .act { padding: 24px; }
-    .act p { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; min-height: 54px; white-space: inherit; }
-    .act .bot { flex-direction: column; align-items: flex-start; }
-    .act .bot button {  margin-left: auto; }
-    .goArea { flex-direction: column; margin-top: 0; height: inherit; }
+    .goArea {  }
     .goArea img { width: 100%; max-width: 100%; }
     .goArea .goBox a { flex: none; height: 64px; }
 }
