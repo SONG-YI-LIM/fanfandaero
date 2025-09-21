@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<!-- E : mobile -->
+<title>aaaa</title>
+<link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+<script type="text/javascript" src="../assets/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../assets/js/moment.min.js"></script>
+<script type="text/javascript" src="../assets/js/daterangepicker.min.js"></script>
+<script type="text/javascript" src="../assets/js/swiper.js"></script>
+<script type="text/javascript" src="../assets/js/common.js"></script>
+<!-- <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="js/selectivizr.js">
+ -->
+<!--[if lte IE 9]>
+</script>
+<![endif]-->
+</head>
+<body>
+<!-- skipNav -->
+<dl id="skipNav">
+	<dt>바로가기 메뉴</dt>
+	<dd><a href="#container">본문 바로가기</a></dd>
+	<dd><a href="#gnb">주메뉴 바로가기</a></dd>
+	<dd><a href="#footer">풋터 바로가기</a></dd>
+</dl>
+<!-- //skipNav -->
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<!-- inner -->
+		<div class="inner">
+			<div class="headTop">
+				<ul class="etc">
+					<li><a href="" class="btnIco btnHref xsm"><img src="../assets/images/common/ico-logo01.png" alt="">소담인프라</a></li>
+					<li><a href="" class="btnIco btnHref xsm"><img src="../assets/images/common/ico-logo02.svg" alt="">동행축제</a></li>
+				</ul>
+			</div>
+			<div class="headBody">
+				<div class="logo">
+					<a href=""><img src="../assets/images/common/logo.svg" alt="KODMA 판판대로"></a>
+				</div>
+				<ul class="util">
+					<li>
+						<button type="button" class="btnSearchForm">통합검색</button>
+						<div class="headSearch">
+							<div class="inner">
+								<strong>판판대로 통합검색</strong>
+								<div class="in">
+									<div class="sesarchInp">
+										<input type="text" placeholder="검색어를 입력해주세요." title="검색어">
+										<button type="button" class="btnHeadSearch"><span class="hide">검색</span></button>
+									</div>
+									<div class="searchInpBot">
+										<p>무엇이 궁금하세요?</p>
+										<ul>
+											<li><button type="button">#전담셀러</button></li>
+											<li><button type="button">#상세페이지</button></li>
+											<li><button type="button">#마트</button></li>
+											<li><button type="button">#브랜드k</button></li>
+										</ul>
+									</div>
+								</div>
+								<button type="button" class="btnCls btnHeaeSearCls"><span class="hide">닫기</span></button>
+							</div>
+						</div>
+					</li>
+					<!-- 로그인 전 -->
+					<li><a href="" class="btnLogin">로그인</a></li>
+					<li><a href="" class="btnJoin">회원가입</a></li>
+					<!--// 로그인 전 -->
+					<!-- 로그인 후 -->
+					<li><a href="" class="btnLogout">로그아웃</a></li>
+					<li><a href="" class="btnMypage">김판판님 마이페이지</a></li>
+					<!--// 로그인 후 -->
+					<li class="btnMobLi"><a href="" class="btnHam">전체메뉴</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--// inner -->
+		<!-- gnb -->
+		<div id="gnb">
+			<div class="inner">
+				<!-- gnbArea -->
+				<div class="gnbArea">
+					<ul class="gnbUl">
+						<li>
+							<a href="">운영기관 소개</a>
+							<div class="subDepth">
+								<p>운영기관 소개</p>
+								<ul>
+									<li><a href="">운영기관 소개</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="">사업공고 및 신청</a>
+							<div class="subDepth">
+								<p>사업공고 및 신청</p>
+								<ul>
+									<li><a href="">지원사업 안내</a></li>
+									<li>
+										<a href="">지원사업 공고</a>
+										<ul>
+											<li><a href="">지원사업 공고ㆍ신청</a></li>
+											<li><a href="">국내 판로지원사업 전체보기</a></li>
+											<li>
+												<a href="">지원사업 신청현황</a>
+												<ul>
+													<li><a href="">지원사업 신청/수정/제출 목록</a></li>
+													<li><a href="">지원사업 신청</a></li>
+													<li><a href="">지원사업 임시저장</a></li>
+													<li><a href="">지원사업 수정</a></li>
+													<li><a href="">지원사업 제출</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li><a href="">지원사업 공고</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="">홍보·알림</a>
+							<div class="subDepth">
+								<p>홍보·알림</p>
+								<ul>
+									<li><a href="">우수제품</a></li>
+									<li><a href="">우수사례</a></li>
+									<li>
+										<a href="">판로정보</a>
+										<ul>
+											<li><a href="">중소기업 행사정보</a></li>
+											<li><a href="">조달청 입찰정보</a></li>
+											<li><a href="">기타 연계정보 제공</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="">MRO 지원정보</a>
+										<ul>
+											<li><a href="">알기쉬운 사업안내</a></li>
+											<li><a href="">납품업체 검색</a></li>
+											<li><a href="">실태조사</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="">주요 서비스</a>
+							<div class="subDepth">
+								<p>주요 서비스</p>
+								<ul>
+									<li><a href="">플랫폼소개</a></li>
+									<li>
+										<a href="">소담인프라</a>
+										<ul>
+											<li>
+												<a href="">소담스퀘어 안내</a>
+												<ul>
+													<li><a href="">상암</a></li>
+													<li><a href="">당산</a></li>
+													<li><a href="">보라매</a></li>
+													<li><a href="">대구</a></li>
+													<li><a href="">부산</a></li>
+													<li><a href="">전주</a></li>
+													<li><a href="">강원</a></li>
+													<li><a href="">광주</a></li>
+													<li><a href="">충북</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="">소담상회 안내</a>
+												<ul>
+													<li><a href="">인사</a></li>
+													<li><a href="">서교</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="">판판소싱</a>
+										<ul>
+											<li>
+												<a href="">판판소싱 공고</a>
+												<ul>
+													<li><a href="">공고 보기</a></li>
+													<li><a href="">입점신청</a></li>
+												</ul>
+											</li>
+											<li><a href="">판판소싱 소개</a></li>
+										</ul>
+									</li>
+									<li><a href="" target="_blank">판판셀러</a></li>
+									<li><a href="" target="_blank">동행축제</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="">이용안내</a>
+							<div class="subDepth">
+								<p>이용안내</p>
+								<ul>
+									<li><a href="">공지사항</a></li>
+									<li><a href="">자주하는 질문</a></li>
+									<li><a href="">1:1 문의</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<!-- hover depth -->
+					<div class="in hoverDepth"></div>
+					<!--// hover depth -->
+				</div>
+				<!--// gnbArea -->
+				<div class="sitemapArea">
+					<button type="button" class="btnSitemap"><span class="hide">사이트맵</span></button>
+					<div id="sitemap">
+						<div class="inner">
+							<strong>판판대로 사이트맵</strong>
+							<!-- sitemap gnb -->
+							<div class="in"></div>
+							<!--// sitemap gnb -->
+							<button type="button" class="btnCls btnSitemapCls"><span class="hide">닫기</span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--// gnb -->
+		<!-- gnbMob -->
+		<div class="gnbMobArea">
+			<div class="gnbMob">
+				<div class="head">
+					<div class="headTop">
+						<ul class="etc">
+							<li><a href="" class="btnIco btnHref xsm"><img src="../assets/images/common/ico-logo01.png" alt="">소담인프라</a></li>
+							<li><a href="" class="btnIco btnHref xsm"><img src="../assets/images/common/ico-logo02.svg" alt="">동행축제</a></li>
+						</ul>
+					</div>
+					<div>
+						<p class="logTxt">로그인을 해주세요.</p>
+					</div>
+				</div>
+				<div class="body">
+					<div class="left">
+						<ul class="gnbNav">
+							<li class="curr"><a href="#mGnb01">운영기관 소개</a></li>
+							<li><a href="#mGnb02">사업공고 및 신청</a></li>
+							<li><a href="#mGnb03">홍보·알림</a></li>
+							<li><a href="#mGnb04">주요 서비스</a></li>
+							<li><a href="#mGnb05">이용안내</a></li>
+						</ul>
+					</div>
+					<div class="right">
+						<div class="in">
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="btnCls btnHamCls"><span class="hide">닫기</span></button>
+		</div>
+		<!--// gnbMob -->
+	</div>
+	<!--// header -->
+
+	<!-- container -->
+	<div id="container">
+		<!-- contents -->
+		<div class="contents">
+			<!-- lnb -->
+			<div id="lnb">
+				<div class="in">
+                    <!-- 2025-09-03 -->
+                    <div class="lnbTop">
+                        <div class="top">
+                            <h4>운영기관 소개</h4>
+                        </div>
+                    </div>
+                    <!--// 2025-09-03 -->
+					<ul class="lnbUl">
+						<li><a href="" class="curr">운영기관 소개</a></li>
+					</ul>
+				</div>
+			</div>
+			<!--// lnb -->
+			<div class="inner">
+				<!-- breadcrumb -->
+				<div class="breadcrumb">
+					<ol>
+						<li class="home"><a href="">홈</a></li>
+						<li><a href="#"><strong>운영기관 소개</strong></a></li>
+					</ol>
+				</div>
+				<!-- breadcrumb -->
+				<!-- subTop -->
+				<div class="subTop v1">
+					<div class="titArea">
+						<h2>운영기관 소개</h2>
+					</div>
+				</div>
+				<!--// subTop -->
+
+				<!-- subCont -->
+				<div class="subCont">
+					<div class="cont">
+						<div class="operTop">
+							<h4><strong>한국중소벤처기업유통원, </strong><br>중소벤처기업과 소상공인의 꿈이 <br>세상과 통하는 <strong>종합판로지원기관</strong></h4>
+							<p>한국중소벤처기업유통원은 시장 경쟁 속에서 판로개척에 어려움을 겪고 있는 우수한 중소벤처기업 및 <br>
+							소상공인 제품의 역량 강화부터 인프라 지원, 시장 진출까지의 전주기적 판로 지원을 통해 중소벤처기업 및 <br>
+							소상공인의 경쟁력 향상과 경영안정에 기여하는 공공기관입니다.</p>
+							<div>
+								<a href="" class="btn bgPrima">한국중소벤처기업유통원 홈페이지 바로가기</a>
+							</div>
+						</div>
+						<div class="operUlist">
+							<ul>
+								<li>
+									<span class="icoArea">
+										<img src="../assets/images/content/ico-ope01.png" alt="중소벤처기업부">
+									</span>
+									<div>
+										<strong>주무기관</strong>
+										<p>중소벤처기업부</p>
+									</div>
+								</li>
+								<li>
+									<span class="icoArea">
+										<img src="../assets/images/content/ico-ope02.png" alt="">
+									</span>
+									<div>
+										<strong>설립근거</strong>
+										<p>중소기업진흥에 관한 법률<br>제 69조 및 동법 시행령 제71조</p>
+									</div>
+								</li>
+								<li>
+									<span class="icoArea">
+										<img src="../assets/images/content/ico-ope03.png" alt="">
+									</span>
+									<div>
+										<strong>본사소재지</strong>
+										<p>서울시 양천구 목동동로 309</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="operFunc">
+							<div class="left">
+								<h4>주요 기능 <br>및 역할</h4>
+							</div>
+							<div class="right">
+								<ul>
+									<li><span>01</span>컨설팅, 마케팅 및 유통지원사업</li>
+									<li><span>02</span>뉴미디어 콘텐츠 기획, 제작, 운영</li>
+									<li><span>03</span>상표 개발 및 교육사업</li>
+									<li><span>04</span>홍보·전시 및 판매시설 설치·운영사업</li>
+									<li><span>05</span>면세점 설치·운영 사업</li>
+									<li><span>06</span>중소소매유통지원 관련 상품개발, 공동구매 및 관련 콜센터 운영</li>
+									<li><span>07</span>기술개발제품 우선구매, 성능인증제도 운영 등 공공구매지원사업</li>
+									<li><span>08</span>조달 계약을 위한 직접생산여부 확인</li>
+									<li><span>09</span>TV 홈쇼핑 판매대행사업</li>
+									<li><span>10</span>통신판매 및 전자상거래사업 등</li>
+								</ul>
+							</div>
+						</div>
+						<div class="historyWrap">
+							<h4>HISTORY</h4>
+							<div class="history tabFunc">
+								<div class="tabTit hisLnb">
+									<ul>
+										<li class="curr"><a href="">도약기<p>현재 ~ 2012</p></a></li>
+										<li><a href="">성장기<p>2011 ~ 2001</p></a></li>
+										<li><a href="">설립기<p>1999 ~ 1995</p></a></li>
+									</ul>
+								</div>
+								<div class="tabCont">
+									<!-- 도약기 -->
+									<div>
+										<div class="swiper">
+											<div class="hisList swiper-wrapper">
+												<div  class="hisBox swiper-slide">
+													<p>2024</p>
+													<ul>
+														<li>
+															<strong>11월</strong>
+															<ul>
+																<li>한국중소벤처기업유통원으로 기관명 변경</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+												<div  class="hisBox swiper-slide">
+													<p>2022</p>
+													<ul>
+														<li>
+															<strong>12월</strong>
+															<ul>
+																<li>한겨울의 동행축제 ‘윈·윈터 페스티벌‘ 주관</li>
+															</ul>
+														</li>
+														<li>
+															<strong>9월</strong>
+															<ul>
+																<li>전국민 소비촉진 행사 ‘7일간의 동행축제‘ 주관</li>
+															</ul>
+														</li>
+														<li>
+															<strong>4월</strong>
+															<ul>
+																<li>직접생산 확인제도 수행기관 지정 및 신규업무 추진</li>
+															</ul>
+														</li>
+														<li>
+															<strong>3월</strong>
+															<ul>
+																<li>중소기업 · 소상공인 판로정보플랫폼 ‘판판대로‘ 오픈</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+												<div  class="hisBox swiper-slide">
+													<p>2021</p>
+													<ul>
+														<li>
+															<strong>12월</strong>
+															<ul>
+																<li>비대면 소비 촉진행사 『2021 K-MAS 라이브마켓』 주관</li>
+															</ul>
+														</li>
+														<li>
+															<strong>11월</strong>
+															<ul>
+																<li>인천공항 중소기업 면세점 운영</li>
+															</ul>
+														</li>
+														<li>
+															<strong>10월</strong>
+															<ul>
+																<li>소상공인 스마트 플래그십 스토어(3개소) 운영</li>
+															</ul>
+														</li>
+														<li>
+															<strong>6월</strong>
+															<ul>
+																<li>2021년 대한민국 동행세일 행사 주관</li>
+															</ul>
+														</li>
+														<li>
+															<strong>4월</strong>
+															<ul>
+																<li>소상공인 전용 라이브 스튜디오 운영(행복한백화점)</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+												<div  class="hisBox swiper-slide">
+													<p>2020</p>
+													<ul>
+														<li>
+															<strong>12월</strong>
+															<ul>
+																<li>비대면 소비 촉진행사 『2020 K-MAS 라이브마켓』주관</li>
+															</ul>
+														</li>
+														<li>
+															<strong>9월</strong>
+															<ul>
+																<li>가치삽시다 라이브커머스 정규방송 편성 및 운영</li>
+															</ul>
+														</li>
+														<li>
+															<strong>6월</strong>
+															<ul>
+																<li>대한민국 동행세일 행사주관</li>
+															</ul>
+														</li>
+														<li>
+															<strong>4월</strong>
+															<ul>
+																<li>대한민국 국가대표 공동브랜드 『Brand K』 2기 업체 선정</li>
+																<li>공공구매종합정보망(www.smpp.go.kr) 이관에 따른 시스템 오픈</li>
+															</ul>
+														</li>
+														<li>
+															<strong>2월</strong>
+															<ul>
+																<li>코로나19 위기대응 공적마스크 판매처 지정 및 수급 · 판매</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+												<div  class="hisBox swiper-slide">
+													<p>2019</p>
+													<ul>
+														<li>
+															<strong>12월</strong>
+															<ul>
+																<li>소상공인 1인미디어 플랫폼 ‘가치삽시다‘ 오픈</li>
+															</ul>
+														</li>
+														<li>
+															<strong>11월</strong>
+															<ul>
+																<li>인천공항 중소기업 면세점 운영</li>
+															</ul>
+														</li>
+														<li>
+															<strong>10월</strong>
+															<ul>
+																<li>공공구매지원사업 신규추진에 따른 지원센터(대전) 설치</li>
+															</ul>
+														</li>
+														<li>
+															<strong>9월</strong>
+															<ul>
+																<li>대한민국 국가대표 공동브랜드 『Brand K』런칭</li>
+															</ul>
+														</li>
+														<li>
+															<strong>2월</strong>
+															<ul>
+																<li>대·중소기업 상생 ‘동반성장몰‘ 플랫폼 확대 구축</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+												<div  class="hisBox swiper-slide">
+													<p>2018</p>
+													<ul>
+														<li>
+															<strong>11월</strong>
+															<ul>
+																<li>아임쇼핑 현대백화점 무역센터점 오픈</li>
+															</ul>
+														</li>
+														<li>
+															<strong>4월</strong>
+															<ul>
+																<li>공공기관 최초 ‘기업평가정보를 활용한 중소기업 상품유통시스템‘ 특허 취득</li>
+															</ul>
+														</li>
+														<li>
+															<strong>2월</strong>
+															<ul>
+																<li>현대자동차 연계 대·중소기업 상생 ‘동반성장몰‘ 오픈</li>
+															</ul>
+														</li>
+														<li>
+															<strong>1월</strong>
+															<ul>
+																<li>아임쇼핑 인천공항 제2터미널 면세점 오픈</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+												<div  class="hisBox swiper-slide">
+													<p>2016</p>
+													<ul>
+														<li>
+															<strong>11월</strong>
+															<ul>
+																<li>경기도 중소기업 판로지원기관 ‘경기도주식회사‘ 출자(2.5%)</li>
+															</ul>
+														</li>
+														<li>
+															<strong>1월</strong>
+															<ul>
+																<li>혁신제품발굴 및 연계시스템 ‘아임스타즈(IMSTARS)’ 오픈</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+												<div  class="hisBox swiper-slide">
+													<p>2015</p>
+													<ul>
+														<li>
+															<strong>10월</strong>
+															<ul>
+																<li>행복한백화점 4층 HIT500 PLAZA → IM SHOPPING으로 확대 개편</li>
+															</ul>
+														</li>
+														<li>
+															<strong>2월</strong>
+															<ul>
+																<li>중소기업 및 농축수산 전용 ㈜공영홈쇼핑 출자(50%)</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="swiper-scrollbar"></div>
+										</div>
+									</div>
+									<!--// 도약기 -->
+									<!-- 성장기 -->
+									<div>
+										<div class="swiper">
+											<div class="hisList swiper-wrapper">
+												<div  class="hisBox swiper-slide">
+													<p>2011</p>
+													<ul>
+														<li>
+															<strong>4월</strong>
+															<ul>
+																<li>중소기업전용 홈쇼핑'(주)홈앤쇼핑' 출자(15%)</li>
+															</ul>
+														</li>
+														<li>
+															<strong>3월</strong>
+															<ul>
+																<li>대한민국 중소기업'HIT 500플라자' 신규오픈(목동 판매장 4층)</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+												<div  class="hisBox swiper-slide">
+													<p>2010</p>
+													<ul>
+														<li>
+															<strong>12월</strong>
+															<ul>
+																<li>제15회 한국유통대상 상생협력부문 대상수상(대한상공회의소 주최)</li>
+															</ul>
+														</li>
+														<li>
+															<strong>9월</strong>
+															<ul>
+																<li>중국 동방 CJ홈쇼핑사와 MOU 체결 대만 VIVA 홈쇼핑사와 MOU 체결</li>
+															</ul>
+														</li>
+														<li>
+															<strong>6월</strong>
+															<ul>
+																<li>2010년 대한민국 사회책임 경영대상 수상(한국경제신문 주최)</li>
+															</ul>
+														</li>
+														<li>
+															<strong>3월</strong>
+															<ul>
+																<li>미국 QVC 홈쇼핑사와 MOU 체결</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+												<div  class="hisBox swiper-slide">
+													<p>2009</p>
+													<ul>
+														<li>
+															<strong>9월</strong>
+															<ul>
+																<li>제4회 대한민국 글로벌 경영인대상 유통부분 수상(한국일보 주최)</li>
+															</ul>
+														</li>
+														<li>
+															<strong>6월</strong>
+															<ul>
+																<li>일본 QVC 홈쇼핑사와 MOU 체결</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+												<div  class="hisBox swiper-slide">
+													<p>2008</p>
+													<ul>
+														<li>
+															<strong>12월</strong>
+															<ul>
+																<li>제13회 백화점부문 한국유통대상 수상(대한상공회의소 주최)</li>
+															</ul>
+														</li>
+														<li>
+															<strong>4월</strong>
+															<ul>
+																<li>독일 QVC 홈쇼핑사와 중소기업상품공급협약체결</li>
+															</ul>
+														</li>
+														<li>
+															<strong>2월</strong>
+															<ul>
+																<li>T-COMMERCE 사업권(구)방송위원회 재승인</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+												<div  class="hisBox swiper-slide">
+													<p>2007</p>
+													<ul>
+														<li>
+															<strong>6월</strong>
+															<ul>
+																<li>아이디어, 신상품 소개 매장 오픈(N-story, 50㎡)</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+												<div  class="hisBox swiper-slide">
+													<p>2006</p>
+													<ul>
+														<li>
+															<strong>7월</strong>
+															<ul>
+																<li>중소기업 공동 A/S콜센터 시범사업 개시</li>
+															</ul>
+														</li>
+														<li>
+															<strong>4월</strong>
+															<ul>
+																<li>멀티플렉스 영화관 메가박스 오픈</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+												<div  class="hisBox swiper-slide">
+													<p>2005</p>
+													<ul>
+														<li>
+															<strong>6월</strong>
+															<ul>
+																<li>(주)아이디지털 홈쇼핑 법인 설립</li>
+															</ul>
+														</li>
+														<li>
+															<strong>3월</strong>
+															<ul>
+																<li>T-COMMERCE 사업자 선정(방송위)</li>
+																<li>독일 RTL 홈쇼핑사와 MOU 체결</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+												<div  class="hisBox swiper-slide">
+													<p>2003</p>
+													<ul>
+														<li>
+															<strong>6월</strong>
+															<ul>
+																<li>메가박스 씨네플러스와 업무제휴 체결</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+												<div  class="hisBox swiper-slide">
+													<p>2002</p>
+													<ul>
+														<li>
+															<strong>7월</strong>
+															<ul>
+																<li>농협유통과 전략적 업무제휴 체결</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+												<div  class="hisBox swiper-slide">
+													<p>2001</p>
+													<ul>
+														<li>
+															<strong>6월</strong>
+															<ul>
+																<li>CJ홈쇼핑업무제휴 협정</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="swiper-scrollbar"></div>
+										</div>
+									</div>
+									<!--// 성장기 -->
+									<!-- 설립기 -->
+									<div>
+										<div class="swiper">
+											<div class="hisList swiper-wrapper">
+												<div  class="hisBox swiper-slide">
+													<p>1999</p>
+													<ul>
+														<li>
+															<strong>12월</strong>
+															<ul>
+																<li>행복한세상 판매장 오픈</li>
+															</ul>
+														</li>
+														<li>
+															<strong>3월</strong>
+															<ul>
+																<li>인터텟 쇼핑몰 오픈</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+												<div  class="hisBox swiper-slide">
+													<p>1996</p>
+													<ul>
+														<li>
+															<strong>4월</strong>
+															<ul>
+																<li>중소기업제품 홍보사업 실시</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+												<div  class="hisBox swiper-slide">
+													<p>1995</p>
+													<ul>
+														<li>
+															<strong>12월</strong>
+															<ul>
+																<li>정부(통산부)에서 운영법인 설립승인 및 유통센터 설립</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="swiper-scrollbar"></div>
+										</div>
+									</div>
+									<!--// 설립기 -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--// subCont -->
+			</div>
+		</div>
+		<!--// contents -->
+
+		<!-- quickmenu -->
+		<div id="quickmenu">
+			<div class="quick">
+				<ul>
+					<li class="m1"><a href="">공지사항</a></li>
+					<li class="m2"><a href="">위원신청</a></li>
+					<li class="m3"><a href="">상담하기</a></li>
+					<li class="m4"><a href="">원격지원</a></li>
+				</ul>
+				<button type="button" class="btnQuick"><span class="hide">퀵메뉴</span></button>
+			</div>
+			<button type="button" class="btnTop"><span class="hide">상단으로 이동</span></button>
+		</div>
+		<!--// quickmenu -->
+	</div>
+	<!--// container -->
+
+	<!-- footer -->
+	<footer id="footer">
+		<div class="inner">
+			<div class="footerCont">
+				<div class="left">
+					<div class="footerLogo">
+						<img src="../assets/images/common/logo-footer01.png" alt="중소벤처기업부">
+						<img src="../assets/images/common/logo-footer02.png" alt="한국중소벤처기업유통원">
+					</div>
+					<div class="fInfo">
+						<p class="addr">(07997) 서울특별시 양천구 목동동로309 <br class="mBlock">한국중소벤처기업유통원</p>
+						<ul class="cs">
+							<li><strong>대표자</strong>이태식</li>
+							<li><strong>사업자등록번호</strong><span>107-81-53660</span></li>
+						</ul>
+						<ul class="cs">
+							<li><strong>기능문의</strong><span>02-2656-9021</span></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="fLink">
+					<div class="familySite">
+						<div class="select">
+							<button type="button">관련사이트</button>
+							<ul>
+								<li class="curr"><a href="" target="_blank">판판셀러</a></li>
+								<li><a href="" target="_blank">전자계약시스템</a></li>
+								<li><a href="" target="_blank">평가관리시스템</a></li>
+								<li><a href="" target="_blank">공공구매종합정보망</a></li>
+								<li><a href="" target="_blank">브랜드K</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="menu">
+						<a href="#" class="btnIco">찾아오시는 길</a>
+					</div>
+					<div class="sns">
+						<a href="#" class="facebook" target="_blank"><span class="hide">페이스북</span></a>
+						<a href="#" class="blog" target="_blank"><span class="hide">블로그</span></a>
+					</div>
+				</div>
+			</div>
+			<div class="footerBottom">
+				<div class="fBot">
+					<div class="menu">
+						<a href="#"><strong>개인정보처리방침</strong></a>
+						<a href="#">이용안내</a>
+						<a href="#">이용약관</a>
+						<a href="#">저작권정책</a>
+						<a href="#">이메일무단수집거부</a>
+					</div>
+					<p class="copyright">Copyright 2025. 판판대로 All Rights Reserved.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--// footer -->
+</div>
+<!--// wrap -->
+</body>
+</html>

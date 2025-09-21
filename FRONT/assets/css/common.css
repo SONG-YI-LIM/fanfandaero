@@ -1,0 +1,69 @@
+@charset "utf-8"; 
+@font-face {font-weight:300;font-family:'Pretendard GOV';font-style:normal;src:url("../fonts/PretendardGOV-Thin.woff2") format('woff2'),
+url("../fonts/PretendardGOV-Thin.woff") format('woff'),}
+@font-face {font-weight:400;font-family:'Pretendard GOV';font-style:normal;src:url("../fonts/PretendardGOV-Regular.woff2") format('woff2'),
+url("../fonts/PretendardGOV-Regular.woff") format('woff'),}
+@font-face {font-weight:500;font-family:'Pretendard GOV';font-style:normal;src:url("../fonts/PretendardGOV-Medium.woff2") format('woff2'),
+url("../fonts/PretendardGOV-Medium.woff") format('woff'),}
+@font-face {font-weight:700;font-family:'Pretendard GOV';font-style:normal;src:url("../fonts/PretendardGOV-Bold.woff2") format('woff2'),
+url("../fonts/PretendardGOV-Bold.woff") format('woff'),}
+@font-face {font-weight:400;font-family:'TimesNewerRoman';font-style:normal;src:url("../fonts/TimesNewerRoman-Regular.woff2") format('woff2'),
+url("../fonts/TimesNewerRoman-Regular.woff") format('woff'),}
+
+* { margin:0; padding:0; box-sizing:border-box } 
+html {line-height: 1.5; font-family: "Pretendard GOV", sans-serif; overflow-x: hidden; } 
+body { position:relative; overflow-y:auto; font-size: 17px; color:var(--color-base, #1d1d1d); } 
+body, div, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, a, button, select, ul, li, span, em, label, :before, :after {margin:0; padding:0;line-height: 1.5;letter-spacing: inherit; font-family: inherit; -webkit-text-size-adjust: none; } 
+span, strong, em, a, button {font-size: 100%; color: inherit; } 
+pre { white-space:pre-line; margin:0; padding:0; word-wrap:break-word } 
+table { border:0; border-collapse:collapse; border-spacing:0; width:100% } 
+fieldset, img { border:0; vertical-align:top } 
+img { border: 0; max-width: 100%; max-height: 100%; } 
+ul, li { list-style:none } 
+h1, h2, h3, h4, h5, h6 { line-height: inherit; font-size:100%; } 
+a { text-decoration:none; cursor:pointer; transition: all 0.3s ease; } 
+body { position:relative } 
+em { font-style:normal } 
+a, button { cursor:pointer } 
+button {background-color: transparent; border: 0;}
+legend, hr, caption { position:absolute; top:-9990px; left:-9999px; width:1px; height:1px; opacity:0 } 
+
+/* 인풋 */
+input[type=number],
+input[type=tel],
+input[type=text],
+input[type=password] { margin:0; padding:0 16px; border:1px solid var(--border-color);  border-radius: 8px; height: 48px; line-height: inherit; letter-spacing: inherit; font-size:100%; font-family: inherit; box-sizing:border-box; } 
+select { position: relative; z-index: 1; margin: 0; padding: 0 48px 0 16px; border:1px solid var(--border-color); border-radius: 8px; width: 100%; max-width: 360px; height: 48px; text-align: left; line-height: inherit; letter-spacing: inherit; font-size:100%; font-family: inherit; background: var(--color-white) url(../images/component/ico-select-arr.svg) no-repeat right 16px center / 12px; appearance: none; -webkit-appearance: none; -moz-appearance: none; } 
+textarea { display: block; padding: 16px; border:1px solid var(--border-color); border-radius: 8px; width: 100%; height: 120px; line-height: inherit; letter-spacing: inherit; font-size:100%; font-family: inherit; background: var(--color-white); resize:none; }
+input:disabled { color: var(--color-gray-50); }
+input:read-only { border-color: var(--color-gray-40); background: var(--bg-readOnly); }
+input:-moz-read-only { border-color: var(--color-gray-40); background: var(--bg-readOnly); }
+::-ms-input-placeholder,
+::-moz-placeholder,
+::-webkit-input-placeholder { color: var(--color-gray-50); }
+@media (max-width: 767px) {
+    input[type=number],
+    input[type=tel],
+    input[type=text],
+    input[type=password],
+    select,
+    textarea { font-size: 15px; }
+}
+
+/* 포커스 */
+a:focus, button:focus, input:focus, select:focus, textarea:focus { outline-offset: -1px; outline: 1px solid var(--color-primary); } 
+a:focus, button:focus { background-color: var(--bg-primary); }
+
+/* 스크롤바 */
+body *::-webkit-scrollbar { width: var(--scrollbar-width, 6px); height: var(--scrollbar-height, 6px); } 
+body *::-webkit-scrollbar-track { background-color: var(--scrollbar-bg-track, #fff); } 
+body *::-webkit-scrollbar-thumb { background-color: var(--scrollbar-bg-thumb, rgba(0, 0, 0, 0.6)); } 
+body *::-webkit-scrollbar-button { display: none; } 
+body *::-webkit-scrollbar-track,
+body *::-webkit-scrollbar-thumb { border-radius: var(--scrollbar-border-radius, 6px); }
+
+/* 스킵네비 */
+#skipNav {height:0}
+#skipNav dt { position:absolute !important;overflow:hidden; width:1px; height:1px}
+#skipNav dd a { display:block; position:absolute; top:-10000px; left:0; z-index:999999;overflow:hidden; width:100%; text-align:center; font-size:16px}
+#skipNav dd a.on { position:absolute; top:0; left:0;overflow:hidden; padding:15px 0; font-weight:bold; color:#fff; background:#272727}

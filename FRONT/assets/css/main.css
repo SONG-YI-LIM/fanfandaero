@@ -1,0 +1,90 @@
+﻿/*>>>>>>>>>> 인트로 <<<<<<<<<<*/
+.intro {display:flex; align-items:flex-end; width: 100%; min-height:100vh; height:100%; padding:0 0 127px 76px; background: #F6F9FF;}
+.csBox {position: absolute; right:0; top:23.6%; padding-left:4%;}
+.csBox > a { display: inline-block; position: absolute; padding: 36px; border-radius: 16px; background: var(--color-white); box-shadow: 4px 4px 15px 0 rgba(0, 0, 0, 0.10);}
+.csBox > a.cs01 { top: -84px; left: 43.8%; border: 1px solid #174AB0; width:424px;}
+.csBox > a.cs02 { bottom: -168px; left: 43.8%; padding: 30px; border: 1px solid #10A8B2; }
+.csBox > a.cs03 { bottom: -168px; right: 14.8%; padding: 30px; border: 1px solid #35BD4C; }
+.csBox dt { display: inline-flex; position: relative; margin-bottom: 10px; padding-right: 32px; padding-left: 48px; line-height: 1.5; font-size: 30px; font-weight: 700; word-break:keep-all; }
+.csBox dt:before { content: ""; position: absolute; top: calc(50% - 16px); left: 0; width: 32px; height: 32px; background-repeat: no-repeat; background-position: center; background-size: 100% auto; }
+.csBox dt:after { content: ""; position: absolute; top: calc(50% - 12px); right: 0; width: 24px; height: 24px; background: url(../images/main/intro-ico-btn-more.png) no-repeat center/100% auto; }
+.csBox > a.cs01 dt { color: #174AB0; }
+.csBox > a.cs02 dt { color: #0A7F87; }
+.csBox > a.cs03 dt { color: #178D2B; }
+.csBox > a.cs01 dt:before { background-image: url(../images/main/intro-ico-cs01.png); }
+.csBox > a.cs02 dt:before { background-image: url(../images/main/intro-ico-cs02.png); }
+.csBox > a.cs03 dt:before { background-image: url(../images/main/intro-ico-cs03.png); }
+.csBox dd { padding-left: 48px; font-size: 17px; color: var(--color-gray-70); }
+.introNotice {position:relative; margin-top:540px; width:580px;}
+.introNotice .noticeTitArea {padding-bottom:6px; border-bottom:1px solid var(--color-base);}
+.introNotice .noticeTitArea .tit {display:block; line-height:1.5; font-size:27px; font-weight:700;}
+.introNotice .introMore {position:absolute; top:11px; right:0; line-height:1.5; font-size:15px; color:var(--color-gray-70);}
+.introNotice [class *= "state"] {display:inline-block; padding:3px 5px; border-radius:4px; white-space:nowrap; line-height:1.3; font-size: 13px;}
+.introNotice .state01 {color:#064EA0; background:#D7E5FA;}
+.introNotice .state02 {color:#007C6F; background:#D2E7E5;}
+.introNotice > ul > li + li {border-top:1px solid #CCC;}
+.introNotice > ul > li > a,
+.introNotice > ul > li > a > div {display:flex;}
+.introNotice > ul > li > a {position:relative; padding:18px 118px 18px 0;}
+.introNotice > ul > li > a > div {gap:5px; align-items: center;}
+.introNotice > ul > li > a > div > p {display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:1; overflow:hidden; text-overflow:ellipsis; line-height:1.3; font-size:19px; color:var(--color-black); font-weight:600;}
+.introNotice .date {position:absolute; right:0; top:50%; transform:translateY(-50%);}
+@media (max-width: 1840px) {
+    .csBox a.cs01 {top:-48px; width: auto;}
+    .csBox a.cs02,
+    .csBox a.cs03 {bottom:-140px}
+}
+@media (max-width:1840px) and (min-width:1647px) {
+    .csBox a,
+    .csBox a.cs02,
+    .csBox a.cs03 {padding:24px;}
+    .csBox dt {font-size:23px;}
+    .csBox dd {font-size:15px;}
+}
+@media (max-width: 1646px) {
+    .intro {flex-direction: column; align-items:stretch; padding:260px 0 67px; background:url("../images/main/intro-bg-tablet.svg") no-repeat #F6F9FF right top 46px;}
+    .csBox {display:flex; gap:16px; order:2; position:initial; margin-top:24px; padding:0 50px;}
+    .csBox img {display: none;}
+    .csBox > a {flex:1; position:initial;}
+    .introNotice {margin-top:30px; padding:0 50px; width:100%;}
+    .introNotice .introMore {right:50px;}
+}
+@media (max-width: 1260px) {
+    .csBox a,
+    .csBox a.cs02,
+    .csBox a.cs03 {padding:24px;}
+    .csBox dt {padding-left:40px;font-size:23px;}
+    .csBox dd {padding-left:40px;font-size:15px;}
+    .introNotice .noticeTitArea .tit {font-size:23px;}
+    .introNotice > ul > li > a > div > p {font-size:17px;}
+    .introNotice .date {font-size:15px;}
+}
+@media (max-width: 1000px) {
+    .intro {padding:218px 0 67px; background-size:96%}
+}
+@media (max-width: 900px) {
+    .csBox {flex-direction:column;}
+}
+@media (max-width: 767px) {
+    .intro {padding:215px 0 80px; background-image:url("../images/main/intro-bg-mobile.svg"); background-size:auto; background-position:top 46px center;}
+    .introNotice {margin-top:48px; padding:0 18px}
+    .introNotice .introMore {right:18px;}
+    .csBox {padding:0 18px}
+}
+@media (max-width: 400px) {
+    .intro {background-position:top 46px right;}
+}
+@media (max-width: 350px) {
+    .intro {background-size:90%;}
+}
+
+/*>>>>>>>>>> 메인 <<<<<<<<<<*/
+/* 메인 공통 */
+
+/* 메인 1단 */
+
+/* 메인 2단 */
+
+/* 메인 3단 */
+
+/* 메인 4단 */

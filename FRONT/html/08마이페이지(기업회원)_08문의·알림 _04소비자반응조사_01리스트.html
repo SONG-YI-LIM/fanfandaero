@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<!-- E : mobile -->
+<title>aaaa</title>
+<link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+<script type="text/javascript" src="../assets/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../assets/js/moment.min.js"></script>
+<script type="text/javascript" src="../assets/js/daterangepicker.min.js"></script>
+<script type="text/javascript" src="../assets/js/swiper.js"></script>
+<script type="text/javascript" src="../assets/js/common.js"></script>
+<!-- <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="js/selectivizr.js">
+ -->
+<!--[if lte IE 9]>
+</script>
+<![endif]-->
+</head>
+<body>
+<!-- skipNav -->
+<dl id="skipNav">
+	<dt>바로가기 메뉴</dt>
+	<dd><a href="#container">본문 바로가기</a></dd>
+	<dd><a href="#gnb">주메뉴 바로가기</a></dd>
+	<dd><a href="#footer">풋터 바로가기</a></dd>
+</dl>
+<!-- //skipNav -->
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<!-- inner -->
+		<div class="inner">
+			<div class="headTop">
+				<ul class="etc">
+					<li><a href="" class="btnIco btnHref xsm"><img src="../assets/images/common/ico-logo01.png" alt="">소담인프라</a></li>
+					<li><a href="" class="btnIco btnHref xsm"><img src="../assets/images/common/ico-logo02.svg" alt="">동행축제</a></li>
+				</ul>
+			</div>
+			<div class="headBody">
+				<div class="logo">
+					<a href=""><img src="../assets/images/common/logo.svg" alt="KODMA 판판대로"></a>
+				</div>
+				<ul class="util">
+					<li>
+						<button type="button" class="btnSearchForm">통합검색</button>
+						<div class="headSearch">
+							<div class="inner">
+								<strong>판판대로 통합검색</strong>
+								<div class="in">
+									<div class="sesarchInp">
+										<input type="text" placeholder="검색어를 입력해주세요." title="검색어">
+										<button type="button" class="btnHeadSearch"><span class="hide">검색</span></button>
+									</div>
+									<div class="searchInpBot">
+										<p>무엇이 궁금하세요?</p>
+										<ul>
+											<li><button type="button">#전담셀러</button></li>
+											<li><button type="button">#상세페이지</button></li>
+											<li><button type="button">#마트</button></li>
+											<li><button type="button">#브랜드k</button></li>
+										</ul>
+									</div>
+								</div>
+								<button type="button" class="btnCls btnHeaeSearCls"><span class="hide">닫기</span></button>
+							</div>
+						</div>
+					</li>
+					<!-- 로그인 전 -->
+					<li><a href="" class="btnLogin">로그인</a></li>
+					<li><a href="" class="btnJoin">회원가입</a></li>
+					<!--// 로그인 전 -->
+					<!-- 로그인 후 -->
+					<li><a href="" class="btnLogout">로그아웃</a></li>
+					<li><a href="" class="btnMypage">김판판님 마이페이지</a></li>
+					<!--// 로그인 후 -->
+					<li class="btnMobLi"><a href="" class="btnHam">전체메뉴</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--// inner -->
+		<!-- gnb -->
+		<div id="gnb">
+			<div class="inner">
+				<!-- gnbArea -->
+				<div class="gnbArea">
+					<ul class="gnbUl">
+						<li>
+							<a href="">운영기관 소개</a>
+							<div class="subDepth">
+								<p>운영기관 소개</p>
+								<ul>
+									<li><a href="">운영기관 소개</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="">사업공고 및 신청</a>
+							<div class="subDepth">
+								<p>사업공고 및 신청</p>
+								<ul>
+									<li><a href="">지원사업 안내</a></li>
+									<li>
+										<a href="">지원사업 공고</a>
+										<ul>
+											<li><a href="">지원사업 공고ㆍ신청</a></li>
+											<li><a href="">국내 판로지원사업 전체보기</a></li>
+											<li>
+												<a href="">지원사업 신청현황</a>
+												<ul>
+													<li><a href="">지원사업 신청/수정/제출 목록</a></li>
+													<li><a href="">지원사업 신청</a></li>
+													<li><a href="">지원사업 임시저장</a></li>
+													<li><a href="">지원사업 수정</a></li>
+													<li><a href="">지원사업 제출</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li><a href="">지원사업 공고</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="">홍보·알림</a>
+							<div class="subDepth">
+								<p>홍보·알림</p>
+								<ul>
+									<li><a href="">우수제품</a></li>
+									<li><a href="">우수사례</a></li>
+									<li>
+										<a href="">판로정보</a>
+										<ul>
+											<li><a href="">중소기업 행사정보</a></li>
+											<li><a href="">조달청 입찰정보</a></li>
+											<li><a href="">기타 연계정보 제공</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="">MRO 지원정보</a>
+										<ul>
+											<li><a href="">알기쉬운 사업안내</a></li>
+											<li><a href="">납품업체 검색</a></li>
+											<li><a href="">실태조사</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="">주요 서비스</a>
+							<div class="subDepth">
+								<p>주요 서비스</p>
+								<ul>
+									<li><a href="">플랫폼소개</a></li>
+									<li>
+										<a href="">소담인프라</a>
+										<ul>
+											<li>
+												<a href="">소담스퀘어 안내</a>
+												<ul>
+													<li><a href="">상암</a></li>
+													<li><a href="">당산</a></li>
+													<li><a href="">보라매</a></li>
+													<li><a href="">대구</a></li>
+													<li><a href="">부산</a></li>
+													<li><a href="">전주</a></li>
+													<li><a href="">강원</a></li>
+													<li><a href="">광주</a></li>
+													<li><a href="">충북</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="">소담상회 안내</a>
+												<ul>
+													<li><a href="">인사</a></li>
+													<li><a href="">서교</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="">판판소싱</a>
+										<ul>
+											<li>
+												<a href="">판판소싱 공고</a>
+												<ul>
+													<li><a href="">공고 보기</a></li>
+													<li><a href="">입점신청</a></li>
+												</ul>
+											</li>
+											<li><a href="">판판소싱 소개</a></li>
+										</ul>
+									</li>
+									<li><a href="" target="_blank">판판셀러</a></li>
+									<li><a href="" target="_blank">동행축제</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="">이용안내</a>
+							<div class="subDepth">
+								<p>이용안내</p>
+								<ul>
+									<li><a href="">공지사항</a></li>
+									<li><a href="">자주하는 질문</a></li>
+									<li><a href="">1:1 문의</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<!-- hover depth -->
+					<div class="in hoverDepth"></div>
+					<!--// hover depth -->
+				</div>
+				<!--// gnbArea -->
+				<div class="sitemapArea">
+					<button type="button" class="btnSitemap"><span class="hide">사이트맵</span></button>
+					<div id="sitemap">
+						<div class="inner">
+							<strong>판판대로 사이트맵</strong>
+							<!-- sitemap gnb -->
+							<div class="in"></div>
+							<!--// sitemap gnb -->
+							<button type="button" class="btnCls btnSitemapCls"><span class="hide">닫기</span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--// gnb -->
+		<!-- gnbMob -->
+		<div class="gnbMobArea">
+			<div class="gnbMob">
+				<div class="head">
+					<div class="headTop">
+						<ul class="etc">
+							<li><a href="" class="btnIco btnHref xsm"><img src="../assets/images/common/ico-logo01.png" alt="">소담인프라</a></li>
+							<li><a href="" class="btnIco btnHref xsm"><img src="../assets/images/common/ico-logo02.svg" alt="">동행축제</a></li>
+						</ul>
+					</div>
+					<div>
+						<p class="logTxt">로그인을 해주세요.</p>
+					</div>
+				</div>
+				<div class="body">
+					<div class="left">
+						<ul class="gnbNav">
+							<li class="curr"><a href="#mGnb01">운영기관 소개</a></li>
+							<li><a href="#mGnb02">사업공고 및 신청</a></li>
+							<li><a href="#mGnb03">홍보·알림</a></li>
+							<li><a href="#mGnb04">주요 서비스</a></li>
+							<li><a href="#mGnb05">이용안내</a></li>
+						</ul>
+					</div>
+					<div class="right">
+						<div class="in">
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="btnCls btnHamCls"><span class="hide">닫기</span></button>
+		</div>
+		<!--// gnbMob -->
+	</div>
+	<!--// header -->
+
+	<!-- container -->
+	<div id="container">
+		<!-- contents -->
+		<div class="contents">
+			<!-- lnb -->
+			<div id="lnb">
+				<div class="in">
+                    <div class="lnbTop">
+                        <div class="top">
+                            <h4>마이페이지</h4>
+                            <button type="button" class="btnTxt download">매뉴얼 다운로드</button>
+                        </div>
+                        <div class="myInfo">
+                            <p class="name"><span class="v1">기업</span>홍길동 님</p>
+                            <span class="recentDate">최근접속일 : 2025.08.01 10:11:15</span>
+                        </div>
+                    </div>
+					<ul class="lnbUl">
+						<li>
+                            <a href="">회원정보</a>
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                            </ul>
+                        </li>
+						<li>
+                            <a href="">지원사업 신청내역</a>
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                            </ul>
+                        </li>
+                        </li>
+						<li>
+                            <a href="">수행기관 공모 신청내역</a>
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                            </ul>
+                        </li>
+						<li>
+                            <a href="">자가진단 신청내역</a>
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                            </ul>
+                        </li>
+						<li>
+                            <a href="">상품소싱 신청내역</a>
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                            </ul>
+                        </li>
+						<li>
+                            <a href="">상품 관리</a>
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                            </ul>
+                        </li>
+						<li>
+                            <a href="">문의/알림</a>
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                            </ul>
+                        </li>
+						<li>
+                            <a href="">MRO</a>
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                            </ul>
+                        </li>
+					</ul>
+				</div>
+			</div>
+			<!--// lnb -->
+			<div class="inner">
+				<!-- breadcrumb -->
+				<div class="breadcrumb">
+					<ol>
+						<li class="home"><a href="">홈</a></li>
+						<li><a href="#"><strong>마이페이지</strong></a></li>
+						<li><a href="#"><strong>문의/알림</strong></a></li>
+					</ol>
+				</div>
+				<!-- breadcrumb -->
+				<!-- subTop -->
+				<div class="subTop v8">
+					<div class="titArea">
+                        <!-- 2025-09-19 -->
+                        <div class="left">
+                            <h2>소비자 반응조사</h2>
+                        </div>
+                        <div class="right">
+                            <button type="button" class="btnTxt download">매뉴얼 다운로드</button>
+                        </div>
+                        <!--// 2025-09-19 -->
+					</div>
+				</div>
+				<!--// subTop -->
+
+				<!-- subCont -->
+				<div class="subCont">
+					<div class="cont">
+                        <div class="section">
+                            <div class="grayBox border">
+                                <p class="stxt">
+                                    안녕하십니까 한국중소벤처기업유통원입니다.<br>
+                                    '판판SHOP' 매장은 대한민국 정부가 인정한 중소기업 혁신제품전용 오프라인 판매장입니다.<br>
+                                    입점하신 중소기업분들에게 오프라인 판매기회를 제공할 뿐만 아니라 <span class="cPoint">매장에 방문한 소비자분들의 반응을 전달해 드림으로써 테스트베드(TEST-BED) 매장역할을 동시에 수행</span>하고 있습니다.<br>
+                                    소비자 반응을 필요하신 부분에 적극 활용하시어 귀사의 무궁한 발전에 도움이 되기를 바랍니다.<br>
+                                    아래의 내용들을 향후 제품개발 및 홍보마케팅 등 필요한 부분에 적극 활용하시면 됩니다.<br><br>
+    
+                                    ※ 소비자 반응사항의 경우, 귀사의 발전을 위해 한국중소벤처기업유통원에서 제공하는 정보입니다.<br>
+                                    따라서, 판판SHOP 매장과 관련해 <span class="cPoint">강제적으로 반영해야하는 사안이 아님</span>을 다시한번 알려드립니다.<br>
+                                    해당화면은 실시간으로 간단한 소비자반응을 확인할 수 있는 화면이며, 월간 소비자반응 조사결과 레포트의 경우 담당자 이메일로 전송될 예정입니다.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 2025-09-19 -->
+                        <div class="section">
+                            <div style="display: flex; align-items: center; justify-content: center; height: 200px; background: #ccc;">검색필터 영역입니다.</div>
+                        </div>
+                        <!--// 2025-09-19 -->
+
+                        <div class="section">
+                            <!-- tableTop -->
+                            <div class="tableTop">
+                                <div class="left">
+                                    <div class="total">
+                                        <p>총</p>
+                                        <p><b class="cPoint">000</b>개</p>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <button type="button" class="btn bgPrima">소비자 반응조사 리포트 보기</button>
+                                </div>
+                            </div>
+                            <!--// tableTop -->
+                            <!-- colTable -->
+                            <div class="colTable scroll">
+                                <table>
+                                    <caption>구분[포장상태, 색상, 용량/크기, 독창성, 기술력, 가격경쟁력, 가성비, 사용편의성, A/S 가능여부, 비고], 백화점사업단[연잎 차 덕용(20T)(좋음, 보통, 미흡)], 화성매장[연잎 차 덕용(20T)(좋음, 보통, 미흡)], 인천공항 서편[연잎 차 덕용(20T)(좋음, 보통, 미흡)], 부산KTX[연잎 차 덕용(20T)(좋음, 보통, 미흡)], 지역[연잎 차 덕용(20T)(좋음, 보통, 미흡)] 항목으로 구성된 소비자 반응조사 표</caption>
+                                    <colgroup>
+                                        <col style="width:120px">
+                                        <col span="15" style="width:70px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" rowspan="3" class="bgBlue">구분</th>
+                                            <th scope="col" colspan="3" class="bgBlue borderB">백화점사업단</th>
+                                            <th scope="col" colspan="3" class="bgBlue borderB">화성매장</th>
+                                            <th scope="col" colspan="3" class="bgBlue borderB">인천공항 서편</th>
+                                            <th scope="col" colspan="3" class="bgBlue borderB">부산KTX</th>
+                                            <th scope="col" colspan="3" class="bgBlue borderB">지역</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col" colspan="3" class="bgBlue borderL borderB">연잎 차 덕용(20T)</th>
+                                            <th scope="col" colspan="3" class="bgBlue borderB">연잎 차 덕용(20T)</th>
+                                            <th scope="col" colspan="3" class="bgBlue borderB">연잎 차 덕용(20T)</th>
+                                            <th scope="col" colspan="3" class="bgBlue borderB">연잎 차 덕용(20T)</th>
+                                            <th scope="col" colspan="3" class="bgBlue borderB">연잎 차 덕용(20T)</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col" class="bgDBlue borderL">좋음</th>
+                                            <th scope="col" class="bgDBlue">보통</th>
+                                            <th scope="col" class="bgDBlue">미흡</th>
+                                            <th scope="col" class="bgDBlue">좋음</th>
+                                            <th scope="col" class="bgDBlue">보통</th>
+                                            <th scope="col" class="bgDBlue">미흡</th>
+                                            <th scope="col" class="bgDBlue">좋음</th>
+                                            <th scope="col" class="bgDBlue">보통</th>
+                                            <th scope="col" class="bgDBlue">미흡</th>
+                                            <th scope="col" class="bgDBlue">좋음</th>
+                                            <th scope="col" class="bgDBlue">보통</th>
+                                            <th scope="col" class="bgDBlue">미흡</th>
+                                            <th scope="col" class="bgDBlue">좋음</th>
+                                            <th scope="col" class="bgDBlue">보통</th>
+                                            <th scope="col" class="bgDBlue">미흡</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td scope="row" class="bgSky bold">포장상태</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row" class="bgSky bold">색상</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row" class="bgSky bold">용량/크기</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row" class="bgSky bold">독창성</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row" class="bgSky bold">기술력</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row" class="bgSky bold">가격경쟁력</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row" class="bgSky bold">가성비</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row" class="bgSky bold">사용편의성</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row" class="bgSky bold">A/S 가능여부</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row" class="bgSky bold">비고</td>
+                                            <td colspan="3">
+                                                <div class="flexWrap jcC">
+                                                    <button type="button" class="btn bgSecond">확인</button>
+                                                </div>
+                                            </td>
+                                            <td colspan="3">
+                                                <div class="flexWrap jcC">
+                                                    <button type="button" class="btn bgSecond">확인</button>
+                                                </div>
+                                            </td>
+                                            <td colspan="3">
+                                                <div class="flexWrap jcC">
+                                                    <button type="button" class="btn bgSecond">확인</button>
+                                                </div>
+                                            </td>
+                                            <td colspan="3">
+                                                <div class="flexWrap jcC">
+                                                    <button type="button" class="btn bgSecond">확인</button>
+                                                </div>
+                                            </td>
+                                            <td colspan="3">
+                                                <div class="flexWrap jcC">
+                                                    <button type="button" class="btn bgSecond">확인</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--// colTable -->
+                        </div>
+					</div>
+                    <!-- side -->
+					<div class="side">
+						<div class="in">
+                            <div class="top">
+                                <h3>검색필터</h3>
+                                <button type="button" class="btn bgSecond btnIco btnReset">초기화</button>
+                            </div>
+							<div class="searchArea">
+                                <dl>
+                                    <dt>조회기간</dt>
+                                    <dd>
+                                        <div class="flexCol">
+                                            <div>
+                                                <p class="schTit">시작일</p>
+                                            </div>
+                                            <div>
+                                                <div class="date">
+                                                    <input type="text" title="시작날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD" disabled>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="schTit">종료일</p>
+                                            </div>
+                                            <div>
+                                                <div class="date">
+                                                    <input type="text" title="종료날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </dd> 
+                                </dl>
+                                <dl>
+                                    <dt>매장명</dt>
+                                    <dd>
+                                        <!-- checkbox -->
+                                        <div class="checkboxWrap">
+                                            <div class="checkbox">
+                                                <input type="radio" name="chk01" id="chk0101">
+                                                <label for="chk0101">전체</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <input type="radio" name="chk01" id="chk0102">
+                                                <label for="chk0102">백화점사업단</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <input type="radio" name="chk01" id="chk0103">
+                                                <label for="chk0103">화성매장</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <input type="radio" name="chk01" id="chk0104">
+                                                <label for="chk0104">인천공항 서편</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <input type="radio" name="chk01" id="chk0105">
+                                                <label for="chk0105">부산KTX</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <input type="radio" name="chk01" id="chk0106">
+                                                <label for="chk0106">인천공항 동편</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <input type="radio" name="chk01" id="chk0107">
+                                                <label for="chk0107">갤러리아 매장</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <input type="radio" name="chk01" id="chk0108">
+                                                <label for="chk0108">에스엠 서울매장</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <input type="radio" name="chk01" id="chk0109">
+                                                <label for="chk0109">신세계 센텀매장</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <input type="radio" name="chk01" id="chk0110">
+                                                <label for="chk0110">신세계 명동매장</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <input type="radio" name="chk01" id="chk0111">
+                                                <label for="chk0111">현대 판교매장</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <input type="radio" name="chk01" id="chk0112">
+                                                <label for="chk0112">신세계 영등포매장</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <input type="radio" name="chk01" id="chk0113">
+                                                <label for="chk0113">인천공항 T2</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <input type="radio" name="chk01" id="chk0114">
+                                                <label for="chk0114">현대무역센터</label>
+                                            </div>
+                                        </div>
+                                        <!--// checkbox -->
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>상품명</dt>
+                                    <dd>
+                                        <input type="text" title="상품명" placeholder="검색어를 입력해주세요.">
+                                    </dd>
+                                </dl>
+								<button type="button" class="btn lg">검색</button>
+							</div>
+						</div>
+					</div>
+					<!--// side -->
+				</div>
+				<!--// subCont -->
+			</div>
+		</div>
+		<!--// contents -->
+
+		<!-- quickmenu -->
+		<div id="quickmenu">
+			<div class="quick">
+				<ul>
+					<li class="m1"><a href="">공지사항</a></li>
+					<li class="m2"><a href="">위원신청</a></li>
+					<li class="m3"><a href="">상담하기</a></li>
+					<li class="m4"><a href="">원격지원</a></li>
+				</ul>
+				<button type="button" class="btnQuick"><span class="hide">퀵메뉴</span></button>
+			</div>
+			<button type="button" class="btnTop"><span class="hide">상단으로 이동</span></button>
+		</div>
+		<!--// quickmenu -->
+	</div>
+	<!--// container -->
+
+	<!-- footer -->
+	<footer id="footer">
+		<div class="inner">
+			<div class="footerCont">
+				<div class="left">
+					<div class="footerLogo">
+						<img src="../assets/images/common/logo-footer01.png" alt="중소벤처기업부">
+						<img src="../assets/images/common/logo-footer02.png" alt="한국중소벤처기업유통원">
+					</div>
+					<div class="fInfo">
+						<p class="addr">(07997) 서울특별시 양천구 목동동로309 <br class="mBlock">한국중소벤처기업유통원</p>
+						<ul class="cs">
+							<li><strong>대표자</strong>이태식</li>
+							<li><strong>사업자등록번호</strong><span>107-81-53660</span></li>
+						</ul>
+						<ul class="cs">
+							<li><strong>기능문의</strong><span>02-2656-9021</span></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="fLink">
+					<div class="familySite">
+						<div class="select">
+							<button type="button">관련사이트</button>
+							<ul>
+								<li class="curr"><a href="" target="_blank">판판셀러</a></li>
+								<li><a href="" target="_blank">전자계약시스템</a></li>
+								<li><a href="" target="_blank">평가관리시스템</a></li>
+								<li><a href="" target="_blank">공공구매종합정보망</a></li>
+								<li><a href="" target="_blank">브랜드K</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="menu">
+						<a href="#" class="btnIco">찾아오시는 길</a>
+					</div>
+					<div class="sns">
+						<a href="#" class="facebook" target="_blank"><span class="hide">페이스북</span></a>
+						<a href="#" class="blog" target="_blank"><span class="hide">블로그</span></a>
+					</div>
+				</div>
+			</div>
+			<div class="footerBottom">
+				<div class="fBot">
+					<div class="menu">
+						<a href="#"><strong>개인정보처리방침</strong></a>
+						<a href="#">이용안내</a>
+						<a href="#">이용약관</a>
+						<a href="#">저작권정책</a>
+						<a href="#">이메일무단수집거부</a>
+					</div>
+					<p class="copyright">Copyright 2025. 판판대로 All Rights Reserved.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--// footer -->
+</div>
+<!--// wrap -->
+</body>
+</html>

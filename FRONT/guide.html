@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<!-- E : mobile -->
+<title>가이드</title>
+<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+<script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="assets/js/moment.min.js"></script>
+<script src="assets/js/daterangepicker.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<style type="text/css">
+i { display: inline-block; white-space: nowrap; line-height: 1; letter-spacing: normal; font-size: 24px; font-weight: normal; font-family: 'Material Symbols Outlined'; font-style: normal; text-transform: none; word-wrap: normal; direction: ltr; -webkit-font-feature-settings: 'liga'; -webkit-font-smoothing: antialiased; } 
+.guideHeader { position:fixed; z-index:1000; overflow:hidden; padding:0 50px 0 25px; border-bottom:2px solid #ed7101; width:100%; background-color:#fff; } 
+.guideHeader h1 { width:100%; height:68px; display: flex; align-items: center; } 
+.guideBody { padding:70px 0 0 250px; min-height:700px } 
+.guideBody .side { position:fixed; top:68px; bottom:0; left:0; z-index:50; overflow:hidden; border-top:2px solid #2d71b8; border-right:1px solid #eaeaea; width:230px !important; background:#fff } 
+.guideBody .side ul { overflow-y:scroll; width:250px } 
+.guideBody .side ul li a { display:block; padding:0 30px; border-bottom:1px solid #eaeaea; line-height:50px; font-size:15px; color:#333; transition:all 0.2s; -webkit-transition:all 0.2s; -moz-transition:all 0.2s } 
+.guideBody .side ul li a:hover { border-bottom:1px solid #2d71b8; color:#2d71b8; background:#eaf1f8 } 
+.guideBody .side ul li.on a { border-bottom:1px solid #133692; color:#fff; background:#133692 } 
+.guideBody > .contWrap > .cont { padding:50px 40px } 
+.guideBody > .contWrap > .cont.hide { position:absolute; top:-99999px; left:-99999px; opacity:0 } 
+.guideBody > .contWrap > .cont .contWrap { display:flex; flex-direction:row; flex-wrap:wrap; margin:-15px } 
+.guideBody > .contWrap > .cont .contWrap .cont { display:block !important; flex:1; margin:15px; padding:35px 30px; border-radius:10px; background:#fff; box-shadow:0 0 16px rgba(206, 206, 206, 0.08) } 
+.guideBody > .contWrap > .cont .contWrap .cont.col1 { max-width:calc(37% - 30px); min-width:calc(37% - 30px) } 
+.guideBody > .contWrap > .cont .contWrap .cont.col2 { max-width:calc(63% - 30px); min-width:calc(63% - 30px) } 
+.guideBody > .contWrap > .cont .contWrap + .contWrap { margin-top:15px } 
+.guideBody .guideList { margin-bottom:60px; } 
+.guideBody .guideList > dt { position:relative; padding-bottom:10px; border-bottom:1px solid #bfbfbf; font-size:20px; font-weight:900; color:#ed7101; } 
+.guideBody .guideList > dt > a { display:inline-block; position:absolute; top:0; right:5px; line-height:30px; font-size:16px; font-weight:600; color:#66ae2f } 
+.guideBody .guideList > dt > a i { vertical-align:middle; font-size:30px } 
+.guideBody .guideList > dd .guideView { margin-bottom:10px; padding-top:20px; width:100% } 
+.guideBody .guideList > dd .guideView:after { display:block; content:""; clear:both } 
+.guideBody .guideList > dd .guideView > strong { display:block; margin-bottom:12px; font-size:15px; color:#db3128 } 
+.guideBody .guideList > dd .guideView > .pointTxt { margin-bottom:20px; font-size:14px; color:#999 } 
+.guideBody .guideList > dd .guideView .GuideNumList { overflow:hidden; } 
+.guideBody .guideList > dd .guideView .GuideNumList li { position:relative; margin:0 15px 10px 0; padding-left:20px; min-height:40px; float:left } 
+.guideBody .guideList > dd .guideView .GuideNumList li .Guidenum { position:absolute; top:2px; left:0; font-size:11px; color:#000 } 
+.guideBody .guideList > dd .guideCode { display:none; position:relative; background:#fff } 
+.guideBody .guideList > dd .guideCode.on { display:block; } 
+.guideBody .guideList > dd xmp { white-space:pre-wrap; margin:0; border:1px solid #bfbfbf; line-height:18px;; font-family:'Noto Sans KR', Dotum, Arial, sans-serif; font-size: 13px; } 
+.closeCodeArea { position:absolute; top:-1px; right:-1px; width:40px; height:40px; text-align:center; line-height:40px; font-size:20px; color:#fff; background:#ed7101 } 
+.closeCodeArea i { vertical-align:sub } 
+#container { min-height:inherit !important } 
+.mPage {display: flex !important;}
+@media (max-width: 900px){
+ .guideBody { overflow:hidden; padding:0; min-height:inherit } 
+ .guideBody .side { position:static; margin-top:66px; border-bottom:1px solid #eaeaea; width:100% !important; height:auto !important } 
+ .guideBody .side ul { overflow:hidden; margin:0 -1px -1px; width:100% !important; height:auto !important } 
+ .guideBody .side ul li { border-right:1px solid #eaeaea; width:25%; float:left } 
+ .guideBody .side ul li.on { border-right:1px solid #db3128 } 
+}
+@media (max-width: 500px){
+ .guideBody .side ul li { width:50% } 
+}
+</style>
+<!--[if lt IE 9]>
+
+<script type="text/javascript" src="js/respond.min.js"></script>
+
+<![endif]-->
+<script type="text/javascript">
+$(function(){
+	var btnGnb = $(".side a"),
+		li = $(".side li"),
+		cont = $(".guideBody > .contWrap > .cont"),
+		i = $(".side .on").index(); 
+	if(!!window.location.hash) i = window.location.hash.split('#')[1];
+	li.removeClass("on").eq(i).addClass("on");
+	cont.addClass("hide").eq(i).removeClass("hide");
+	btnGnb.click(function(e){
+		e.preventDefault();
+		var i = $(this).parent().index(); 
+		window.location.hash = i;
+		li.removeClass('on').eq(i).addClass('on')
+		cont.addClass('hide').eq(i).removeClass('hide');
+	});
+
+	$(".guideList > dt").append('<a href=""><i>visibility</i> Code View</a>');
+	var btnShowCode = $(".guideList > dt a");
+	btnShowCode.click(function(e){
+		e.preventDefault();
+		var guideCode = $(this).closest(".guideList").find(".guideCode");
+		guideCode.slideToggle(200);
+	});
+
+	var btnClose = $(".closeCodeArea");
+	$(document).on('click', '.closeCodeArea', function(e){
+		e.preventDefault();
+		var guideCode = $(this).parent(".guideCode");
+		guideCode.slideUp(200);
+	});
+	$('.guideList').each(function(){
+		const code = $(this).find('.guideView').html();
+		$(this).find('.guideView').after(`<div class="guideCode"><xmp>${code}</xmp><a href="#" class="closeCodeArea"><i>close</i></a></div>`)
+	});
+});
+</script>
+<script type="text/javascript" src="assets/js/common.js"></script>
+<!-- E : 가이드 용 -->
+</head>
+<body>
+	<div class="guideHeader">
+		<h1>판판대로</h1>
+	</div>
+	<div class="guideBody">
+		<div class="side">
+			<ul>
+				<li class="on"><a href="">레이아웃</a></li>
+				<li><a href="">버튼+텍스트</a></li>
+				<li><a href="">입력 필드</a></li>
+				<li><a href="">폼</a></li>
+				<li><a href="">기능</a></li>
+				<li><a href="">표</a></li>
+				<li><a href="">모달</a></li>
+			</ul>
+		</div>
+
+		<div class="contWrap">
+			<!-- 레이아웃 (Layout) -->
+			<div class="cont">
+				<dl class="guideList">
+					<dt>브레드크럼(Breadcrumb)</dt>
+					<dd>
+						<div class="guideView">
+							<!-- breadcrumb -->
+							<div class="breadcrumb">
+								<ol>
+									<li class="home">홈</li>
+									<li class="short">생략</li>
+									<li><a href="#">depth2</a></li>
+									<li><a href="#"><strong>depth3</strong></a></li>
+								</ol>
+							</div>
+							<!-- breadcrumb -->
+						</div>
+					</dd>
+				</dl>
+				<dl class="guideList">
+					<dt>박스(Box)</dt>
+					<dd>
+						<div class="guideView">
+							<div class="grayBox">회색박스</div>
+							<div class="grayBox border">회색박스+라인</div>
+							<div class="whiteBox">흰색박스</div>
+						</div>
+					</dd>
+				</dl>
+				<dl class="guideList">
+					<dt>서브메뉴(LNB)</dt>
+					<dd>
+						<div class="guideView">
+							<!-- lnb -->
+                            <div id="lnb">
+                                <div class="in">
+                                    <div class="lnbTop">
+                                        <div class="top">
+                                            <h4>마이페이지</h4>
+                                            <button type="button" class="btnTxt download">매뉴얼 다운로드</button>
+                                        </div>
+                                        <div class="myInfo">
+                                            <p class="name"><span class="v1">기업</span>홍길동 님</p>
+                                            <span class="recentDate">최근접속일 : 2025.08.01 10:11:15</span>
+                                        </div>
+                                    </div>
+                                    <ul class="lnbUl">
+                                        <li>
+                                            <a href="">회원정보</a>
+                                            <ul>
+                                                <li><a href="">1</a></li>
+                                                <li><a href="">2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="">지원사업 신청내역</a>
+                                            <ul>
+                                                <li><a href="">1</a></li>
+                                                <li><a href="">2</a></li>
+                                            </ul>
+                                        </li>
+                                        </li>
+                                        <li>
+                                            <a href="">수행기관 공모 신청내역</a>
+                                            <ul>
+                                                <li><a href="">1</a></li>
+                                                <li><a href="">2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="">자가진단 신청내역</a>
+                                            <ul>
+                                                <li><a href="">1</a></li>
+                                                <li><a href="">2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="">상품소싱 신청내역</a>
+                                            <ul>
+                                                <li><a href="">1</a></li>
+                                                <li><a href="">2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="">상품 관리</a>
+                                            <ul>
+                                                <li><a href="">1</a></li>
+                                                <li><a href="">2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="">문의/알림</a>
+                                            <ul>
+                                                <li><a href="">1</a></li>
+                                                <li><a href="">2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="">MRO</a>
+                                            <ul>
+                                                <li><a href="">1</a></li>
+                                                <li><a href="">2</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--// lnb -->
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<!--// 레이아웃 (Layout) -->
+			<!-- 버튼 -->
+			<div class="cont">
+				<dl class="guideList">
+					<dt>텍스트(Text)</dt>
+					<dd>
+						<div class="guideView">
+							<h2>h2 - 36px</h2>
+							<h3>h3 - 23px</h3>
+							<h4>h4 - 19px</h4>
+							<p class="stxt">.stxt - 15px </p>
+						</div>
+					</dd>
+				</dl>
+				<dl class="guideList">
+					<dt>리스트(List)</dt>
+					<dd>
+						<div class="guideView">
+							<ul class="dotList">
+								<li>dotList </li>
+								<li>dotList </li>
+								<li class="cPoint">dotList </li>
+							</ul>
+
+							<ul class="dashList">
+								<li>dashList </li>
+								<li>dashList </li>
+								<li>dashList </li>
+							</ul>
+
+							<ol class="olList">
+								<li>olList </li>
+								<li>olList </li>
+								<li>olList </li>
+							</ol>
+
+							<ol class="cusList">
+								<li>① cusList </li>
+								<li>② cusList </li>
+								<li>③ cusList </li>
+							</ol>
+						</div>
+					</dd>
+				</dl>
+				<dl class="guideList">
+					<dt>버튼(Button)</dt>
+					<dd>
+						<div class="guideView">
+							<!-- btnBottom -->
+							<div class="btnBottom btnArea">
+								<div>
+									<a href="" class="btn">기본</a>
+									<a href="" class="btn bgPrima">bgPrima</a>
+									<button type="button" class="btnBor btnMore">지원사업 더보기</button>
+									<a href="" class="btnIco btnHref">소담인프라</a>
+									<a href="" class="attachDo"><span class="hide">다운로드</span></a>
+									<a href="" class="attachDo lg"><span class="hide">다운로드</span></a> 
+								</div>
+							</div>
+							<!--// btnBottom -->
+
+							<!-- btnBottom -->
+							<div class="btnBottom btnArea">
+								<div>
+									<a href="" class="btn xsm">버튼 xsm</a>
+									<a href="" class="btn">버튼</a>
+									<a href="" class="btn lg">버튼 lg</a>
+									<a href="" class="btn xlg">버튼 xlg</a>
+								</div>
+							</div>
+							<!--// btnBottom -->
+
+							<!-- badgeArea -->
+							<div class="badgeArea">
+								<div>
+									<span class="badge">기본</span>
+									<span class="badge v2">v2</span>
+									<span class="badge v3">v3</span>
+									<span class="badge v4">v4</span>
+									<span class="badge v5">v5</span>
+									<span class="badge v6">v6</span>
+									<span class="badge v7">v7</span>
+								</div>
+							</div>
+							<!--// badgeArea -->
+						</div>
+					</dd>
+				</dl>
+				<dl class="guideList">
+					<dt>버튼(Button) - 정렬</dt>
+					<dd>
+						<div class="guideView">
+							<strong>왼쪽</strong>
+							<!-- btnBottom -->
+							<div class="btnBottom">
+								<div class="left">
+									<a href="" class="btn borGray">버튼</a>
+									<a href="" class="btn bgPrima">버튼</a>
+								</div>
+							</div>
+							<!--// btnBottom -->
+
+							<br>
+							<strong class="txtC">가운데</strong>
+							<!-- btnBottom -->
+							<div class="btnBottom">
+								<div>
+									<a href="" class="btn borGray">버튼</a>
+									<a href="" class="btn bgPrima">버튼</a>
+								</div>
+							</div>
+							<!--// btnBottom -->
+							
+							<br>
+							<strong class="txtR">오른쪽</strong>
+							<!-- btnBottom -->
+							<div class="btnBottom">
+								<div class="right">
+									<a href="" class="btn xlg">이전화면</a>
+									<a href="" class="btn bgPrima xlg">목록</a>
+								</div>
+							</div>
+							<!--// btnBottom -->
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<!--// 버튼 -->
+			<!-- 입력 필드 (Text) -->
+			<div class="cont">
+				<dl class="guideList">
+					<dt>라디오/체크박스(Radio/checkbox) - 종류</dt>
+					<dd>
+						<div class="guideView">
+							<strong>가로형 - 기본</strong>
+							<!-- checkbox -->
+							<div class="checkboxWrap">
+								<div class="checkbox">
+									<input type="radio" name="chk01" id="chk0101">
+									<label for="chk0101">라디오</label>
+								</div>
+								<div class="checkbox">
+									<input type="radio" name="chk01" id="chk0102">
+									<label for="chk0102">라디오</label>
+								</div>
+								<div class="checkbox">
+									<input type="radio" name="chk01" id="chk0103">
+									<label for="chk0103">라디오</label>
+								</div>
+								<div class="checkbox">
+									<input type="radio" name="chk01" id="chk0103">
+									<label for="chk0103">라디오</label>
+								</div>
+							</div>
+							<!--// checkbox -->
+
+							<!-- checkbox -->
+							<div class="checkboxWrap">
+								<div class="checkbox">
+									<input type="checkbox" name="chk01" id="chk0101">
+									<label for="chk0101">체크박스</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="chk01" id="chk0102">
+									<label for="chk0102">체크박스</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="chk01" id="chk0103">
+									<label for="chk0103">체크박스</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="chk01" id="chk0104">
+									<label for="chk0104">체크박스</label>
+								</div>
+							</div>
+							<!--// checkbox -->
+							
+							<br>
+							<strong>세로형 - column</strong>
+							<!-- checkbox -->
+							<div class="checkboxWrap column">
+								<div class="checkbox">
+									<input type="radio" name="chk01" id="chk0101">
+									<label for="chk0101">라디오</label>
+								</div>
+								<div class="checkbox">
+									<input type="radio" name="chk01" id="chk0102">
+									<label for="chk0102">라디오</label>
+								</div>
+								<div class="checkbox">
+									<input type="radio" name="chk01" id="chk0103">
+									<label for="chk0103">라디오</label>
+								</div>
+							</div>
+							<!--// checkbox -->
+						</div>
+					</dd>
+				</dl>
+				<dl class="guideList">
+					<dt>선택(Select) - 기본</dt>
+					<dd>
+						<div class="guideView">
+							<select title="">
+								<option value="">옵션1</option>
+								<option value="">옵션2</option>
+							</select>
+						</div>
+					</dd>
+				</dl>
+				<dl class="guideList">
+					<dt>선택(Select) - Ul 태그</dt>
+					<dd>
+						<div class="guideView">
+							<div class="select">
+								<button type="button">select</button>
+								<ul>
+									<li class="curr"><a href="">옵션1</a></li>
+									<li><a href="">옵션2</a></li>
+								</ul>
+							</div>
+						</div>
+					</dd>
+				</dl>
+				<dl class="guideList">
+					<dt>달력(Calendar) - datepicker</dt>
+					<dd>
+						<div class="guideView">
+							<strong>기본</strong>
+							<div class="date">
+								<input type="text" title="날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
+							</div>
+
+							<br>
+							<strong>시작~종료</strong>
+							<div class="dateWrap">
+								<div>
+									<div class="date">
+										<input type="text" title="시작날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)">
+									</div>
+								</div>
+								<span>-</span>
+								<div>
+									<div class="date">
+										<input type="text" title="종료날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)">
+									</div>
+								</div>
+							</div>
+						</div>
+					</dd>
+				</dl>
+				<dl class="guideList">
+					<dt>달력(Calendar) - daterangepicker</dt>
+					<dd>
+						<div class="guideView">
+							<strong>기본</strong>
+							<div class="dateRange single">
+								<input type="text" title="시작/종료날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)">
+							</div>
+							
+							<br>
+							<strong>시작~종료</strong>
+							<div class="dateRange">
+								<input type="text" title="시작/종료날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)">
+							</div>
+						</div>
+					</dd>
+				</dl>
+				<dl class="guideList">
+					<dt>파일업로드(File upload) - 기본</dt>
+					<dd>
+						<div class="guideView">
+							<!-- fileWrap -->
+							<div class="fileWrap">
+								<input type="text" class="fileInput" disabled="">
+								<div class="fileBtn">
+									<input type="file" title="파일선택">
+									<button type="button" class="btn btnUpload">파일찾기</button>
+								</div>
+								<button type="button" class="btn btnDelete">파일삭제</button>
+							</div>
+							<!--/// fileWrap -->
+							<ul class="dotList">
+								<li>이미지 확장자 JPG, GIF, PNG / 이미지 크기 1020 X 5000 픽셀 이하 / 파일 크기 10M 이하</li>
+								<li>첨부파일이 2개 이상일 경우, 하나의 파일(PDF, ZIP 등)로 첨부 요망</li>
+							</ul>
+						</div>
+					</dd>
+				</dl>
+				<dl class="guideList">
+					<dt>파일업로드(File upload) - 결과</dt>
+					<dd>
+						<div class="guideView">
+							<!-- fileListTop -->
+							<div class="fileListTop">
+								<div class="left">
+									<!-- checkbox -->
+									<div class="checkboxWrap">
+										<div class="checkbox">
+											<input type="checkbox" name="fileChkAll01" id="fileChkAll0101">
+											<label for="fileChkAll0101">전체선택</label>
+										</div>
+									</div>
+									<!--// checkbox -->
+								</div>
+								<div class="right">
+									<ul class="barList">
+										<li><p>1개, 1.23MB 추가됨</p></li>
+										<li>
+											<div class="btnArea">
+												<a href="" class="btn">선택항목제거</a>
+												<a href="" class="btn">전체항목제거</a>
+												<a href="" class="btn bgPrima">파일추가</a>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- fileListTop -->
+							<!-- fileList -->
+							<div class="fileList">
+								<ul>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" name="fileChk01" id="fileChk0101">
+											<label for="fileChk0101">첨부 파일명-01.jpg</label>
+										</div>
+									</li>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" name="fileChk02" id="fileChk0201">
+											<label for="fileChk0201">첨부 파일명-01.jpg</label>
+										</div>
+									</li>
+								</ul>
+								<p class="stxt">※ 최대 1GB 제한</p>
+                                <p class="stxt">※ 상품이미지는 최대 4개까지 등록 가능합니다.</p>
+                                <p class="stxt">※ 확장자: JPG, JPEG, GIF, PNG / 해상도 : 910*732픽셀 이하 / 파일크기 : 1M 이하</p>
+							</div>
+							<!--// fileList -->
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<!--// 입력 필드 (Text) -->
+			<!-- 폼 (Form) -->
+			<div class="cont">
+				<dl class="guideList">
+					<dt>폼 (Form)</dt>
+					<dd>
+						<div class="guideView">
+							<div class="section">
+								<p class="reqCap"><span class="cDanger">*</span> 표시는 필수사항입니다.</p>
+								<div class="titArea">
+									<div class="left">
+										<h3>가입 정보</h3>
+									</div>
+								</div>
+								<!-- formTable -->
+								<div class="formTable">
+									<dl>
+										<dt><p class="req">회원구분</p></dt>
+										<dd>
+											<div>
+												<strong>유통MD</strong>
+											</div>
+										</dd>
+									</dl>
+									<dl>
+										<dt><p class="req">아이디</p></dt>
+										<dd>
+											<div>
+												<div class="flexWrap">
+													<div>
+														<input type="text" title="아이디" placeholder="아이디를 입력해주세요.">
+													</div>
+													<button type="button" class="btn lg">중복확인</button>
+												</div>
+											</div>
+										</dd>
+									</dl>
+									<dl>
+										<dt><p class="req">사진</p></dt>
+										<dd>
+                                            <div>
+                                                <div class="profileBox">
+                                                    <div class="profile">
+                                                        <img src="assets/images/content/ico-profile.png" alt="">
+                                                    </div>
+                                                    <div class="txtBox">
+                                                        <!-- fileWrap -->
+                                                        <div class="fileWrap">
+                                                            <div class="fileBtn">
+                                                                <input type="file" title="파일선택">
+                                                                <button type="button" class="btn bgSecond btnUpload">사진등록/수정</button>
+                                                            </div>
+                                                            <button type="button" class="btn bgSecond">삭제</button>
+                                                        </div>
+                                                        <!--/// fileWrap -->
+                                                        <p class="stxt">이미지 사이즈(권장) : 60 * 100 / 파일 크기(필수) : 10MB 이하</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </dd>
+									</dl>
+									<dl>
+										<dt><p class="req">성명</p></dt>
+										<dd>
+											<div>
+												<p>홍길동</p>
+											</div>
+										</dd>
+									</dl>
+									<dl>
+										<dt><p>유통회원구분</p></dt>
+										<dd>
+											<div>
+												<div class="flexWrap phone">
+													<div>
+														<select title="유통회원구분 대분류">
+															<option value="">선택</option>
+														</select>
+													</div>
+													<div>
+														<select title="유통회원구분 중분류">
+															<option value="">선택</option>
+														</select>
+													</div>
+													<div>
+														<select title="유통회원구분 소분류">
+															<option value="">선택</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</dd>
+										<dt><p>직업</p></dt>
+										<dd>
+											<div>
+												<select title="직업">
+													<option value="">선택</option>
+												</select>
+											</div>
+										</dd>
+									</dl>
+									<dl>
+										<dt><p class="req">생년월일</p></dt>
+										<dd>
+											<div>
+												<div class="date">
+													<input type="text" title="날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
+												</div>
+											</div>
+										</dd>
+										<dt><p class="req">전화번호</p></dt>
+										<dd>
+											<div>
+												<div class="flexWrap phone">
+													<select title="전화번호 앞 3자리">
+														<option value="">선택</option>
+														<option value="">010</option>
+													</select>
+                                                    <span>-</span>
+													<div>
+														<input type="text" title="전화번호 중간 3자리">
+													</div>
+													<span>-</span>
+													<div>
+														<input type="text" title="전화번호 뒤 3자리">
+													</div>
+												</div>
+											</div>
+										</dd>
+									</dl>
+                                    <dl>
+										<dt><p class="req">휴대폰번호</p></dt>
+                                        <dd>
+                                            <div>
+                                                <div class="flexWrap phone">
+                                                    <select title="휴대전화 앞 3자리">
+                                                        <option value="">02</option>
+                                                        <option value="">010</option>
+                                                    </select>
+                                                    <span>-</span>
+                                                    <div>
+                                                        <input type="text" title="휴대전화 중간 3자리" value="1234">
+                                                    </div>
+                                                    <span>-</span>
+                                                    <div>
+                                                        <input type="text" title="휴대전화 뒤 3자리" value="5678">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                        <dt><p>팩스번호</p></dt>
+                                        <dd>
+                                            <div>
+                                                <div class="flexWrap phone">
+                                                    <select title="팩스번호 앞 3자리">
+                                                        <option value="">선택</option>
+                                                        <option value="">010</option>
+                                                    </select>
+                                                    <span>-</span>
+                                                    <div>
+                                                        <input type="text" title="팩스번호 중간 3자리">
+                                                    </div>
+                                                    <span>-</span>
+                                                    <div>
+                                                        <input type="text" title="팩스번호 뒤 3자리">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </dd>
+									</dl>
+									<dl>
+										<dt><p class="req">이메일</p></dt>
+										<dd>
+											<div>
+												<div class="flexWrap email">
+													<div>
+														<input type="text" title="이메일 아이디">
+													</div>
+													<span>@</span>
+													<div>
+														<input type="text" title="이메일 도메인">
+													</div>
+													<select title="이메일 도메인 선택">
+														<option value="">선택</option>
+														<option value="">fanfandaero.kr</option>
+													</select>
+												</div>
+												<p class="stxt cPoint">hanmail.net과 daum.net은 메일이 스팸으로 분류되어 수신이 원활하지 않을 수 있습니다.</p>
+											</div>
+										</dd>
+									</dl>
+									<dl>
+										<dt><p>자택주소</p></dt>
+										<dd>
+											<div>
+												<div class="flexWrap addr">
+													<div class="flexWrap post">
+														<div>
+															<input type="text" title="우편번호" value="우편번호" readonly>
+														</div>
+														<button type="button" class="btn lg">주소검색</button>
+													</div>
+													<div class="flexWrap">
+														<div>
+															<input type="text" title="기본주소" value="기본주소" readonly>
+														</div>
+														<div>
+															<input type="text" title="상세주소" placeholder="상세주소를 입력해주세요.">
+														</div>
+													</div>
+                                                    <p class="stxt cPoint">주소가 정확하지 않을 경우 불이익을 받을 수 있습니다.</p>
+												</div>
+											</div>
+										</dd>
+									</dl>
+									<dl>
+										<dt><p class="req">추천기관</p></dt>
+										<dd>
+											<div>
+												<select title="추천기관">
+													<option value="">선택</option>
+												</select>
+												<p class="stxt">회원님을 추천한 추천기관을 선택하세요. 없을 경우 기타를 선택하십시오.</p>
+											</div>
+										</dd>
+										<dt><p>추천인 아이디</p></dt>
+										<dd>
+											<div>
+												<div class="flexWrap">
+													<div>
+														<input type="text" title="추천인 아이디" placeholder="추천한 아이디를 입력하세요.">
+													</div>
+													<button type="button" class="btn lg bgSecond">아이디 검증</button>
+												</div>
+												<p class="stxt">회원님을 추천한 아이디를 입력하세요.</p>
+											</div>
+										</dd>
+									</dl>
+									<dl>
+										<dt><p>유통업체 관련서류</p></dt>
+										<dd>
+											<div>
+												<!-- fileWrap -->
+												<div class="fileWrap">
+													<input type="text" title="첨부파일명" class="fileInput" disabled="">
+													<div class="fileBtn">
+														<input type="file" title="파일선택">
+														<button type="button" class="btn btnUpload">파일찾기</button>
+													</div>
+													<button type="button" class="btn btnDelete">파일삭제</button>
+												</div>
+												<!--/// fileWrap -->
+												<p class="stxt cPoint">최근 3년간의 매출현황, 회사 연혁, 대표자 정보 등을 작성하여 한글 파일로 올려주시면 MD 공개소싱을 보다 빠르게 이용하실 수 있습니다.</p>
+											</div>
+										</dd>
+									</dl>
+								</div>
+								<!--// formTable -->
+							</div>
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<!--// 폼 (Form) -->
+			<!-- 탭 (Tab) -->
+			<div class="cont">
+				<dl class="guideList">
+					<dt>탭(Tab)</dt>
+					<dd>
+						<div class="guideView">
+							<!-- tab -->
+							<div class="tab tabFunc">
+								<div class="tabTit">
+									<ul>
+										<li class="curr"><a href="">탭1</a></li>
+										<li><a href="">탭2</a></li>
+										<li><a href="">탭3</a></li>
+									</ul>
+								</div>
+								<div class="tabCont">
+									<!-- 탭1 -->
+									<div>
+										탭1 내용
+									</div>
+									<!--// 탭1 -->
+									<!-- 탭2 -->
+									<div>
+										탭2 내용
+									</div>
+									<!--// 탭2 -->
+									<!-- 탭3 -->
+									<div>
+										탭3 내용
+									</div>
+									<!--// 탭3 -->
+								</div>
+							</div>
+							<!--// tab -->
+						</div>
+					</dd>
+				</dl>
+				<dl class="guideList">
+					<dt>탭(Tab) - 모바일 swiper</dt>
+					<dd>
+						<div class="guideView">
+							<!-- tab -->
+							<div class="tab tabFunc">
+								<div class="categoryList tabTit">
+									<div class="categorySwiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide"><a href="" class="curr">탭1</a></div>
+											<div class="swiper-slide"><a href="">탭2</a></div>
+											<div class="swiper-slide"><a href="">탭3</a></div>
+										</div>
+										<div class="swiper-button-next">다음</div>
+									</div>
+								</div>
+								<div class="tabCont">
+									<!-- 탭1 -->
+									<div>
+										탭1 내용
+									</div>
+									<!--// 탭1 -->
+									<!-- 탭2 -->
+									<div>
+										탭2 내용
+									</div>
+									<!--// 탭2 -->
+									<!-- 탭3 -->
+									<div>
+										탭3 내용
+									</div>
+									<!--// 탭3 -->
+								</div>
+							</div>
+							<!--// tab -->
+						</div>
+					</dd>
+				</dl>
+				<dl class="guideList">
+					<dt>아코디언(Accordion)</dt>
+					<dd>
+						<div class="guideView">
+							<!-- accordion -->
+							<div class="accordion">
+								<dl>
+									<dt><button type="button" class="btnAccor">Accordion Title 1</button></dt>
+									<dd>
+										<div>
+											Accordion Contents
+										</div>
+									</dd>
+								</dl>
+								<dl>
+									<dt><button type="button" class="btnAccor">Accordion Title 2</button></dt>
+									<dd>
+										<div>
+											Accordion Contents
+										</div>
+									</dd>
+								</dl>
+								<dl>
+									<dt><button type="button" class="btnAccor">Accordion Title 3</button></dt>
+									<dd>
+										<div>
+											Accordion Contents
+										</div>
+									</dd>
+								</dl>
+							</div>
+							<!--// accordion -->
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<!--// 탭 (Tab) -->
+			<!-- 표 (Table) -->
+			<div class="cont">
+				<dl class="guideList">
+					<dt>표(Table) - col</dt>
+					<dd>
+						<div class="guideView">
+							<!-- tableTop -->
+							<div class="tableTop">
+								<div class="left">
+									<div class="total">
+										<p>총괄장</p>
+										<span>(<b class="cPoint">51</b>건)</span>
+									</div>
+								</div>
+								<div class="right">
+									<div class="btnArea">
+										<button type="button" class="btn bgSecond">선택삭제</button>
+                                        <button type="button" class="btn bgPrima">인증등록</button>
+									</div>
+								</div>
+							</div>
+							<!--// tableTop -->
+							<!-- colTable -->
+							<div class="colTable">
+								<table>
+									<caption>구분, 어른, 어린이, 전체 항목으로 구성된 타이틀 표</caption>
+									<colgroup>
+										<col style="width:60px">
+										<col style="width:130px">
+										<col style="width:200px">
+										<col style="width:130px">
+										<col style="width:150px">
+										<col style="width:250px">
+										<col style="width:120px">
+										<col style="width:130px">
+										<col style="width:130px">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col" class="bgBlue">번호</th>
+											<th scope="col" class="bgBlue">날짜</th>
+											<th scope="col" class="bgBlue">기간</th>
+											<th scope="col" class="bgBlue">기본</th>
+											<th scope="col" class="bgBlue">매출액</th>
+											<th scope="col" class="bgBlue">제목</th>
+											<th scope="col" class="bgBlue">버튼 1개</th>
+											<th scope="col" class="bgBlue">버튼 2개</th>
+											<th scope="col" class="bgBlue">
+                                                <div class="tooltipIn">
+                                                    툴팁
+                                                    <!-- tooltip -->
+                                                    <div class="tooltip">
+                                                        <button type="button" class="btnTooltip"><span class="hide">내용보기</span></button>
+                                                        <div class="tooltipCont">
+                                                            <div class="inner">
+                                                                <p>툴팁내용</p>
+                                                            </div>
+                                                            <button type="button" class="btnTooltipCls"><span class="hide">닫기</span></button>
+                                                        </div>
+                                                    </div>
+                                                    <!--// tooltip -->
+                                                </div>
+                                            </th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="txtC">1</td>
+											<td class="txtC">2025.08.04</td>
+											<td class="txtC">2025.08.04~2025.08.04</td>
+											<td class="txtC">기본</td>
+											<td class="txtR">1,000,000</td>
+                                            <td>제목 제목 제목 제목 제목</td>
+                                            <td>
+                                                <div class="flexWrap jcC">
+                                                    <button type="button" class="btn bgSecond">수정</button>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flexWrap jcC">
+                                                    <button type="button" class="btn bgSecond">수정</button>
+                                                    <button type="button" class="btn bgSecond">삭제</button>
+                                                </div>
+                                            </td>
+                                            <td>&nbsp;</td>
+										</tr>
+                                        <tr>
+											<td class="txtC">2</td>
+											<td class="txtC">2025.08.04</td>
+											<td class="txtC">2025.08.04~2025.08.04</td>
+											<td class="txtC">기본</td>
+											<td class="txtR">1,000,000</td>
+                                            <td>제목 제목 제목 제목 제목</td>
+                                            <td>
+                                                <div class="flexWrap jcC">
+                                                    <button type="button" class="btn bgSecond">수정</button>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flexWrap jcC">
+                                                    <button type="button" class="btn bgSecond">수정</button>
+                                                    <button type="button" class="btn bgSecond">삭제</button>
+                                                </div>
+                                            </td>
+                                            <td>&nbsp;</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!--// colTable -->
+						</div>
+					</dd>
+				</dl>
+				<dl class="guideList">
+					<dt>표(Table) - row</dt>
+					<dd>
+						<div class="guideView">
+							<!-- rowTable -->
+							<div class="rowTable">
+								<table>
+									<caption>구분, 어른, 어린이 항목으로 구성된 타이틀 표</caption>
+									<colgroup>
+										<col style="width:200px">
+										<col style="width:auto">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">구분</th>
+											<td>남자</td>
+										</tr>
+										<tr>
+											<th scope="row">어른</th>
+											<td>여자</td>
+										</tr>
+										<tr>
+											<th scope="row">어린이</th>
+											<td>남자</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!--// rowTable -->
+						</div>
+					</dd>
+				</dl>
+				<dl class="guideList">
+					<dt>페이지네이션(Pagination)</dt>
+					<dd>
+						<div class="guideView">
+							<!-- paging -->
+						<div class="pagination">
+							<div>
+								<a class="pageNavi first" href="#"><span class="hide">처음</span></a>
+								<a class="pageNavi prev" href="#">이전</a>
+								<div class="pageLinks">
+									<a class="pageLink" href="#">1</a>
+									<span class="pageLink linkDot"></span>
+									<a class="pageLink" href="#">6</a>
+									<a class="pageLink" href="#">7</a>
+									<a class="pageLink curr" href="#" title="선택됨">8</a>
+									<a class="pageLink" href="#">9</a>
+									<a class="pageLink" href="#">10</a>
+									<a class="pageLink" href="#">11</a>
+									<span class="pageLink linkDot"></span>
+									<a class="pageLink" href="#">120</a>
+								</div>
+								<a class="pageNavi next" href="#">다음</a>
+								<a class="pageNavi last" href="#"><span class="hide">마지막</span></a>
+							</div>
+						</div>
+						<!-- //paging -->
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<!--// 표 (Table) -->
+			<!-- 모달 (Modal) -->
+			<div class="cont">
+				<dl class="guideList">
+					<dt>모달(Modal)</dt>
+					<dd>
+						<div class="guideView">
+							<button type="button" class="btn" onclick="fn_layer('layer01',480)">팝업버튼</button>
+							<!-- layer -->
+							<div class="layerPop" id="layer01">
+								<div class="inner">
+									<strong class="tit">팝업 타이틀</strong>
+									<div class="cont">
+										<div>
+											<div class="titArea">
+												<strong class="lg">내용 타이틀</strong>
+											</div>
+											<p>
+												대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+											</p>
+										</div>
+										<div class="btnBottom">
+											<div class="right">
+												<a href="javascript:void(0)" onclick="fn_layer_close(this)" class="btn borGray">버튼</a>
+												<a href="javascript:void(0)" onclick="fn_layer_close(this)" class="btn bgPrima">버튼</a>
+											</div>
+										</div>
+									</div>
+									<a href="javascript:void(0)" onclick="fn_layer_close(this)">닫기</a>
+								</div>
+							</div>
+							<!--// layer -->
+						</div>
+					</dd>
+				</dl>
+				<dl class="guideList">
+					<dt>툴팁(Tooltip)</dt>
+					<dd>
+						<div class="guideView">
+							<!-- tooltip -->
+							<div class="tooltip">
+								<button type="button" class="btnTooltip"><span class="hide">내용보기</span></button>
+								<div class="tooltipCont">
+									<div class="inner">
+										<p>툴팁내용</p>
+									</div>
+									<button type="button" class="btnTooltipCls"><span class="hide">닫기</span></button>
+								</div>
+							</div>
+							<!--// tooltip -->
+
+							<br><br>
+							<!-- tooltip -->
+							<div class="tooltip">
+								<p><button type="button" class="btnTooltip v2"><span class="hide">내용보기</span></button><strong>텍스트</strong></p>
+								<div class="tooltipCont">
+									<div class="inner">
+										<p>툴팁내용</p>
+									</div>
+									<button type="button" class="btnTooltipCls"><span class="hide">닫기</span></button>
+								</div>
+							</div>
+							<!--// tooltip -->
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<!--// 모달 (Modal) -->
+			<!-- 가이드6 -->
+			<div class="cont">
+				<dl class="guideList">
+					<dt>가이드6</dt>
+					<dd>
+						<div class="guideView">
+							
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<!--// 가이드6 -->
+		</div>
+	</div>
+</body>
+</html>
