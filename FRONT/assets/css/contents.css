@@ -504,7 +504,6 @@ v3 사업공고·신청
 v4 홍보·알림
 v6 이용안내
 v7 로그인·회원
-v8 마이페이지
 v9 고객지원
 */ 
 .subTop::after { display: block; content: ""; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: #2567B0;} 
@@ -1130,6 +1129,12 @@ v9 고객지원
     .goArea img { width: 100%; max-width: 100%; }
     .goArea .goBox a { flex: none; height: 64px; }
 }
+
+/* 유통 MD회원 */
+.itemInfoRight {position: relative;}
+.itemInfoRight div {position: absolute; right: 0; bottom: 0; padding-bottom: 16px;}
+.formTable .flexWrapForm {display: flex; flex-direction: column; gap: 16px;}
+
 
 /* 비밀번호 확인 */
 .formCol dl dt { margin-bottom: 10px; font-size: 17px; color: var(--color-gray-70); }
