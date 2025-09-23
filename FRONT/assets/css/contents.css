@@ -876,7 +876,7 @@ v9 고객지원
 .step ol > li.curr p { color: var(--color-primary); }
 .step.step6 ol > li {min-width:162px;}
 .joinTopTxt { text-align: center; }
-@media(min-width:799px) {
+@media(min-width:1121px) {
     .step .swiper-wrapper {transform:translate3d(0px, 0px, 0px) !important;} 
 }
 @media(max-width:767px) {
