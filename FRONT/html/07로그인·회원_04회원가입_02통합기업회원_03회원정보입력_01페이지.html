@@ -285,7 +285,7 @@
 				</div>
 				<!-- breadcrumb -->
 				<!-- titArea -->
-				<div class="titArea txtC borderB">
+				<div class="titArea txtC borderB mTxtL"> <!-- 2025-09-19 클래스 추가 -->
 					<h2>회원가입</h2>
 				</div>
 				<!--// titArea -->
@@ -296,26 +296,26 @@
 						<div class="joinTopTxt">
 							<p>판판대로의 회원이 되시면 중소기업지원의 다양한 서비스를 이용할 수 있습니다. <br>비밀번호는 개인정보 보호를 위해 주기적으로 변경해주시기 바랍니다.</p>
 						</div>
-						<!-- step -->
-						<div class="step">
-							<ol>
-								<li>
+						<!-- step 2025-09-19 수정 -->
+						<div class="step stepSwiper">
+							<ol class="swiper-wrapper">
+								<li class="swiper-slide">
 									<span>STEP 01</span>
 									<p>약관동의</p>
 								</li>
-								<li>
+								<li class="swiper-slide">
 									<span>STEP 02</span>
 									<p>회원인증</p>
 								</li>
-								<li class="curr">
+								<li class="swiper-slide curr">
 									<span>STEP 03</span>
 									<p>회원정보입력</p>
 								</li>
-								<li>
+								<li class="swiper-slide">
 									<span>STEP 04</span>
 									<p>회원가입완료</p>
 								</li>
-								<li>
+								<li class="swiper-slide">
 									<span>STEP 05</span>
 									<p>상품정보등록</p>
 								</li>
@@ -361,19 +361,25 @@
 									<dt><p class="req">아이디(이메일)</p></dt>
 									<dd>
 										<div>
+											<!-- 2025-09-19 코드 수정 -->
 											<div class="flexWrap email">
-												<div>
-													<input type="text" title="이메일 아이디">
-												</div>
-												<span>@</span>
+                                                <div class="flexWrap">
+                                                    <div>
+                                                        <input type="text" title="이메일 아이디">
+                                                    </div>
+                                                    <span>@</span>
+                                                </div>
 												<div>
 													<input type="text" title="이메일 도메인">
 												</div>
-												<select title="이메일 도메인 선택">
-													<option value="">선택</option>
-													<option value="">fanfandaero.kr</option>
-												</select>
+												<div>
+                                                    <select title="이메일 도메인 선택">
+                                                        <option value="">선택</option>
+                                                        <option value="">fanfandaero.kr</option>
+                                                    </select>
+												</div>
 											</div>
+											<!-- 2025-09-19 코드 수정 -->
 										</div>
 									</dd>
 								</dl>
@@ -463,19 +469,25 @@
 								<dt><p class="req">이메일</p></dt>
 									<dd>
 										<div>
+											<!-- 2025-09-19 코드 수정 -->
 											<div class="flexWrap email">
-												<div>
-													<input type="text" title="이메일 아이디">
-												</div>
-												<span>@</span>
+                                                <div class="flexWrap">
+                                                    <div>
+                                                        <input type="text" title="이메일 아이디">
+                                                    </div>
+                                                    <span>@</span>
+                                                </div>
 												<div>
 													<input type="text" title="이메일 도메인">
 												</div>
-												<select title="이메일 도메인 선택">
-													<option value="">선택</option>
-													<option value="">fanfandaero.kr</option>
-												</select>
+												<div>
+                                                    <select title="이메일 도메인 선택">
+                                                        <option value="">선택</option>
+                                                        <option value="">fanfandaero.kr</option>
+                                                    </select>
+												</div>
 											</div>
+											<!-- 2025-09-19 코드 수정 -->
 											<p class="stxt cPoint">hanmail.net과 daum.net은 메일이 스팸으로 분류되어 수신이 원활하지 않을 수 있습니다.</p><!-- 2025-09-02 -->
 										</div>
 									</dd>
@@ -589,19 +601,25 @@
 									<dt><p class="req">이메일</p></dt>
 									<dd>
 										<div>
+											<!-- 2025-09-19 코드 수정 -->
 											<div class="flexWrap email">
-												<div>
-													<input type="text" title="이메일 아이디">
-												</div>
-												<span>@</span>
+                                                <div class="flexWrap">
+                                                    <div>
+                                                        <input type="text" title="이메일 아이디">
+                                                    </div>
+                                                    <span>@</span>
+                                                </div>
 												<div>
 													<input type="text" title="이메일 도메인">
 												</div>
-												<select title="이메일 도메인 선택">
-													<option value="">선택</option>
-													<option value="">fanfandaero.kr</option>
-												</select>
+												<div>
+                                                    <select title="이메일 도메인 선택">
+                                                        <option value="">선택</option>
+                                                        <option value="">fanfandaero.kr</option>
+                                                    </select>
+												</div>
 											</div>
+											<!-- 2025-09-19 코드 수정 -->
 											<p class="stxt cPoint">hanmail.net과 daum.net은 메일이 스팸으로 분류되어 수신이 원활하지 않을 수 있습니다.</p><!-- 2025-09-02 -->
 										</div>
 									</dd>
@@ -645,8 +663,8 @@
 									</ul>
 								</div>
 								<div class="right borderL">
-									<p class="bold cGray">
-										KODATA <br>고객센터 1811-8883 이메일 find@kodata.co.kr
+									<p class="bold"> <!-- 2025-09-19 cGray 클래스 삭제 -->
+										KODATA <br>고객센터 1811-8883 <br class="mBlock">이메일 find@kodata.co.kr
 									</p>
 									<a href="" class="btn bgPrima">기업정보 업데이트요청서</a>
 								</div>
@@ -954,6 +972,247 @@
 										<!--// checkbox -->
 									</li>
 								</ul>
+							</div>
+							<!--// formTable -->
+							<!-- formTable -->
+							<div class="formTable">
+								<dl>
+									<dt><p class="req">과세 유형</p></dt>
+									<dd>
+										<div>
+											<!-- checkbox -->
+											<div class="checkboxWrap">
+												<div class="checkbox">
+													<input type="radio" name="chk09" id="chk0901">
+													<label for="chk0901">과세</label>
+												</div>
+												<div class="checkbox">
+													<input type="radio" name="chk09" id="chk0902">
+													<label for="chk0902">면세</label>
+												</div>
+												<div class="checkbox">
+													<input type="radio" name="chk09" id="chk0903">
+													<label for="chk0903">영세</label>
+												</div>
+												<div class="checkbox">
+													<input type="radio" name="chk09" id="chk0904">
+													<label for="chk0904">과세, 면세 겸업</label>
+												</div>
+											</div>
+											<!--// checkbox -->
+										</div>
+									</dd>
+									<dt><p class="req">회사규모</p></dt>
+									<dd>
+										<div>
+											<select title="회사규모">
+												<option value="">선택</option>
+											</select>
+										</div>
+									</dd>
+								</dl>
+								<dl>
+									<dt><p class="req">취급품목 선택</p></dt>
+									<dd>
+										<div>
+											<!-- checkbox 2025-09-19 코드 추가 -->
+											<div class="checkboxWrap">
+												<div class="checkbox">
+													<input type="checkbox" name="chk10" id="chk1001">
+													<label for="chk1001">전산용품 - 디지털기기, 잉크/토너, 컴퓨터용품</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk10" id="chk1002">
+													<label for="chk1002">가전류(소형가전) - 생화가전, 음향/통신가전, 주방가전</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk10" id="chk1003">
+													<label for="chk1003">공구류 - 작업공구, 용접공구, 유공압공구, 전동엔진공구, 절삭연마공구, 조경공구</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk10" id="chk1004">
+													<label for="chk1004">산업안전용품(안전보호장구) - 개인보호구, 도로안전/소방/구급, 안전시설/가설용품, 클린룸자재</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk10" id="chk1005">
+													<label for="chk1005">기계/배관/유공압(설비자재) - 기계요소, 배관기자재, 배관보온재/호스/튜브, 공작기계, 기타기계요소</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk10" id="chk1006">
+													<label for="chk1006">전기/조명 - 전기용품, 조명기구</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk10" id="chk1007">
+													<label for="chk1007">연료/화학(외장마감재) - 가스/연료, 윤활유/그리스/부식방지, 접착제/메꿈제, 페인트/도장자재, 표면처리제, 화학</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk10" id="chk1008">
+													<label for="chk1008">운송/포장/저장 - 운반/이동용품, 포장용품, 저장용품</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk10" id="chk1009">
+													<label for="chk1009">실험/측정(계측 및 실험기자재) - 측정기기, 실험기자재, 시약/화공약품</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk10" id="chk1010">
+													<label for="chk1010">통신/보안(통신공사자재) - 보안자재, 통신자재</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk10" id="chk1011">
+													<label for="chk1011">피복 - 피복류</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk10" id="chk1012">
+													<label for="chk1012">철장재류(철강자재) - 철금속, 비철금속</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk10" id="chk1013">
+													<label for="chk1013">건설자재 - 건설자재, 골재/가설재</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk10" id="chk1014">
+													<label for="chk1014">사무가구-사무가구, 캐비넷</label>
+												</div>
+											</div>
+											<!--// checkbox -->
+										</div>
+									</dd>
+								</dl>
+								<dl>
+									<dt><p>납품(직납)가능<br>지역 선택<br>(복수선택 가능,<br> 택배제외)</p></dt>
+									<dd>
+										<div>
+											<!-- checkbox 2025-09-19 코드 추가 -->
+											<div class="checkboxWrap">
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1101">
+													<label for="chk1101">서울권</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1102">
+													<label for="chk1102">서울특별시</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1103">
+													<label for="chk1103">경인권</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1104">
+													<label for="chk1104">인천광역시</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1105">
+													<label for="chk1105">광명, 부천, 김포, 안산, 시흥, 화성</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1106">
+													<label for="chk1106">경기 북동부권</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1107">
+													<label for="chk1107">고양, 의정부, 동두천, 파주, 연천, 포천, 양주, 구리, 하남, 남양주, 가평, 양평</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1108">
+													<label for="chk1108">경기 남부권</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1109">
+													<label for="chk1109">수원, 과천, 안양, 군포, 의왕</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1110">
+													<label for="chk1110">성남, 광주, 용인, 수산, 평택, 안성, 여주, 이천</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1111">
+													<label for="chk1111">강원권</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1112">
+													<label for="chk1112">강원 영서</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1113">
+													<label for="chk1113">강원 영동</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1114">
+													<label for="chk1114">충청권</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1115">
+													<label for="chk1115">충청남도</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1116">
+													<label for="chk1116">충청북도</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1117">
+													<label for="chk1117">대전광역시</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1118">
+													<label for="chk1118">전라권</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1119">
+													<label for="chk1119">전라남도, 광주광역시</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1120">
+													<label for="chk1120">전라남도</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1121">
+													<label for="chk1121">광주광역시</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1122">
+													<label for="chk1122">경상북부권</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk11123">
+													<label for="chk11123">경상북도</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1124">
+													<label for="chk1124">대구광역시</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1125">
+													<label for="chk1125">경상남부권</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1126">
+													<label for="chk1126">경상남도</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1127">
+													<label for="chk1127">울산광역시</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1128">
+													<label for="chk1128">부산권</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1129">
+													<label for="chk1129">부산광역시</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1130">
+													<label for="chk1130">제주권</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="chk11" id="chk1131">
+													<label for="chk1131">제주도</label>
+												</div>
+											</div>
+											<!--// checkbox -->
+										</div>
+									</dd>
+								</dl>
 							</div>
 							<!--// formTable -->
 						</div>

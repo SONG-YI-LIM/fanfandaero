@@ -284,7 +284,7 @@
                             <button type="button" class="btnTxt download">매뉴얼 다운로드</button>
                         </div>
                         <div class="myInfo">
-                            <p class="name"><span class="v1">기업</span>홍길동 님</p>
+                            <p class="name"><span class="v2">MD</span>홍길동 님</p>
                             <span class="recentDate">최근접속일 : 2025.08.01 10:11:15</span>
                         </div>
                     </div>
@@ -356,20 +356,19 @@
 					<ol>
 						<li class="home"><a href="">홈</a></li>
 						<li><a href="#"><strong>마이페이지</strong></a></li>
+						<li><a href="#"><strong>판판소싱 모집내역</strong></a></li>
 					</ol>
 				</div>
 				<!-- breadcrumb -->
 				<!-- subTop -->
 				<div class="subTop v8">
 					<div class="titArea">
-                        <!-- 2025-09-18 -->
                         <div class="left">
-                            <h2>나의 활동</h2>
+                            <h2>입점이력 및 성과</h2>
                         </div>
                         <div class="right">
                             <button type="button" class="btnTxt download">매뉴얼 다운로드</button>
                         </div>
-                        <!--// 2025-09-18 -->
 					</div>
 				</div>
 				<!--// subTop -->
@@ -378,230 +377,153 @@
 				<div class="subCont">
 					<div class="cont">
                         <div class="section">
-                            <div class="titArea">
-                                <div class="left">
-                                    <h3>지원현황</h3>
-                                </div>
-                                <div class="right">
-                                    <button type="button" class="btn bgPrima">제품등록</button>
-                                    <button type="button" class="btn bgPrima">내 문의내역</button>
+                            <div class="grayBox border">
+                                <div>
+                                    <ul class="dotList">
+                                        <li>판판소싱 공고제목을 선택하고, 해당 데이터를 입력한 엑셀파일을 업로드해주세요.</li>
+                                        <li>업로드한 엑셀시트를 확인 후, 저장 버튼을 클릭하셔야 업로드한 내용이 반영됩니다.</li>
+                                        <li>한번에 대량의 데이터를 등록하시면 데이터 양에 따라서 작업시간이 오래 걸릴 수 있습니다.</li>
+                                        <li>작업 도중 화면을 종료하시면 오류가 발생합니다. 끝날 때까지 기다려주세요.</li>
+                                    </ul>
                                 </div>
                             </div>
-                            <!-- supportStatus -->
-                            <div class="supportStatus">
-                                <dl class="status01">
-                                    <dt>신청완료</dt>
-                                    <dd>5</dd>
-                                </dl>
-                                <dl class="status02">
-                                    <dt>접수완료</dt>
-                                    <dd>2</dd>
-                                </dl>
-                                <dl class="status03">
-                                    <dt>심사중</dt>
-                                    <dd>7</dd>
-                                </dl>
-                                <dl class="status04">
-                                    <dt>선정</dt>
-                                    <dd>2</dd>
-                                </dl>
-                                <dl class="status05">
-                                    <dt>지원완료</dt>
-                                    <dd>9</dd>
-                                </dl>
-                                <dl class="status06">
-                                    <dt>취소/반려/탈락/해지</dt>
-                                    <dd>3</dd>
-                                </dl>
+                            <div class="whiteBox border">
+                                <div>
+                                    <ul class="dotList">
+                                        <li>입력양식 다운로드 후, 매출액,주문건수,주문수량을 작성하여 업로드해주세요.</li>
+                                        <li>엑셀컬럼(매출액,주문건수,주문수량)외의 컬럼은 절대 수정하시면 안됩니다.</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <!--// supportStatus -->
                         </div>
 
                         <div class="section">
-                            <!-- halfArea -->
-                            <div class="halfArea">
-                                <!-- 2025-09-18 -->
-                                <div class="halfSection">
-                                    <div class="actBox">
-                                        <h3>지원사업 추천 (8)</h3>
-                                        <!-- actSwiper -->
-                                        <div class="swiper actSwiper">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide act">
-                                                    <div class="label">
-                                                        <ul>
-                                                            <li class="v1">D-2</li><!-- D-day -->
-                                                            <li class="v2">도약단계</li><!-- 단계 -->
-                                                            <li class="v3">지원</li>
-                                                            <li class="v3">홍보·마케팅</li>
-                                                            <li class="v3">전국</li>
-                                                        </ul>
-                                                    </div>
-                                                    <p>2025 판판셀러(온라인쇼핑몰 통합관리시스템) 2025 판판셀러(온라인쇼핑몰 통합관리시스템)</p>
-                                                    <div class="bot">
-                                                        <span>사업기간 : 2025-01-01 ~ 2025-12-31</span>
-                                                        <button type="button" class="btn bgSecond">자세히보기</button>
-                                                    </div>
+                            <!-- formTable -->
+                            <div class="formTable">
+                                <dl>
+                                    <dt><p>양식 다운로드</p></dt>
+                                    <dd>
+                                        <div>
+                                            <button type="button" class="btn bgSecond">입력양식 다운로드(.xlsx)</button>
+                                        </div>
+                                    </dd>
+                                    <dt><p>업로드할 공고 선택</p></dt>
+                                    <dd>
+                                        <div>
+                                            <select title="업로드할 공고 선택">
+                                                <option value="">선택</option>
+                                            </select>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><p>엑셀 업로드</p></dt>
+                                    <dd>
+                                        <div>
+                                            <!-- fileWrap -->
+                                            <div class="fileWrap v2">
+                                                <div class="fileBtn">
+                                                    <input type="file" title="파일선택">
+                                                    <button type="button" class="btn btnUpload bgSecond">파일추가</button>
                                                 </div>
-                                                <div class="swiper-slide act">
-                                                    <div class="label">
-                                                        <ul>
-                                                            <li class="v3">라벨1</li>
-                                                            <li class="v3">라벨2</li>
-                                                            <li class="v3">라벨3</li>
-                                                            <li class="v3">라벨4</li>
-                                                        </ul>
-                                                    </div>
-                                                    <p>2025 판판셀러(온라인쇼핑몰 통합관리시스템)</p>
-                                                    <div class="bot">
-                                                        <span>사업기간 : 2025-01-01 ~ 2025-12-31</span>
-                                                        <button type="button" class="btn bgSecond">자세히보기</button>
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide act">
-                                                    <div class="label">
-                                                        <ul>
-                                                            <li class="v3">라벨1</li>
-                                                            <li class="v3">라벨2</li>
-                                                            <li class="v3">라벨3</li>
-                                                            <li class="v3">라벨4</li>
-                                                        </ul>
-                                                    </div>
-                                                    <p>2025 판판셀러(온라인쇼핑몰 통합관리시스템)</p>
-                                                    <div class="bot">
-                                                        <span>사업기간 : 2025-01-01 ~ 2025-12-31</span>
-                                                        <button type="button" class="btn bgSecond">자세히보기</button>
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide act">
-                                                    <div class="label">
-                                                        <ul>
-                                                            <li class="v3">라벨1</li>
-                                                            <li class="v3">라벨2</li>
-                                                            <li class="v3">라벨3</li>
-                                                            <li class="v3">라벨4</li>
-                                                        </ul>
-                                                    </div>
-                                                    <p>2025 판판셀러(온라인쇼핑몰 통합관리시스템)</p>
-                                                    <div class="bot">
-                                                        <span>사업기간 : 2025-01-01 ~ 2025-12-31</span>
-                                                        <button type="button" class="btn bgSecond">자세히보기</button>
-                                                    </div>
-                                                </div>
+                                                <input type="text" class="fileInput" value="첨부파일 없음">
                                             </div>
-                                            <div class="swiper-button-prev">이전</div>
-                                            <div class="swiper-button-next">다음</div>
+                                            <!--/// fileWrap -->
                                         </div>
-                                        <!--// actSwiper -->
+                                    </dd>
+                                </dl>
+                            </div> 
+                            <!--// formTable -->
+                        </div>
+
+                        <div class="section">
+                            <!-- tableTop -->
+                            <div class="tableTop">
+                                <div class="left">
+                                    <div class="total">
+                                        <p>총</p>
+                                        <p><b class="cPoint">000</b>개</p>
                                     </div>
                                 </div>
-                                <div class="halfSection">
-                                    <div class="actBox">
-                                        <h3>상품소싱 추천 (1)</h3>
-                                        <!-- 2025-09-23 - 리스트가 없는 경우 -->
-                                        <!--
-                                        <div class="act actNone">
-                                            <p>현재 신청 가능한 소싱 공고가 없습니다.</p>
-                                        </div>
-                                        -->
-                                        <!--// 2025-09-23 - 리스트가 없는 경우 -->
-                                        <!-- actSwiper -->
-                                        <div class="swiper actSwiper">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide act">
-                                                    <div class="label">
-                                                        <ul>
-                                                            <li class="v1">D-2</li><!-- D-day -->
-                                                            <li class="v2">도약단계</li><!-- 단계 -->
-                                                            <li class="v3">지원</li>
-                                                            <li class="v3">홍보·마케팅</li>
-                                                            <li class="v3">전국</li>
-                                                        </ul>
-                                                    </div>
-                                                    <p>2025 판판셀러(온라인쇼핑몰 통합관리시스템) 2025 판판셀러(온라인쇼핑몰 통합관리시스템)</p>
-                                                    <div class="bot">
-                                                        <span>사업기간 : 2025-01-01 ~ 2025-12-31</span>
-                                                        <button type="button" class="btn bgSecond">자세히보기</button>
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide act">
-                                                    <div class="label">
-                                                        <ul>
-                                                            <li class="v3">라벨1</li>
-                                                            <li class="v3">라벨2</li>
-                                                            <li class="v3">라벨3</li>
-                                                            <li class="v3">라벨4</li>
-                                                        </ul>
-                                                    </div>
-                                                    <p>2025 판판셀러(온라인쇼핑몰 통합관리시스템)</p>
-                                                    <div class="bot">
-                                                        <span>사업기간 : 2025-01-01 ~ 2025-12-31</span>
-                                                        <button type="button" class="btn bgSecond">자세히보기</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-button-prev">이전</div>
-                                            <div class="swiper-button-next">다음</div>
-                                        </div>
-                                        <!--// actSwiper -->
-                                    </div>
-                                </div>
-                                <div class="halfSection">
-                                    <div class="actBox">
-                                        <h3>마감임박 지원사업</h3>
-                                        <!-- actSwiper -->
-                                        <div class="swiper actSwiper">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide act">
-                                                    <div class="label">
-                                                        <ul>
-                                                            <li class="v1">D-2</li><!-- D-day -->
-                                                            <li class="v2">도약단계</li><!-- 단계 -->
-                                                            <li class="v3">지원</li>
-                                                            <li class="v3">홍보·마케팅</li>
-                                                            <li class="v3">전국</li>
-                                                        </ul>
-                                                    </div>
-                                                    <p>2025 판판셀러(온라인쇼핑몰 통합관리시스템) 2025 판판셀러(온라인쇼핑몰 통합관리시스템)</p>
-                                                    <div class="bot">
-                                                        <span>사업기간 : 2025-01-01 ~ 2025-12-31</span>
-                                                        <button type="button" class="btn bgSecond">자세히보기</button>
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide act">
-                                                    <div class="label">
-                                                        <ul>
-                                                            <li class="v3">라벨1</li>
-                                                            <li class="v3">라벨2</li>
-                                                            <li class="v3">라벨3</li>
-                                                            <li class="v3">라벨4</li>
-                                                        </ul>
-                                                    </div>
-                                                    <p>2025 판판셀러(온라인쇼핑몰 통합관리시스템)</p>
-                                                    <div class="bot">
-                                                        <span>사업기간 : 2025-01-01 ~ 2025-12-31</span>
-                                                        <button type="button" class="btn bgSecond">자세히보기</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-button-prev">이전</div>
-                                            <div class="swiper-button-next">다음</div>
-                                        </div>
-                                        <!--// actSwiper -->
-                                    </div>
-                                </div>
-                                <div class="halfSection">
-                                    <div class="goArea">
-                                        <a href=""><img src="../assets/images/content/img-go01.svg" alt="판로 마케팅 주변 지인에게 판판대로 추천하기"></a>
-                                        <div class="goBox">
-                                            <a href=""><span>판로정보 보러가기</span></a>
-                                            <a href=""><span>우수사레 보러가기</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--// 2025-09-18 -->
                             </div>
-                            <!--// halfArea -->
+                            <!--// tableTop -->
+                            <!-- colTable -->
+                            <div class="colTable">
+                                <table>
+                                    <caption>번호, 공고제목, 신청기업명, 사업자등록번호, 선정상품명, 상품코드, 매출액(원), 주문수(건), 주문량(개) 항목으로 구성된 입점이력 및 성과 표</caption>
+                                    <colgroup>
+                                        <col style="width:60px">
+                                        <col style="width:250px">
+                                        <col style="width:130px">
+                                        <col style="width:150px">
+                                        <col style="width:130px">
+                                        <col style="width:130px">
+                                        <col style="width:150px">
+                                        <col style="width:130px">
+                                        <col style="width:130px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="bgBlue">번호</th>
+                                            <th scope="col" class="bgBlue">공고제목</th>
+                                            <th scope="col" class="bgBlue">신청기업명</th>
+                                            <th scope="col" class="bgBlue">사업자등록번호</th>
+                                            <th scope="col" class="bgBlue">선정상품명</th>
+                                            <th scope="col" class="bgBlue">상품코드</th>
+                                            <th scope="col" class="bgBlue">매출액(원)</th>
+                                            <th scope="col" class="bgBlue">주문수(건)</th>
+                                            <th scope="col" class="bgBlue">주문량(개)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="txtC">10</td>
+                                            <td>유통센터 공고</td>
+                                            <td>한국중소벤처기업유통원</td>
+                                            <td class="txtC">123-45-67890</td>
+                                            <td>페미닌 라인 티</td>
+                                            <td class="txtC">J490D</td>
+                                            <td class="txtR">999,999,999</td>
+                                            <td class="txtC">100</td>
+                                            <td class="txtC">146</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="txtC">9</td>
+                                            <td>유통센터 공고</td>
+                                            <td>한국중소벤처기업유통원</td>
+                                            <td class="txtC">123-45-67890</td>
+                                            <td>페미닌 라인 티</td>
+                                            <td class="txtC">J490D</td>
+                                            <td class="txtR">999,999,999</td>
+                                            <td class="txtC">100</td>
+                                            <td class="txtC">146</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--// colTable -->
+                            <!-- paging -->
+                            <div class="pagination">
+                                <div>
+                                    <a class="pageNavi first" href="#"><span class="hide">처음</span></a>
+                                    <a class="pageNavi prev" href="#">이전</a>
+                                    <div class="pageLinks">
+                                        <a class="pageLink" href="#">1</a>
+                                        <span class="pageLink linkDot"></span>
+                                        <a class="pageLink" href="#">6</a>
+                                        <a class="pageLink" href="#">7</a>
+                                        <a class="pageLink curr" href="#" title="선택됨">8</a>
+                                        <a class="pageLink" href="#">9</a>
+                                        <a class="pageLink" href="#">10</a>
+                                        <a class="pageLink" href="#">11</a>
+                                        <span class="pageLink linkDot"></span>
+                                        <a class="pageLink" href="#">120</a>
+                                    </div>
+                                    <a class="pageNavi next" href="#">다음</a>
+                                    <a class="pageNavi last" href="#"><span class="hide">마지막</span></a>
+                                </div>
+                            </div>
+                            <!-- //paging -->
                         </div>
 					</div>
 				</div>
@@ -662,7 +584,7 @@
 						</div>
 					</div>
 					<div class="menu">
-						<a href="#" class="btnTxt rt more">찾아오시는 길</a>
+						<a href="#" class="btnIco">찾아오시는 길</a>
 					</div>
 					<div class="sns">
 						<a href="#" class="facebook" target="_blank"><span class="hide">페이스북</span></a>
@@ -689,4 +611,3 @@
 <!--// wrap -->
 </body>
 </html>
- 
