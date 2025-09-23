@@ -285,7 +285,7 @@
 				</div>
 				<!-- breadcrumb -->
 				<!-- titArea -->
-				<div class="titArea txtC borderB">
+				<div class="titArea txtC borderB mTxtL"> <!-- 2025-09-23 클래스 추가 -->
 					<h2>회원가입</h2>
 				</div>
 				<!--// titArea -->
@@ -296,30 +296,30 @@
 						<div class="joinTopTxt">
 							<p>판판대로의 회원이 되시면 중소기업지원의 다양한 서비스를 이용할 수 있습니다. <br>비밀번호는 개인정보 보호를 위해 주기적으로 변경해주시기 바랍니다.</p>
 						</div>
-						<!-- step -->
-						<div class="step">
-							<ol>
-								<li>
+						<!-- step 2025-09-23 수정 -->
+						<div class="step step6 stepSwiper"> <!-- 스탭이 6단계일 경우 step6 클래스 추가 -->
+							<ol class="swiper-wrapper">
+								<li class="swiper-slide">
 									<span>STEP 01</span>
 									<p>약관동의</p>
 								</li>
-								<li>
+								<li class="swiper-slide">
 									<span>STEP 02</span>
 									<p>회원인증</p>
 								</li>
-								<li class="curr">
+								<li class="swiper-slide curr">
 									<span>STEP 03</span>
 									<p>회원정보입력</p>
 								</li>
-								<li>
+								<li class="swiper-slide">
 									<span>STEP 04</span>
 									<p>회원가입신청완료</p>
 								</li>
-								<li>
+								<li class="swiper-slide">
 									<span>STEP 05</span>
-									<p>상품정보등록</p>
+									<p>가입승인</p>
 								</li>
-								<li>
+								<li class="swiper-slide">
 									<span>STEP 06</span>
 									<p>회원가입완료</p>
 								</li>
@@ -494,19 +494,25 @@
 									<dt><p class="req">이메일</p></dt>
 									<dd>
 										<div>
+											<!-- 2025-09-23 코드 수정 -->
 											<div class="flexWrap email">
-												<div>
-													<input type="text" title="이메일 아이디">
-												</div>
-												<span>@</span>
+                                                <div class="flexWrap">
+                                                    <div>
+                                                        <input type="text" title="이메일 아이디">
+                                                    </div>
+                                                    <span>@</span>
+                                                </div>
 												<div>
 													<input type="text" title="이메일 도메인">
 												</div>
-												<select title="이메일 도메인 선택">
-													<option value="">선택</option>
-													<option value="">fanfandaero.kr</option>
-												</select>
+												<div>
+                                                    <select title="이메일 도메인 선택">
+                                                        <option value="">선택</option>
+                                                        <option value="">fanfandaero.kr</option>
+                                                    </select>
+												</div>
 											</div>
+											<!-- 2025-09-23 코드 수정 -->
 											<p class="stxt cPoint">hanmail.net과 daum.net은 메일이 스팸으로 분류되어 수신이 원활하지 않을 수 있습니다.</p><!-- 2025-09-03 -->
 										</div>
 									</dd>
@@ -623,15 +629,19 @@
 									<dd>
 										<div>
 											<!-- fileWrap -->
-											<div class="fileWrap">
-												<input type="text" class="fileInput" disabled />
-												<div class="fileBtn">
-													<input type="file" title="파일선택">
-													<button type="button" class="btn bgSecond btnUpload">파일찾기</button><!-- 2025-09-03 -->
-												</div>
-												<button type="button" class="btn bgSecond btnDelete">파일삭제</button><!-- 2025-09-03 -->
-											</div>
-											<!--/// fileWrap -->
+                                            <div class="fileWrap">
+                                                <input type="text" class="fileInput" disabled />
+                                                <!-- 2025-09-23 코드 수정 -->
+                                                <div class="fileCol">
+                                                    <div class="fileBtn">
+                                                        <input type="file" title="파일선택">
+                                                        <button type="button" class="btn bgSecond btnUpload">파일찾기</button>
+                                                    </div>
+                                                    <button type="button" class="btn bgSecond btnDelete">파일삭제</button>
+                                                </div>
+                                                <!-- 2025-09-23 코드 수정 -->
+                                            </div>
+                                            <!--/// fileWrap -->
                                             <p class="stxt">이미지 확장자 JPG, JPEG, GIF, PNG / 800*5000 픽셀 이하 / 파일크기 10M 이하</p><!-- 2025-09-03 -->
 										</div>
 									</dd>
@@ -705,12 +715,16 @@
 															</td>
 															<td>
 																<div class="dateWrap">
-																	<div>
-																		<div class="date">
-																			<input type="text" title="시작날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
+																	<!-- 2025-09-23 코드 수정 -->
+																	<div class="flexWrap">
+																		<div>
+																			<div class="date">
+																				<input type="text" title="시작날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
+																			</div>
 																		</div>
+																		<span>~</span>
 																	</div>
-																	<span>~</span>
+																	<!--// 2025-09-23 코드 수정 -->
 																	<div>
 																		<div class="date">
 																			<input type="text" title="종료날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
@@ -729,12 +743,16 @@
 															</td>
 															<td>
 																<div class="dateWrap">
-																	<div>
-																		<div class="date">
-																			<input type="text" title="시작날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
+																	<!-- 2025-09-23 코드 수정 -->
+																	<div class="flexWrap">
+																		<div>
+																			<div class="date">
+																				<input type="text" title="시작날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
+																			</div>
 																		</div>
+																		<span>~</span>
 																	</div>
-																	<span>~</span>
+																	<!--// 2025-09-23 코드 수정 -->
 																	<div>
 																		<div class="date">
 																			<input type="text" title="종료날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
@@ -753,12 +771,16 @@
 															</td>
 															<td>
 																<div class="dateWrap">
-																	<div>
-																		<div class="date">
-																			<input type="text" title="시작날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
+																	<!-- 2025-09-23 코드 수정 -->
+																	<div class="flexWrap">
+																		<div>
+																			<div class="date">
+																				<input type="text" title="시작날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
+																			</div>
 																		</div>
+																		<span>~</span>
 																	</div>
-																	<span>~</span>
+																	<!--// 2025-09-23 코드 수정 -->
 																	<div>
 																		<div class="date">
 																			<input type="text" title="종료날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
@@ -773,11 +795,15 @@
 																<!-- fileWrap -->
 																<div class="fileWrap">
 																	<input type="text" class="fileInput" disabled />
-																	<div class="fileBtn">
-																		<input type="file" title="파일선택">
-																		<button type="button" class="btn bgSecond btnUpload">파일찾기</button><!-- 2025-09-03 -->
+																	<!-- 2025-09-23 코드 수정 -->
+																	<div class="fileCol">
+																		<div class="fileBtn">
+																			<input type="file" title="파일선택">
+																			<button type="button" class="btn bgSecond btnUpload">파일찾기</button>
+																		</div>
+																		<button type="button" class="btn bgSecond btnDelete">파일삭제</button>
 																	</div>
-																	<button type="button" class="btn bgSecond btnDelete">파일삭제</button><!-- 2025-09-03 -->
+																	<!-- 2025-09-23 코드 수정 -->
 																</div>
 																<!--/// fileWrap -->
 																<ul class="dotList">
@@ -803,9 +829,9 @@
 												<table>
 													<caption>자격증/면허증, 발행기관, 취득일 항목으로 구성된 부가정보 자격증 및 면허 표</caption>
 													<colgroup>
-														<col style="width:100px">
+														<col style="width:130px"> <!-- 2025-09-23 코드 수정 -->
 														<col style="width:300px">
-														<col spab="2" style="width:400px">
+														<col span="2" style="width:400px"> <!-- 2025-09-23 코드 수정 -->
 													</colgroup>
 													<thead>
 														<tr>
@@ -855,11 +881,15 @@
 																<!-- fileWrap -->
 																<div class="fileWrap">
 																	<input type="text" class="fileInput" disabled />
-																	<div class="fileBtn">
-																		<input type="file" title="파일선택">
-																		<button type="button" class="btn bgSecond btnUpload">파일찾기</button><!-- 2025-09-03 -->
+																	<!-- 2025-09-23 코드 수정 -->
+																	<div class="fileCol">
+																		<div class="fileBtn">
+																			<input type="file" title="파일선택">
+																			<button type="button" class="btn bgSecond btnUpload">파일찾기</button>
+																		</div>
+																		<button type="button" class="btn bgSecond btnDelete">파일삭제</button>
 																	</div>
-																	<button type="button" class="btn bgSecond btnDelete">파일삭제</button><!-- 2025-09-03 -->
+																	<!-- 2025-09-23 코드 수정 -->
 																</div>
 																<!--/// fileWrap -->
 																<ul class="dotList">

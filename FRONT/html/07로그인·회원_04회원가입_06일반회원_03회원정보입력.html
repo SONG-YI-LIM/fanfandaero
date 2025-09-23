@@ -285,7 +285,7 @@
 				</div>
 				<!-- breadcrumb -->
 				<!-- titArea -->
-				<div class="titArea txtC borderB">
+				<div class="titArea txtC borderB mTxtL"> <!-- 2025-09-23 클래스 추가 -->
 					<h2>회원가입</h2>
 				</div>
 				<!--// titArea -->
@@ -296,22 +296,22 @@
 						<div class="joinTopTxt">
 							<p>판판대로의 회원이 되시면 중소기업지원의 다양한 서비스를 이용할 수 있습니다. <br>비밀번호는 개인정보 보호를 위해 주기적으로 변경해주시기 바랍니다.</p>
 						</div>
-						<!-- step -->
-						<div class="step">
-							<ol>
-								<li>
+						<!-- step 2025-09-23 수정 -->
+						<div class="step stepSwiper"> <!-- 스탭이 6단계일 경우 step6 클래스 추가 -->
+							<ol class="swiper-wrapper">
+								<li class="swiper-slide">
 									<span>STEP 01</span>
 									<p>약관동의</p>
 								</li>
-								<li>
+								<li class="swiper-slide">
 									<span>STEP 02</span>
 									<p>회원인증</p>
 								</li>
-								<li class="curr">
+								<li class="swiper-slide curr">
 									<span>STEP 03</span>
 									<p>회원정보입력</p>
 								</li>
-								<li>
+								<li class="swiper-slide">
 									<span>STEP 04</span>
 									<p>회원가입완료</p>
 								</li>
@@ -433,19 +433,25 @@
 									<dt><p class="req">이메일</p></dt>
 									<dd>
 										<div>
+											<!-- 2025-09-23 코드 수정 -->
 											<div class="flexWrap email">
-												<div>
-													<input type="text" title="이메일 아이디">
-												</div>
-												<span>@</span>
+                                                <div class="flexWrap">
+                                                    <div>
+                                                        <input type="text" title="이메일 아이디">
+                                                    </div>
+                                                    <span>@</span>
+                                                </div>
 												<div>
 													<input type="text" title="이메일 도메인">
 												</div>
-												<select title="이메일 도메인 선택">
-													<option value="">선택</option>
-													<option value="">fanfandaero.kr</option>
-												</select>
+												<div>
+                                                    <select title="이메일 도메인 선택">
+                                                        <option value="">선택</option>
+                                                        <option value="">fanfandaero.kr</option>
+                                                    </select>
+												</div>
 											</div>
+											<!-- 2025-09-23 코드 수정 -->
 											<p class="stxt cPoint">hanmail.net과 daum.net은 메일이 스팸으로 분류되어 수신이 원활하지 않을 수 있습니다.</p><!-- 2025-09-03 -->
 										</div>
 									</dd>
