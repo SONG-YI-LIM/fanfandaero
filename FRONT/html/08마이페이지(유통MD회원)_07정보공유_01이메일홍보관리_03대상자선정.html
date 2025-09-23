@@ -275,227 +275,118 @@
 	<div id="container">
 		<!-- contents -->
 		<div class="contents">
-			<!-- lnb -->
-			<div id="lnb">
-				<div class="in">
-                    <div class="lnbTop">
-                        <div class="top">
-                            <h4>마이페이지</h4>
-                            <button type="button" class="btnTxt download">매뉴얼 다운로드</button>
-                        </div>
-                        <div class="myInfo">
-                            <p class="name"><span class="v2">MD</span>홍길동 님</p>
-                            <span class="recentDate">최근접속일 : 2025.08.01 10:11:15</span>
-                        </div>
-                    </div>
-					<ul class="lnbUl">
-						<li>
-                            <a href="">회원정보</a>
-                            <ul>
-                                <li><a href="">1</a></li>
-                                <li><a href="">2</a></li>
-                            </ul>
-                        </li>
-						<li>
-                            <a href="">지원사업 신청내역</a>
-                            <ul>
-                                <li><a href="">1</a></li>
-                                <li><a href="">2</a></li>
-                            </ul>
-                        </li>
-                        </li>
-						<li>
-                            <a href="">수행기관 공모 신청내역</a>
-                            <ul>
-                                <li><a href="">1</a></li>
-                                <li><a href="">2</a></li>
-                            </ul>
-                        </li>
-						<li>
-                            <a href="">자가진단 신청내역</a>
-                            <ul>
-                                <li><a href="">1</a></li>
-                                <li><a href="">2</a></li>
-                            </ul>
-                        </li>
-						<li>
-                            <a href="">상품소싱 신청내역</a>
-                            <ul>
-                                <li><a href="">1</a></li>
-                                <li><a href="">2</a></li>
-                            </ul>
-                        </li>
-						<li>
-                            <a href="">상품 관리</a>
-                            <ul>
-                                <li><a href="">1</a></li>
-                                <li><a href="">2</a></li>
-                            </ul>
-                        </li>
-						<li>
-                            <a href="">문의/알림</a>
-                            <ul>
-                                <li><a href="">1</a></li>
-                                <li><a href="">2</a></li>
-                            </ul>
-                        </li>
-						<li>
-                            <a href="">MRO</a>
-                            <ul>
-                                <li><a href="">1</a></li>
-                                <li><a href="">2</a></li>
-                            </ul>
-                        </li>
-					</ul>
-				</div>
-			</div>
-			<!--// lnb -->
 			<div class="inner">
 				<!-- breadcrumb -->
 				<div class="breadcrumb">
 					<ol>
 						<li class="home"><a href="">홈</a></li>
-						<li><a href="#"><strong>마이페이지</strong></a></li>
-						<li><a href="#"><strong>판판소싱 모집내역</strong></a></li>
+						<li><a href="#"><strong>회원가입</strong></a></li>
 					</ol>
 				</div>
 				<!-- breadcrumb -->
-				<!-- subTop -->
-				<div class="subTop v8">
-					<div class="titArea">
-                        <div class="left">
-                            <h2>입점이력 및 성과</h2>
-                        </div>
-                        <!-- 2025-09-23 -->
-                        <div class="right">
-                            <button type="button" class="btnTxt download">매뉴얼 다운로드</button>
-                        </div>
-                        <!--// 2025-09-23 -->
-					</div>
-				</div>
-				<!--// subTop -->
 
 				<!-- subCont -->
 				<div class="subCont">
 					<div class="cont">
-                        <div class="section">
-                            <div style="display: flex; align-items: center; justify-content: center; height: 200px; background: #ccc;">검색필터 영역입니다.</div>
-                        </div>
+						<button type="button" class="btn" onclick="fn_layer('layer01', 1000)">대상자 선정</button>
+						<!-- layer -->
+						<div class="layerPop" id="layer01">
+							<div class="inner">
+								<strong class="tit">대상자 선정</strong>
+								<div class="cont">
+									<div>
+                                        <div class="section">
+                                            <div class="titArea">
+                                                <div class="left">
+                                                    <h3>판판소싱 참여기업</h3>
+                                                </div>
+                                            </div>
+                                            <!-- formTable -->
+                                            <div class="formTable">
+                                                <dl>
+                                                    <dt><p>연도</p></dt>
+                                                    <dd>
+                                                        <div>
+                                                            <select title="연도">
+                                                                <option value="">선택</option>
+                                                            </select>
+                                                        </div>
+                                                    </dd>
+                                                    <dt><p>사업명</p></dt>
+                                                    <dd>
+                                                        <div>
+                                                            <select title="사업명">
+                                                                <option value="">선택</option>
+                                                            </select>
+                                                        </div>
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt><p>접수상태</p></dt>
+                                                    <dd>
+                                                        <div>
+                                                            <select title="접수상태">
+                                                                <option value="">선택</option>
+                                                            </select>
+                                                        </div>
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                            <!--// formTable -->
+                                        </div>
 
-                        <div class="section">
-                            <!-- tableTop -->
-                            <div class="tableTop">
-                                <div class="left">
-                                    <div class="total">
-                                        <p>총</p>
-                                        <p><b class="cPoint">000</b>개</p>
-                                    </div>
-                                </div>
-                                <div class="right">
-                                    <button type="button" class="btn bgSecond">목록 엑셀 다운로드</button>
-                                    <button type="button" class="btn bgSecond">엑셀 업로드</button>
-                                </div>
-                            </div>
-                            <!--// tableTop -->
-                            <!-- colTable --> 
-                            <div class="colTable">
-                                <table>
-                                    <caption>번호, 선택, 공고제목, 신청기업명, 사업자번호, 선정 상품명, 상품코드, 매출액(원), 주문수(건), 주문량(개) 항목으로 구성된 입점이력 및 성과 표</caption>
-                                    <colgroup>
-                                        <col span="2" style="width:60px">
-                                        <col style="width:250px">
-                                        <col style="width:130px">
-                                        <col style="width:150px">
-                                        <col style="width:130px">
-                                        <col style="width:130px">
-                                        <col style="width:150px">
-                                        <col style="width:120px">
-                                        <col style="width:120px">
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th scope="col" class="bgBlue">번호</th>
-                                            <th scope="col" class="bgBlue tableChk">
-                                                <div class="checkbox">
-                                                    <input type="checkbox" name="chkThAll01" id="chkThAll01">
-                                                    <label for="chkThAll01">전체선택</label>
-                                                </div>
-                                            </th>
-                                            <th scope="col" class="bgBlue">공고제목</th>
-                                            <th scope="col" class="bgBlue">신청기업명</th>
-                                            <th scope="col" class="bgBlue">사업자번호</th>
-                                            <th scope="col" class="bgBlue">선정 상품명</th>
-                                            <th scope="col" class="bgBlue">상품코드</th>
-                                            <th scope="col" class="bgBlue">매출액(원)</th>
-                                            <th scope="col" class="bgBlue">주문수(건)</th>
-                                            <th scope="col" class="bgBlue">주문량(개)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="txtC">10</td>
-                                            <td class="tableChk">
-                                                <div class="checkbox">
-                                                    <input type="checkbox" name="chkTd01" id="chkTd0101">
-                                                    <label for="chkTd0101">선택</label>
-                                                </div>
-                                            </td>
-                                            <td>유통센터</td>
-                                            <td>한국중소벤처기업유통원</td>
-                                            <td class="txtC">123-45-67890</td>
-                                            <td class="txtC">페미닌 라인 티</td>
-                                            <td class="txtC">J490D</td>
-                                            <td class="txtR">999,999,999</td>
-                                            <td class="txtR">100</td>
-                                            <td class="txtR">146</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="txtC">9 </td>
-                                            <td class="tableChk">
-                                                <div class="checkbox">
-                                                    <input type="checkbox" name="chkTd01" id="chkTd0102">
-                                                    <label for="chkTd0102">선택</label>
-                                                </div>
-                                            </td>
-                                            <td>유통센터</td>
-                                            <td>한국중소벤처기업유통원</td>
-                                            <td class="txtC">123-45-67890</td>
-                                            <td class="txtC">페미닌 라인 티</td>
-                                            <td class="txtC">J490D</td>
-                                            <td class="txtR">999,999,999</td>
-                                            <td class="txtR">100</td>
-                                            <td class="txtR">146</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!--// colTable -->
-                            <!-- paging -->
-                            <div class="pagination">
-                                <div>
-                                    <a class="pageNavi first" href="#"><span class="hide">처음</span></a>
-                                    <a class="pageNavi prev" href="#">이전</a>
-                                    <div class="pageLinks">
-                                        <a class="pageLink" href="#">1</a>
-                                        <span class="pageLink linkDot"></span>
-                                        <a class="pageLink" href="#">6</a>
-                                        <a class="pageLink" href="#">7</a>
-                                        <a class="pageLink curr" href="#" title="선택됨">8</a>
-                                        <a class="pageLink" href="#">9</a>
-                                        <a class="pageLink" href="#">10</a>
-                                        <a class="pageLink" href="#">11</a>
-                                        <span class="pageLink linkDot"></span>
-                                        <a class="pageLink" href="#">120</a>
-                                    </div>
-                                    <a class="pageNavi next" href="#">다음</a>
-                                    <a class="pageNavi last" href="#"><span class="hide">마지막</span></a>
-                                </div>
-                            </div>
-                            <!-- //paging -->
-                        </div>
+                                        <div class="section">
+                                            <!-- colTable -->
+                                            <div class="colTable">
+                                                <table>
+                                                    <caption>추가 수신자(이름/이메일), 수신 거부자(● 이메일/ ○ 사업자번호) 항목으로 구성된 판판소싱 참여기업 표</caption>
+                                                    <colgroup>
+                                                        <col style="width:300px">
+                                                        <col style="width:300px">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col" class="bgBlue">추가 수신자(이름/이메일)</th>
+                                                            <th scope="col" class="bgBlue">수신 거부자(● 이메일/ ○ 사업자번호)</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                하단 예시의 형식처럼 발송대상자 이름과 이메일 주소를 줄바꿈으로 구분하여 입력해주세요. (최대 5개)<br>
+                                                                예)<br>
+                                                                관리자/fanfandaero@naver.ocm<br>
+                                                                운영자/fanfandaero@naver.ocm<br>
+                                                                홍길동/fanfandaero@naver.ocm
+                                                            </td>
+                                                            <td>
+                                                                하단 예시의 형식처럼 발송대상자 이름과 이메일 주소를 줄바꿈으로 구분하여 입력해주세요. (최대 5개)<br>
+                                                                예)<br>
+                                                                관리자/fanfandaero@naver.ocm<br>
+                                                                운영자/fanfandaero@naver.ocm<br>
+                                                                홍길동/fanfandaero@naver.ocm
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!--// colTable -->
+                                        </div>
+									</div>
+                                    <div class="btnBottom">
+										<div class="right">
+											<a href="javascript:void(0)" onclick="fn_layer_close(this)" class="btn bgPrima">선택</a>
+										</div>
+									</div>
+								</div>
+								<a href="javascript:void(0)" onclick="fn_layer_close(this)">닫기</a>
+							</div>
+						</div>
+						<!--// layer -->
 					</div>
 				</div>
 				<!--// subCont -->
+				
 			</div>
 		</div>
 		<!--// contents -->
