@@ -423,88 +423,128 @@
                             <div class="section">
                                 <div class="titArea">
                                     <div class="left">
-                                        <h3>진행이력 및 관리</h3>
+                                        <h3>신청서화면</h3>
                                     </div>
                                 </div>
                                 <!-- formTable -->
                                 <div class="formTable">
                                     <dl>
                                         <dt>
-                                            <p>모집종료일</p>
+                                            <p class="req">기업명</p>
                                         </dt>
                                         <dd>
                                             <div>
-                                                <p>2024.01.11</p>
+                                                <input type="text" title="기업명" value="한국중소벤처기업유통원" readonly>
+                                            </div>
+                                        </dd>
+                                        <dt>
+                                            <p class="req">대표자명</p>
+                                        </dt>
+                                        <dd>
+                                            <div>
+                                                <input type="text" title="대표자명" value="홍길동" readonly>
                                             </div>
                                         </dd>
                                     </dl>
                                     <dl>
                                         <dt>
-                                            <p>모집시작일</p>
+                                            <p class="req">기업유형</p>
                                         </dt>
                                         <dd>
                                             <div>
-                                                <p>2024.01.02</p>
+                                                <select title="기업유형" disabled>
+                                                    <option value="법인사업자">법인사업자</option>
+                                                </select>
+                                            </div>
+                                        </dd>
+                                        <dt>
+                                            <p class="req">사업자번호</p>
+                                        </dt>
+                                        <dd>
+                                            <div>
+                                                <p>123-45-67890</p>
                                             </div>
                                         </dd>
                                     </dl>
                                     <dl>
                                         <dt>
-                                            <p>게시승인일</p>
+                                            <p class="req">설립일</p>
                                         </dt>
                                         <dd>
                                             <div>
-                                                <p>2025.01.04</p>
+                                                <div class="date">
+                                                    <input type="text" title="날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)"
+                                                        placeholder="YYYY-MM-DD" readonly>
+                                                </div>
                                             </div>
                                         </dd>
                                     </dl>
                                     <dl>
                                         <dt>
-                                            <p>게시신청일</p>
+                                            <p class="req">주소지</p>
                                         </dt>
                                         <dd>
                                             <div>
-                                                <p>2025.02.02</p>
+                                                <div class="flexWrap addr">
+                                                    <div class="flexWrap post">
+                                                        <div>
+                                                            <input type="text" title="우편번호" value="07997" readonly>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flexWrap">
+                                                        <div>
+                                                            <input type="text" title="기본주소"
+                                                                value="서울특별시 양천구 목동동로 309(목동)" readonly>
+                                                        </div>
+                                                        <div>
+                                                            <input type="text" title="상세주소" value="홍빌딩 10층" readonly>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                            <p>국내매출액</p>
+                                        </dt>
+                                        <dd>
+                                            <div>
+                                                <div class="flexWrap mb10">
+                                                    <p class="req addressInput">2023년</p>
+                                                    <div class="inputTxtR">
+                                                        <input type="text" title="국내매출액" value="100,000,000" readonly>
+                                                    </div>
+                                                    <p>원</p>
+                                                </div>
+                                                <div class="flexWrap mb10">
+                                                    <p class="req addressInput">2023년</p>
+                                                    <div class="inputTxtR">
+                                                        <input type="text" title="국내매출액" value="100,000,000" readonly>
+                                                    </div>
+                                                    <p>원</p>
+                                                </div>
+                                                <div class="flexWrap">
+                                                    <p class="req addressInput">2023년</p>
+                                                    <div class="inputTxtR">
+                                                        <input type="text" title="국내매출액" value="100,000,000" readonly>
+                                                    </div>
+                                                    <p>원</p>
+                                                </div>
                                             </div>
                                         </dd>
                                     </dl>
                                     <dl>
                                         <dt>
-                                            <p>게시반려일</p>
+                                            <p class="req">상시 근로자수</p>
                                         </dt>
                                         <dd>
                                             <div>
-                                                <p>2025.02.05</p>
-                                            </div>
-                                        </dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>
-                                            <p>수정요청일</p>
-                                        </dt>
-                                        <dd>
-                                            <div>
-                                                <p>2025.02.05</p>
-                                            </div>
-                                        </dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>
-                                            <p>게시신청일</p>
-                                        </dt>
-                                        <dd>
-                                            <div>
-                                                <p>2025.02.10</p>
-                                            </div>
-                                        </dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>
-                                            <p>게시승인일</p>
-                                        </dt>
-                                        <dd>
-                                            <div>
-                                                <p>2025.02.15</p>
+                                                <div class="flexWrap">
+                                                    <div class="inputTxtR">
+                                                        <input type="text" title="국내매출액" value="100,000,000" readonly>
+                                                    </div>
+                                                    <p>원</p>
+                                                </div>
                                             </div>
                                         </dd>
                                     </dl>
@@ -515,44 +555,74 @@
                             <div class="section">
                                 <div class="titArea">
                                     <div class="left">
-                                        <h3>담당자 관리</h3>
-                                    </div>
-                                </div>
-                                <div class="grayBox border">
-                                    <div>
-                                        <ul class="dotList">
-                                            <li>판판대로 담당자에게 전달할 메시지를 작성한 후, 저장해주세요.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="section">
-                                <div class="btnBottom mb10">
-                                    <div class="right">
-                                        <button type="button" class="btn bgPrima">저장</button>
+                                        <h3>담당자</h3>
                                     </div>
                                 </div>
                                 <!-- formTable -->
                                 <div class="formTable">
                                     <dl>
                                         <dt>
-                                            <p>1:1 상담</p>
+                                            <p class="req">담당자</p>
                                         </dt>
                                         <dd>
-                                            <div class="flexWrapForm">
-                                                <textarea title="1:1상담"></textarea>
-                                                <div>
-                                                    <strong>[담당자] 2025-01-23 11시26분</strong>
-                                                    <p>담당자 답장 테스트입니다</p>
+                                            <div>
+                                                <input type="text" title="담당자" value="홍길동" readonly>
+                                            </div>
+                                        </dd>
+                                        <dt>
+                                            <p class="req">부서</p>
+                                        </dt>
+                                        <dd>
+                                            <div>
+                                                <input type="text" title="부서" value="마케팅팀" readonly>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                            <p class="req">직위</p>
+                                        </dt>
+                                        <dd>
+                                            <div>
+                                                <input type="text" title="직위" value="부장" readonly>
+                                            </div>
+                                        </dd>
+                                        <dt>
+                                            <p class="req">연락처</p>
+                                        </dt>
+                                        <dd>
+                                            <div>
+                                                <div class="flexWrap phone">
+                                                    <select title="전화번호 앞 3자리" value="010" disabled>
+                                                        <option value="">선택</option>
+                                                        <option value="">010</option>
+                                                    </select>
+                                                    <span>-</span>
+                                                    <div>
+                                                        <input type="text" title="전화번호 중간 3자리" value="1234" readonly>
+                                                    </div>
+                                                    <span>-</span>
+                                                    <div>
+                                                        <input type="text" title="전화번호 뒤 3자리" value="5678" readonly>
+                                                    </div>
                                                 </div>
-                                                <div>
-                                                    <strong>[담당자] 2025-01-23 11시26분</strong>
-                                                    <p>담당자 답장 테스트입니다</p>
-                                                </div>
-                                                <div>
-                                                    <strong>[담당자] 2025-01-23 11시26분</strong>
-                                                    <p>담당자 답장 테스트입니다</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                            <p class="req">이메일</p>
+                                        </dt>
+                                        <dd>
+                                            <div>
+                                                <div class="flexWrap email">
+                                                    <div>
+                                                        <input type="text" title="이메일 아이디" value="fanfandaero" readonly>
+                                                    </div>
+                                                    <span>@</span>
+                                                    <div>
+                                                        <input type="text" title="이메일 도메인" value="kodma.or.kr" readonly>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </dd>
@@ -560,11 +630,178 @@
                                 </div>
                                 <!--// formTable -->
                             </div>
+
+                            <div class="section">
+                                <div class="titArea">
+                                    <h3>판판소싱 참여이력</h3>
+                                </div>
+                                <div class="mdArea">
+                                    <div class="lt">
+                                        <!-- colTable -->
+                                        <div class="colTable">
+                                            <table>
+                                                <caption>참여연도, 판판소싱공고명, 대표상품명, 유통회사, 참여결과 항목으로 구성된 판판소싱 참여이력 현황 표
+                                                </caption>
+                                                <!-- 2025-09-19 -->
+                                                <colgroup>
+                                                    <col style="width:120px">
+                                                    <col style="width:120px">
+                                                    <col style="width:120px">
+                                                    <col style="width:120px">
+                                                    <col style="width:120px">
+                                                </colgroup>
+                                                <!--// 2025-09-19 -->
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" class="bgBlue">참여연도</th>
+                                                        <th scope="col" class="bgBlue">판판소싱공고명</th>
+                                                        <th scope="col" class="bgBlue">대표 상품명</th>
+                                                        <th scope="col" class="bgBlue">유통회사</th>
+                                                        <th scope="col" class="bgBlue">참여결과</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="txtC">-</td>
+                                                        <td class="txtC">-</td>
+                                                        <td class="txtC">-</td>
+                                                        <td class="txtC">-</td>
+                                                        <td class="txtC">-</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!--// colTable -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="section">
+                                <div class="titArea">
+                                    <h3>지원사업 참여이력</h3>
+                                </div>
+                                <div class="mdArea">
+                                    <div class="lt">
+                                        <!-- colTable -->
+                                        <div class="colTable">
+                                            <table>
+                                                <caption>참여연도, 지원사업명, 운영기관, 참여결과 항목으로 구성된 지원사업 참여이력 현황 표
+                                                </caption>
+                                                <!-- 2025-09-19 -->
+                                                <colgroup>
+                                                    <col style="width:120px">
+                                                    <col style="width:120px">
+                                                    <col style="width:120px">
+                                                    <col style="width:120px">
+                                                </colgroup>
+                                                <!--// 2025-09-19 -->
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" class="bgBlue">참여연도</th>
+                                                        <th scope="col" class="bgBlue">지원사업명</th>
+                                                        <th scope="col" class="bgBlue">운영기관</th>
+                                                        <th scope="col" class="bgBlue">참여결과</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="txtC">-</td>
+                                                        <td class="txtC">-</td>
+                                                        <td class="txtC">-</td>
+                                                        <td class="txtC">-</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!--// colTable -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="section">
+                                <div class="titArea">
+                                    <h3>상품 등록</h3>
+                                    <div class="left">
+                                        <a href="" class="btn borGray">상품추가</a>
+                                        <a href="" class="btn bgPrima">신규등록</a>
+                                    </div>
+                                </div>
+                                <div class="mdArea">
+                                    <div class="lt mb20">
+                                        <!-- colTable -->
+                                        <div class="colTable">
+                                            <table>
+                                                <caption>이미지, 상품명, 카테고리, 가격 항목으로 구성된 지원사업 상품등록 표
+                                                </caption>
+                                                <!-- 2025-09-19 -->
+                                                <colgroup>
+                                                    <col style="width:120px">
+                                                    <col style="width:120px">
+                                                    <col style="width:120px">
+                                                    <col style="width:120px">
+                                                </colgroup>
+                                                <!--// 2025-09-19 -->
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" class="bgBlue">이미지</th>
+                                                        <th scope="col" class="bgBlue">상품명</th>
+                                                        <th scope="col" class="bgBlue">카테고리</th>
+                                                        <th scope="col" class="bgBlue">가격</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="txtC">
+                                                            <div class="img">
+                                                                <img src="../assets/images/content/img-tv01.png" alt="">
+                                                            </div>
+                                                        </td>
+                                                        <td class="txtC">[제이유퍼] 페미닌 라인 티</td>
+                                                        <td class="txtC">의류 > 여성의류 > 블라우스/셔츠/남방</td>
+                                                        <td class="txtC">69,000원</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!--// colTable -->
+                                    </div>
+                                </div>
+                                <!-- formTable -->
+                                <div class="formTable">
+                                    <dl>
+                                        <dt>
+                                            <p>상품기술서</p>
+                                        </dt>
+                                        <dd>
+                                            <!-- fileWrap -->
+                                            <div class="fileWrap v2">
+                                                <div class="fileBtn">
+                                                    <input type="file" title="파일선택">
+                                                    <button type="button" class="btn btnUpload bgSecond">파일추가</button>
+                                                </div>
+                                                <input type="text" class="fileInput" value="첨부파일 없음">
+                                            </div>
+                                            <!--/// fileWrap -->
+                                        </dd>
+                                        <dt>
+                                            <p>첨부자료</p>
+                                        </dt>
+                                        <dd>
+                                            <!-- fileWrap -->
+                                            <div class="fileWrap v2">
+                                                <div class="fileBtn">
+                                                    <input type="file" title="파일선택">
+                                                    <button type="button" class="btn btnUpload bgSecond">파일추가</button>
+                                                </div>
+                                                <input type="text" class="fileInput" value="첨부파일 없음">
+                                            </div>
+                                            <!--/// fileWrap -->
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <!--// formTable -->
+                            </div>
                         </div>
-
-
-
-
 
 
 
@@ -639,86 +876,87 @@
                         </div>
                         <!--// side -->
                     </div>
-                    <!--// subCont -->
                 </div>
+                <!--// subCont -->
             </div>
-            <!--// contents -->
-
-            <!-- quickmenu -->
-            <div id="quickmenu">
-                <div class="quick">
-                    <ul>
-                        <li class="m1"><a href="">공지사항</a></li>
-                        <li class="m2"><a href="">위원신청</a></li>
-                        <li class="m3"><a href="">상담하기</a></li>
-                        <li class="m4"><a href="">원격지원</a></li>
-                    </ul>
-                    <button type="button" class="btnQuick"><span class="hide">퀵메뉴</span></button>
-                </div>
-                <button type="button" class="btnTop"><span class="hide">상단으로 이동</span></button>
-            </div>
-            <!--// quickmenu -->
         </div>
-        <!--// container -->
+        <!--// contents -->
 
-        <!-- footer -->
-        <footer id="footer">
-            <div class="inner">
-                <div class="footerCont">
-                    <div class="left">
-                        <div class="footerLogo">
-                            <img src="../assets/images/common/logo-footer01.png" alt="중소벤처기업부">
-                            <img src="../assets/images/common/logo-footer02.png" alt="한국중소벤처기업유통원">
-                        </div>
-                        <div class="fInfo">
-                            <p class="addr">(07997) 서울특별시 양천구 목동동로309 <br class="mBlock">한국중소벤처기업유통원</p>
-                            <ul class="cs">
-                                <li><strong>대표자</strong>이태식</li>
-                                <li><strong>사업자등록번호</strong><span>107-81-53660</span></li>
-                            </ul>
-                            <ul class="cs">
-                                <li><strong>기능문의</strong><span>02-2656-9021</span></li>
-                            </ul>
-                        </div>
+        <!-- quickmenu -->
+        <div id="quickmenu">
+            <div class="quick">
+                <ul>
+                    <li class="m1"><a href="">공지사항</a></li>
+                    <li class="m2"><a href="">위원신청</a></li>
+                    <li class="m3"><a href="">상담하기</a></li>
+                    <li class="m4"><a href="">원격지원</a></li>
+                </ul>
+                <button type="button" class="btnQuick"><span class="hide">퀵메뉴</span></button>
+            </div>
+            <button type="button" class="btnTop"><span class="hide">상단으로 이동</span></button>
+        </div>
+        <!--// quickmenu -->
+    </div>
+    <!--// container -->
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="inner">
+            <div class="footerCont">
+                <div class="left">
+                    <div class="footerLogo">
+                        <img src="../assets/images/common/logo-footer01.png" alt="중소벤처기업부">
+                        <img src="../assets/images/common/logo-footer02.png" alt="한국중소벤처기업유통원">
                     </div>
-
-                    <div class="fLink">
-                        <div class="familySite">
-                            <div class="select">
-                                <button type="button">관련사이트</button>
-                                <ul>
-                                    <li class="curr"><a href="" target="_blank">판판셀러</a></li>
-                                    <li><a href="" target="_blank">전자계약시스템</a></li>
-                                    <li><a href="" target="_blank">평가관리시스템</a></li>
-                                    <li><a href="" target="_blank">공공구매종합정보망</a></li>
-                                    <li><a href="" target="_blank">브랜드K</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="menu">
-                            <a href="#" class="btnIco">찾아오시는 길</a>
-                        </div>
-                        <div class="sns">
-                            <a href="#" class="facebook" target="_blank"><span class="hide">페이스북</span></a>
-                            <a href="#" class="blog" target="_blank"><span class="hide">블로그</span></a>
-                        </div>
+                    <div class="fInfo">
+                        <p class="addr">(07997) 서울특별시 양천구 목동동로309 <br class="mBlock">한국중소벤처기업유통원</p>
+                        <ul class="cs">
+                            <li><strong>대표자</strong>이태식</li>
+                            <li><strong>사업자등록번호</strong><span>107-81-53660</span></li>
+                        </ul>
+                        <ul class="cs">
+                            <li><strong>기능문의</strong><span>02-2656-9021</span></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="footerBottom">
-                    <div class="fBot">
-                        <div class="menu">
-                            <a href="#"><strong>개인정보처리방침</strong></a>
-                            <a href="#">이용안내</a>
-                            <a href="#">이용약관</a>
-                            <a href="#">저작권정책</a>
-                            <a href="#">이메일무단수집거부</a>
+
+                <div class="fLink">
+                    <div class="familySite">
+                        <div class="select">
+                            <button type="button">관련사이트</button>
+                            <ul>
+                                <li class="curr"><a href="" target="_blank">판판셀러</a></li>
+                                <li><a href="" target="_blank">전자계약시스템</a></li>
+                                <li><a href="" target="_blank">평가관리시스템</a></li>
+                                <li><a href="" target="_blank">공공구매종합정보망</a></li>
+                                <li><a href="" target="_blank">브랜드K</a></li>
+                            </ul>
                         </div>
-                        <p class="copyright">Copyright 2025. 판판대로 All Rights Reserved.</p>
+                    </div>
+                    <div class="menu">
+                        <a href="#" class="btnIco">찾아오시는 길</a>
+                    </div>
+                    <div class="sns">
+                        <a href="#" class="facebook" target="_blank"><span class="hide">페이스북</span></a>
+                        <a href="#" class="blog" target="_blank"><span class="hide">블로그</span></a>
                     </div>
                 </div>
             </div>
-        </footer>
-        <!--// footer -->
+            <div class="footerBottom">
+                <div class="fBot">
+                    <div class="menu">
+                        <a href="#"><strong>개인정보처리방침</strong></a>
+                        <a href="#">이용안내</a>
+                        <a href="#">이용약관</a>
+                        <a href="#">저작권정책</a>
+                        <a href="#">이메일무단수집거부</a>
+                    </div>
+                    <p class="copyright">Copyright 2025. 판판대로 All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--// footer -->
     </div>
     <!--// wrap -->
 </body>

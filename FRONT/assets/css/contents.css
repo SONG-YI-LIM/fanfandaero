@@ -1134,7 +1134,12 @@ v9 고객지원
 .itemInfoRight {position: relative;}
 .itemInfoRight div {position: absolute; right: 0; bottom: 0; padding-bottom: 16px;}
 .formTable .flexWrapForm {display: flex; flex-direction: column; gap: 16px;}
-
+.btnFormWrap {display: flex; gap: 10px; align-items: center;  cursor: default;}
+.btnForm-next {width: 14px; height: 14px; background: url('../images/content/ico-btn-swiper-next.png') no-repeat center / cover; text-indent: -9999px;  cursor: default;}
+.btnForm { display: inline-flex; align-items: center; justify-content: center; gap: 5px; padding: 0 16px; border: none; border-radius: 14px; padding: 0 16px; height: 28px; line-height: 1; font-size: 15px; font-weight: 700; color: var(--color-gray-70); background-color: var(--color-gray-20);  cursor: default;} 
+.inputTxtR input {text-align: right;}
+.flexWrap .addressInput {font-size: 15px; font-weight: 700; color: var(--color-base);}
+.subCont .cont .mdArea img {width: 100px; height: 100px; }
 
 /* 비밀번호 확인 */
 .formCol dl dt { margin-bottom: 10px; font-size: 17px; color: var(--color-gray-70); }
