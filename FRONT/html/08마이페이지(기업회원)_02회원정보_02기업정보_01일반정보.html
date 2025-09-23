@@ -366,7 +366,7 @@
                     <div class="titArea">
                         <!-- 2025-09-18 -->
                         <div class="left">
-                            <h2>일반정보</h2>
+                            <h2>기업정보</h2><!-- 2025-09-23 -->
                         </div>
                         <div class="right">
                             <button type="button" class="btnTxt download">매뉴얼 다운로드</button>
@@ -379,383 +379,1112 @@
 				<!-- subCont -->
 				<div class="subCont">
 					<div class="cont">
-                        <div class="section">
-							<p class="reqCap"><span class="cPoint">*</span> 표시는 필수사항입니다.</p>
-							<!-- formTable -->
-							<div class="formTable">
-                                <dl>
-                                    <dt><p class="req">기업명(한글)</p></dt>
-                                    <dd>
-                                        <div>
-                                            <input type="text" title="기업명(한글)">
-                                        </div>
-                                    </dd>
-                                    <dt><p>기업명(영문)</p></dt>
-                                    <dd>
-                                        <div>
-                                            <input type="text" title="기업명(영문)">
-                                        </div>
-                                    </dd>
-                                </dl>
-                                <dl>
-                                    <dt><p class="req">대표자명</p></dt>
-                                    <dd>
-                                        <div>
-                                            <input type="text" title="대표자명">
-                                        </div>
-                                    </dd>
-                                    <dt><p>대표자명(영문)</p></dt>
-                                    <dd>
-                                        <div>
-                                            <input type="text" title="대표자명(영문)">
-                                        </div>
-                                    </dd>
-                                </dl>
-                                <dl>
-                                    <dt><p class="req">기업유형</p></dt>
-                                    <dd>
-                                        <div>
-                                            <select title="기업유형">
-                                                <option value="">선택</option>
-                                                <option value="">법인사업자</option>
-                                            </select>
-                                        </div>
-                                    </dd>
-                                    <dt><p class="req">운영상태</p></dt>
-                                    <dd>
-                                        <div>
-                                            <select title="운영상태">
-                                                <option value="">선택</option>
-                                                <option value="">정상운영</option>
-                                            </select>
-                                        </div>
-                                    </dd>
-                                </dl>
-                                <dl>
-                                    <dt><p class="req">사업자등록번호</p></dt>
-                                    <dd>
-                                        <div>
-                                            <p>123-45-67890</p>
-                                        </div>
-                                    </dd>
-                                    <dt><p>법인등록번호</p></dt>
-                                    <dd>
-                                        <div>
-                                            <input type="text" title="법인등록번호">
-                                        </div>
-                                    </dd>
-                                </dl>
-                                <dl>
-                                    <dt><p class="req">설립일</p></dt>
-                                    <dd>
-                                        <div>
-                                            <div class="date">
-                                                <input type="text" title="날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" value="2025-08-15">
-                                            </div>
-                                        </div>
-                                    </dd>
-                                    <dt><p class="req">운영상태</p></dt>
-                                    <dd>
-                                        <div>
-                                            <select title="운영상태">
-                                                <option value="">선택</option>
-                                                <option value="">중기업</option>
-                                            </select>
-                                        </div>
-                                    </dd>
-                                </dl>
-                                <dl>
-                                    <dt><p class="req">중소기업 <br>유효기간</p></dt><!-- 2025-09-18 -->
-                                    <dd>
-                                        <div>
-                                            <!-- 2025-09-18 -->
-                                            <div class="dateWrap">
-                                                <div class="flexWrap">
+                        <!-- 2025-09-23 -->
+                        <!-- tab -->
+                        <div class="tab tabFunc">
+                            <div class="categoryList tabTit">
+                                <div class="categorySwiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><a href="" class="curr">일반정보</a></div>
+                                        <div class="swiper-slide"><a href="">매출액</a></div>
+                                        <div class="swiper-slide"><a href="">근로자수</a></div>
+                                        <div class="swiper-slide"><a href="">ESG등급</a></div>
+                                    </div>
+                                    <div class="swiper-button-next">다음</div>
+                                </div>
+                            </div>
+                            <div class="tabCont">
+                                <!-- 일반정보 -->
+                                <div>
+                                    <div class="section">
+                                        <p class="reqCap"><span class="cPoint">*</span> 표시는 필수사항입니다.</p>
+                                        <!-- formTable -->
+                                        <div class="formTable">
+                                            <dl>
+                                                <dt><p class="req">기업명(한글)</p></dt>
+                                                <dd>
+                                                    <div>
+                                                        <input type="text" title="기업명(한글)">
+                                                    </div>
+                                                </dd>
+                                                <dt><p>기업명(영문)</p></dt>
+                                                <dd>
+                                                    <div>
+                                                        <input type="text" title="기업명(영문)">
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><p class="req">대표자명</p></dt>
+                                                <dd>
+                                                    <div>
+                                                        <input type="text" title="대표자명">
+                                                    </div>
+                                                </dd>
+                                                <dt><p>대표자명(영문)</p></dt>
+                                                <dd>
+                                                    <div>
+                                                        <input type="text" title="대표자명(영문)">
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><p class="req">기업유형</p></dt>
+                                                <dd>
+                                                    <div>
+                                                        <select title="기업유형">
+                                                            <option value="">선택</option>
+                                                            <option value="">법인사업자</option>
+                                                        </select>
+                                                    </div>
+                                                </dd>
+                                                <dt><p class="req">운영상태</p></dt>
+                                                <dd>
+                                                    <div>
+                                                        <select title="운영상태">
+                                                            <option value="">선택</option>
+                                                            <option value="">정상운영</option>
+                                                        </select>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><p class="req">사업자등록번호</p></dt>
+                                                <dd>
+                                                    <div>
+                                                        <p>123-45-67890</p>
+                                                    </div>
+                                                </dd>
+                                                <dt><p>법인등록번호</p></dt>
+                                                <dd>
+                                                    <div>
+                                                        <input type="text" title="법인등록번호">
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><p class="req">설립일</p></dt>
+                                                <dd>
                                                     <div>
                                                         <div class="date">
-                                                            <input type="text" title="시작날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
+                                                            <input type="text" title="날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" value="2025-08-15">
                                                         </div>
                                                     </div>
-                                                    <span>~</span>
-                                                </div>
-                                                <div>
-                                                    <div class="date">
-                                                        <input type="text" title="종료날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
+                                                </dd>
+                                                <dt><p class="req">운영상태</p></dt>
+                                                <dd>
+                                                    <div>
+                                                        <select title="운영상태">
+                                                            <option value="">선택</option>
+                                                            <option value="">중기업</option>
+                                                        </select>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <!--// 2025-09-18 -->
-                                        </div>
-                                    </dd>
-                                    <dt><p class="req">업태</p></dt>
-                                    <dd>
-                                        <div>
-                                            <input type="text" title="업태">
-                                        </div>
-                                    </dd>
-                                </dl>
-                                <dl>
-                                    <dt><p class="req">업종</p></dt>
-                                    <dd>
-                                        <div>
-                                            <input type="text" title="업종">
-                                        </div>
-                                    </dd>
-                                    <dt><p class="req">상시 근로자수</p></dt>
-                                    <dd>
-                                        <div>
-                                            <div class="flexWrap">
-                                                <div>
-                                                    <input type="text" title="상시 근로자수" class="txtR">
-                                                </div>
-                                                <span>명</span>
-                                            </div>
-                                        </div>
-                                    </dd>
-                                </dl>
-                                <dl>
-                                    <dt><p class="req">자본금</p></dt>
-                                    <dd>
-                                        <div>
-                                            <div class="flexWrap">
-                                                <div>
-                                                    <input type="text" title="자본금" class="txtR">
-                                                </div>
-                                                <span>원</span>
-                                            </div>
-                                        </div>
-                                    </dd>
-                                    <dt><p class="req">총자산</p></dt>
-                                    <dd>
-                                        <div>
-                                            <div class="flexWrap">
-                                                <div>
-                                                    <input type="text" title="총자산" class="txtR">
-                                                </div>
-                                                <span>원</span>
-                                            </div>
-                                        </div>
-                                    </dd>
-                                </dl>
-                                <dl>
-                                    <dt><p class="req">주요 생산지</p></dt>
-                                    <dd>
-										<div>
-											<!-- checkbox -->
-											<div class="checkboxWrap">
-												<div class="checkbox">
-													<input type="radio" name="chk01" id="chk0101">
-													<label for="chk0101">국내</label>
-												</div>
-												<div class="checkbox">
-													<input type="radio" name="chk01" id="chk0102">
-													<label for="chk0102">국외</label>
-												</div>
-											</div>
-											<!--// checkbox -->
-										</div>
-									</dd>
-                                    <dt><p>주요 생산방식</p></dt>
-                                    <dd>
-										<div>
-											<!-- checkbox -->
-											<div class="checkboxWrap">
-												<div class="checkbox">
-													<input type="radio" name="chk02" id="chk0201">
-													<label for="chk0201">자체생산</label>
-												</div>
-												<div class="checkbox">
-													<input type="radio" name="chk02" id="chk0202">
-													<label for="chk0202">외주생산</label>
-												</div>
-											</div>
-											<!--// checkbox -->
-										</div>
-									</dd>
-                                </dl>
-                                <dl>
-                                    <dt><p class="req">주소</p></dt>
-                                    <dd>
-                                        <div>
-											<div class="flexWrap addr">
-												<div class="flexWrap post">
-													<div>
-														<input type="text" title="우편번호" value="우편번호" readonly>
-													</div>
-													<button type="button" class="btn lg bgSecond">주소검색</button>
-												</div>
-												<div class="flexWrap">
-													<div>
-														<input type="text" title="기본주소" value="기본주소" readonly>
-													</div>
-													<div>
-														<input type="text" title="상세주소" placeholder="상세주소를 입력해주세요.">
-													</div>
-												</div>
-											</div>
-										</div>
-                                    </dd>
-                                </dl>
-                                <dl>
-                                    <dt><p>공장주소</p></dt>
-                                    <dd>
-                                        <div>
-											<div class="flexWrap addr">
-												<div class="flexWrap post">
-													<div>
-														<input type="text" title="우편번호" value="우편번호" readonly>
-													</div>
-													<button type="button" class="btn lg bgSecond">주소검색</button>
-												</div>
-												<div class="flexWrap">
-													<div>
-														<input type="text" title="기본주소" value="기본주소" readonly>
-													</div>
-													<div>
-														<input type="text" title="상세주소" placeholder="상세주소를 입력해주세요.">
-													</div>
-												</div>
-											</div>
-										</div>
-                                    </dd>
-                                </dl>
-                                <dl>
-                                    <dt><p class="req">홈페이지</p></dt>
-                                    <dd>
-										<div>
-											<div class="flexWrapChk">
-												<div class="flexWrap">
-													<div>
-														<input type="text" title="홈페이지" placeholder="예. www.fanfandaero.kr">
-													</div>
-												</div>
-												<!-- checkbox -->
-												<div class="checkboxWrap">
-													<div class="checkbox">
-														<input type="checkbox" name="chk03" id="chk0301">
-														<label for="chk0301">없음</label>
-													</div>
-												</div>
-												<!--// checkbox -->
-											</div>
-										</div>
-									</dd>
-                                    <dt><p class="req">대표카테고리</p></dt>
-                                    <dd>
-                                        <div>
-                                            <select title="대표카테고리">
-                                                <option value="">선택</option>
-                                                <option value="">식품</option>
-                                            </select>
-                                        </div>
-                                    </dd>
-                                </dl>
-                                <dl>
-                                    <dt><p class="req">대표전화</p></dt>
-									<dd>
-										<div>
-											<div class="flexWrap phone">
-												<select title="대표전화 앞 3자리">
-													<option value="">선택</option>
-													<option value="">010</option>
-												</select>
-                                                <span>-</span>
-												<div>
-													<input type="text" title="대표전화 중간 3자리">
-												</div>
-												<span>-</span>
-												<div>
-													<input type="text" title="대표전화 뒤 3자리">
-												</div>
-											</div>
-										</div>
-									</dd>
-                                    <dt><p>팩스번호</p></dt>
-									<dd>
-										<div>
-											<div class="flexWrap phone">
-												<select title="팩스번호 앞 3자리">
-													<option value="">선택</option>
-													<option value="">010</option>
-												</select>
-                                                <span>-</span>
-												<div>
-													<input type="text" title="팩스번호 중간 3자리">
-												</div>
-												<span>-</span>
-												<div>
-													<input type="text" title="팩스번호 뒤 3자리">
-												</div>
-											</div>
-										</div>
-									</dd>
-                                </dl>
-                                <dl>
-                                    <dt><p>기업소개</p></dt>
-                                    <dd>
-                                        <div>
-                                            <textarea title="기업소개"></textarea>
-                                        </div>
-                                    </dd>
-                                </dl>
-                                <dl>
-                                    <dt><p>기업소개(영문)</p></dt>
-                                    <dd>
-                                        <div>
-                                            <textarea title="기업소개(영문)"></textarea>
-                                        </div>
-                                    </dd>
-                                </dl>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><p class="req">중소기업 <br>유효기간</p></dt><!-- 2025-09-18 -->
+                                                <dd>
+                                                    <div>
+                                                        <!-- 2025-09-18 -->
+                                                        <div class="dateWrap">
+                                                            <div class="flexWrap">
+                                                                <div>
+                                                                    <div class="date">
+                                                                        <input type="text" title="시작날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
+                                                                    </div>
+                                                                </div>
+                                                                <span>~</span>
+                                                            </div>
+                                                            <div>
+                                                                <div class="date">
+                                                                    <input type="text" title="종료날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--// 2025-09-18 -->
+                                                    </div>
+                                                </dd>
+                                                <dt><p class="req">업태</p></dt>
+                                                <dd>
+                                                    <div>
+                                                        <input type="text" title="업태">
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><p class="req">업종</p></dt>
+                                                <dd>
+                                                    <div>
+                                                        <input type="text" title="업종">
+                                                    </div>
+                                                </dd>
+                                                <dt><p class="req">상시 근로자수</p></dt>
+                                                <dd>
+                                                    <div>
+                                                        <div class="flexWrap">
+                                                            <div>
+                                                                <input type="text" title="상시 근로자수" class="txtR">
+                                                            </div>
+                                                            <span>명</span>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><p class="req">자본금</p></dt>
+                                                <dd>
+                                                    <div>
+                                                        <div class="flexWrap">
+                                                            <div>
+                                                                <input type="text" title="자본금" class="txtR">
+                                                            </div>
+                                                            <span>원</span>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                                <dt><p class="req">총자산</p></dt>
+                                                <dd>
+                                                    <div>
+                                                        <div class="flexWrap">
+                                                            <div>
+                                                                <input type="text" title="총자산" class="txtR">
+                                                            </div>
+                                                            <span>원</span>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><p class="req">주요 생산지</p></dt>
+                                                <dd>
+                                                    <div>
+                                                        <!-- checkbox -->
+                                                        <div class="checkboxWrap">
+                                                            <div class="checkbox">
+                                                                <input type="radio" name="chk01" id="chk0101">
+                                                                <label for="chk0101">국내</label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <input type="radio" name="chk01" id="chk0102">
+                                                                <label for="chk0102">국외</label>
+                                                            </div>
+                                                        </div>
+                                                        <!--// checkbox -->
+                                                    </div>
+                                                </dd>
+                                                <dt><p>주요 생산방식</p></dt>
+                                                <dd>
+                                                    <div>
+                                                        <!-- checkbox -->
+                                                        <div class="checkboxWrap">
+                                                            <div class="checkbox">
+                                                                <input type="radio" name="chk02" id="chk0201">
+                                                                <label for="chk0201">자체생산</label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <input type="radio" name="chk02" id="chk0202">
+                                                                <label for="chk0202">외주생산</label>
+                                                            </div>
+                                                        </div>
+                                                        <!--// checkbox -->
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><p class="req">주소</p></dt>
+                                                <dd>
+                                                    <div>
+                                                        <div class="flexWrap addr">
+                                                            <div class="flexWrap post">
+                                                                <div>
+                                                                    <input type="text" title="우편번호" value="우편번호" readonly>
+                                                                </div>
+                                                                <button type="button" class="btn lg bgSecond">주소검색</button>
+                                                            </div>
+                                                            <div class="flexWrap">
+                                                                <div>
+                                                                    <input type="text" title="기본주소" value="기본주소" readonly>
+                                                                </div>
+                                                                <div>
+                                                                    <input type="text" title="상세주소" placeholder="상세주소를 입력해주세요.">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><p>공장주소</p></dt>
+                                                <dd>
+                                                    <div>
+                                                        <div class="flexWrap addr">
+                                                            <div class="flexWrap post">
+                                                                <div>
+                                                                    <input type="text" title="우편번호" value="우편번호" readonly>
+                                                                </div>
+                                                                <button type="button" class="btn lg bgSecond">주소검색</button>
+                                                            </div>
+                                                            <div class="flexWrap">
+                                                                <div>
+                                                                    <input type="text" title="기본주소" value="기본주소" readonly>
+                                                                </div>
+                                                                <div>
+                                                                    <input type="text" title="상세주소" placeholder="상세주소를 입력해주세요.">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><p class="req">홈페이지</p></dt>
+                                                <dd>
+                                                    <div>
+                                                        <div class="flexWrapChk">
+                                                            <div class="flexWrap">
+                                                                <div>
+                                                                    <input type="text" title="홈페이지" placeholder="예. www.fanfandaero.kr">
+                                                                </div>
+                                                            </div>
+                                                            <!-- checkbox -->
+                                                            <div class="checkboxWrap">
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" name="chk03" id="chk0301">
+                                                                    <label for="chk0301">없음</label>
+                                                                </div>
+                                                            </div>
+                                                            <!--// checkbox -->
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                                <dt><p class="req">대표카테고리</p></dt>
+                                                <dd>
+                                                    <div>
+                                                        <select title="대표카테고리">
+                                                            <option value="">선택</option>
+                                                            <option value="">식품</option>
+                                                        </select>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><p class="req">대표전화</p></dt>
+                                                <dd>
+                                                    <div>
+                                                        <div class="flexWrap phone">
+                                                            <select title="대표전화 앞 3자리">
+                                                                <option value="">선택</option>
+                                                                <option value="">010</option>
+                                                            </select>
+                                                            <span>-</span>
+                                                            <div>
+                                                                <input type="text" title="대표전화 중간 3자리">
+                                                            </div>
+                                                            <span>-</span>
+                                                            <div>
+                                                                <input type="text" title="대표전화 뒤 3자리">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                                <dt><p>팩스번호</p></dt>
+                                                <dd>
+                                                    <div>
+                                                        <div class="flexWrap phone">
+                                                            <select title="팩스번호 앞 3자리">
+                                                                <option value="">선택</option>
+                                                                <option value="">010</option>
+                                                            </select>
+                                                            <span>-</span>
+                                                            <div>
+                                                                <input type="text" title="팩스번호 중간 3자리">
+                                                            </div>
+                                                            <span>-</span>
+                                                            <div>
+                                                                <input type="text" title="팩스번호 뒤 3자리">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><p>기업소개</p></dt>
+                                                <dd>
+                                                    <div>
+                                                        <textarea title="기업소개"></textarea>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><p>기업소개(영문)</p></dt>
+                                                <dd>
+                                                    <div>
+                                                        <textarea title="기업소개(영문)"></textarea>
+                                                    </div>
+                                                </dd>
+                                            </dl>
 
-                                <dl>
-                                    <dt><p>주요 상품소개</p></dt>
-                                    <dd>
-                                        <div>
-                                            <textarea title="주요 상품소개"></textarea>
+                                            <dl>
+                                                <dt><p>주요 상품소개</p></dt>
+                                                <dd>
+                                                    <div>
+                                                        <textarea title="주요 상품소개"></textarea>
+                                                    </div>
+                                                </dd>
+                                            </dl>
                                         </div>
-                                    </dd>
-                                </dl>
-							</div>
-							<!--// formTable -->
-						</div>
+                                        <!--// formTable -->
+                                    </div>
 
-                        <div class="section">
-							<div class="titArea">
-								<div class="left">
-									<h3>MRO 납품기업 정보</h3>
-								</div>
-							</div>
-							<div class="grayBox border">
-								<div>
-									<p class="stxt cPoint">* MRO 지원사업을 신청하실 분만 체크해주시기 바랍니다.</p>
-								</div>
-							</div>
-							<!-- formTable -->
-							<div class="formTable">
-								<ul>
-									<li>
-										<p class="cGray bold">중소 소모성자재 납품기업은 체크 후 입력바랍니다.</p>
-										<!-- checkbox -->
-										<div class="checkboxWrap">
-											<div class="checkbox">
-												<input type="checkbox" name="chk04" id="chk0401">
-												<label for="chk0401">MRO 납품기업 신청</label>
-											</div>
-										</div>
-										<!--// checkbox -->
-									</li>
-								</ul>
-							</div>
-							<!--// formTable -->
-						</div>
-
-                        <!-- btnBottom -->
-						<div class="btnBottom">
-							<div class="right">
-								<a href="" class="btn xlg bgPrima">저장</a>
-							</div>
-						</div>
-						<!--// btnBottom -->
+                                    <div class="section">
+                                        <div class="titArea">
+                                            <div class="left">
+                                                <h3>MRO 납품기업 정보</h3>
+                                            </div>
+                                        </div>
+                                        <div class="grayBox border">
+                                            <div>
+                                                <p class="stxt cPoint">* MRO 지원사업을 신청하실 분만 체크해주시기 바랍니다.</p>
+                                            </div>
+                                        </div>
+                                        <!-- formTable -->
+                                        <div class="formTable">
+                                            <ul>
+                                                <li>
+                                                    <p class="cGray bold">중소 소모성자재 납품기업은 체크 후 입력바랍니다.</p>
+                                                    <!-- checkbox -->
+                                                    <div class="checkboxWrap">
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" name="chk04" id="chk0401">
+                                                            <label for="chk0401">MRO 납품기업 신청</label>
+                                                        </div>
+                                                    </div>
+                                                    <!--// checkbox -->
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!--// formTable -->
+                                        <!-- 2025-09-23 -->
+                                        <!-- formTable -->
+                                        <div class="formTable">
+                                            <dl>
+                                                <dt><p class="req">과세유형</p></dt>
+                                                <dd>
+                                                    <div>
+                                                        <!-- checkbox -->
+                                                        <div class="checkboxWrap">
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" name="chk05" id="chk0501">
+                                                                <label for="chk0501">과세</label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" name="chk05" id="chk0502">
+                                                                <label for="chk0502">면세</label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" name="chk05" id="chk0503">
+                                                                <label for="chk0503">영세</label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" name="chk05" id="chk0504">
+                                                                <label for="chk0504">과세, 면세 겸업</label>
+                                                            </div>
+                                                        </div>
+                                                        <!--// checkbox -->
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><p class="req">회사규모</p></dt>
+                                                <dd>
+                                                    <div>
+                                                        <!-- checkbox -->
+                                                        <div class="checkboxWrap">
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" name="chk06" id="chk0601">
+                                                                <label for="chk0601">대기업</label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" name="chk06" id="chk0602">
+                                                                <label for="chk0602">중기업</label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" name="chk06" id="chk0603">
+                                                                <label for="chk0603">소기업</label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" name="chk06" id="chk0604">
+                                                                <label for="chk0604">소상공인</label>
+                                                            </div>
+                                                        </div>
+                                                        <!--// checkbox -->
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><p class="req">취급품목</p></dt>
+                                                <dd>
+                                                    <div>
+                                                        <!-- colTable --> 
+                                                        <div class="colTable">
+                                                            <table>
+                                                                <caption>선택, 구분, 상세품목류 항목으로 구성된 취급품목 표</caption>
+                                                                <colgroup>
+                                                                    <col style="width:60px">
+                                                                    <col style="width:130px">
+                                                                    <col style="width:250px">
+                                                                </colgroup>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col" class="bgBlue tableChk">
+                                                                            <div class="checkbox">
+                                                                                <input type="checkbox" name="chkThAll01" id="chkThAll01">
+                                                                                <label for="chkThAll01">전체선택</label>
+                                                                            </div>
+                                                                        </th>
+                                                                        <th scope="col" class="bgBlue">구분</th>
+                                                                        <th scope="col" class="bgBlue">상세품목류</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="tableChk">
+                                                                            <div class="checkbox">
+                                                                                <input type="checkbox" name="chkTd01" id="chkTd0101">
+                                                                                <label for="chkTd0101">선택</label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="txtC">사무용품</td>
+                                                                        <td class="txtC">일반사무용품, 파일/바인더, 필기구, 사무기기, 용지류</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="tableChk">
+                                                                            <div class="checkbox">
+                                                                                <input type="checkbox" name="chkTd01" id="chkTd0102">
+                                                                                <label for="chkTd0102">선택</label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="txtC">전산용품</td>
+                                                                        <td class="txtC">디지털기기, 잉크/토너, 컴퓨터용품</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="tableChk">
+                                                                            <div class="checkbox">
+                                                                                <input type="checkbox" name="chkTd01" id="chkTd0103">
+                                                                                <label for="chkTd0103">선택</label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="txtC">가전류(소형가전)</td>
+                                                                        <td class="txtC">생활가전, 음향/영상가전, 주방가전</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="tableChk">
+                                                                            <div class="checkbox">
+                                                                                <input type="checkbox" name="chkTd01" id="chkTd0104">
+                                                                                <label for="chkTd0104">선택</label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="txtC">공구류</td>
+                                                                        <td class="txtC">작업공구, 용접공구, 유공압공구, 전동엔진공구, 절삭연마공구, 조경공구</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="tableChk">
+                                                                            <div class="checkbox">
+                                                                                <input type="checkbox" name="chkTd01" id="chkTd0105">
+                                                                                <label for="chkTd0105">선택</label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="txtC">청소, 생활용품(위생자재)</td>
+                                                                        <td class="txtC">생활용품, 청소용품</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="tableChk">
+                                                                            <div class="checkbox">
+                                                                                <input type="checkbox" name="chkTd01" id="chkTd0106">
+                                                                                <label for="chkTd0106">선택</label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="txtC">산업안전용품(안전보호장구)</td>
+                                                                        <td class="txtC">개인보호구, 도로안전/소방/구급, 안전시설/가설용품, 클린룸자재</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="tableChk">
+                                                                            <div class="checkbox">
+                                                                                <input type="checkbox" name="chkTd01" id="chkTd0107">
+                                                                                <label for="chkTd0107">선택</label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="txtC">기계/배관/유공압(설비자재)</td>
+                                                                        <td class="txtC">기계요소, 배관기자재, 배관보온재/호스/튜브, 유공압, 공조기기</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="tableChk">
+                                                                            <div class="checkbox">
+                                                                                <input type="checkbox" name="chkTd01" id="chkTd0108">
+                                                                                <label for="chkTd0108">선택</label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="txtC">생산/기계장비(모터/펌프시설)</td>
+                                                                        <td class="txtC">동력전달부품, 펌프/콤프레셔, 필터, 보일러/연소기, 공작기계, 기타기계요소</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="tableChk">
+                                                                            <div class="checkbox">
+                                                                                <input type="checkbox" name="chkTd01" id="chkTd0109">
+                                                                                <label for="chkTd0109">선택</label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="txtC">전기/조명</td>
+                                                                        <td class="txtC">전기용품, 조명기구</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="tableChk">
+                                                                            <div class="checkbox">
+                                                                                <input type="checkbox" name="chkTd01" id="chkTd0110">
+                                                                                <label for="chkTd0110">선택</label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="txtC">연료/화학(외장마감재)</td>
+                                                                        <td class="txtC">가스/연료, 윤활유/그리스/부식방지, 접착제/메꿈제, 페인트/도장자재, 표면처리제, 화학</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="tableChk">
+                                                                            <div class="checkbox">
+                                                                                <input type="checkbox" name="chkTd01" id="chkTd0111">
+                                                                                <label for="chkTd0111">선택</label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="txtC">운송/포장/저장</td>
+                                                                        <td class="txtC">운반/이동용품, 포장용품, 저장용품</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="tableChk">
+                                                                            <div class="checkbox">
+                                                                                <input type="checkbox" name="chkTd01" id="chkTd0112">
+                                                                                <label for="chkTd0112">선택</label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="txtC">실험/측정(계측 및 실험기자재)</td>
+                                                                        <td class="txtC">측정기기, 실험기자재, 시약/화공약품</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="tableChk">
+                                                                            <div class="checkbox">
+                                                                                <input type="checkbox" name="chkTd01" id="chkTd0113">
+                                                                                <label for="chkTd0113">선택</label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="txtC">통신/보안(통신공사자재)</td>
+                                                                        <td class="txtC">보안자재, 통신자재</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="tableChk">
+                                                                            <div class="checkbox">
+                                                                                <input type="checkbox" name="chkTd01" id="chkTd0114">
+                                                                                <label for="chkTd0114">선택</label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="txtC">피복</td>
+                                                                        <td class="txtC">피복류</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="tableChk">
+                                                                            <div class="checkbox">
+                                                                                <input type="checkbox" name="chkTd01" id="chkTd0115">
+                                                                                <label for="chkTd0115">선택</label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="txtC">철강재류(철강자재)</td>
+                                                                        <td class="txtC">철금속, 비철금속</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="tableChk">
+                                                                            <div class="checkbox">
+                                                                                <input type="checkbox" name="chkTd01" id="chkTd0116">
+                                                                                <label for="chkTd0116">선택</label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="txtC">건설자재</td>
+                                                                        <td class="txtC">건축자재, 골재/가설재</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="tableChk">
+                                                                            <div class="checkbox">
+                                                                                <input type="checkbox" name="chkTd01" id="chkTd0117">
+                                                                                <label for="chkTd0117">선택</label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="txtC">사무가구</td>
+                                                                        <td class="txtC">사무가구, 캐비넷</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <!--// colTable -->
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><p class="req">납품가능 지역</p></dt>
+                                                <dd>
+                                                    <div>
+                                                        <!-- colTable --> 
+                                                        <div class="colTable">
+                                                            <table>
+                                                                <caption>선택, 대권역, 선택, 중권역 항목으로 구성된 납품가능 지역 표</caption>
+                                                                <colgroup>
+                                                                    <col style="width:60px">
+                                                                    <col style="width:130px">
+                                                                    <col style="width:60px">
+                                                                    <col style="width:130px">
+                                                                </colgroup>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col" class="bgBlue">선택</th>
+                                                                        <th scope="col" class="bgBlue">대권역</th>
+                                                                        <th scope="col" class="bgBlue">선택</th>
+                                                                        <th scope="col" class="bgBlue">중권역</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0701">
+                                                                                    <label for="chk0701">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">서울권</td>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0702">
+                                                                                    <label for="chk0702">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">서울특별시</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0703">
+                                                                                    <label for="chk0703">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">경인권</td>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0704">
+                                                                                    <label for="chk0704">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">인천광역시</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="txtC">&nbsp;</td>
+                                                                        <td class="txtC">&nbsp;</td>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0705">
+                                                                                    <label for="chk0705">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">광역, 부천, 김포, 안산, 시흥, 화성</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0706">
+                                                                                    <label for="chk0706">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">경기 북동부권</td>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0707">
+                                                                                    <label for="chk0707">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">고양, 의정부, 동두천, 파주, 연천, 포천, 양주, 구리, 하남, 남양주, 가평, 양평</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0708">
+                                                                                    <label for="chk0708">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">경기 남부권</td>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0709">
+                                                                                    <label for="chk0709">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">수원, 과천, 안양, 군포, 의왕</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="txtC">&nbsp;</td>
+                                                                        <td class="txtC">&nbsp;</td>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0710">
+                                                                                    <label for="chk0710">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">성남, 광주, 용인, 오산, 평택, 안성, 여주, 이천</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0711">
+                                                                                    <label for="chk0711">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">강원권</td>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0712">
+                                                                                    <label for="chk0712">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">강원 영서</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="txtC">&nbsp;</td>
+                                                                        <td class="txtC">&nbsp;</td>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0713">
+                                                                                    <label for="chk0713">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">강원 영동</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0714">
+                                                                                    <label for="chk0714">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">충청권</td>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0715">
+                                                                                    <label for="chk0715">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">충청남도</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="txtC">&nbsp;</td>
+                                                                        <td class="txtC">&nbsp;</td>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0716">
+                                                                                    <label for="chk0716">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">충청북도</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="txtC">&nbsp;</td>
+                                                                        <td class="txtC">&nbsp;</td>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0717">
+                                                                                    <label for="chk0716">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">대전광역시</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0718">
+                                                                                    <label for="chk0718">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">전라권</td>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0719">
+                                                                                    <label for="chk0719">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">전라남도, 광주광역시</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="txtC">&nbsp;</td>
+                                                                        <td class="txtC">&nbsp;</td>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0720">
+                                                                                    <label for="chk0720">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">전라북도</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="txtC">&nbsp;</td>
+                                                                        <td class="txtC">&nbsp;</td>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0721">
+                                                                                    <label for="chk0721">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">광주광역시</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0722">
+                                                                                    <label for="chk0722">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">경상북부권</td>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0723">
+                                                                                    <label for="chk0723">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">경상북도</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="txtC">&nbsp;</td>
+                                                                        <td class="txtC">&nbsp;</td>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0724">
+                                                                                    <label for="chk0724">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">대구광역시</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0725">
+                                                                                    <label for="chk0725">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">경상남부권</td>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0726">
+                                                                                    <label for="chk0726">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">경상남도</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="txtC">&nbsp;</td>
+                                                                        <td class="txtC">&nbsp;</td>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0727">
+                                                                                    <label for="chk0727">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">울산광역시</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0728">
+                                                                                    <label for="chk0728">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">부산권</td>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0729">
+                                                                                    <label for="chk0729">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">부산광역시</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0730">
+                                                                                    <label for="chk0730">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">제주권</td>
+                                                                        <td class="txtC">
+                                                                            <!-- checkbox -->
+                                                                            <div class="checkboxWrap jcC">
+                                                                                <div class="checkbox only">
+                                                                                    <input type="checkbox" name="chk07" id="chk0731">
+                                                                                    <label for="chk0731">선택</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--// checkbox -->
+                                                                        </td>
+                                                                        <td class="txtC">제주도</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <!--// colTable -->
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                        <!--// formTable -->
+                                        <!--// 2025-09-23 -->
+                                    </div>
+                                    <!-- btnBottom -->
+                                    <div class="btnBottom">
+                                        <div class="right">
+                                            <a href="" class="btn xlg bgPrima">저장</a>
+                                        </div>
+                                    </div>
+                                    <!--// btnBottom -->
+                                </div>
+                                <!--// 일반정보 -->
+                                <!-- 매출액 -->
+                                <div>
+                                    매출액 내용
+                                </div>
+                                <!--// 매출액 -->
+                                <!-- 근로수자 -->
+                                <div>
+                                    근로수자 내용
+                                </div>
+                                <!--// 근로수자 -->
+                                <!-- ESG등급 -->
+                                <div>
+                                    ESG등급 내용
+                                </div>
+                                <!--// ESG등급 -->
+                            </div>
+                        </div>
+                        <!--// tab -->
+                        <!--// 2025-09-23 -->
 					</div>
 				</div>
 				<!--// subCont -->

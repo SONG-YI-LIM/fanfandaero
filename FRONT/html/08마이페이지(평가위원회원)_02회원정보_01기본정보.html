@@ -284,7 +284,7 @@
                             <button type="button" class="btnTxt download">매뉴얼 다운로드</button>
                         </div>
                         <div class="myInfo">
-                            <p class="name"><span class="v1">기업</span>홍길동 님</p>
+                            <p class="name"><span class="v3">위원</span>홍길동 님</p>
                             <span class="recentDate">최근접속일 : 2025.08.01 10:11:15</span>
                         </div>
                     </div>
@@ -363,14 +363,12 @@
 				<!-- subTop -->
 				<div class="subTop v8">
 					<div class="titArea">
-                        <!-- 2025-09-18 -->
                         <div class="left">
                             <h2>기본정보</h2>
                         </div>
                         <div class="right">
                             <button type="button" class="btnTxt download">매뉴얼 다운로드</button>
                         </div>
-                        <!--// 2025-09-18 -->
 					</div>
 				</div>
 				<!--// subTop -->
@@ -393,16 +391,15 @@
                                     <img src="../assets/images/content/img-user.png" alt="프로필 사진">
                                     <div class="detail">
                                         <ul>
-                                            <li class="v1">기업</li>
-                                            <li class="v2">법인인증서 확인</li>
+                                            <li class="v5">평가위원</li>
                                         </ul>
                                         <p>홍길동 님</p>
-                                        <span>최근접속일 : <br class="mBlock">2025.08.01 10:11:15</span><!-- 2025-09-18 -->
+                                        <span>최근접속일 : 2025.08.01 10:11:15</span>
                                     </div>
                                 </div>
                                 <dl class="userLabel01">
                                     <dt>회원구분</dt>
-                                    <dd>기업회원</dd>
+                                    <dd>평가위원</dd>
                                 </dl>
                                 <dl class="userLabel02">
                                     <dt>아이디</dt>
@@ -424,49 +421,78 @@
 							<p class="reqCap"><span class="cPoint">*</span> 표시는 필수사항입니다.</p>
 							<div class="titArea">
 								<div class="left">
-									<h3>대표자 정보</h3>
+									<h3>회원 정보</h3>
 								</div>
 							</div>
-                            <div class="grayBox border">
-                                <div>
-                                    <ul class="dotList">
-                                        <li>대표자 정보는 아이디 비번 찾기 시 사용되므로 정확한 정보를 입력해주십시오.</li>
-                                    </ul>
-                                </div>
-                            </div>
 							<!-- formTable -->
 							<div class="formTable">
                                 <dl>
-                                    <dt><p class="req">대표자 성명</p></dt>
+									<dt><p>사진</p></dt>
+									<dd>
+										<div>
+											<div class="profileBox">
+												<div class="profile">
+													<img src="../assets/images/content/ico-profile.png" alt="">
+												</div>
+												<div class="txtBox">
+													<!-- fileWrap -->
+													<div class="fileWrap">
+														<div class="fileBtn">
+															<input type="file" title="파일선택">
+															<button type="button" class="btn bgSecond btnUpload">사진등록/수정</button>
+														</div>
+                                                        <button type="button" class="btn bgSecond">삭제</button>
+													</div>
+													<!--/// fileWrap -->
+													<p class="stxt">이미지 사이즈(권장) : 60 * 100 / 파일 크기(필수) : 10MB 이하</p>
+												</div>
+											</div>
+										</div>
+									</dd>
+								</dl>
+                                <dl>
+                                    <dt><p class="req">성명</p></dt>
                                     <dd>
                                         <div>
-                                            <input type="text" title="대표자 성명">
+                                            <input type="text" title="성명">
                                         </div>
                                     </dd>
-                                    <dt><p class="req">대표자 성별</p></dt>
+                                    <dt><p>성명(한자)</p></dt>
                                     <dd>
                                         <div>
-											<select title="대표자 성별">
-												<option value="">선택</option>
-												<option value="">남성</option>
-												<option value="">여성</option>
-											</select>
+                                            <input type="text" title="성명(한자)">
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><p>직업</p></dt>
+                                    <dd>
+                                        <div>
+                                            <select title="직업">
+                                                <option value="">선택</option>
+                                            </select>
+                                        </div>
+                                    </dd>
+                                    <dt><p>생년월일</p></dt>
+                                    <dd>
+                                        <div>
+                                            <div class="date">
+												<input type="text" title="날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
+											</div>
 										</div>
                                     </dd>
                                 </dl>
                                 <dl>
-                                    <dt><p>전화번호</p></dt>
+                                    <dt><p class="req">전화번호</p></dt>
                                     <dd>
                                         <div>
                                             <div class="flexWrap phone">
-                                                <!-- 2025-09-18 -->
                                                 <div>
                                                     <select title="전화번호 앞 3자리">
                                                         <option value="">02</option>
                                                         <option value="">010</option>
                                                     </select>
                                                 </div>
-                                                <!--// 2025-09-18 -->
                                                 <span>-</span>
                                                 <div>
                                                     <input type="text" title="전화번호 중간 3자리" value="1234">
@@ -478,127 +504,16 @@
                                             </div>
                                         </div>
                                     </dd>
-                                    <dt><p class="req">휴대폰번호</p></dt>
+                                    <dt><p>팩스번호</p></dt>
                                     <dd>
-                                        <div>
-                                            <div class="flexWrap phone">
-                                                <!-- 2025-09-18 -->
-                                                <div>
-                                                    <select title="휴대전화 앞 3자리">
-                                                        <option value="">02</option>
-                                                        <option value="">010</option>
-                                                    </select>
-                                                </div>
-                                                <!--// 2025-09-18 -->
-                                                <span>-</span>
-                                                <div>
-                                                    <input type="text" title="휴대전화 중간 3자리" value="1234">
-                                                </div>
-                                                <span>-</span>
-                                                <div>
-                                                    <input type="text" title="휴대전화 뒤 3자리" value="5678">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </dd>
-                                </dl>
-                                <dl>
-									<dt><p class="req">이메일</p></dt>
-									<dd>
-										<div>
-                                            <!-- 2025-09-18 -->
-											<div class="flexWrap email">
-                                                <div class="flexWrap">
-                                                    <div>
-                                                        <input type="text" title="이메일 아이디">
-                                                    </div>
-                                                    <span>@</span>
-                                                </div>
-												<div>
-													<input type="text" title="이메일 도메인">
-												</div>
-												<div>
-                                                    <select title="이메일 도메인 선택">
-                                                        <option value="">선택</option>
-                                                        <option value="">fanfandaero.kr</option>
-                                                    </select>
-												</div>
-											</div>
-                                            <!--// 2025-09-18 -->
-                                            <p class="stxt cPoint">hanmail.net과 daum.net은 메일이 스팸으로 분류되어 수신이 원활하지 않을 수 있습니다.</p>
-										</div>
-									</dd>
-								</dl>
-							</div>
-							<!--// formTable -->
-						</div>
-
-                        <div class="section">
-							<div class="titArea">
-								<div class="left">
-									<h3>담당자 정보</h3>
-								</div>
-							</div>
-							<!-- formTable -->
-							<div class="formTable">
-								<dl>
-									<dt><p class="req">담당자 성명</p></dt>
-									<dd>
-										<div>
-											<input type="text" title="담당자 성명">
-										</div>
-									</dd>
-									<dt><p class="req">담당자 직위</p></dt>
-									<dd>
-										<div>
-											<input type="text" title="담당자 직위">
-										</div>
-									</dd>
-								</dl> 
-								<dl>
-									<dt><p class="req">담당자 부서</p></dt>
-									<dd>
-										<div>
-											<input type="text" title="담당자 부서">
-										</div>
-									</dd>
-									<dt><p>전화번호</p></dt>
-									<dd>
 										<div>
 											<div class="flexWrap phone">
-                                                <!-- 2025-09-18 -->
-												<div>
-                                                    <select title="전화번호 앞 3자리">
-                                                        <option value="">선택</option>
-                                                        <option value="">010</option>
-                                                    </select>
-												</div>
-                                                <!--// 2025-09-18 -->
-                                                <span>-</span>
-												<div>
-													<input type="text" title="전화번호 중간 3자리">
-												</div>
-												<span>-</span>
-												<div>
-													<input type="text" title="전화번호 뒤 3자리">
-												</div>
-											</div>
-										</div>
-									</dd>
-								</dl>
-								<dl>
-									<dt><p>팩스번호</p></dt>
-									<dd>
-										<div>
-											<div class="flexWrap phone">
-                                                <!-- 2025-09-18 -->
 												<div>
                                                     <select title="팩스번호 앞 3자리">
                                                         <option value="">선택</option>
                                                         <option value="">010</option>
                                                     </select>
 												</div>
-                                                <!--// 2025-09-18 -->
                                                 <span>-</span>
 												<div>
 													<input type="text" title="팩스번호 중간 3자리">
@@ -615,16 +530,14 @@
 									<dt><p class="req">휴대폰번호</p></dt>
 									<dd>
 										<div>
-                                            <div class="flexWrapChk mx600"><!-- 2025-09-23 -->
+                                            <div class="flexWrapChk mx600">
                                                 <div class="flexWrap phone">
-                                                    <!-- 2025-09-18 -->
                                                     <div>
                                                         <select title="휴대전화 앞 3자리">
                                                             <option value="">선택</option>
                                                             <option value="">010</option>
                                                         </select>
                                                     </div>
-                                                    <!--// 2025-09-18 -->
                                                     <span>-</span>
                                                     <div>
                                                         <input type="text" title="휴대전화 중간 3자리">
@@ -641,11 +554,10 @@
 										</div>
 									</dd>
 								</dl>
-								<dl>
+                                <dl>
 									<dt><p class="req">이메일</p></dt>
 									<dd>
 										<div>
-                                            <!-- 2025-09-18 -->
 											<div class="flexWrap email">
                                                 <div class="flexWrap">
                                                     <div>
@@ -663,19 +575,509 @@
                                                     </select>
 												</div>
 											</div>
-                                            <!--// 2025-09-18 -->
-											<p class="stxt cPoint">hanmail.net과 daum.net은 메일이 스팸으로 분류되어 수신이 원활하지 않을 수 있습니다.</p>
 										</div>
 									</dd>
 								</dl>
-								<dl>
-									<dt><p>담당 업무</p></dt>
+                                <dl>
+									<dt><p>자택주소</p></dt>
 									<dd>
 										<div>
-											<input type="text" title="담당 업무">
+											<div class="flexWrap addr">
+												<div class="flexWrap post">
+													<div>
+														<input type="text" title="우편번호" value="우편번호" readonly>
+													</div>
+													<button type="button" class="btn lg bgSecond">주소검색</button>
+												</div>
+												<div class="flexWrap">
+													<div>
+														<input type="text" title="기본주소" value="기본주소" readonly>
+													</div>
+													<div>
+														<input type="text" title="상세주소" placeholder="상세주소를 입력해주세요.">
+													</div>
+												</div>
+											</div>
 										</div>
 									</dd>
 								</dl>
+							</div>
+							<!--// formTable -->
+						</div>
+
+                        <div class="section">
+							<div class="titArea">
+								<div class="left">
+									<h3>부가 정보</h3>
+								</div>
+							</div>
+							<!-- formTable -->
+							<div class="formTable">
+								<dl>
+									<dt><p class="req">소속(기관)</p></dt>
+									<dd>
+										<div>
+											<input type="text" title="소속(기관)">
+										</div>
+									</dd>
+									<dt><p class="req">부서</p></dt>
+									<dd>
+										<div>
+											<input type="text" title="부서">
+										</div>
+									</dd>
+								</dl>
+                                <dl>
+                                    <dt><p class="req">직위</p></dt>
+									<dd>
+										<div>
+											<input type="text" title="직위">
+										</div>
+									</dd>
+                                    <dt><p>사업자등록번호</p></dt>
+                                    <dd>
+										<div>
+											<div class="flexWrap phone">
+												<div>
+													<input type="text" title="사업자등록번호 앞 3자리">
+												</div>
+                                                <span>-</span>
+												<div>
+													<input type="text" title="사업자등록번호 중간 2자리">
+												</div>
+												<span>-</span>
+												<div>
+													<input type="text" title="사업자등록번호 뒤 5자리">
+												</div>
+											</div>
+										</div>
+									</dd>
+                                </dl>
+                                <dl>
+                                    <dt><p class="req">업종</p></dt>
+									<dd>
+										<div>
+											<input type="text" title="업종">
+										</div>
+									</dd>
+                                    <dt><p class="req">전화번호</p></dt>
+                                    <dd>
+										<div>
+											<div class="flexWrap phone">
+												<div>
+                                                    <select title="전화번호 앞 3자리">
+                                                        <option value="">선택</option>
+                                                        <option value="">010</option>
+                                                    </select>
+												</div>
+                                                <span>-</span>
+												<div>
+													<input type="text" title="전화번호 중간 3자리">
+												</div>
+												<span>-</span>
+												<div>
+													<input type="text" title="전화번호 뒤 3자리">
+												</div>
+											</div>
+										</div>
+									</dd>
+                                </dl>
+                                <dl>
+                                    <dt><p>팩스번호</p></dt>
+									<dd>
+										<div>
+											<div class="flexWrap phone">
+												<div>
+                                                    <select title="팩스번호 앞 3자리">
+                                                        <option value="">선택</option>
+                                                        <option value="">010</option>
+                                                    </select>
+												</div>
+                                                <span>-</span>
+												<div>
+													<input type="text" title="팩스번호 중간 3자리">
+												</div>
+												<span>-</span>
+												<div>
+													<input type="text" title="팩스번호 뒤 3자리">
+												</div>
+											</div>
+										</div>
+									</dd>
+                                </dl>
+                                <dl>
+                                    <dt><p class="req">홈페이지</p></dt>
+                                    <dd>
+										<div>
+											<input type="text" title="홈페이지" placeholder="예. www.fanfandaero.kr">
+										</div>
+									</dd>
+                                </dl>
+                                <dl>
+									<dt><p class="req">재직증명서</p></dt>
+									<dd>
+										<div>
+											<!-- fileWrap -->
+											<div class="fileWrap">
+												<input type="text" class="fileInput" disabled />
+												<div class="fileCol">
+                                                    <div class="fileBtn">
+                                                        <input type="file" title="파일선택">
+                                                        <button type="button" class="btn bgSecond btnUpload">파일찾기</button>
+                                                    </div>
+                                                    <button type="button" class="btn bgSecond btnDelete">파일삭제</button>
+												</div>
+											</div>
+											<!--/// fileWrap -->
+                                            <p class="stxt cPoint">* 확장자 jpg, jpeg, gif, png / 해상도 800*5000이하 / 파일크기 10MB이하</p>
+										</div>
+									</dd>
+								</dl>
+                                <dl>
+									<dt><p class="req">회사주소</p></dt>
+									<dd>
+										<div>
+											<div class="flexWrap addr">
+												<div class="flexWrap post">
+													<div>
+														<input type="text" title="우편번호" value="우편번호" readonly>
+													</div>
+													<button type="button" class="btn lg bgSecond">주소검색</button>
+												</div>
+												<div class="flexWrap">
+													<div>
+														<input type="text" title="기본주소" value="기본주소" readonly>
+													</div>
+													<div>
+														<input type="text" title="상세주소" placeholder="상세주소를 입력해주세요.">
+													</div>
+												</div>
+											</div>
+                                            <p class="stxt cPoint">주소가 정확하지 않을 경우 불이익을 받을 수 있습니다.</p>
+										</div>
+									</dd>
+								</dl>
+							</div>
+							<!--// formTable -->
+						</div>
+
+                        <div class="section">
+                            <div class="grayBox border">
+                                <ul class="dotList">
+                                    <li>학력은 학사이상부터 기재해주세요.</li>
+                                    <li>학력증명서는 최종학위증명서로 제출해주세요.(연구계는 필히 제출)</li>
+                                    <li>전문자격증(회계사, 변호사 등)과 같은 면허 형식의 자격증은 기한제한 없음</li>
+                                </ul>
+                            </div>
+                            <!-- formTable -->
+							<div class="formTable">
+								<dl>
+									<dt><p class="req">학력</p></dt>
+									<dd>
+										<div>
+											<!-- colTable -->
+											<div class="colTable">
+												<table>
+													<caption>학위, 학교, 전공, 기간 항목으로 구성된 학력 표</caption>
+													<colgroup>
+														<col style="width:100px">
+														<col style="width:200px">
+														<col style="width:200px">
+														<col style="width:250px">
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">학위</th>
+															<th scope="col">학교</th>
+															<th scope="col">전공</th>
+															<th scope="col">기간</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td class="txtC">학사</td>
+															<td>
+																<input type="text" title="학교" placeholder="학교명을 입력해주세요.">
+															</td>
+															<td>
+																<input type="text" title="전공" placeholder="전공을 입력해주세요.">
+															</td>
+															<td>
+																<div class="dateWrap">
+                                                                    <div class="flexWrap">
+                                                                        <div>
+                                                                            <div class="date">
+                                                                                <input type="text" title="시작날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD" id="dp1758600605289" class="hasDatepicker"><img class="ui-datepicker-trigger" src="../assets/images/component/ico-input-cal.svg" alt="선택" title="선택">
+                                                                            </div>
+                                                                        </div>
+                                                                        <span>~</span>
+                                                                    </div>
+																	<div>
+																		<div class="date">
+																			<input type="text" title="종료날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD" id="dp1758600605290" class="hasDatepicker"><img class="ui-datepicker-trigger" src="../assets/images/component/ico-input-cal.svg" alt="선택" title="선택">
+																		</div>
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td class="txtC">석사</td>
+															<td>
+																<input type="text" title="학교" placeholder="학교명을 입력해주세요.">
+															</td>
+															<td>
+																<input type="text" title="전공" placeholder="전공을 입력해주세요.">
+															</td>
+															<td>
+																<div class="dateWrap">
+                                                                    <div class="flexWrap">
+                                                                        <div>
+                                                                            <div class="date">
+                                                                                <input type="text" title="시작날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD" id="dp1758600605291" class="hasDatepicker"><img class="ui-datepicker-trigger" src="../assets/images/component/ico-input-cal.svg" alt="선택" title="선택">
+                                                                            </div>
+                                                                        </div>
+                                                                        <span>~</span>
+                                                                    </div>
+																	<div>
+																		<div class="date">
+																			<input type="text" title="종료날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD" id="dp1758600605292" class="hasDatepicker"><img class="ui-datepicker-trigger" src="../assets/images/component/ico-input-cal.svg" alt="선택" title="선택">
+																		</div>
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td class="txtC">박사</td>
+															<td>
+																<input type="text" title="학교" placeholder="학교명을 입력해주세요.">
+															</td>
+															<td>
+																<input type="text" title="전공" placeholder="전공을 입력해주세요.">
+															</td>
+															<td>
+																<div class="dateWrap">
+                                                                    <div class="flexWrap">
+                                                                        <div>
+                                                                            <div class="date">
+                                                                                <input type="text" title="시작날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD" id="dp1758600605293" class="hasDatepicker"><img class="ui-datepicker-trigger" src="../assets/images/component/ico-input-cal.svg" alt="선택" title="선택">
+                                                                            </div>
+                                                                        </div>
+                                                                        <span>~</span>
+                                                                    </div>
+																	<div>
+																		<div class="date">
+																			<input type="text" title="종료날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD" id="dp1758600605294" class="hasDatepicker"><img class="ui-datepicker-trigger" src="../assets/images/component/ico-input-cal.svg" alt="선택" title="선택">
+																		</div>
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td class="txtC">학력증명서 <br>사본</td>
+															<td colspan="3">
+																<!-- fileWrap -->
+																<div class="fileWrap">
+																	<input type="text" class="fileInput" disabled="">
+																	<div class="fileBtn">
+																		<input type="file" title="파일선택">
+																		<button type="button" class="btn bgSecond btnUpload">파일찾기</button>
+																	</div>
+																	<button type="button" class="btn bgSecond btnDelete">파일삭제</button>
+																</div>
+																<!--/// fileWrap -->
+                                                                <p class="stxt cPoint">이미지 확장자 JPG, GIF, PNG / 이미지 크기 1020 X 5000 픽셀 이하 / 파일 크기 10M 이하</p>
+                                                                <p class="stxt cPoint">첨부파일이 2개 이상일 경우, 하나의 파일(PDF, ZIP 등)로 첨부 요망</p>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<!--// colTable -->
+										</div>
+									</dd>
+								</dl>
+                                <dl>
+									<dt><p>자격증 및 면허 <br class="pBlock">(관련분야 최대 <br class="pBlock">2개 10년이내)</p></dt>
+									<dd>
+										<div>
+											<!-- colTable -->
+											<div class="colTable">
+												<table>
+													<caption>자격증/면허증, 발행기관, 취득일 항목으로 구성된 자격증 및 면허 표</caption>
+													<colgroup>
+														<col style="width:100px">
+														<col style="width:200px">
+														<col style="width:200px">
+														<col style="width:200px">
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col" colspan="2">자격증/면허증</th>
+															<th scope="col">발행기관</th>
+															<th scope="col">취득일</th>
+														</tr>
+													</thead>
+													<tbody>
+                                                        <tr>
+                                                            <td colspan="2">
+                                                                <input type="text" title="자격증/면허증" placeholder="자격증/면허증명을 입력해주세요.">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" title="발행기관" placeholder="발행기관명을 입력해주세요.">
+                                                            </td>
+                                                            <td>
+																<div class="dateWrap">
+																	<div>
+																		<div class="date">
+																			<input type="text" title="취득일(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD" id="dp1758601186769" class="hasDatepicker"><img class="ui-datepicker-trigger" src="../assets/images/component/ico-input-cal.svg" alt="선택" title="선택">
+																		</div>
+																	</div>
+																</div>
+															</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2">
+                                                                <input type="text" title="자격증/면허증" placeholder="자격증/면허증명을 입력해주세요.">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" title="발행기관" placeholder="발행기관명을 입력해주세요.">
+                                                            </td>
+                                                            <td>
+																<div class="dateWrap">
+																	<div>
+																		<div class="date">
+																			<input type="text" title="취득일(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD" id="dp1758601186770" class="hasDatepicker"><img class="ui-datepicker-trigger" src="../assets/images/component/ico-input-cal.svg" alt="선택" title="선택">
+																		</div>
+																	</div>
+																</div>
+															</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="txtC">자격증명서<br>사본</td>
+                                                            <td colspan="3">
+																<!-- fileWrap -->
+																<div class="fileWrap">
+																	<input type="text" class="fileInput" disabled="">
+																	<div class="fileBtn">
+																		<input type="file" title="파일선택">
+																		<button type="button" class="btn bgSecond btnUpload">파일찾기</button>
+																	</div>
+																	<button type="button" class="btn bgSecond btnDelete">파일삭제</button>
+																</div>
+																<!--/// fileWrap -->
+                                                                <p class="stxt cPoint">첨부파일이 2개 이상일 경우, 하나의 파일(PDF, ZIP 등)로 첨부 요망</p>
+															</td>
+                                                        </tr>
+													</tbody>
+												</table>
+											</div>
+											<!--// colTable -->
+										</div>
+									</dd>
+								</dl>
+                                <dl>
+									<dt><p class="req">직장경력</p></dt>
+									<dd>
+										<div>
+											<!-- colTable -->
+											<div class="colTable">
+												<table>
+													<caption>직장명, 근무부서, 직위, 근무기간, 담당업무 및 업무실적 항목으로 구성된 직장경력 표</caption>
+													<colgroup>
+														<col span="5" style="width:200px">
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">직장명</th>
+															<th scope="col">근무부서</th>
+															<th scope="col">직위</th>
+															<th scope="col">근무기간</th>
+															<th scope="col">담당업무 및 업무실적</th>
+														</tr>
+													</thead>
+													<tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <input type="text" title="직장명">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" title="근무부서">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" title="직위">
+                                                            </td>
+                                                            <td>
+                                                                <div class="flexWrap">
+                                                                    <div>
+                                                                        <input type="text" title="근무기간 년">
+                                                                    </div>
+                                                                    <span>년</span>
+                                                                    <div>
+                                                                        <input type="text" title="근무기간 개월">
+                                                                    </div>
+                                                                    <span>개월</span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" title="담당업무 및 업무실적">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <input type="text" title="직장명">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" title="근무부서">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" title="직위">
+                                                            </td>
+                                                            <td>
+                                                                <div class="flexWrap">
+                                                                    <div>
+                                                                        <input type="text" title="근무기간 년">
+                                                                    </div>
+                                                                    <span>년</span>
+                                                                    <div>
+                                                                        <input type="text" title="근무기간 개월">
+                                                                    </div>
+                                                                    <span>개월</span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" title="담당업무 및 업무실적">
+                                                            </td>
+                                                        </tr>
+													</tbody>
+												</table>
+											</div>
+											<!--// colTable -->
+										</div>
+									</dd>
+								</dl>
+							</div>
+							<!--// formTable -->
+                        </div>
+
+                        <div class="section">
+							<div class="titArea">
+								<div class="left">
+									<h3>기타</h3>
+								</div>
+							</div>
+							<!-- formTable -->
+							<div class="formTable">
+								<dl>
+									<dt><p class="req">추천기관</p></dt>
+									<dd>
+										<div>
+											<select title="추천기관">
+												<option value="">선택</option>
+											</select>
+											<p class="stxt">회원님을 추천한 추천기관을 선택하세요. 없을 경우 기타를 선택하십시오.</p>
+										</div>
+									</dd>
+								</dl> 
 							</div>
 							<!--// formTable -->
 						</div>
@@ -781,7 +1183,6 @@
 							</div>
 							<!--// formTable -->
 						</div>
-
                         <!-- btnBottom -->
 						<div class="btnBottom">
 							<div class="right">
