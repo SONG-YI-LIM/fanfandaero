@@ -538,7 +538,7 @@ const fn_Content = () => {
     });
 
     $('.btnTxt.fold').each(function(){
-        const $formTable = $(this).closest(".titArea").nextAll(".formTable").first();
+        const $formTable = $(this).closest(".titArea").nextAll(".formTable, .colTable").first();
         $(this).click(function(){
             if($(this).hasClass('open')){
                 $(this).removeClass('open').text('접기');

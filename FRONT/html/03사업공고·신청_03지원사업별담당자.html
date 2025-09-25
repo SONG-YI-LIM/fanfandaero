@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<!-- E : mobile -->
+<title>aaaa</title>
+<link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+<script type="text/javascript" src="../assets/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../assets/js/moment.min.js"></script>
+<script type="text/javascript" src="../assets/js/daterangepicker.min.js"></script>
+<script type="text/javascript" src="../assets/js/swiper.js"></script>
+<script type="text/javascript" src="../assets/js/common.js"></script>
+<!-- <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="js/selectivizr.js">
+ -->
+<!--[if lte IE 9]>
+</script>
+<![endif]-->
+</head>
+<body>
+<!-- skipNav -->
+<dl id="skipNav">
+	<dt>바로가기 메뉴</dt>
+	<dd><a href="#container">본문 바로가기</a></dd>
+	<dd><a href="#gnb">주메뉴 바로가기</a></dd>
+	<dd><a href="#footer">풋터 바로가기</a></dd>
+</dl>
+<!-- //skipNav -->
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<!-- inner -->
+		<div class="inner">
+			<div class="headTop">
+				<ul class="etc">
+					<li><a href="" class="btnIco btnHref xsm"><img src="../assets/images/common/ico-logo01.png" alt="">소담인프라</a></li>
+					<li><a href="" class="btnIco btnHref xsm"><img src="../assets/images/common/ico-logo02.svg" alt="">동행축제</a></li>
+				</ul>
+			</div>
+			<div class="headBody">
+				<div class="logo">
+					<a href=""><img src="../assets/images/common/logo.svg" alt="KODMA 판판대로"></a>
+				</div>
+				<ul class="util">
+					<li>
+						<button type="button" class="btnSearchForm">통합검색</button>
+						<div class="headSearch">
+							<div class="inner">
+								<strong>판판대로 통합검색</strong>
+								<div class="in">
+									<div class="sesarchInp">
+										<input type="text" placeholder="검색어를 입력해주세요." title="검색어">
+										<button type="button" class="btnHeadSearch"><span class="hide">검색</span></button>
+									</div>
+									<div class="searchInpBot">
+										<p>무엇이 궁금하세요?</p>
+										<ul>
+											<li><button type="button">#전담셀러</button></li>
+											<li><button type="button">#상세페이지</button></li>
+											<li><button type="button">#마트</button></li>
+											<li><button type="button">#브랜드k</button></li>
+										</ul>
+									</div>
+								</div>
+								<button type="button" class="btnCls btnHeaeSearCls"><span class="hide">닫기</span></button>
+							</div>
+						</div>
+					</li>
+					<!-- 로그인 전 -->
+					<li><a href="" class="btnLogin">로그인</a></li>
+					<li><a href="" class="btnJoin">회원가입</a></li>
+					<!--// 로그인 전 -->
+					<!-- 로그인 후 -->
+					<li><a href="" class="btnLogout">로그아웃</a></li>
+					<li><a href="" class="btnMypage">김판판님 마이페이지</a></li>
+					<!--// 로그인 후 -->
+					<li class="btnMobLi"><a href="" class="btnHam">전체메뉴</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--// inner -->
+		<!-- gnb -->
+		<div id="gnb">
+			<div class="inner">
+				<!-- gnbArea -->
+				<div class="gnbArea">
+					<ul class="gnbUl">
+						<li>
+							<a href="">운영기관 소개</a>
+							<div class="subDepth">
+								<p>운영기관 소개</p>
+								<ul>
+									<li><a href="">운영기관 소개</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="">사업공고 및 신청</a>
+							<div class="subDepth">
+								<p>사업공고 및 신청</p>
+								<ul>
+									<li><a href="">지원사업 안내</a></li>
+									<li>
+										<a href="">지원사업 공고</a>
+										<ul>
+											<li><a href="">지원사업 공고ㆍ신청</a></li>
+											<li><a href="">국내 판로지원사업 전체보기</a></li>
+											<li>
+												<a href="">지원사업 신청현황</a>
+												<ul>
+													<li><a href="">지원사업 신청/수정/제출 목록</a></li>
+													<li><a href="">지원사업 신청</a></li>
+													<li><a href="">지원사업 임시저장</a></li>
+													<li><a href="">지원사업 수정</a></li>
+													<li><a href="">지원사업 제출</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li><a href="">지원사업 공고</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="">홍보·알림</a>
+							<div class="subDepth">
+								<p>홍보·알림</p>
+								<ul>
+									<li><a href="">우수제품</a></li>
+									<li><a href="">우수사례</a></li>
+									<li>
+										<a href="">판로정보</a>
+										<ul>
+											<li><a href="">중소기업 행사정보</a></li>
+											<li><a href="">조달청 입찰정보</a></li>
+											<li><a href="">기타 연계정보 제공</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="">MRO 지원정보</a>
+										<ul>
+											<li><a href="">알기쉬운 사업안내</a></li>
+											<li><a href="">납품업체 검색</a></li>
+											<li><a href="">실태조사</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="">주요 서비스</a>
+							<div class="subDepth">
+								<p>주요 서비스</p>
+								<ul>
+									<li><a href="">플랫폼소개</a></li>
+									<li>
+										<a href="">소담인프라</a>
+										<ul>
+											<li>
+												<a href="">소담스퀘어 안내</a>
+												<ul>
+													<li><a href="">상암</a></li>
+													<li><a href="">당산</a></li>
+													<li><a href="">보라매</a></li>
+													<li><a href="">대구</a></li>
+													<li><a href="">부산</a></li>
+													<li><a href="">전주</a></li>
+													<li><a href="">강원</a></li>
+													<li><a href="">광주</a></li>
+													<li><a href="">충북</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="">소담상회 안내</a>
+												<ul>
+													<li><a href="">인사</a></li>
+													<li><a href="">서교</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="">판판소싱</a>
+										<ul>
+											<li>
+												<a href="">판판소싱 공고</a>
+												<ul>
+													<li><a href="">공고 보기</a></li>
+													<li><a href="">입점신청</a></li>
+												</ul>
+											</li>
+											<li><a href="">판판소싱 소개</a></li>
+										</ul>
+									</li>
+									<li><a href="" target="_blank">판판셀러</a></li>
+									<li><a href="" target="_blank">동행축제</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="">이용안내</a>
+							<div class="subDepth">
+								<p>이용안내</p>
+								<ul>
+									<li><a href="">공지사항</a></li>
+									<li><a href="">자주하는 질문</a></li>
+									<li><a href="">1:1 문의</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<!-- hover depth -->
+					<div class="in hoverDepth"></div>
+					<!--// hover depth -->
+				</div>
+				<!--// gnbArea -->
+				<div class="sitemapArea">
+					<button type="button" class="btnSitemap"><span class="hide">사이트맵</span></button>
+					<div id="sitemap">
+						<div class="inner">
+							<strong>판판대로 사이트맵</strong>
+							<!-- sitemap gnb -->
+							<div class="in"></div>
+							<!--// sitemap gnb -->
+							<button type="button" class="btnCls btnSitemapCls"><span class="hide">닫기</span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--// gnb -->
+		<!-- gnbMob -->
+		<div class="gnbMobArea">
+			<div class="gnbMob">
+				<div class="head">
+					<div class="headTop">
+						<ul class="etc">
+							<li><a href="" class="btnIco btnHref xsm"><img src="../assets/images/common/ico-logo01.png" alt="">소담인프라</a></li>
+							<li><a href="" class="btnIco btnHref xsm"><img src="../assets/images/common/ico-logo02.svg" alt="">동행축제</a></li>
+						</ul>
+					</div>
+					<div>
+						<p class="logTxt">로그인을 해주세요.</p>
+					</div>
+				</div>
+				<div class="body">
+					<div class="left">
+						<ul class="gnbNav">
+							<li class="curr"><a href="#mGnb01">운영기관 소개</a></li>
+							<li><a href="#mGnb02">사업공고 및 신청</a></li>
+							<li><a href="#mGnb03">홍보·알림</a></li>
+							<li><a href="#mGnb04">주요 서비스</a></li>
+							<li><a href="#mGnb05">이용안내</a></li>
+						</ul>
+					</div>
+					<div class="right">
+						<div class="in">
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="btnCls btnHamCls"><span class="hide">닫기</span></button>
+		</div>
+		<!--// gnbMob -->
+	</div>
+	<!--// header -->
+
+	<!-- container -->
+	<div id="container">
+		<!-- contents -->
+		<div class="contents">
+			<!-- lnb -->
+			<div id="lnb">
+				<div class="in">
+                    <!-- 2025-09-03 -->
+                    <div class="lnbTop">
+                        <div class="top">
+                            <h4>사업공고·신청</h4>
+                        </div>
+                    </div>
+                    <!--// 2025-09-03 -->
+					<ul class="lnbUl">
+						<li><a href="">지원사업 안내</a></li>
+						<li>
+							<a href="">지원사업 공고</a>
+							<ul>
+								<li><a href="">지원사업 공고·신청</a></li>
+								<li><a href="">국내 판로지원사업 전체보기</a></li>
+								<li><a href="">지원사업 신청현황</a></li>
+							</ul>
+						</li>
+						<li class="curr"><a href="">지원사업별 담당자</a></li>
+					</ul>
+				</div>
+			</div>
+			<!--// lnb -->
+			<div class="inner">
+				<!-- breadcrumb -->
+				<div class="breadcrumb">
+					<ol>
+						<li class="home"><a href="">홈</a></li>
+						<li><a href="#"><strong>사업공고·신청</strong></a></li>
+						<li><a href="#"><strong>지원사업별 담당자</strong></a></li>
+					</ol>
+				</div>
+				<!-- breadcrumb -->
+				<!-- subTop -->
+				<div class="subTop v3">
+					<div class="titArea">
+                        <div class="left">
+                            <h2>지원사업별 담당자</h2>
+                        </div>
+					</div>
+				</div>
+				<!--// subTop -->
+
+				<!-- subCont -->
+				<div class="subCont">
+					<div class="cont">
+                        <div class="section">
+                            <!-- titArea -->
+                            <div class="titArea">
+                                <div class="left">
+                                    <h3>동반성장몰</h3>
+                                </div>
+                                <div class="right">
+                                    <button type="button" class="btnTxt rt fold">접기</button>
+                                </div>
+                            </div>
+                            <!--// titArea -->
+                            <!-- colTable -->
+                            <div class="colTable">
+                                <table>
+                                    <caption>지원사업, 담당자, 연락처 항목으로 구성된 동반성장몰 표</caption>
+                                    <colgroup>
+                                        <col style="width:460px">
+                                        <col style="width:240px">
+                                        <col style="width:240px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="bgBlue">지원사업</th>
+                                            <th scope="col" class="bgBlue">담당자</th>
+                                            <th scope="col" class="bgBlue">연락처</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>동반성장몰</td>
+                                            <td class="txtC">박성환 대리</td>
+                                            <td class="txtC">02-6678-9828</td>
+                                        </tr>
+                                        <tr>
+                                            <td>동반성장몰(K전략품목/시범구매/상생협력 한정)</td>
+                                            <td class="txtC">김찬석 주임</td>
+                                            <td class="txtC">02-6678-9548</td>
+                                        </tr>
+                                        <tr>
+                                            <td>동반성장몰(브랜드K/시범구매/상생협력 한정)</td>
+                                            <td class="txtC">박성환 대리</td>
+                                            <td class="txtC">02-6678-9828</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--// colTable -->
+                        </div>
+                        <div class="section">
+                            <!-- titArea -->
+                            <div class="titArea">
+                                <div class="left">
+                                    <h3>마케팅지원사업</h3>
+                                </div>
+                                <div class="right">
+                                    <button type="button" class="btnTxt rt fold">접기</button>
+                                </div>
+                            </div>
+                            <!--// titArea -->
+                            <!-- colTable -->
+                            <div class="colTable">
+                                <table>
+                                    <caption>지원사업, 담당자, 연락처 항목으로 구성된 마케팅지원사업 표</caption>
+                                    <colgroup>
+                                        <col style="width:460px">
+                                        <col style="width:240px">
+                                        <col style="width:240px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="bgBlue">지원사업</th>
+                                            <th scope="col" class="bgBlue">담당자</th>
+                                            <th scope="col" class="bgBlue">연락처</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2025 판판셀러 (온라인쇼핑몰 통합관리시스템)</td>
+                                            <td class="txtC">채유진 주임</td>
+                                            <td class="txtC">02-6678-9427</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2025년도 중소기업 판로 및 마케팅 유공자 포상</td>
+                                            <td class="txtC">이근영 과장</td>
+                                            <td class="txtC">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>25년 대형유통망 입점연계지원(LG유플러스, 1차)</td>
+                                            <td class="txtC">박세광 주임</td>
+                                            <td class="txtC">02-6678-9717</td>
+                                        </tr>
+                                        <tr>
+                                            <td>25년 대형유통망 입점연계지원(신세계면세점)</td>
+                                            <td class="txtC">박세광 주임</td>
+                                            <td class="txtC">02-6678-9717</td>
+                                        </tr>
+                                        <tr>
+                                            <td>25년 대형유통망 입점연계지원(코레일유통)</td>
+                                            <td class="txtC">박세광 주임</td>
+                                            <td class="txtC">02-6678-9717</td>
+                                        </tr>
+                                        <tr>
+                                            <td>공동A/S지원사업</td>
+                                            <td class="txtC">김혜원 주임</td>
+                                            <td class="txtC">02-6678-9324</td>
+                                        </tr>
+                                        <tr>
+                                            <td>라이브커머스 판매관리 시범운영</td>
+                                            <td class="txtC">윤수한 과장</td>
+                                            <td class="txtC">02-6678-9541</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--// colTable -->
+                        </div>
+                        <div class="section">
+                            <!-- titArea -->
+                            <div class="titArea">
+                                <div class="left">
+                                    <h3>소상공인지원사업</h3>
+                                </div>
+                                <div class="right">
+                                    <button type="button" class="btnTxt rt fold">접기</button>
+                                </div>
+                            </div>
+                            <!--// titArea -->
+                            <!-- colTable -->
+                            <div class="colTable">
+                                <table>
+                                    <caption>지원사업, 담당자, 연락처 항목으로 구성된 소상공인지원사업 표</caption>
+                                    <colgroup>
+                                        <col style="width:460px">
+                                        <col style="width:240px">
+                                        <col style="width:240px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="bgBlue">지원사업</th>
+                                            <th scope="col" class="bgBlue">담당자</th>
+                                            <th scope="col" class="bgBlue">연락처</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td rowspan="2">1회차 소상공인 PB/직매입 상담회(추가모집)</td>
+                                            <td class="txtC">김보배 사원</td>
+                                            <td class="txtC">02-6678-9589</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="txtC borderL">정재성 주임</td>
+                                            <td class="txtC">02-6678-9458</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2025 BI,캐릭터 디자인 개선·제작 (상품 개선)</td>
+                                            <td class="txtC">김건태 주임</td>
+                                            <td class="txtC">02-6678-9878</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--// colTable -->
+                        </div>
+                        <div class="section">
+                            <!-- titArea -->
+                            <div class="titArea">
+                                <div class="left">
+                                    <h3>대한민국 동행축제</h3>
+                                </div>
+                                <div class="right">
+                                    <button type="button" class="btnTxt rt fold">접기</button>
+                                </div>
+                            </div>
+                            <!--// titArea -->
+                            <!-- colTable -->
+                            <div class="colTable">
+                                <table>
+                                    <caption>지원사업, 담당자, 연락처 항목으로 구성된 대한민국 동행축제 표</caption>
+                                    <colgroup>
+                                        <col style="width:460px">
+                                        <col style="width:240px">
+                                        <col style="width:240px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="bgBlue">지원사업</th>
+                                            <th scope="col" class="bgBlue">담당자</th>
+                                            <th scope="col" class="bgBlue">연락처</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2025년 5월 대한민국 동행축제 정책브랜드(K-뷰티,식품어워즈)추천기업</td>
+                                            <td class="txtC">권나영 대리</td>
+                                            <td class="txtC">02-6678-9885</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2025년 9월 대한민국 동행축제 참여기업 모집</td>
+                                            <td class="txtC">권나영 대리</td>
+                                            <td class="txtC">02-6678-9885</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2025년 9월 동행축제(제주 오프라인 판매전) 참여기업 모집</td>
+                                            <td class="txtC">전영주 과장</td>
+                                            <td class="txtC">02-6678-9883</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2025년 대한민국 동행축제(5월)</td>
+                                            <td class="txtC">김민정 주임</td>
+                                            <td class="txtC">02-6678-9887</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--// colTable -->
+                        </div>
+                        <div class="section">
+                            <!-- titArea -->
+                            <div class="titArea">
+                                <div class="left">
+                                    <h3>MRO지원사업</h3>
+                                </div>
+                                <div class="right">
+                                    <button type="button" class="btnTxt rt fold">접기</button>
+                                </div>
+                            </div>
+                            <!--// titArea -->
+                            <!-- colTable -->
+                            <div class="colTable">
+                                <table>
+                                    <caption>지원사업, 담당자, 연락처 항목으로 구성된 MRO지원사업 표</caption>
+                                    <colgroup>
+                                        <col style="width:460px">
+                                        <col style="width:240px">
+                                        <col style="width:240px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="bgBlue">지원사업</th>
+                                            <th scope="col" class="bgBlue">담당자</th>
+                                            <th scope="col" class="bgBlue">연락처</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>MRO 권역별 오프라인 교육</td>
+                                            <td class="txtC">진주희 대리</td>
+                                            <td class="txtC">02-6678-9323</td>
+                                        </tr>
+                                        <tr>
+                                            <td>MRO 납품관리시스템 활용 지원</td>
+                                            <td class="txtC">진주희 대리</td>
+                                            <td class="txtC">02-6678-9323</td>
+                                        </tr>
+                                        <tr>
+                                            <td>MRO 입점·구매상담회</td>
+                                            <td class="txtC">진주희 대리</td>
+                                            <td class="txtC">02-6678-9323</td>
+                                        </tr>
+                                        <tr>
+                                            <td>MRO 입찰정보제공 및 온라인교육</td>
+                                            <td class="txtC">진주희 대리</td>
+                                            <td class="txtC">02-6678-9323</td>
+                                        </tr>
+                                        <tr>
+                                            <td>MRO 전자입찰 1:1 컨설팅</td>
+                                            <td class="txtC">진주희 대리</td>
+                                            <td class="txtC">02-6678-9323</td>
+                                        </tr>
+                                        <tr>
+                                            <td>제2회 MRO 입점·구매상담회</td>
+                                            <td class="txtC">진주희 대리</td>
+                                            <td class="txtC">02-6678-9323</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--// colTable -->
+                        </div>
+                        <div class="section">
+                            <!-- titArea -->
+                            <div class="titArea">
+                                <div class="left">
+                                    <h3>수행기관 공모</h3>
+                                </div>
+                                <div class="right">
+                                    <button type="button" class="btnTxt rt fold">접기</button>
+                                </div>
+                            </div>
+                            <!--// titArea -->
+                            <!-- colTable -->
+                            <div class="colTable">
+                                <table>
+                                    <caption>지원사업, 담당자, 연락처 항목으로 구성된 수행기관 공모 표</caption>
+                                    <colgroup>
+                                        <col style="width:460px">
+                                        <col style="width:240px">
+                                        <col style="width:240px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="bgBlue">지원사업</th>
+                                            <th scope="col" class="bgBlue">담당자</th>
+                                            <th scope="col" class="bgBlue">연락처</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>TV홈쇼핑 및 데이터홈쇼핑 입점지원</td>
+                                            <td class="txtC">장진우 주임</td>
+                                            <td class="txtC">02-6678-9469</td>
+                                        </tr>
+                                        <tr>
+                                            <td>공동A/S지원사업(A/S영상콘텐츠 제작, 상담챗봇 구축) 수행기관 공모</td>
+                                            <td class="txtC">김혜원 주임</td>
+                                            <td class="txtC">02-6678-9324</td>
+                                        </tr>
+                                        <tr>
+                                            <td>대형유통망 입점연계지원 수행기관 공모</td>
+                                            <td class="txtC">박세광 주임</td>
+                                            <td class="txtC">02-6678-9717</td>
+                                        </tr>
+                                        <tr>
+                                            <td>디지털커머스 전문기관 소담스퀘어 역삼 대체 인프라(수행기관) 선정 공고(공모)</td>
+                                            <td class="txtC">김영진 과장</td>
+                                            <td class="txtC">02-6678-9363</td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="4">라이브커머스 제작·운영 지원</td>
+                                            <td class="txtC">김다솜 주임</td>
+                                            <td class="txtC">02-6678-9468</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="txtC borderL">김태경 주임</td>
+                                            <td class="txtC">02-6678-9465</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="txtC borderL">박민기 과장</td>
+                                            <td class="txtC">02-6678-9462/td>
+                                        </tr>
+                                        <tr>
+                                            <td class="txtC borderL">최자혜 대리</td>
+                                            <td class="txtC">02-6678-9466</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--// colTable -->
+                        </div>
+                        <div class="section">
+                            <!-- titArea -->
+                            <div class="titArea">
+                                <div class="left">
+                                    <h3>공영홈쇼핑 정책사업</h3>
+                                </div>
+                                <div class="right">
+                                    <button type="button" class="btnTxt rt fold">접기</button>
+                                </div>
+                            </div>
+                            <!--// titArea -->
+                            <!-- colTable -->
+                            <div class="colTable">
+                                <table>
+                                    <caption>지원사업, 담당자, 연락처 항목으로 구성된 공영홈쇼핑 정책사업 표</caption>
+                                    <colgroup>
+                                        <col style="width:460px">
+                                        <col style="width:240px">
+                                        <col style="width:240px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="bgBlue">지원사업</th>
+                                            <th scope="col" class="bgBlue">담당자</th>
+                                            <th scope="col" class="bgBlue">연락처</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2025년 공영홈쇼핑 대전세종지역 혁신기업 제품 코칭 상담회</td>
+                                            <td class="txtC">양규석 공영홈쇼핑</td>
+                                            <td class="txtC">02-6350-8568</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2025년 공영홈쇼핑 부산지역 혁신기업제품 코칭 상담회</td>
+                                            <td class="txtC">양규석 공영홈쇼핑</td>
+                                            <td class="txtC">02-6350-8568</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2025년 전국 스마트제조혁신기업 공영홈쇼핑 입점 코칭 상담회</td>
+                                            <td class="txtC">양규석 공영홈쇼핑</td>
+                                            <td class="txtC">02-6350-8568</td>
+                                        </tr>
+                                        <tr>
+                                            <td>『전국 스마트제조혁신기업 판로지원 사업』원스톱 통합지원프로그램 참여기업 모집</td>
+                                            <td class="txtC">양규석 공영홈쇼핑</td>
+                                            <td class="txtC">02-6350-8568</td>
+                                        </tr>
+                                        <tr>
+                                            <td>제4회 공영홈쇼핑 『국내 우수 아이디어·혁신기업제품 공모전』</td>
+                                            <td class="txtC">양규석 공영홈쇼핑</td>
+                                            <td class="txtC">02-6350-8568</td>
+                                        </tr>
+                                        <tr>
+                                            <td>지역 혁신기관 협력 『지역 특화제품 판로지원 사업』</td>
+                                            <td class="txtC">양규석 공영홈쇼핑</td>
+                                            <td class="txtC">02-6350-8568</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--// colTable -->
+                        </div>
+					</div>
+				</div>
+				<!--// subCont -->
+			</div>
+		</div>
+		<!--// contents -->
+
+		<!-- quickmenu -->
+		<div id="quickmenu">
+			<div class="quick">
+				<ul>
+					<li class="m1"><a href="">공지사항</a></li>
+					<li class="m2"><a href="">위원신청</a></li>
+					<li class="m3"><a href="">상담하기</a></li>
+					<li class="m4"><a href="">원격지원</a></li>
+				</ul>
+				<button type="button" class="btnQuick"><span class="hide">퀵메뉴</span></button>
+			</div>
+			<button type="button" class="btnTop"><span class="hide">상단으로 이동</span></button>
+		</div>
+		<!--// quickmenu -->
+	</div>
+	<!--// container -->
+
+	<!-- footer -->
+	<footer id="footer">
+		<div class="inner">
+			<div class="footerCont">
+				<div class="left">
+					<div class="footerLogo">
+						<img src="../assets/images/common/logo-footer01.png" alt="중소벤처기업부">
+						<img src="../assets/images/common/logo-footer02.png" alt="한국중소벤처기업유통원">
+					</div>
+					<div class="fInfo">
+						<p class="addr">(07997) 서울특별시 양천구 목동동로309 한국중소벤처기업유통원</p>
+						<ul class="cs">
+							<li><strong>대표자</strong>이태식</li>
+							<li><strong>사업자등록번호</strong><span>107-81-53660</span></li>
+						</ul>
+						<ul class="cs">
+							<li><strong>기능문의</strong><span>02-2656-9021</span></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="fLink">
+					<div class="familySite">
+						<div class="select">
+							<button type="button">관련사이트</button>
+							<ul>
+								<li class="curr"><a href="" target="_blank">판판셀러</a></li>
+								<li><a href="" target="_blank">전자계약시스템</a></li>
+								<li><a href="" target="_blank">평가관리시스템</a></li>
+								<li><a href="" target="_blank">공공구매종합정보망</a></li>
+								<li><a href="" target="_blank">브랜드K</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="menu">
+						<a href="#" class="btnIco">찾아오시는 길</a>
+					</div>
+					<div class="sns">
+						<a href="#" class="facebook" target="_blank"><span class="hide">페이스북</span></a>
+						<a href="#" class="blog" target="_blank"><span class="hide">블로그</span></a>
+					</div>
+				</div>
+			</div>
+			<div class="footerBottom">
+				<div class="fBot">
+					<div class="menu">
+						<a href="#"><strong>개인정보처리방침</strong></a>
+						<a href="#">이용안내</a>
+						<a href="#">이용약관</a>
+						<a href="#">저작권정책</a>
+						<a href="#">이메일무단수집거부</a>
+					</div>
+					<p class="copyright">Copyright 2025. 판판대로 All Rights Reserved.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--// footer -->
+</div>
+<!--// wrap -->
+</body>
+</html>
