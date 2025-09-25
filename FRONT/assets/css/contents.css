@@ -424,6 +424,7 @@ table { table-layout: fixed; width: auto; max-width: none; min-width: 100%; }
 .colTable .borderB { border-bottom: 1px solid var(--color-gray-30); } 
 .colTable.scroll { overflow-x:auto; } 
 .colTable.scroll table { width: 100%; }
+.colTable.inImg img { width: 100px; height: 100px; }
 .colTable .bgDBlue { background-color: #617486; }
 .colTable .bgSky { color: var(--color-base); background-color: #EDF1F5; }
 
@@ -479,6 +480,15 @@ body.tooltipOn .subCont > div { overflow: visible; } */
 .lnbTop .myInfo .name span.v1 { background-color: #4E6CB6; }
 .lnbTop .myInfo .name span.v2 { background-color: #764A8F; }
 .lnbTop .myInfo .name span.v3 { background-color: rgba(5, 120, 156, 0.95); }
+.lnbTop .myInfo .name span.v4 { background-color: #59509E; }
+.lnbTop .myInfo .name span.v5 { background-color: #229068; }
+/*
+v1 기업
+v2 MD
+v3 위원
+v4 제휴
+v5 예비
+*/
 .lnbTop .myInfo .recentDate { font-size: 13px; color: var(--color-gray-70); }
 .lnbUl { padding: 16px 20px; } 
 .lnbUl li a { display: inline-flex; align-items: center; gap: 10px; position: relative; width: 100%; } 
@@ -540,7 +550,7 @@ body.tooltipOn .subCont > div { overflow: visible; } */
 v3 사업공고·신청
 v4 홍보·알림
 v6 이용안내
-v7 로그인·회원
+v8 마이페이지
 v9 고객지원
 */ 
 .subTop::after { display: block; content: ""; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: #2567B0;} 
@@ -1245,7 +1255,7 @@ v9 고객지원
 .supportStatus dl.status09 dt:before { background-image: url(../images/content/ico-status09.svg); }
 .supportStatus dl.status10 dt:before { background-image: url(../images/content/ico-status10.svg); }
 .supportStatus dl.status11 dt:before { background-image: url(../images/content/ico-status11.svg); }
-.supportStatus dl dd { display: flex; justify-content: flex-end; gap: 10px; margin-top: 10px; padding-top: 16px; border-top: 1px solid #aaa; text-align: right; font-size: 30px; font-weight: 700; color: var(--color-base); }
+.supportStatus dl dd { display: flex; align-items: center; justify-content: flex-end; gap: 10px; margin-top: 10px; padding-top: 16px; border-top: 1px solid #aaa; text-align: right; font-size: 30px; font-weight: 700; color: var(--color-base); }
 .supportStatus dl.status06 dt,
 .supportStatus dl.status06 dd,
 .supportStatus dl.status11 dt,
@@ -1280,6 +1290,15 @@ v9 고객지원
 .goArea .goBox a:first-child span:before { background-image: url(../images/content/img-go02.png); }
 .goArea .goBox a:last-child span:before { background-image: url(../images/content/img-go03.png); }
 .goArea .goBox a span:after { content: ""; position: absolute; top: 0; right: 0; width: 16px; height: 100%; background: url(../images/content/img-go04.png) no-repeat center/100% auto; }
+.goArea .corpInfo ul { display: flex; flex-direction: column; gap: 10px; padding: 20px; border: 1px solid #ccc; border-radius: 12px; }
+.goArea .corpInfo ul li { display: flex; }
+.goArea .corpInfo ul li p { flex: 0 0 100px; position: relative; padding-left: 14px; font-size: 15px; font-weight: 700; color: var(--color-base); }
+.goArea .corpInfo ul li p:before { content: ""; position: absolute; top: 9px; left: 0; border-radius: 50%; width: 4px; height: 4px; background: var(--color-base); }
+.goArea .corpInfo ul li span { flex: 1; font-size: 15px; color: var(--color-gray-70); }
+
+.goArea.inCorpInfo { margin-top: 0; height: auto; }
+.goArea.inCorpInfo .corpInfo { flex: 1; }
+.goArea.inCorpInfo img { width: 100%; }
 
 .mdArea { display: flex; flex-wrap: wrap; gap: 40px; }
 .mdArea .lt { flex: 1; }
@@ -1329,6 +1348,17 @@ v9 고객지원
 .userInfo .user .detail ul li.v3 { background: #764A8F; }
 .userInfo .user .detail ul li.v4 { background: #594664; }
 .userInfo .user .detail ul li.v5 { background: #229068; }
+.userInfo .user .detail ul li.v6 { background: #59509E; }
+.userInfo .user .detail ul li.v7 { background: #229068; }
+/*
+v1 기업
+v2 법인인증서 확인
+v3 MD
+v4 정회원
+v5 평가위원
+v6 제휴
+v7 예비
+*/
 .userInfo .user .detail p { margin-bottom: 5px; line-height: 1; font-size: 23px; font-weight: 700; color: var(--color-base); }
 .userInfo .user .detail span { font-size: 13px; color: var(--color-gray-70); }
 .userInfo dl { display: flex; flex-direction: column; justify-content: space-between; flex: 1; padding: 24px 24px 16px; border-radius: 8px; background: var(--color-white); }
@@ -1432,7 +1462,7 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
 .statusProcess ol li.status06 p,
 .statusProcess ol li.status06 span { color: var(--color-point); }
 
-.spStatus { display: flex; flex-wrap: wrap; gap: 32px; margin-bottom: 16px; }
+.spStatus { display: flex; flex-wrap: wrap; gap: 0 32px; margin-bottom: 16px; }
 .spStatus dl { position: relative; padding: 12px 16px 12px 86px; border-top: 1px solid #ddd; width: calc(50% - 16px); }
 .spStatus dl:before { content: ""; position: absolute; top: calc(50% - 25px); left: 16px; width: 50px; height: 50px; background-repeat: no-repeat; background-position: center; background-size: 100% auto; }
 .spStatus dl.status01:before { background-image: url(../images/content/img-status01.png); }
@@ -1611,7 +1641,6 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
 .btnForm { display: inline-flex; align-items: center; justify-content: center; gap: 5px; padding: 0 16px; border: none; border-radius: 14px; padding: 0 16px; height: 28px; line-height: 1; font-size: 15px; font-weight: 700; color: var(--color-gray-70); background-color: var(--color-gray-20);  cursor: default;} 
 .inputTxtR input {text-align: right;}
 .flexWrap .addressInput {font-size: 15px; font-weight: 700; color: var(--color-base);}
-.subCont .cont .mdArea img {width: 100px; height: 100px; }
 @media (max-width: 1160px) {
     .itemInfoRight { padding-bottom: 48px !important; }
     .itemInfoRight div { bottom: 0; }

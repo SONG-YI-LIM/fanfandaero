@@ -284,7 +284,7 @@
                             <button type="button" class="btnTxt download">매뉴얼 다운로드</button>
                         </div>
                         <div class="myInfo">
-                            <p class="name"><span class="v2">MD</span>홍길동 님</p>
+                            <p class="name"><span class="v5">예비</span>홍길동 님</p>
                             <span class="recentDate">최근접속일 : 2025.08.01 10:11:15</span>
                         </div>
                     </div>
@@ -356,7 +356,7 @@
 					<ol>
 						<li class="home"><a href="">홈</a></li>
 						<li><a href="#"><strong>마이페이지</strong></a></li>
-						<li><a href="#"><strong>판판소싱 모집내역</strong></a></li>
+						<li><a href="#"><strong>회원정보</strong></a></li>
 					</ol>
 				</div>
 				<!-- breadcrumb -->
@@ -364,7 +364,7 @@
 				<div class="subTop v8">
 					<div class="titArea">
                         <div class="left">
-                            <h2>모집현황 및 선정</h2>
+                            <h2>기본정보</h2>
                         </div>
                         <div class="right">
                             <button type="button" class="btnTxt download">매뉴얼 다운로드</button>
@@ -373,419 +373,365 @@
 				</div>
 				<!--// subTop -->
 
-				<!-- subCont --> 
+				<!-- subCont -->
 				<div class="subCont">
 					<div class="cont">
                         <div class="section">
                             <div class="titArea">
                                 <div class="left">
-                                    <h3>유통센터 공고</h3>
+                                    <h3>회원정보</h3>
                                 </div>
                                 <div class="right">
-                                    <button type="button" class="btn bgSecond">첨부파일 다운로드</button>
+                                    <button type="button" class="btn bgSecond">회원 탈퇴</button>
                                 </div>
                             </div>
-                            <!-- itemInfo -->
-                            <div class="itemInfo">
-                                <ul>
-                                    <li><strong>신청일</strong>2025.08.06</li>
-                                    <li><strong>신청기업명</strong>한국중소벤처기업유통원</li>
-                                    <li><strong>선정일</strong>2025.08.06</li>
-                                    <li><strong>선정결과</strong>입점선정</li>
-                                </ul>
-                            </div> 
-                            <!--// itemInfo -->
+                            <!-- userInfo -->
+                            <div class="userInfo">
+                                <div class="user">
+                                    <img src="../assets/images/content/img-user.png" alt="프로필 사진">
+                                    <div class="detail">
+                                        <ul>
+                                            <li class="v7">예비</li>
+                                        </ul>
+                                        <p>홍길동 님</p>
+                                        <span>최근접속일 : <br class="mBlock">2025.08.01 10:11:15</span>
+                                    </div>
+                                </div>
+                                <dl class="userLabel01">
+                                    <dt>회원구분</dt>
+                                    <dd>일반회원</dd>
+                                </dl>
+                                <dl class="userLabel02">
+                                    <dt>아이디</dt>
+                                    <dd>test01</dd>
+                                </dl>
+                                <dl class="userLabel03">
+                                    <dt>가입일</dt>
+                                    <dd>2020.02.10</dd>
+                                </dl>
+                                <dl class="userLabel04">
+                                    <dt>최근 정보수정일</dt>
+                                    <dd>2025.08.02</dd>
+                                </dl>
+                            </div>
+                            <!--// userInfo -->
                         </div>
 
                         <div class="section">
-                            <div class="titArea">
-                                <div class="left">
-                                    <h3>신청기업정보</h3>
-                                </div>
-                            </div>
-                            <!-- formTable -->
-                            <div class="formTable">
+							<p class="reqCap"><span class="cPoint">*</span> 표시는 필수사항입니다.</p>
+							<div class="titArea">
+								<div class="left">
+									<h3>대표자 정보</h3>
+								</div>
+							</div>
+							<!-- formTable -->
+							<div class="formTable">
                                 <dl>
-                                    <dt><p class="req">기업명</p></dt>
+                                    <dt><p class="req">대표자 성명</p></dt>
                                     <dd>
                                         <div>
-                                            <input type="text" title="기업명" disabled>
+                                            <input type="text" title="대표자 성명">
                                         </div>
                                     </dd>
-                                    <dt><p class="req">대표자명</p></dt>
+                                    <dt><p class="req">대표자 성별</p></dt>
                                     <dd>
                                         <div>
-                                            <input type="text" title="대표자명" disabled>
-                                        </div>
+											<select title="대표자 성별">
+												<option value="">선택</option>
+												<option value="">남성</option>
+												<option value="">여성</option>
+											</select>
+										</div>
                                     </dd>
                                 </dl>
                                 <dl>
-                                    <dt><p class="req">기업유형</p></dt>
+                                    <dt><p class="req">전화번호</p></dt>
                                     <dd>
                                         <div>
-                                            <select title="기업유형" disabled>
-                                                <option value="">선택</option>
-                                            </select>
-                                        </div>
-                                    </dd>
-                                    <dt><p class="req">사업자등록번호</p></dt>
-                                    <dd>
-                                        <div>
-                                            <p>123-45-67890</p>
-                                        </div>
-                                    </dd>
-                                </dl>
-                                <dl>
-                                    <dt><p class="req">설립일</p></dt>
-                                    <dd>
-                                        <div>
-                                            <div class="date mx400">
-                                                <input type="text" title="날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD" disabled>
-                                            </div>
-                                        </div>
-                                    </dd>
-                                </dl>
-                                <dl>
-                                    <dt><p class="req">주소지</p></dt>
-                                    <dd>
-                                        <div>
-                                            <div class="flexWrap addr">
-												<div class="flexWrap post">
-													<div>
-														<input type="text" title="우편번호" disabled>
-													</div>
-												</div>
-												<div class="flexWrap">
-													<div>
-														<input type="text" title="기본주소" disabled>
-													</div>
-													<div>
-														<input type="text" title="상세주소" disabled>
-													</div>
-												</div>
-											</div>
-                                        </div>
-                                    </dd>
-                                </dl>
-                                <dl>
-                                    <dt><p>국내매출액</p></dt>
-                                    <dd>
-                                        <div>
-                                            <div class="inForm">
-                                                <dl>
-                                                    <dt class="req">2023년</dt>
-                                                    <dd>
-                                                        <div>
-                                                            <div class="flexWrap">
-                                                                <div>
-                                                                    <input type="text" title="국내매출액 2023년" class="txtR" disabled>
-                                                                </div>
-                                                                <span>원</span>
-                                                            </div>
-                                                        </div>
-                                                    </dd>
-                                                </dl>
-                                                <dl>
-                                                    <dt class="req">2022년</dt>
-                                                    <dd>
-                                                        <div>
-                                                            <div class="flexWrap">
-                                                                <div>
-                                                                    <input type="text" title="국내매출액 2022년" class="txtR" disabled>
-                                                                </div>
-                                                                <span>원</span>
-                                                            </div>
-                                                        </div>
-                                                    </dd>
-                                                </dl>
-                                                <dl>
-                                                    <dt class="req">2021년</dt>
-                                                    <dd>
-                                                        <div>
-                                                            <div class="flexWrap">
-                                                                <div>
-                                                                    <input type="text" title="국내매출액 2021년" class="txtR" disabled>
-                                                                </div>
-                                                                <span>원</span>
-                                                            </div>
-                                                        </div>
-                                                    </dd>
-                                                </dl>
-                                            </div>
-                                        </div>
-                                    </dd>
-                                </dl>
-                                <dl>
-                                    <dt><p class="req">상시 근로자수</p></dt>
-                                    <dd>
-                                        <div>
-                                            <div class="flexWrap">
+                                            <div class="flexWrap phone">
                                                 <div>
-                                                    <input type="text" title="상시 근로자수" class="txtR" disabled>
+                                                    <select title="전화번호 앞 3자리">
+                                                        <option value="">02</option>
+                                                        <option value="">010</option>
+                                                    </select>
                                                 </div>
-                                                <span>명</span>
+                                                <span>-</span>
+                                                <div>
+                                                    <input type="text" title="전화번호 중간 3자리" value="1234">
+                                                </div>
+                                                <span>-</span>
+                                                <div>
+                                                    <input type="text" title="전화번호 뒤 3자리" value="5678">
+                                                </div>
                                             </div>
                                         </div>
                                     </dd>
-                                </dl>
-                            </div>
-                            <!--// formTable -->
-                        </div>
-
-                        <div class="section">
-                            <div class="titArea">
-                                <div class="left">
-                                    <h3>담당자 정보</h3>
-                                </div>
-                            </div>
-                            <!-- formTable -->
-                            <div class="formTable">
-                                <dl>
-                                    <dt><p class="req">담당자</p></dt>
-                                    <dd>
-                                        <div>
-                                            <input type="text" title="담당자" disabled>
-                                        </div>
-                                    </dd>
-                                    <dt><p class="req">부서</p></dt>
-                                    <dd>
-                                        <div>
-                                            <input type="text" title="부서" disabled>
-                                        </div>
-                                    </dd>
-                                </dl>
-                                <dl>
-                                    <dt><p class="req">직위</p></dt>
-                                    <dd>
-                                        <div>
-                                            <input type="text" title="직위" disabled>
-                                        </div>
-                                    </dd>
-                                    <dt><p class="req">연락처</dt>
+                                    <dt><p>팩스번호</p></dt>
                                     <dd>
 										<div>
 											<div class="flexWrap phone">
 												<div>
-                                                    <select title="전화번호 앞 3자리" disabled>
+                                                    <select title="팩스번호 앞 3자리">
                                                         <option value="">선택</option>
                                                         <option value="">010</option>
                                                     </select>
 												</div>
                                                 <span>-</span>
 												<div>
-													<input type="text" title="전화번호 중간 3자리" disabled>
+													<input type="text" title="팩스번호 중간 3자리">
 												</div>
 												<span>-</span>
 												<div>
-													<input type="text" title="전화번호 뒤 3자리" disabled>
+													<input type="text" title="팩스번호 뒤 3자리">
 												</div>
 											</div>
 										</div>
 									</dd>
                                 </dl>
                                 <dl>
-                                    <dt class="req"><p>이메일</p></dt>
+									<dt><p class="req">휴대폰번호</p></dt>
+									<dd>
+										<div>
+                                            <div class="flexWrapChk mx600">
+                                                <div class="flexWrap phone">
+                                                    <div>
+                                                        <select title="휴대전화 앞 3자리">
+                                                            <option value="">선택</option>
+                                                            <option value="">010</option>
+                                                        </select>
+                                                    </div>
+                                                    <span>-</span>
+                                                    <div>
+                                                        <input type="text" title="휴대전화 중간 3자리">
+                                                    </div>
+                                                    <span>-</span>
+                                                    <div>
+                                                        <input type="text" title="휴대전화 뒤 3자리">
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button type="button" class="btn lg bgSecond">휴대폰 인증</button>
+                                                </div>
+                                            </div>
+										</div>
+									</dd>
+								</dl>
+                                <dl>
+									<dt><p class="req">이메일</p></dt>
 									<dd>
 										<div>
 											<div class="flexWrap email">
                                                 <div class="flexWrap">
                                                     <div>
-                                                        <input type="text" title="이메일 아이디" disabled>
+                                                        <input type="text" title="이메일 아이디">
                                                     </div>
                                                     <span>@</span>
                                                 </div>
 												<div>
-													<input type="text" title="이메일 도메인" disabled>
+													<input type="text" title="이메일 도메인">
 												</div>
-                                                <div>
-                                                    <select title="이메일 도메인 선택" disabled>
+												<div>
+                                                    <select title="이메일 도메인 선택">
                                                         <option value="">선택</option>
                                                         <option value="">fanfandaero.kr</option>
                                                     </select>
 												</div>
 											</div>
+                                            <p class="stxt cPoint">hanmail.net과 daum.net은 메일이 스팸으로 분류되어 수신이 원활하지 않을 수 있습니다.</p>
+										</div>
+									</dd>
+								</dl>
+							</div>
+							<!--// formTable -->
+						</div>
+
+                        <div class="section">
+							<div class="titArea">
+								<div class="left">
+									<h3>부가 정보</h3>
+								</div>
+							</div>
+							<!-- formTable -->
+							<div class="formTable">
+								<dl>
+									<dt><p>소속</p></dt>
+									<dd>
+										<div>
+											<input type="text" title="소속">
+										</div>
+									</dd>
+									<dt><p>부서</p></dt>
+									<dd>
+										<div>
+											<input type="text" title="부서">
+										</div>
+									</dd>
+								</dl>
+                                <dl>
+                                    <dt><p>직위</p></dt>
+									<dd>
+										<div>
+											<input type="text" title="직위" class="mx400">
 										</div>
 									</dd>
                                 </dl>
-                            </div>
-                            <!--// formTable -->
-                        </div>
-
-                        <div class="section">
-                            <div class="titArea">
-                                <div class="left">
-                                    <h3>판판소싱 참여이력</h3>
-                                </div>
-                            </div>
-                            <!-- colTable -->
-							<div class="colTable">
-								<table>
-									<caption>참여연도, 판판소싱공고명, 대표 상품명, 유통회사, 참여결과 항목으로 구성된 판판소싱 참여이력 표</caption>
-									<colgroup>
-										<col style="width:130px">
-										<col style="width:250px">
-										<col style="width:130px">
-										<col style="width:130px">
-										<col style="width:120px">
-									</colgroup>
-									<thead>
-										<tr>
-											<th scope="col" class="bgBlue">참여연도</th>
-											<th scope="col" class="bgBlue">판판소싱공고명</th>
-											<th scope="col" class="bgBlue">대표 상품명</th>
-											<th scope="col" class="bgBlue">유통회사</th>
-											<th scope="col" class="bgBlue">참여결과</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td class="txtC">-</td>
-											<td class="txtC">-</td>
-											<td class="txtC">-</td>
-											<td class="txtC">-</td>
-											<td class="txtC">-</td>
-										</tr>
-									</tbody>
-								</table>
+                                <dl>
+                                    <dt><p class="req">홈페이지</p></dt>
+                                    <dd>
+										<div>
+											<div class="flexWrapChk">
+												<div class="flexWrap">
+													<div>
+														<input type="text" title="홈페이지" placeholder="예. www.fanfandaero.kr">
+													</div>
+												</div>
+												<!-- checkbox -->
+												<div class="checkboxWrap">
+													<div class="checkbox">
+														<input type="checkbox" name="chk01" id="chk0101">
+														<label for="chk0101">없음</label>
+													</div>
+												</div>
+												<!--// checkbox -->
+											</div>
+										</div>
+									</dd>
+                                </dl>
 							</div>
-							<!--// colTable -->
-                        </div>
+							<!--// formTable -->
+						</div>
 
                         <div class="section">
-                            <div class="titArea">
-                                <div class="left">
-                                    <h3>지원사업 참여이력</h3>
-                                </div>
-                            </div>
-                            <!-- colTable -->
-							<div class="colTable">
-								<table>
-									<caption>참여연도, 지원사업명, 운영기관, 참여결과 항목으로 구성된 지원사업 참여이력 표</caption>
-									<colgroup>
-										<col style="width:130px">
-										<col style="width:250px">
-										<col style="width:130px">
-										<col style="width:120px">
-									</colgroup>
-									<thead>
-										<tr>
-											<th scope="col" class="bgBlue">참여연도</th>
-											<th scope="col" class="bgBlue">지원사업명</th>
-											<th scope="col" class="bgBlue">운영기관</th>
-											<th scope="col" class="bgBlue">참여결과</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td class="txtC">-</td>
-											<td class="txtC">-</td>
-											<td class="txtC">-</td>
-											<td class="txtC">-</td>
-										</tr>
-									</tbody>
-								</table>
+							<div class="titArea">
+								<div class="left">
+									<h3>기타</h3>
+								</div>
 							</div>
-							<!--// colTable -->
-                        </div>
+							<!-- formTable -->
+							<div class="formTable">
+								<dl>
+									<dt><p class="req">추천기관</p></dt>
+									<dd>
+										<div>
+											<select title="추천기관">
+												<option value="">선택</option>
+											</select>
+											<p class="stxt">회원님을 추천한 추천기관을 선택하세요. 없을 경우 기타를 선택하십시오.</p>
+										</div>
+									</dd>
+								</dl> 
+							</div>
+							<!--// formTable -->
+						</div>
 
                         <div class="section">
-                            <div class="titArea">
-                                <div class="left">
-                                    <h3>신청 내용</h3>
-                                </div>
-                            </div>
+							<div class="titArea">
+								<div class="left">
+									<h3>판판대로 소식 제공여부</h3>
+								</div>
+							</div>
+							<div class="grayBox border">
+								<div>
+									<ul class="dotList">
+										<li>판판대로에서 제공하는 소식을 받아보시려면 '예'를 선택해주세요. (사업안내, 정책안내, 이벤트, 세미나, 관련 자료 등)</li>
+										<li>수신여부와 상관없이 사업관련 정보와 회사의 주요정책, 공지사항 등은 발송됩니다.</li>
+										<li>수신여부를 '아니오'로 하실 경우 홈페이지 서비스 이용에 제한을 받으실 수 있습니다. </li>
+									</ul>
+								</div>
+							</div>
+							<!-- formTable -->
+							<div class="formTable">
+								<dl>
+									<dt><p>이메일</p></dt>
+									<dd>
+										<div>
+											<!-- checkbox -->
+											<div class="checkboxWrap">
+												<div class="checkbox">
+													<input type="radio" name="chk02" id="chk0201">
+													<label for="chk0201">예</label>
+												</div>
+												<div class="checkbox">
+													<input type="radio" name="chk02" id="chk0202">
+													<label for="chk0202">아니오</label>
+												</div>
+											</div>
+											<!--// checkbox -->
+										</div>
+									</dd>
+									<dt><p>SMS</p></dt>
+									<dd>
+										<div>
+											<!-- checkbox -->
+											<div class="checkboxWrap">
+												<div class="checkbox">
+													<input type="radio" name="chk03" id="chk0301">
+													<label for="chk0301">예</label>
+												</div>
+												<div class="checkbox">
+													<input type="radio" name="chk03" id="chk0302">
+													<label for="chk0302">아니오</label>
+												</div>
+											</div>
+											<!--// checkbox -->
+										</div>
+									</dd>
+								</dl> 
+							</div>
+							<!--// formTable -->
+						</div>
+
+                        <div class="section">
+							<div class="titArea">
+								<div class="left">
+									<h3>비밀번호 변경</h3>
+								</div>
+							</div>
                             <div class="grayBox border">
                                 <div>
                                     <ul class="dotList">
-                                        <li>비품 리스트의 상품을 선택/해제한 후 저장하시면 상품 선정/미선정됩니다.</li>
-                                        <li>이후 신청서에 대한 선정완료/심사탈락 처리할 수 있습니다.</li>
+                                        <li>비밀번호를 변경하시려면, 기존 비밀번호, 신규비밀번호, 비밀번호 확인을 모두 입력해주십시오.</li>
                                     </ul>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="section">
-                            <div class="titArea">
-                                <div class="left">
-                                    <h3>상품 등록</h3>
-                                </div>
-                            </div>
-                            <!-- colTable -->
-							<div class="colTable inImg"><!-- 2025-09-25 -->
-								<table>
-									<caption>이미지, 상품명, 카테고리, 가격, 선정 항목으로 구성된 상품 등록 표</caption>
-									<colgroup>
-										<col style="width:250px">
-										<col style="width:250px">
-										<col style="width:250px">
-										<col style="width:150px">
-										<col style="width:120px">
-									</colgroup>
-									<thead>
-										<tr>
-											<th scope="col" class="bgBlue">이미지</th>
-											<th scope="col" class="bgBlue">상품명</th>
-											<th scope="col" class="bgBlue">카테고리</th>
-											<th scope="col" class="bgBlue">가격</th>
-											<th scope="col" class="bgBlue">선정</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td class="txtC">
-                                                <img src="../assets/images/content/img-tv01.png" alt="">
-                                            </td>
-											<td>[제이유퍼] 페미닌 라인 티</td>
-                                            <td>의류 > 여성의류 > 블라우스/셔츠/남방</td>
-											<td class="txtR">69,000원</td>
-                                            <td class="txtC">선정</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<!--// colTable -->
-                            <!-- formTable -->
-                            <div class="formTable">
+							<!-- formTable -->
+							<div class="formTable">
                                 <dl>
-                                    <dt><p>상품기술서</p></dt>
+                                    <dt><p>기존 비밀번호</p></dt>
                                     <dd>
                                         <div>
-                                            <!-- fileWrap -->
-                                            <div class="fileWrap v2">
-                                                <div class="fileBtn">
-                                                    <input type="file" title="파일선택">
-                                                    <button type="button" class="btn btnUpload bgSecond">파일추가</button>
-                                                </div>
-                                                <input type="text" class="fileInput" value="첨부파일 없음">
-                                            </div>
-                                            <!--/// fileWrap -->
-                                        </div>
-                                    </dd>
-                                    <dt><p>첨부자료</p></dt>
-                                    <dd>
-                                        <div>
-                                            <!-- fileWrap -->
-                                            <div class="fileWrap v2">
-                                                <div class="fileBtn">
-                                                    <input type="file" title="파일선택">
-                                                    <button type="button" class="btn btnUpload bgSecond">파일추가</button>
-                                                </div>
-                                                <input type="text" class="fileInput" value="첨부파일 없음">
-                                            </div>
-                                            <!--/// fileWrap -->
+                                            <input type="password" title="기존 비밀번호">
                                         </div>
                                     </dd>
                                 </dl>
-                            </div> 
-                            <!--// formTable -->
-                        </div>
-                        <!-- btnBottom -->
-							<div class="btnBottom">
-								<div class="right">
-									<a href="" class="btn xlg">목록</a>
-								</div>
+                                <dl>
+                                    <dt><p>신규 비밀번호</p></dt>
+                                    <dd>
+                                        <div>
+                                            <input type="password" title="신규 비밀번호">
+                                            <p class="stxt">※ 비밀번호는 영문(대문자,소문자 둘 다 포함),숫자,특수문자를 혼용 8~16자를 입력하셔야 합니다.</p>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><p>비밀번호 확인</p></dt>
+                                    <dd>
+                                        <div>
+                                            <input type="password" title="비밀번호 확인">
+                                            <p class="stxt">※  비밀번호는 영문(대문자,소문자 둘 다 포함),숫자,특수문자를 혼용 8~16자를 입력하셔야 합니다.</p>
+                                        </div>
+                                    </dd>
+                                </dl>
 							</div>
-							<!--// btnBottom -->
+							<!--// formTable -->
+						</div>
+                        <!-- btnBottom -->
+						<div class="btnBottom">
+							<div class="right">
+								<a href="" class="btn xlg bgPrima">저장</a>
+							</div>
+						</div>
+						<!--// btnBottom -->
 					</div>
 				</div>
 				<!--// subCont -->
