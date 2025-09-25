@@ -449,7 +449,7 @@ table { table-layout: fixed; width: auto; max-width: none; min-width: 100%; }
 .tooltip > p { display: flex; align-items: center; gap: 4px; } 
 .tooltip .tooltipCont { display: none; position: absolute; top: 100%; left: 50%; z-index: 50; margin-left: -100px; border: 1px solid #ccc; max-width: 400px; width: max-content;} 
 .tooltip .tooltipCont .inner { padding: 10px 30px 10px 10px; text-align: left; line-height: 1.4; font-size: 13px; font-weight: 400; color: var(--color-base); background-color: #fff; } 
-.tooltip .tooltipCont .inner .tit {display:block; margin-bottom:10px; font-size:17px; font-weight:700px;}
+.tooltip .tooltipCont .inner .tit {display:block; margin-bottom:10px; font-size:17px; font-weight:700;}
 .tooltip.open .tooltipCont { display: block; }
 .btnTooltipCls { display: block; position: absolute; top: 10px; right: 10px; overflow: hidden; border: 0; width: 20px; height: 20px; text-indent: -9999px; background: url(../images/component/ico-layer-close.svg) no-repeat center / 10px; outline: none; } 
 
@@ -516,7 +516,7 @@ v5 예비
 .lnbUl > li.curr > a::before { display: block; content: ""; position: absolute; top: 50%; left: 0; margin-top: -2px; border-radius: 100%; width: 4px; height: 4px; background-color: var(--color-primary); } 
 .lnbUl li.hasDepth:not(.open) > ul { display: none; } 
 .lnbUl li.hasDepth > a::after { display: block; content: ""; margin-left: auto; width: 12px; height: 12px; background: url(../images/component/ico-lnb-arr01.png) no-repeat center / 12px; transition: all 0.2s ease; } 
-.lnbUl li.hasDepth.open > a::after { transform: rot109te(180deg); } 
+.lnbUl li.hasDepth.open > a::after { transform: rotate(180deg); } 
 .lnbUl li li.hasDepth > a::after { margin-left: 0; background: url(../images/component/ico-lnb-arr02.png) no-repeat center / 12px; } 
 @media (max-width: 1160px) {
     #lnb { display: none; }
@@ -958,7 +958,7 @@ v9 고객지원
 .selectAccount .txtBox {display:flex; flex-direction: column; padding:10px 0;}
 .selectAccount .txtBox strong {display:block; position:relative; margin-bottom:10px; line-height:1.5; font-size:21px; font-weight:700;}
 .selectAccount .txtBox p {line-height:1.5; font-size:17px; color:var(--color-gray-70)}
-@media((max-width: 1160px)) {
+@media(max-width: 1160px) {
     .selectAccount {gap:28px;}
     .selectAccount > a {gap:20px;}
     .selectAccount .icoArea {min-width:80px; height:80px;}
