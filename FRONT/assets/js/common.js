@@ -204,33 +204,54 @@ const fn_Common = () => {
     // 탭 (Tab)
     $('.tabFunc').each(function () {
         let currIndex = 0
-        const tab = $(this),
-            tabTit = tab.find('> .tabTit .swiper-slide a'),
-            tabCont = tab.find('> .tabCont > div')
+        const tab = $(this)
 
+        // 두 가지 구조 구분
+        const isCategory = tab.find('> .tabTit .swiper-slide a').length > 0
+
+        // 버튼 그룹/버튼 단위 선택자
+        const tabTit = isCategory
+            ? tab.find('> .tabTit .swiper-slide a') // swiper 구조
+            : tab.find('> .tabTit ul li')           // 기본 구조
+
+        const tabCont = tab.find('> .tabCont > div')
+
+        // 공통 탭 전환 함수
         const currEvent = (currIndex) => {
-            tabTit.removeClass('curr').removeAttr('title')
-            tabTit.eq(currIndex).addClass('curr').attr('title', '선택됨')
+            if (isCategory) {
+                // a 태그에 curr
+                tabTit.removeClass('curr').removeAttr('title')
+                tabTit.eq(currIndex).addClass('curr').attr('title', '선택됨')
+            } else {
+                // li 태그에 curr
+                tabTit.removeClass('curr').find('> a').removeAttr('title')
+                tabTit.eq(currIndex).addClass('curr').find('> a').attr('title', '선택됨')
+            }
             tabCont.hide().eq(currIndex).show()
         }
 
+        // 각 버튼 순회
         tabTit.each(function (idx) {
-            const tabTitle = $(this).text()
+            const tabTitle = isCategory ? $(this).text() : $(this).find('> a').text()
             tabCont.eq(idx).prepend(`<h3 class="hide">${tabTitle}</h3>`)
-            $(this).hasClass('curr') && (currIndex = idx)
 
-            $(this)
-                .not('.disabled')
-                .click(function (e) {
-                    e.preventDefault()
-                    currEvent(idx)
-                })
-            $(this)
-                .filter('.disabled')
-                .click(function (e) {
-                    e.preventDefault()
-                })
+            // 초기 currIndex
+            if ($(this).hasClass('curr')) currIndex = idx
+
+            // 클릭 이벤트용 실제 버튼
+            const btn = isCategory ? $(this) : $(this).find('> a')
+
+            btn.not('.disabled').on('click', function (e) {
+                e.preventDefault()
+                currEvent(idx)
+            })
+
+            btn.filter('.disabled').on('click', function (e) {
+                e.preventDefault()
+            })
         })
+
+        // 초기 실행
         currEvent(currIndex)
     })
 
