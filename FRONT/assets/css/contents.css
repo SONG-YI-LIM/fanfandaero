@@ -1292,10 +1292,9 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
 
 /* 상품관리 */
 .itemList > ul { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
-.itemList > ul.grid-2 { grid-template-columns: repeat(2, 1fr); gap: 88px;}
 .itemList > ul li { display: flex; flex-direction: column; gap: 16px; }
 .itemList .imgBox { margin: 0 auto; padding: 10px; height: 230px;}
-.itemList .imgBox.full { padding: 0; width: 100%; position: relative; text-align: center; border-radius: 10px; overflow: hidden;}
+.itemList .imgBox.full {margin: 0 auto; padding: 0; width: 100%; height: 230px; position: relative; text-align: center; border-radius: 10px; overflow: hidden;}
 .itemList .imgBox.full img { width: 100%; height: 100%; object-fit: cover; display: block;}
 .itemList .imgBox .badge {position: absolute; top: 0; left: 0;}
 .itemList .info { display: flex; flex-direction: column; gap: 10px; }
@@ -1305,6 +1304,7 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
 .itemList .info strong span { margin-left: 5px; font-size: 15px; font-weight: 600; color: var(--color-gray-70); }
 .itemList .info ul { display: flex; flex-wrap: wrap; gap: 0 10px; }
 .itemList .info ul li { font-size: 15px; color: var(--color-gray-70); }
+.itemList .flexWrap{ display: grid; gap: 8px; grid-template-columns: repeat(4, 1fr)}
 
 .itemInfo { padding: 16px 0; border-top: 1px solid #ccc; }
 .itemInfo ul { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -1371,6 +1371,8 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
     .itemClick.open { margin-top: 35px; }
 
     .itemSummary .info p { font-size: 19px; }
+
+    .itemList .flexWrap{ grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 767px) {
     .itemList > ul { grid-template-columns: repeat(1, 1fr); }
@@ -1390,6 +1392,8 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
 
     .srchArea { padding-right: 0; padding-bottom: 58px; }
     .srchArea > .btn { top: inherit; bottom: 0; }
+
+    .itemList .flexWrap{ grid-template-columns: repeat(4, 1fr); }
 }
 
 /* 문의/알림 */
@@ -1443,7 +1447,7 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
 .itemInfoRight {position: relative;}
 .itemInfoRight div {position: absolute; right: 0; bottom: 16px;}
 .formTable .flexWrapForm {display: flex; flex-direction: column; gap: 16px;}
-.btnFormWrap {display: flex; gap: 10px; align-items: center;  cursor: default;}
+.btnFormWrap {display: flex; flex-wrap: wrap; gap: 10px; align-items: center;  cursor: default;}
 .btnForm-next {width: 14px; height: 14px; background: url('../images/content/ico-btn-swiper-next.png') no-repeat center / cover; text-indent: -9999px;  cursor: default;}
 .btnForm { display: inline-flex; align-items: center; justify-content: center; gap: 5px; padding: 0 16px; border: none; border-radius: 14px; padding: 0 16px; height: 28px; line-height: 1; font-size: 15px; font-weight: 700; color: var(--color-gray-70); background-color: var(--color-gray-20);  cursor: default;} 
 .inputTxtR input {text-align: right;}
