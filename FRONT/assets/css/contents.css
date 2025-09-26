@@ -1292,10 +1292,15 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
 
 /* 상품관리 */
 .itemList > ul { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.itemList > ul.grid-2 { grid-template-columns: repeat(2, 1fr); gap: 88px;}
 .itemList > ul li { display: flex; flex-direction: column; gap: 16px; }
-.itemList .imgBox { margin: 0 auto; padding: 10px; height: 230px; }
+.itemList .imgBox { margin: 0 auto; padding: 10px; height: 230px;}
+.itemList .imgBox.full { padding: 0; width: 100%; position: relative; text-align: center; border-radius: 10px; overflow: hidden;}
+.itemList .imgBox.full img { width: 100%; height: 100%; object-fit: cover; display: block;}
+.itemList .imgBox .badge {position: absolute; top: 0; left: 0;}
 .itemList .info { display: flex; flex-direction: column; gap: 10px; }
 .itemList .info p { display: -webkit-box; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; -webkit-line-clamp: 2; min-height: 54px; max-height: 54px; line-height: 1.3; font-size: 21px; font-weight: 600; color: var(--color-base); }
+.itemList .info p.line-1 {-webkit-line-clamp: 1; min-height: auto;}
 .itemList .info strong { display: block; text-align: right; font-size: 21px; font-weight: 600; color: var(--color-point); }
 .itemList .info strong span { margin-left: 5px; font-size: 15px; font-weight: 600; color: var(--color-gray-70); }
 .itemList .info ul { display: flex; flex-wrap: wrap; gap: 0 10px; }
