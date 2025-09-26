@@ -466,7 +466,6 @@ table { table-layout: fixed; width: auto; max-width: none; min-width: 100%; }
 .btnTooltip.v2::before { content: "ⓘ"; font-size: 100%; color: inherit; background: none; } 
 .tooltip { display: inline-flex; position: relative; margin-top: 4px; } 
 .tooltip > p { display: flex; align-items: center; gap: 4px; } 
-<<<<<<< HEAD
 .tooltip .tooltipCont { display: none; position: absolute; top: 100%; left: 50%; z-index: 50; margin-left: -100px; border: 1px solid #ccc; max-width:500px; width: max-content;} 
 .tooltip .tooltipCont .inner { padding: 10px 30px 10px 10px; text-align: left; line-height: 1.4; font-size: 13px; font-weight: 400; color: var(--color-base); background-color: #fff; } 
 .tooltip .tooltipCont .inner .tit {display:block; margin-bottom:10px; font-size:17px; font-weight:700;}
@@ -483,13 +482,6 @@ table { table-layout: fixed; width: auto; max-width: none; min-width: 100%; }
 @media(max-width:360px) {
     .tooltip .tooltipCont {max-width:230px;}
 }
-=======
-.tooltipCont { display: none; position: absolute; top: 100%; z-index: 9999; margin-left: 10px; border: 1px solid #ccc; max-width: 400px; } 
-.tooltipCont .inner { padding: 10px 30px 10px 10px; text-align: left; line-height: 1.4; font-size: 13px; font-weight: 400; color: var(--color-base); background-color: #fff; } 
-.tooltipCont .inner .tit { display: block; margin-bottom: 10px; font-size: 17px; font-weight: 700; }
-.tooltip.open .tooltipCont { display: block; }
-.btnTooltipCls { display: block; position: absolute; top: 10px; right: 10px; overflow: hidden; border: 0; width: 20px; height: 20px; text-indent: -9999px; background: url(../images/component/ico-layer-close.svg) no-repeat center / 10px; outline: none; } 
->>>>>>> main
 /* body.tooltipOn #container .contents > .inner,
 body.tooltipOn .subCont > div { overflow: visible; } */
 
