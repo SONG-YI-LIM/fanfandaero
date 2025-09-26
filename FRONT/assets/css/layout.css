@@ -134,7 +134,7 @@
 #container .contents > #lnb { flex: 0 0 240px; margin-top: 158px; } 
 #container .contents > .inner { overflow: hidden; padding: 0; width: 100%; max-width: 100%; } 
 .inner { margin-right: auto; margin-left: auto; padding-right: 24px; padding-left: 24px; width: 100%; max-width: 1620px; } 
-.subCont > .cont { margin: 0 auto; max-width: 1280px; }
+.subCont > .cont { margin: 0 auto; max-width: 1300px; }
 @media (max-width: 1160px) {
     #container .contents > #lnb { display: none; }
 }

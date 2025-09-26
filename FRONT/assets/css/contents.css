@@ -48,11 +48,13 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 .cBlue { color:#023CA4 !important;}
 .cGray { color: var(--color-gray-70) !important; }
 .cLink {color:#4E6CB6 !important;}
+.cPurple {color:#622D80 !important;}
 
 /* 텍스트 */
 .xsm { font-size: 15px !important; }  
 .xlg { font-size: 19px; } 
 .bold { font-weight: 700 !important; }
+.txtLink {text-decoration: underline;}
 
 /* 크기 */
 .full { width: 100% !important; max-width: 100% !important; }
@@ -184,6 +186,8 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 .btnKakao:before { background-image: url(../images/content/ico-btn-kakao.png); }
 .btnNaver { border-color: #03CF5D; color: var(--color-white); background-color: #03CF5D; }
 .btnNaver:before { background-image: url(../images/content/ico-btn-naver.png); }
+.btnDownload:after {width:14px; height:14px; background-image: url("../images/content/ico-attach-download.svg");}
+.btnShortcut:after {width:16px; height:16px; background-image: url("../images/component/ico-shortcut.svg");}
 
 /* 아이콘 + 텍스트(버튼 라인 없는) */
 .btnTxt { position: relative; padding-left: 20px; line-height: 16px; font-size: 15px; color: var(--color-gray-70); }
@@ -192,6 +196,8 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 .btnTxt.rt:before { left: inherit; right: 0; }
 .btnTxt.download { font-size: 13px; font-weight: 600; color: var(--color-primary); }
 .btnTxt.download:before { background-image: url(../images/content/ico-attach-download.svg); }
+.btnTxt.view {font-size: 13px; font-weight: 600; color: var(--color-primary);}
+.btnTxt.view:before { background-image: url(../images/content/ico-attach-view.svg); }
 .btnTxt.more:before { background-image: url(../images/content/ico-attach-more.svg); }
 .btnTxt.fold:before { background-image: url(../images/content/ico-btn-arr-up.svg); }
 .btnTxt.fold.open:before { transform: rotate(180deg); }
@@ -435,9 +441,19 @@ table { table-layout: fixed; width: auto; max-width: none; min-width: 100%; }
 .rowTable > table > tbody > tr { border-bottom: 1px solid #ccc; } 
 .rowTable > table > tbody > tr > th { padding: 8px 16px; border-right: 1px solid #ccc; text-align: left; font-size: 15px; background: var(--color-secondary-5); } 
 .rowTable > table > tbody > tr > td { padding: 12px 16px; color: var(--color-gray-70); }
+.rowTable .scrollTxtBox {overflow-y:auto; height:80px;}
 @media (max-width: 1160px) {
     table { width: 100%; }
     .colTable td { word-break: break-all; }
+    .rowTable > table,
+    .rowTable > table > tbody {display:block;}
+    .rowTable > table > tbody > tr {display:flex; flex-direction: column; border-bottom:0;}
+    .rowTable > table > tbody > tr > th {display:flex; align-items:center; padding:10px 16px; border-top:1px solid #ccc; border-right:0; width:100%; min-height:50px;}
+    .rowTable > table > tbody > tr > td {padding:16px 0;}
+}
+@media (max-width: 767px) {
+    .rowTable > table > tbody > tr > th {padding:6px 16px; min-height:36px;}
+    .rowTable > table > tbody > tr > td {font-size:15px;}
 }
 
 /* 툴팁 (tooltip) */
@@ -447,13 +463,22 @@ table { table-layout: fixed; width: auto; max-width: none; min-width: 100%; }
 .btnTooltip.v2::before { content: "ⓘ"; font-size: 100%; color: inherit; background: none; } 
 .tooltip { display: inline-flex; position: relative; margin-top: 4px; } 
 .tooltip > p { display: flex; align-items: center; gap: 4px; } 
-.tooltip .tooltipCont { display: none; position: absolute; top: 100%; left: 50%; z-index: 50; margin-left: -100px; border: 1px solid #ccc; max-width: 400px; width: max-content;} 
+.tooltip .tooltipCont { display: none; position: absolute; top: 100%; left: 50%; z-index: 50; margin-left: -100px; border: 1px solid #ccc; max-width:500px; width: max-content;} 
 .tooltip .tooltipCont .inner { padding: 10px 30px 10px 10px; text-align: left; line-height: 1.4; font-size: 13px; font-weight: 400; color: var(--color-base); background-color: #fff; } 
 .tooltip .tooltipCont .inner .tit {display:block; margin-bottom:10px; font-size:17px; font-weight:700;}
 .tooltip.open .tooltipCont { display: block; }
 .btnTooltipCls { display: block; position: absolute; top: 10px; right: 10px; overflow: hidden; border: 0; width: 20px; height: 20px; text-indent: -9999px; background: url(../images/component/ico-layer-close.svg) no-repeat center / 10px; outline: none; } 
-
 .tooltipIn { display: flex; align-items: flex-start; justify-content: center; gap: 5px;}
+.layerPop .tooltip .tooltipCont {margin-left:-82px; max-width:400px}
+@media(max-width:767px) {
+    .tooltip .tooltipCont {max-width:400px;}
+}
+@media(max-width:490px) {
+    .tooltip .tooltipCont {max-width:270px;}
+}
+@media(max-width:360px) {
+    .tooltip .tooltipCont {max-width:230px;}
+}
 /* body.tooltipOn #container .contents > .inner,
 body.tooltipOn .subCont > div { overflow: visible; } */
 
@@ -757,6 +782,107 @@ v9 고객지원
     .bestProductList .btnBox {flex-direction: column;}
     .bestProductList .btnBox button {flex:none;}
 }
+
+/* 유행·트렌드 정보 */
+.trendList {display:flex; flex-wrap: wrap; gap:36px 32px;}
+.trendList .trendListItem {width: calc(100%/3 - 22px);}
+.trendList .trendListItem > a {display:block;}
+.trendList .trendListItem .trendCardThumb {margin-bottom:16px; aspect-ratio: 280/156;}
+.trendList .trendListItem .trendCardThumb img {width:100%; height:100%; object-fit: cover;}
+.trendList .trendListItem .trendCardBody .badge {margin-bottom:10px;}
+.trendList .trendListItem .trendCardBody .inTit {display:-webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom:10px; text-overflow: ellipsis; height:50px; line-height:1.3; font-size:19px; font-weight:600;}
+.trendList .trendListItem .trendCardBody .date {display:block; text-align:right; line-height:1.3; font-size:13px; color:var(--color-gray-70)}
+@media(max-width:1160px) {
+    .trendList {gap:26px 16px;}
+    .trendList .trendListItem {width: calc(100%/3 - 11px);}
+}
+@media(max-width:767px) {
+    .trendList .trendListItem {width: 100%;}
+}
+
+/* 판로정보 */
+.lineBoxList {display:flex; flex-wrap:wrap; gap:16px 24px;}
+.lineBoxList > li {padding:30px; border:1px solid #ccc; border-radius:12px; width:calc(100%/2 - 12px)}
+.lineBoxList .topArea strong {display:-webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow:hidden; margin-bottom:10px; height: 54px; text-overflow: ellipsis; line-height:1.3; font-size:21px; font-weight:600;}
+.lineBoxList .topArea p {display:-webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow:hidden; margin-bottom:28px; height:38px; text-overflow: ellipsis; line-height:1.3; font-size:15px; color:var(--color-gray-70);}
+.lineBoxList .topArea span {display:block; line-height:1.3; font-size:15px; color:var(--color-gray-70);}
+.lineBoxList .bottomArea {display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:10px; padding-top:10px; border-top:1px solid #ccc;}
+.lineBoxList .bottomArea .btn {max-width:185px; width:100%;}
+.lineBoxList .bottomArea .btnBox {display:flex; align-items:center; gap:5px; margin-left:auto;}
+.lineBoxList .bottomArea .btnBox span {font-size:15px; color:var(--color-gray-70)}
+.lineBoxList .bottomArea .btnBox .btnTxt:before {top:calc(50% - 10px); left:calc(50% - 10px); width:20px; height:20px;}
+.lineBoxList .bottomArea .btnBox .btnTxt.view,
+.lineBoxList .bottomArea .btnBox .btnTxt.download {padding-left:30px; width:30px; height:30px;}
+@media(max-width:767px) {
+    .lineBoxList > li {width:100%;}
+    .lineBoxList .bottomArea .btn {max-width:100%;}
+}
+
+/* MRO 지원정보 */
+.mroInfoArea {display:flex; gap:40px;}
+.mroInfoArea .tit {display:block; margin-bottom:16px; line-height:1.3; font-size:23px; font-weight:700;}
+.mroInfoArea .sTit {display:block; margin-bottom:16px; line-height:1.3; font-size:19px; font-weight:700;}
+.mroInfoArea p {font-size:15px; color:var(--color-gray-70); word-break:keep-all;}
+.mroInfoArea .left {width:100%; max-width:491px;}
+.mroInfoArea .right {width:100%; max-width:769px;}
+.mroInfoArea .overview {padding:40px; height:100%; border-radius: 20px; background:url("../images/content/img-mroInfo04.png") no-repeat right bottom #EDF1F5;}
+.mroInfoArea .overview .tooltipIn {display:inline-flex; align-items:flex-start; position:relative; margin:16px 0 32px; font-size:15px; color:var(--color-primary); font-weight:700;}
+.mroInfoArea .overview .tooltipIn:before {position:absolute; bottom:4px; left:0; right:16px; content:""; height:1px; background-color: var(--color-primary);} 
+.mroInfoArea .cntList > ul {display:flex; flex-wrap:wrap; gap:24px;}
+.mroInfoArea .cntList > ul > li {flex:1 0 calc(50% - 12px); display:flex; align-items:flex-start; gap:24px; padding:30px; border:1px solid #ccc; border-radius:20px;}
+.mroInfoArea .cntList > ul > li img {width:70px;}
+.mroInfoArea .cntList .txtBox {min-width:152px}
+.mroInfoArea .cntList .txtBox ul {display:flex; flex-wrap:wrap; gap:32px;}
+.mroInfoArea .cntList .txtBox ul li {flex:1; padding-left:24px;}
+.mroInfoArea .cntList .txtBox strong {display:block; margin-bottom:10px; line-height:1.3; font-size:17px;}
+.mroInfoArea .cntList .txtBox .dotTxt {display:block; position: relative;}
+.mroInfoArea .cntList .txtBox .dotTxt:before {position: absolute; left:-10px; top:10px; content: ""; width:4px; height:4px; border-radius: 50%; background:var(--color-gray-70);}
+.blueBox .inFlex .fileArea {display:flex; flex-wrap:wrap; gap:5px 10px;}
+.blueBox .inFlex .fileArea .tit {color:var(--color-base);}
+.blueBox .inFlex .fileArea .date {font-size:15px; color:var(--color-gray-70);}
+.lineBoxList02 {display:flex; flex-wrap:wrap; gap:16px 24px;}
+.lineBoxList02 > li {display:flex; flex-direction:column; padding:30px; border:1px solid #ccc; border-radius:12px; width:calc(100%/2 - 12px)}
+.lineBoxList02 .topArea strong {display:-webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow:hidden; margin-bottom:26px; max-height: 54px; text-overflow: ellipsis; line-height:1.3; font-size:21px; font-weight:600;}
+.lineBoxList02 .topArea p {display:block; line-height:1.5; font-size:15px; color:var(--color-gray-70); font-weight:700;}
+.lineBoxList02 .bottomArea {margin-top:auto;}
+.lineBoxList02 .bottomArea ul {display:flex; flex-wrap:wrap; gap:5px;}
+.lineBoxList02 .bottomArea ul li {line-height:1.5; font-size:15px; color:var(--color-gray-70);}
+.lineBoxList02 .bottomArea .btnBox {display:flex; justify-content:flex-end; flex-wrap:wrap; gap:10px; margin-top:16px;}
+.lineBoxList02 .bottomArea .btnBox .btn {flex:0 0 calc(50% - 5px); word-break: keep-all;}
+.grayBox .list > li + li {margin-top:24px;}
+.grayBox .list .sTit {display:block; margin-bottom:5px; line-height:1.3; font-size:17px; color:var(--color-gray-70); font-weight:700;}
+.grayBox .list .cont {font-size:15px; color:var(--color-gray-70);}
+.grayBox .list > li > ul {padding-left:10px;}
+.lineBoxList03 {display:flex; flex-wrap:wrap; gap:16px 24px;}
+.lineBoxList03 > li {padding:30px; border:1px solid #ccc; border-radius:12px; width:calc(100%/2 - 12px)}
+.lineBoxList03 .topArea strong {display:-webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow:hidden; margin-bottom:10px; height: 54px; text-overflow: ellipsis; line-height:1.3; font-size:21px; font-weight:600;}
+.lineBoxList03 .topArea span {display:block; line-height:1.3; font-size:15px; color:var(--color-gray-70);}
+.lineBoxList03 .bottomArea {display:flex; justify-content:flex-end; align-items:center; flex-wrap:wrap; gap:10px; margin-top:16px;}
+.lineBoxList03 .bottomArea .btn {max-width:185px; width:100%;}
+.lineBoxList03 .bottomArea .btnDownload:after {width:16px; height:16px;}
+@media(max-width:1530px){
+    .mroInfoArea .cntList > ul > li {flex:1 0 100%}
+    .mroInfoArea .cntList .txtBox ul li {flex:1 0 100%;}
+}
+@media(max-width:1160px){
+    .mroInfoArea {flex-direction:column;}
+    .mroInfoArea .left {max-width:100%;}
+    .mroInfoArea .right {max-width:100%;}
+    .mroInfoArea .overview {background-size:200px}
+}
+@media(max-width:767px){
+    .mroInfoArea .overview {padding:34px;}
+    .mroInfoArea .cntList > ul > li {gap:16px; padding:24px;}
+    .mroInfoArea .cntList > ul > li img {width:40px;}
+    .lineBoxList02 > li {width:100%;}
+    .lineBoxList02 .bottomArea .btnBox .btn {flex:1 0 100%;}
+    .lineBoxList03 > li {width:100%;}
+    .lineBoxList03 .bottomArea .btn {max-width:100%;}
+}
+@media(max-width:560px){
+    .mroInfoArea .overview {background-image:none}
+}
+
 /*** 이용안내 ***/
 /* 공지사항 */
 /* 목록 */
@@ -801,7 +927,7 @@ v9 고객지원
 .attachInfo .attachBtn { display: flex; align-items: center; gap: 5px; margin-left: auto; font-size: 15px; } 
 .attachInfo .attachBtn :is(a, button), .attachPr, .attachDo { display: flex; width: 30px; height: 30px; } 
 .attachInfo .attachName { display: inline-block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 85%; }
-.attachPr { background: url(../images/content/ico-attach-view.png) no-repeat center / 20px; } 
+.attachPr { background: url(../images/content/ico-attach-view.svg) no-repeat center / 20px; } 
 .attachDo { background: url(../images/content/ico-attach-down.png) no-repeat center / 20px; } 
 .attachDo.lg { background-size: 30px; } 
 .detailTable .detailCont { padding: 50px 60px; } 
@@ -871,7 +997,8 @@ v9 고객지원
     .formTable > dl > dd { padding: 16px 0; }
 }
 @media (max-width: 767px) {
-    .formTable > dl > dt { flex: 0 0 36px; padding: 6px 16px; }
+    .formTable > dl > dt,
+    .formTable.dtWd252 > dl > dt { flex: 0 0 36px; padding: 6px 16px; }
     .formTable > ul > li { flex-direction: column; align-items: flex-start; gap: 10px; }
     .fileListTop { flex-direction: column; align-items: flex-start; gap: 10px; }
     .fileListTop .right { width: 100%; }
