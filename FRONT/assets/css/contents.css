@@ -1378,6 +1378,7 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
     .itemList > ul { grid-template-columns: repeat(1, 1fr); }
     .itemList .info p { max-height: inherit; min-height: inherit; font-size: 19px; }
     .itemList .info strong { font-size: 19px; }
+    .itemList .flexWrap{ grid-template-columns: repeat(4, 1fr); }
 
     .itemInfo ul li { width: 100%; font-size: 15px; }
     .itemDetail .lt .itemImg .img { height: 330px; }
@@ -1391,9 +1392,7 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
     .itemSummary .imgBox img { display: block; margin: 0 auto; }
 
     .srchArea { padding-right: 0; padding-bottom: 58px; }
-    .srchArea > .btn { top: inherit; bottom: 0; }
-
-    .itemList .flexWrap{ grid-template-columns: repeat(4, 1fr); }
+    .srchArea > .btn { top: inherit; bottom: 0; }    
 }
 
 /* 문의/알림 */
