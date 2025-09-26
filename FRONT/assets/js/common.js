@@ -345,16 +345,19 @@ const fn_Common = () => {
             e.stopPropagation();
             e.preventDefault();
             let hasClass = tooltip.hasClass('open');
-            if(hasClass) tooltip.removeClass('open').closest('body').removeClass('tooltipOn');
+            if(hasClass) tooltip.removeClass('open');
             else tooltip.addClass('open').closest('body').addClass('tooltipOn');
+            $(this).addClass('focusTarget'); // 웹접근성
+            btnCls.focus(); // 웹접근성
         })
         btnCls.on('click', function(e){
             e.stopPropagation();
-            tooltip.removeClass('open').closest('body').removeClass('tooltipOn');
+            tooltip.removeClass('open');
+            $('.focusTarget').focus().removeClass('focusTarget'); // 웹접근성
         })
     });
     $(document).on('click', function(e){
-        $('.tooltip.open').removeClass('open').closest('body').removeClass('tooltipOn');
+        $('.tooltip.open').removeClass('open');
     })
 
     // 체크박스 전체 선택
@@ -374,7 +377,6 @@ const fn_Common = () => {
                 if(check)  $this.find('.checkbox input').prop('checked', true);
                 else $this.find('.checkbox input').prop('checked', false);
             })
-
         }
     })
 
