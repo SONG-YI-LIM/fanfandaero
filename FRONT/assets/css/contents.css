@@ -189,6 +189,8 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 .btnNaver:before { background-image: url(../images/content/ico-btn-naver.png); }
 .btnDownload:after {width:14px; height:14px; background-image: url("../images/content/ico-attach-download.svg");}
 .btnShortcut:after {width:16px; height:16px; background-image: url("../images/component/ico-shortcut.svg");}
+.btnSearchDetail:before { background-image: url(../images/component/ico-btn-search-detail.png); }
+.btnSearchDetail.open:before { background-image: url(../images/component/ico-btn-search-default.png); }
 
 /* 아이콘 + 텍스트(버튼 라인 없는) */
 .btnTxt { position: relative; padding-left: 20px; line-height: 16px; font-size: 15px; color: var(--color-gray-70); }
@@ -362,7 +364,7 @@ select:disabled, .select.disabled > button, input.disabled, .date input:disabled
 /* select:disabled, .select.disabled > button { background-image: url(../images/component/ico-select-arr-gray60.svg); } */
 
 /* 날짜 입력 필드 (Date input) */
-.dateWrap { display: flex; align-items: center; gap: 8px; } 
+.dateWrap { display: flex; align-items: center; gap: 10px; } 
 .dateWrap span { line-height: 48px; } 
 .date { position: relative; } 
 .date input { text-overflow: ellipsis; padding-right: 44px; width: 100%; background: url(../images/component/ico-input-cal.svg) no-repeat right 16px center; cursor: pointer; } 
@@ -599,12 +601,43 @@ v9 고객지원
 .subCont .side .checkboxWrap { gap: 12px 45px; } 
 .section:not(:first-child) { margin-top: 40px; }
 
-.searchArea { display: flex; flex-direction: column; gap: 32px; }
+/* .searchArea { display: flex; flex-direction: column; gap: 32px; }
 .searchArea dl dt { position: relative; font-size: 19px; font-weight: 700; color: var(--color-base); cursor: pointer; }
 .searchArea dl dt:after { content: ""; position: absolute; top: 6px; right: 0; width: 12px; height: 12px; background: url(../images/component/ico-lnb-arr01.png) no-repeat center right/100% auto; }
 .searchArea dl.open dt:after { transform: rotate(180deg); }
 .searchArea dl dd { padding-top: 12px;}
-.searchArea dl dd input { width: 100%; }
+.searchArea dl dd input { width: 100%; } */
+.searchArea { padding: 24px; border-radius: 6px; background: #F1F7F8; }
+.searchArea .in { position: relative; padding-right: 210px; }
+.searchArea .in .rt { display: flex; gap: 8px; position: absolute; right: 0; bottom: 0; }
+.searchDefault input { width: 100%; }
+.searchDetail { display: none; margin-top: 24px; }
+.searchDetail ul { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 60px; }
+.searchDetail ul li { width: calc(50% - 30px); }
+.searchDetail dl { display: flex; align-items: center; }
+.searchDetail dl dt { flex: 0 0 72px; line-height: 1.5;  font-size: 15px; font-weight: 700; color: var(--color-base); }
+.searchDetail dl dd { flex: 1; }
+.searchDetail dl dd > select { max-width: 100%; }
+.searchDetail dl dd input { background-color: var(--color-white) !important; }
+.searchDetail dl dd .checkboxWrap { gap: 10px 12px; }
+.searchDetail dl dd .checkboxBtn input + label { border-color: var(--border-color) !important; line-height: 46px !important; font-weight: 400 !important; color: var(--color-base) !important; background: var(--color-white) !important; }
+.searchDetail dl dd .checkboxBtn input:checked + label { font-weight: 700 !important; color: var(--color-white) !important; }
+.searchDetail dl dd .checkboxBtn input.label01:checked + label { background: #4E6CB6 !important; }
+.searchDetail dl dd .checkboxBtn input.label02:checked + label { background: #83579C !important; }
+.searchDetail dl dd .checkboxBtn input.label03:checked + label { background: #229068 !important; }
+.searchDetail dl dd .date input { max-width: 190px; }
+@media (max-width: 1600px) {
+    .searchArea .in { padding-right: 0 ; padding-bottom: 72px; }
+    .searchDetail ul { gap: 10px 20px; }
+}
+@media (max-width: 1160px) {
+    .searchArea { padding: 24px 16px; }
+    .searchDetail ul li { width: 100%; }
+    .searchDetail dl { flex-direction: column; align-items: flex-start; }
+    .searchDetail dl dt { flex: none; margin-bottom: 8px; }
+    .searchDetail dl dd { width: 100%; }
+    .searchDetail dl dd .date input { max-width: 100%; }
+} 
 
 /* 검색영역 */
 .srchBox {margin-bottom:32px; padding:24px; border-radius:6px; background:#F1F7F8;}
@@ -1912,6 +1945,11 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
 .conceptMap dl.map04 .colList li { background: #ECE5F0; }
 .conceptMap > ul > li:last-child .colList { position: relative; }
 .conceptMap > ul > li:last-child .colList:before { content: ""; position: absolute; top: 2px; left: -56px; width: 28px; height: 222px; background: url(../images/content/img-platform08.png) no-repeat center/100% auto; }
+
+.biWrap { display: flex; flex-wrap: wrap; gap: 60px; }
+.biWrap .biIntro { width: 100%; line-height: 1.5; font-size: 17px; color: var(--color-base); }
+.biWrap .lt { flex: 1; }
+.biWrap .rt { flex: 0 0 410px; }
 @media (max-width: 1160px) {
     .mainService p { font-size: 23px; }
     .conceptMap > ul { flex-direction: column; }

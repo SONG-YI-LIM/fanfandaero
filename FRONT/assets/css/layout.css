@@ -9,8 +9,8 @@
 .headBody { display: flex; align-items: center; justify-content: space-between; height: 80px; } 
 .headBody .logo a { display: inline-flex; } 
 .headBody .util { display: flex; gap: 30px; } 
-.headBody .util > li > :is(a, button) { display: inline-flex; gap: 5px; border-radius: 4px; font-weight: 700; }
-.headBody .util > li > :is(a, button)::before { display: block; content: ""; width: 20px; background-size: 20px; }
+.headBody .util > li > :is(a, button) { display: inline-flex; align-items: center; gap: 5px; border-radius: 4px; font-weight: 700; }
+.headBody .util > li > :is(a, button)::before { display: block; content: ""; width: 20px; height: 20px; background-size: 20px; }
 .headBody .util > li > :is(a, button):hover { background-color: var(--bg-primary); }
 .btnSearchForm::before { background: url(../images/common/ico-search.png) no-repeat center; } 
 .btnLogin::before { background: url(../images/common/ico-login.png) no-repeat center; } 

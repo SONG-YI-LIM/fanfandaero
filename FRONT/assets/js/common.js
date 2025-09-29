@@ -469,22 +469,36 @@ const fn_Content = () => {
 
     /* 검색필터 */
     $('.searchArea').each(function(){
-        let $this = $(this),
-            $dl = $this.find('dl'),
-            $dt = $this.find('dt');
-        $dt.append(`<span class="hide">닫힘</span>`);
-        $dl.addClass('open');
-        $dt.click(function(){
-            if($(this).closest('dl').hasClass('open')){
-                $(this).closest('dl').removeClass('open');
-                $(this).find('.hide').text('열림');
-                $(this).siblings().slideUp(200);
+        let btnDetail = $('.btnSearchDetail');
+        btnDetail.on('click', function(){
+            if($(this).hasClass('open')){
+                $(this).removeClass('open');
+                $(this).closest(".in").find(".searchDetail").slideUp(200);
+                $(this).text('고급검색');
             }else{
-                $(this).closest('dl').addClass('open');
-                $(this).find('.hide').text('닫힘');
-                $(this).siblings().slideDown(200);
+                $(this).addClass('open');
+                $(this).closest(".in").find(".searchDetail").slideDown(200);
+                $(this).text('기본검색');
             }
-        })
+            
+        });
+
+        // let $this = $(this),
+        //     $dl = $this.find('dl'),
+        //     $dt = $this.find('dt');
+        // $dt.append(`<span class="hide">닫힘</span>`);
+        // $dl.addClass('open');
+        // $dt.click(function(){
+        //     if($(this).closest('dl').hasClass('open')){
+        //         $(this).closest('dl').removeClass('open');
+        //         $(this).find('.hide').text('열림');
+        //         $(this).siblings().slideUp(200);
+        //     }else{
+        //         $(this).closest('dl').addClass('open');
+        //         $(this).find('.hide').text('닫힘');
+        //         $(this).siblings().slideDown(200);
+        //     }
+        // })
     })
 
     /*** 마이페이지 ***/
