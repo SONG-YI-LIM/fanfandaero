@@ -321,120 +321,173 @@
 				<!-- subCont -->
 				<div class="subCont">
 					<div class="cont">
-						<!-- 검색필터 영역 (디자인 미확정) -->
+						<!-- 검색필터 영역 -->
                         <div class="section">
-                            <div style="display: flex; align-items: center; justify-content: center; height: 200px; background: #ccc;">검색필터 영역입니다.</div>
+                            <div class="sprtProgramSrch">
+								<div class="inFlex">
+									<select title="년도">
+										<option value="">2025년</option>
+									</select>
+									<select title="지원대상자">
+										<option value="">소상공인</option>
+									</select>
+									<p>지원대상자에 대한 <b>지원사업 안내</b>해 드리겠습니다.</p>
+								</div>
+							</div>
                         </div>
-                        <!--// 검색필터 영역 (디자인 미확정) -->
+                        <!--// 검색필터 영역 -->
                         <div class="section">
-							<!-- tableTop -->
-							<div class="tableTop">
-								<div class="left">
-									<div class="total">
-										<p>지원사업 공고 <b class="cBlue">‘2025년’ ‘전체’</b></p>
-										<p><b class="cPoint">000<span>건</span></b></p>
+							<!-- tab -->
+							<div class="tab tabFunc"> <!-- 탭 기능 필요 없을 시 : tabFunc 클래스 삭제 , tabCont 안 div 하나만 남기고 삭제 -->
+								<div class="categoryList tabTit">
+									<div class="categorySwiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide"><a href="" class="curr">홍보·마케팅</a></div>
+											<div class="swiper-slide"><a href="">유통·판로</a></div>
+											<div class="swiper-slide"><a href="">교육·컨설팅</a></div>
+											<div class="swiper-slide"><a href="">인프라</a></div>
+											<div class="swiper-slide"><a href="">사후관리</a></div>
+										</div>
+										<div class="swiper-button-next">다음</div>
 									</div>
 								</div>
-								<div class="right">
-									<button type="button" class="btn bgPrima">문의하기</button>
+								<div class="tabCont">
+									<!-- 홍보·마케팅 -->
+									<div>
+										<!-- sprtProgramWrap -->
+										<div class="sprtProgramWrap">
+											<!-- sprtProgramList -->
+											<div class="sprtProgramList mbSelect">
+												<a href="">소상공인 상품 개선 지원</a>
+												<ul>
+													<li><a href="" class="curr">소상공인 상품 개선 지원</a></li>
+													<li><a href="">소상공인 콘텐츠 제작지원사업</a></li>
+													<li><a href="">SNS 활용 패키지 지원사업</a></li>
+													<li><a href="">소상공인 홍보 지원사업</a></li>
+												</ul>
+											</div>
+											<!--// sprtProgramList -->
+											<!-- sprtProgramBox -->
+											<div class="sprtProgramBox">
+												<!-- topArea -->
+												<div class="topArea">
+													<div class="inTxtArea">
+														<h3>소상공인 상품 개선 지원</h3>
+														<p>소상공인 상품 개선 지원 (패키지 디자인, BI 캐릭터 디자인, 상세페이지 제작)</p>
+													</div>
+													<div class="inBtnArea">
+														<button type="button" class="btn bgSecond">링크 복사</button>
+														<button type="button" class="btn bgPrima">지원사업 신청</button>
+													</div>		
+												</div>
+												<!--// topArea -->
+												<!-- rowTable -->
+												<div class="rowTable">
+													<table>
+														<caption>지원대상, 지원규모, 사업기간, 지원내용, 지원안내 항목으로 구성된 소상공인 상품 개선 지원 표</caption>
+														<colgroup>
+															<col style="width:140px">
+															<col style="width:auto">
+														</colgroup>
+														<tbody>
+															<tr>
+																<th scope="row">지원대상</th>
+																<td>소상공인</td>
+															</tr>
+															<tr>
+																<th scope="row">지원규모</th>
+																<td>3,000</td>
+															</tr>
+															<tr>
+																<th scope="row">사업기간</th>
+																<td>2025-03-21 ~ 2025-12-31</td>
+															</tr>
+															<tr>
+																<th scope="row">지원내용</th>
+																<td>온라인 진출을 희망하나, 상품성이 부족한 소상공인에게 온라인 판매에 적합한 상품이 될 수 있도록 개선 지원</td>
+															</tr>
+															<tr>
+																<th scope="row">지원안내</th>
+																<td>
+																	<img src="../assets/images/content/img-support-list01.png" alt="하단 내용을 참고해주세요"> <!-- (웹 접근성) 이미지에 텍스트 있을 경우 alt 값이나 아래 hide 안에 텍스트 내용 모두 적어야 함 -->
+																	<div class="hide">
+																		<strong>상품 개선 지원</strong>
+																		<ul>
+																			<li>
+																				<strong>대상</strong>
+																				소상공인
+																			</li>
+																			<li>
+																				<strong>규모</strong>
+																				3,000개 사 
+																				* 패키지, BI 캐릭터 디자인 사업은 소상공인 일부 비용(자부담금 10%) 발생
+																			</li>
+																			<li>
+																				<strong>내용</strong>
+																				온라인 시장 초기진출 소상공인 대상 디자인 개선 및 디지털 전환에 필요한 기초역량 지원을 통한 자생력 강화
+																				<table>
+																					<caption>구분, 주요내용 항목으로 구성된 표</caption>
+																					<thead>
+																						<tr>
+																							<th scope="col">구분</th>
+																							<th scope="col">주요내용</th>
+																						</tr>
+																					</thead>
+																					<tbody>
+																						<tr>
+																							<td>패키지 디자인</td>
+																							<td>온라인 판매에 적합한 포장 패키지 디자인 개선 제작 지원(600개 사)</td>
+																						</tr>
+																						<tr>
+																							<td>BI, 캐릭터 디자인</td>
+																							<td>
+																								상품 브랜드 가치를 소비자에게 소구할 수 있도록 BI, 캐릭터 등(택1) 개선 제작 등 정체성 정립(600개 사)
+																							</td>
+																						</tr>
+																						<tr>
+																							<td>상세페이지 제작</td>
+																							<td>온라인 상품등록을 위한 상세페이지 제작 지원(1,800개 사)</td>
+																						</tr>
+																					</tbody>
+																				</table>
+																			</li>
+																		</ul>
+																	</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<!--// rowTable -->
+											</div>
+											<!--// sprtProgramBox -->
+										</div>
+										<!--// sprtProgramWrap -->
+									</div>
+									<!--// 홍보·마케팅 -->
+									<!-- 유통·판로 -->
+									<div>
+										유통·판로 내용
+									</div>
+									<!--// 유통·판로 -->
+									<!-- 교육·컨설팅 -->
+									<div>
+										교육·컨설팅 내용
+									</div>
+									<!--// 교육·컨설팅 -->
+									<!-- 인프라 -->
+									<div>
+										인프라 내용
+									</div>
+									<!--// 인프라 -->
+									<!-- 사후관리 -->
+									<div>
+										사후관리 내용
+									</div>
+									<!--// 사후관리 -->
 								</div>
 							</div>
-							<!--// tableTop -->
-							<!-- supportProgramList -->
-							<ul class="supportProgramList">
-								<li>
-									<div class="infoBox">
-										<!-- badgeArea -->
-										<div class="badgeArea">
-											<div>
-												<span class="badge">2025년</span>
-												<span class="badge v7">소상공인</span>
-												<span class="badge">홍보·마케팅</span>
-											</div>
-										</div>
-										<!--// badgeArea -->
-										<strong>소상공인 상품 개선 지원 (패키지 디자인, BI 캐릭터 디자인, 상세페이지 제작)</strong>
-										<p>· 온라인 진출을 희망하나, 상품성이 부족한 소상공인에게 온라인 판매에 적합한 상품이 될 수 있도록 개선 지원</p>
-										<em>· 지원규모 : 3,000</em>
-										<span>모집기간 : 2025-03-21 ~ 2025-12-31</span>
-									</div>
-									<div class="btnBox">
-										<button type="button" class="btn bgSecond">링크복사</button>
-										<button type="button" class="btn bgPrima">사업신청</button>
-									</div>
-								</li>
-								<li>
-									<div class="infoBox">
-										<!-- badgeArea -->
-										<div class="badgeArea">
-											<div>
-												<span class="badge">지원</span>
-												<span class="badge v7">소상공인</span>
-												<span class="badge">홍보·마케팅</span>
-											</div>
-										</div>
-										<!--// badgeArea -->
-										<strong>소상공인 콘텐츠 제작지원사업</strong>
-										<p>· 소상공인 업종과 상품 유형을 고려하여 맞춤형 영상 제작 지원</p>
-										<em>· 지원규모 : 1,800</em>
-										<span>모집기간 : 2025-03-21 ~ 2025-12-31</span>
-									</div>
-									<div class="btnBox">
-										<button type="button" class="btn bgSecond">링크복사</button>
-										<button type="button" class="btn bgPrima">사업신청</button>
-									</div>
-								</li>
-								<li>
-									<div class="infoBox">
-										<!-- badgeArea -->
-										<div class="badgeArea">
-											<div>
-												<span class="badge">2025년</span>
-												<span class="badge v7">소상공인</span>
-												<span class="badge v8">중소기업</span>
-												<span class="badge">홍보·마케팅</span>
-											</div>
-										</div>
-										<!--// badgeArea -->
-										<strong>SNS 활용 패키지 지원사업</strong>
-										<p>· SNS 채널 타겟 광고 및 분석 지원</p>
-										<em>· 지원규모 : 750</em>
-										<span>모집기간 : 2025-03-26 ~ 2025-12-31</span>
-									</div>
-									<div class="btnBox">
-										<button type="button" class="btn bgSecond">링크복사</button>
-										<button type="button" class="btn bgPrima">사업신청</button>
-									</div>
-								</li>
-								<li>
-									<div class="infoBox">
-										<!-- badgeArea -->
-										<div class="badgeArea">
-											<div>
-												<span class="badge">2025년</span>
-												<span class="badge v7">소상공인</span>
-												<span class="badge">홍보·마케팅</span>
-											</div>
-										</div>
-										<!--// badgeArea -->
-										<strong>소상공인 홍보 지원사업</strong>
-										<p>· 검색 광고 및 매체 홍보를 통해 소상공인 제품 인지도 제고</p>
-										<em>· 지원규모 : 300</em>
-										<span>모집기간 : 2025-03-11 ~ 2025-12-31</span>
-									</div>
-									<div class="btnBox">
-										<button type="button" class="btn bgSecond">자세히보기</button>
-									</div>
-								</li>
-							</ul>
-							<!--// supportProgramList -->
-							<!-- btnBottom -->
-							<div class="btnBottom">
-								<div>
-									<button type="button" class="btnBor btnMore">지원사업 더보기 (1/2)</button>
-								</div>
-							</div>
-							<!--// btnBottom -->
+							<!--// tab -->
 						</div>
 					</div>
 					<!-- side -->

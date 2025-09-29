@@ -501,6 +501,24 @@ const fn_Content = () => {
         // })
     })
 
+    // 모바일 셀렉트
+    let mbSelectBtn = $(".mbSelect > a");
+    mbSelectBtn.on("click", function(e){
+        e.preventDefault();
+        $(this).toggleClass("on");
+        if($(this).hasClass("on")){
+            $(this).next().slideDown(200);
+        }else{
+            $(this).next().slideUp(200);
+        }
+    });
+    // 영역 밖 클릭 시 닫기
+    $(document).on("click", function(e) {
+        if (!$(e.target).closest(".mbSelect").length) {
+            mbSelectBtn.removeClass("on").next().slideUp(200);
+        }
+    });
+
     /*** 마이페이지 ***/
     /* 나의 활동 */
     var swiper = new Swiper(".actSwiper", {
