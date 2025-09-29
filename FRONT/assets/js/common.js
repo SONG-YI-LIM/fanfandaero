@@ -204,33 +204,54 @@ const fn_Common = () => {
     // 탭 (Tab)
     $('.tabFunc').each(function () {
         let currIndex = 0
-        const tab = $(this),
-            tabTit = tab.find('> .tabTit .swiper-slide a'),
-            tabCont = tab.find('> .tabCont > div')
+        const tab = $(this)
 
+        // 두 가지 구조 구분
+        const isCategory = tab.find('> .tabTit .swiper-slide a').length > 0
+
+        // 버튼 그룹/버튼 단위 선택자
+        const tabTit = isCategory
+            ? tab.find('> .tabTit .swiper-slide a') // swiper 구조
+            : tab.find('> .tabTit ul li')           // 기본 구조
+
+        const tabCont = tab.find('> .tabCont > div')
+
+        // 공통 탭 전환 함수
         const currEvent = (currIndex) => {
-            tabTit.removeClass('curr').removeAttr('title')
-            tabTit.eq(currIndex).addClass('curr').attr('title', '선택됨')
+            if (isCategory) {
+                // a 태그에 curr
+                tabTit.removeClass('curr').removeAttr('title')
+                tabTit.eq(currIndex).addClass('curr').attr('title', '선택됨')
+            } else {
+                // li 태그에 curr
+                tabTit.removeClass('curr').find('> a').removeAttr('title')
+                tabTit.eq(currIndex).addClass('curr').find('> a').attr('title', '선택됨')
+            }
             tabCont.hide().eq(currIndex).show()
         }
 
+        // 각 버튼 순회
         tabTit.each(function (idx) {
-            const tabTitle = $(this).text()
+            const tabTitle = isCategory ? $(this).text() : $(this).find('> a').text()
             tabCont.eq(idx).prepend(`<h3 class="hide">${tabTitle}</h3>`)
-            $(this).hasClass('curr') && (currIndex = idx)
 
-            $(this)
-                .not('.disabled')
-                .click(function (e) {
-                    e.preventDefault()
-                    currEvent(idx)
-                })
-            $(this)
-                .filter('.disabled')
-                .click(function (e) {
-                    e.preventDefault()
-                })
+            // 초기 currIndex
+            if ($(this).hasClass('curr')) currIndex = idx
+
+            // 클릭 이벤트용 실제 버튼
+            const btn = isCategory ? $(this) : $(this).find('> a')
+
+            btn.not('.disabled').on('click', function (e) {
+                e.preventDefault()
+                currEvent(idx)
+            })
+
+            btn.filter('.disabled').on('click', function (e) {
+                e.preventDefault()
+            })
         })
+
+        // 초기 실행
         currEvent(currIndex)
     })
 
@@ -324,16 +345,19 @@ const fn_Common = () => {
             e.stopPropagation();
             e.preventDefault();
             let hasClass = tooltip.hasClass('open');
-            if(hasClass) tooltip.removeClass('open').closest('body').removeClass('tooltipOn');
+            if(hasClass) tooltip.removeClass('open');
             else tooltip.addClass('open').closest('body').addClass('tooltipOn');
+            $(this).addClass('focusTarget'); // 웹접근성
+            btnCls.focus(); // 웹접근성
         })
         btnCls.on('click', function(e){
             e.stopPropagation();
-            tooltip.removeClass('open').closest('body').removeClass('tooltipOn');
+            tooltip.removeClass('open');
+            $('.focusTarget').focus().removeClass('focusTarget'); // 웹접근성
         })
     });
     $(document).on('click', function(e){
-        $('.tooltip.open').removeClass('open').closest('body').removeClass('tooltipOn');
+        $('.tooltip.open').removeClass('open');
     })
 
     // 체크박스 전체 선택
@@ -353,7 +377,6 @@ const fn_Common = () => {
                 if(check)  $this.find('.checkbox input').prop('checked', true);
                 else $this.find('.checkbox input').prop('checked', false);
             })
-
         }
     })
 
@@ -517,7 +540,7 @@ const fn_Content = () => {
     });
 
     $('.btnTxt.fold').each(function(){
-        const $formTable = $(this).closest(".titArea").nextAll(".formTable").first();
+        const $formTable = $(this).closest(".titArea").nextAll(".formTable, .colTable").first();
         $(this).click(function(){
             if($(this).hasClass('open')){
                 $(this).removeClass('open').text('접기');

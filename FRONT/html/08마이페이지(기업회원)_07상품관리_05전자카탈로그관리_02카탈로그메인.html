@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<!-- E : mobile -->
+<title>aaaa</title>
+<link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+<script type="text/javascript" src="../assets/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../assets/js/moment.min.js"></script>
+<script type="text/javascript" src="../assets/js/daterangepicker.min.js"></script>
+<script type="text/javascript" src="../assets/js/swiper.js"></script>
+<script type="text/javascript" src="../assets/js/common.js"></script>
+<!-- <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="js/selectivizr.js">
+ -->
+<!--[if lte IE 9]>
+</script>
+<![endif]-->
+</head>
+<body>
+<style>
+.catWrap { height: 100%; min-height: 100vh; background-repeat: no-repeat; background-position: center; background-size: cover; }
+.catWrap.v1 { background-image: url(../assets/images/content/img-catalog-template01.svg); }
+.catWrap .catInner { display: flex; flex-direction: column; gap: 16px; margin: 0 auto; padding: 40px 0 20px; width: 100%; max-width: 520px; }
+.catHeader { display: flex; flex-wrap: wrap; justify-content: space-between; padding: 20px; background: var(--color-white); }
+.catHeader .lt { font-size: 23px; font-weight: 700; color: var(--color-black); }
+.catHeader .rt { display: flex; gap: 10px; }
+.catHeader .rt a { display: block; padding: 10px; border: 1px solid var(--color-gray-20); border-radius: 50%; width: 30px; height: 30px; text-indent: -9999px; background-repeat: no-repeat; background-position: center; background-size: 18px auto; }
+.catHeader .rt a.btnFacebook { background-image: url(../assets/images/content/ico-btn-catalog01.png); }
+.catHeader .rt a.btnTwitter { background-image: url(../assets/images/content/ico-btn-catalog02.png); }
+.catHeader .rt a.btnKakaotalk { background-image: url(../assets/images/content/ico-btn-catalog03.png); }
+.catHeader .rt a.btnKakaostory { background-image: url(../assets/images/content/ico-btn-catalog04.png); }
+.catHeader .rt a.btnPrint { background-image: url(../assets/images/content/ico-btn-catalog05.png); }
+.catFooter { padding: 8px 20px; background: var(--color-white); }
+.catFooter p { margin-bottom: 5px; line-height: 1.3; font-size: 15px; font-weight: 700; color: var(--color-base); }
+.catFooter span { display: block; font-size: 13px; color: var(--color-gray-70); }
+
+.catCont { padding: 40px; background: var(--color-white); }
+.catTab .catTit ul { display: flex; }
+.catTab .catTit ul li { flex: 1; text-align: center; font-size: 15px; font-weight: 700;  color: #717171; background: #ECECEC; }
+.catTab .catTit ul li + li { border-left: 1px solid #ccc; }
+.catTab .catTit ul li.curr { color: var(--color-white); background: var(--color-secondary); }
+.catTab .catTit ul li a { display: block; border-radius: 0; line-height: 36px; }
+.catTab .catTit ul li a:focus { color: inherit; background: transparent; }
+.catTab .tabCont { margin-top: 32px; }
+
+.catMain { display: flex; gap: 10px; }
+.catMain .rt ul { display: flex; flex-direction: column; gap: 30px; }
+.catMain .rt p { margin-top: 5px; line-height: 1.3; font-size: 15px; color: var(--color-gray-70); }
+.catIntro dl + dl { margin-top: 32px; }
+.catIntro dl dt { padding-bottom: 10px; border-bottom: 1px solid #ccc; font-size: 19px; font-weight: 700; color: var(--color-base); }
+.catIntro dl dd { padding-top: 10px; }
+.catIntro ul { display: flex; flex-direction: column; gap: 6px; }
+.catIntro ul li { display: flex; flex-wrap: wrap; }
+.catIntro ul li span { flex: 0 0 120px; line-height: 1.3; font-size: 15px; font-weight: 700; color: var(--color-base); }
+.catIntro ul li span.year { flex: 0 0 70px; }
+.catIntro ul li p { flex: 1; line-height: 1.3; font-size: 15px; color: var(--color-base); }
+.catIntro .introduce { overflow-y: auto; max-height: 110px; line-height: 1.3; font-size: 15px; color: var(--color-gray-70); }
+.catItem ul { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px 30px; }
+.catItem .imgBox { position: relative; margin-bottom: 5px; width: 130px; height: 130px; }
+.catItem .imgBox img { width: 100%; height: 100%; }
+.catItem .imgBox span { position: absolute; top: 0; left: 0; padding: 3px 0; border-radius: 4px; width: 35px; text-align: center; font-size: 13px; color: var(--color-white); background: var(--color-point); }
+.catItem p { line-height: 1.3; font-size: 15px; color: var(--color-gray-70); }
+.catContact { display: flex; flex-direction: column; gap: 32px; }
+.contact { display: flex; gap: 30px; padding: 20px 30px; border: 1px solid #ccc; border-radius: 16px; }
+.contact img { border-radius: 50%; width: 128px; height: 128px; object-fit: cover; }
+.contact dl dt { padding-bottom: 5px; border-bottom: 1px solid #ccc; font-size: 19px; font-weight: 700; color: var(--color-base);  }
+.contact dl dd { padding-top: 16px; }
+.contact dl dd ul { display: flex; flex-direction: column; gap: 5px; }
+.contact dl dd p { margin-bottom: 5px; line-height: 1.3; font-size: 15px; font-weight: 700; color: var(--color-base); }
+.contact dl dd span { display: block; line-height: 1.3; font-size: 15px; color: var(--color-gray-70); }
+</style>
+<!-- catWrap -->
+<div class="catWrap v1">
+    <div class="catInner">
+        <div class="catHeader">
+            <div class="lt">
+                <p>중소기업유통센터15</p>
+            </div>
+            <div class="rt">
+                <a href="" class="btnFacebook">페이스북 바로가기</a>
+                <a href="" class="btnTwitter">트위터 바로가기</a>
+                <a href="" class="btnKakaotalk">카카오톡 바로가기</a>
+                <a href="" class="btnKakaostory">카카오스토리 바로가기</a>
+                <a href="" class="btnPrint">인쇄하기</a>
+            </div>
+        </div>
+        <div class="catCont">
+            <div class="catTab tabFunc">
+                <div class="tabTit catTit">
+                    <ul>
+                        <li class="curr"><a href="">메인</a></li>
+                        <li><a href="">회사소개</a></li>
+                        <li><a href="">상품소개</a></li>
+                        <li><a href="">연락처</a></li>
+                    </ul>
+                </div>
+                <div class="tabCont">
+                    <!-- 메인 -->
+                    <div>
+                        <div class="catMain">
+                            <img src="../assets/images/content/img-catalog01.png" alt="SMALL BUSINESS DISTRIBUTION CENTER 15">
+                            <div class="rt">
+                                <ul>
+                                    <li>
+                                        <img src="../assets/images/content/img-catalog02.png" alt="">
+                                        <p>LG 그램 <br>39.6cm</p>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/images/content/img-catalog02.png" alt="">
+                                        <p>LG 그램 <br>39.6cm</p>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/images/content/img-catalog02.png" alt="">
+                                        <p>LG 그램 <br>39.6cm</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// 메인 -->
+                    <!-- 회사소개 -->
+                    <div>
+                        <div class="catIntro">
+                            <dl>
+                                <dt>회사개요</dt>
+                                <dd>
+                                    <ul>
+                                        <li>
+                                            <span>회사명(국문/영문)</span>
+                                            <p>한국중소벤처기업유통원/ KODMA</p>
+                                        </li>
+                                        <li>
+                                            <span>대표전화</span>
+                                            <p>02-6674-9831</p>
+                                        </li>
+                                        <li>
+                                            <span>팩스번호</span>
+                                            <p>02-6678-9831</p>
+                                        </li>
+                                        <li>
+                                            <span>홈페이지</span>
+                                            <p>www.fanfandaero.kr</p>
+                                        </li>
+                                        <li>
+                                            <span>회사주소</span>
+                                            <p>서울특별시 양천구 목동동로309 (목동)</p>
+                                        </li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>회사연혁</dt>
+                                <dd>
+                                    <ul>
+                                        <li>
+                                            <span class="year">2024년</span>
+                                            <p>11월 한국중소벤처기업유통원으로기관명 변경</p>
+                                        </li>
+                                        <li>
+                                            <span class="year">2022년</span>
+                                            <p>
+                                                12월 한겨울의 동행축제 ‘윈·윈터 페스티벌‘ 주관<br>
+                                                9월 전국민 소비촉진 행사 ‘7일간의 동행축제‘ 주관<br>
+                                                5월 행복한백화점모바일 어플리케이션 오픈<br>
+                                                4월 직접생산 확인제도 수행기관 지정 및 신규업무 추진<br>
+                                                3월 중소기업 · 소상공인 판로정보플랫폼 ‘판판대로‘ 오픈
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>회사소개</dt>
+                                <dd>
+                                    <p class="introduce">
+                                        한국중소벤처기업유통원,<br>
+                                        중소벤처기업과 소상공인의 꿈이 세상과 통하는 종합판로지원기관
+                                        한국중소벤처기업유통원은 시장 경쟁 속에서 판로개척에 어려움을 겪고 있는 우수한 중소벤처기업 및 소상공인 제품의 역량 강화부터 인프라 지원, 시장 진출까지의 전주기적 판로 지원을 통해 중소벤처기업 및 소상공인의 경쟁력 향상과 경영안정에 기여하는 공공기관입니다.
+                                    </p>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!--// 회사소개 -->
+                    <!-- 상품소개 -->
+                    <div>
+                        <div class="catItem">
+                            <ul>
+                                <li>
+                                    <div class="imgBox">
+                                        <img src="../assets/images/content/img-catalog02.png" alt="">
+                                        <span>대표</span>
+                                    </div>
+                                    <p>LG 그램 <br>39.6cm</p>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <img src="../assets/images/content/img-catalog02.png" alt="">
+                                    </div>
+                                    <p>LG 그램 <br>39.6cm</p>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <img src="../assets/images/content/img-catalog02.png" alt="">
+                                    </div>
+                                    <p>LG 그램 <br>39.6cm</p>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <img src="../assets/images/content/img-catalog02.png" alt="">
+                                    </div>
+                                    <p>LG 그램 <br>39.6cm</p>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <img src="../assets/images/content/img-catalog02.png" alt="">
+                                    </div>
+                                    <p>LG 그램 <br>39.6cm</p>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <img src="../assets/images/content/img-catalog02.png" alt="">
+                                    </div>
+                                    <p>LG 그램 <br>39.6cm</p>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <img src="../assets/images/content/img-catalog02.png" alt="">
+                                    </div>
+                                    <p>LG 그램 <br>39.6cm</p>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <img src="../assets/images/content/img-catalog02.png" alt="">
+                                    </div>
+                                    <p>LG 그램 <br>39.6cm</p>
+                                </li>
+                                <li>
+                                    <div class="imgBox">
+                                        <img src="../assets/images/content/img-catalog02.png" alt="">
+                                    </div>
+                                    <p>LG 그램 <br>39.6cm</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--// 상품소개 -->
+                    <!-- 연락처 -->
+                    <div>
+                        <div class="catContact">
+                            <div class="contact">
+                                <img src="../assets/images/content/img-catalog-profile01.png" alt="">
+                                <dl>
+                                    <dt>대표자</dt>
+                                    <dd>
+                                        <ul>
+                                            <li>
+                                                <p>성명</p>
+                                                <span>홍길동</span>
+                                            </li>
+                                            <li>
+                                                <p>연락처</p>
+                                                <span>02-6678-9727</span>
+                                            </li>
+                                            <li>
+                                                <p>이메일</p>
+                                                <span>honggildong@fanfandaero.kr</span>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="contact">
+                                <img src="../assets/images/content/img-catalog-profile02.png" alt="">
+                                <dl>
+                                    <dt>대표자</dt>
+                                    <dd>
+                                        <ul>
+                                            <li>
+                                                <p>성명</p>
+                                                <span>홍길동</span>
+                                            </li>
+                                            <li>
+                                                <p>연락처</p>
+                                                <span>02-6678-9727</span>
+                                            </li>
+                                            <li>
+                                                <p>이메일</p>
+                                                <span>honggildong@fanfandaero.kr</span>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// 연락처 -->
+                </div>
+            </div>
+        </div>
+        <div class="catFooter">
+            <p>중소기업유통센터15</p>
+            <span>(우. 07997) 서울특별시 양천구 목동동로 309 (목동) 본사셍세주소 / TEL. 02-6674-9831</span>
+        </div>
+    </div>
+</div>
+<!--// catWrap -->
+</body>
+</html>

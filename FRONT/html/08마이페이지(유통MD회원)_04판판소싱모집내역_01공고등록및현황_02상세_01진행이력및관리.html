@@ -531,7 +531,7 @@
                                         </div>
 
                                         <div class="section">
-                                            <div class="btnBottom mb10">
+                                            <div class="tableTop">
                                                 <div class="right">
                                                     <button type="button" class="btn bgPrima">저장</button>
                                                 </div>
@@ -711,7 +711,7 @@
                                                     </dt>
                                                     <dd>
                                                         <div>
-                                                            <p>배너샘플이미지.png  /  등록일 2025.05.01</p>
+                                                            <p>배너샘플이미지.png / 등록일 2025.05.01</p>
                                                         </div>
                                                     </dd>
                                                     <dt>
@@ -729,7 +729,7 @@
                                                     </dt>
                                                     <dd>
                                                         <div>
-                                                            <p>배너샘플이미지.png  /  등록일 2025.05.01</p>
+                                                            <p>배너샘플이미지.png / 등록일 2025.05.01</p>
                                                         </div>
                                                     </dd>
                                                     <dt>
@@ -783,7 +783,7 @@
                                                     </dt>
                                                     <dd>
                                                         <div>
-                                                            <p>사업자등록증사본이미지.png  /  등록일 2025.05.01</p>
+                                                            <p>사업자등록증사본이미지.png / 등록일 2025.05.01</p>
                                                         </div>
                                                     </dd>
                                                     <dt>
@@ -791,7 +791,7 @@
                                                     </dt>
                                                     <dd>
                                                         <div>
-                                                            <p>재직증명서사본이미지.png  /  등록일 2025.05.01</p>
+                                                            <p>재직증명서사본이미지.png / 등록일 2025.05.01</p>
                                                         </div>
                                                     </dd>
                                                 </dl>
@@ -873,7 +873,7 @@
                                                         <p>진행 절차</p>
                                                     </dt>
                                                     <dd>
-                                                        <ul class="btnFormWrap">
+                                                        <ol class="btnFormWrap">
                                                             <li class="btnForm">공고</li>
                                                             <li class="btnForm-next">다음</li>
                                                             <li class="btnForm">대상선정</li>
@@ -885,7 +885,7 @@
                                                             <li class="btnForm">발표</li>
                                                             <li class="btnForm-next">다음</li>
                                                             <li class="btnForm">결정</li>
-                                                        </ul>
+                                                        </ol>
                                                     </dd>
                                                 </dl>
                                                 <dl>
@@ -977,7 +977,7 @@
                                                     </dt>
                                                     <dd>
                                                         <div>
-                                                            <div class="date">
+                                                            <div class="date mx400">
                                                                 <input type="text" title="날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)"
                                                                     placeholder="YYYY-MM-DD" disabled>
                                                             </div>
@@ -993,19 +993,20 @@
                                                             <div class="flexWrap addr">
                                                                 <div class="flexWrap post">
                                                                     <div>
-                                                                        <input type="text" title="우편번호" value="07997" disabled>
+                                                                        <input type="text" title="우편번호" value="우편번호" readonly>
                                                                     </div>
+                                                                    <button type="button" class="btn lg bgSecond">주소검색</button>
                                                                 </div>
                                                                 <div class="flexWrap">
                                                                     <div>
-                                                                        <input type="text" title="기본주소"
-                                                                            value="서울특별시 양천구 목동동로 309(목동)" disabled>
+                                                                        <input type="text" title="기본주소" value="기본주소" readonly>
                                                                     </div>
                                                                     <div>
-                                                                        <input type="text" title="상세주소" value="홍빌딩 10층" disabled>
+                                                                        <input type="text" title="상세주소" placeholder="상세주소를 입력해주세요.">
                                                                     </div>
                                                                 </div>
                                                             </div>
+                                                        </div>
                                                     </dd>
                                                 </dl>
                                                 <dl>
@@ -1098,10 +1099,12 @@
                                                     <dd>
                                                         <div>
                                                             <div class="flexWrap phone">
-                                                                <select title="전화번호 앞 3자리" value="010" disabled>
-                                                                    <option value="">선택</option>
-                                                                    <option value="">010</option>
-                                                                </select>
+                                                                <div>
+                                                                    <select title="전화번호 앞 3자리" value="010" disabled>
+                                                                        <option value="">선택</option>
+                                                                        <option value="">010</option>
+                                                                    </select>
+                                                                </div>
                                                                 <span>-</span>
                                                                 <div>
                                                                     <input type="text" title="전화번호 중간 3자리" value="1234" disabled>
@@ -1121,12 +1124,20 @@
                                                     <dd>
                                                         <div>
                                                             <div class="flexWrap email">
-                                                                <div>
-                                                                    <input type="text" title="이메일 아이디" value="fanfandaero" disabled>
+                                                                <div class="flexWrap">
+                                                                    <div>
+                                                                        <input type="text" title="이메일 아이디">
+                                                                    </div>
+                                                                    <span>@</span>
                                                                 </div>
-                                                                <span>@</span>
                                                                 <div>
-                                                                    <input type="text" title="이메일 도메인" value="kodma.or.kr" disabled>
+                                                                    <input type="text" title="이메일 도메인">
+                                                                </div>
+                                                                <div>
+                                                                    <select title="이메일 도메인 선택">
+                                                                        <option value="">선택</option>
+                                                                        <option value="">fanfandaero.kr</option>
+                                                                    </select>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1140,137 +1151,120 @@
                                             <div class="titArea">
                                                 <h3>판판소싱 참여이력</h3>
                                             </div>
-                                            <div class="mdArea">
-                                                <div class="lt">
-                                                    <!-- colTable -->
-                                                    <div class="colTable">
-                                                        <table>
-                                                            <caption>참여연도, 판판소싱공고명, 대표상품명, 유통회사, 참여결과 항목으로 구성된 판판소싱 참여이력 현황 표
-                                                            </caption>
-                                                            <!-- 2025-09-19 -->
-                                                            <colgroup>
-                                                                <col style="width:120px">
-                                                                <col style="width:120px">
-                                                                <col style="width:120px">
-                                                                <col style="width:120px">
-                                                                <col style="width:120px">
-                                                            </colgroup>
-                                                            <!--// 2025-09-19 -->
-                                                            <thead>
-                                                                <tr>
-                                                                    <th scope="col" class="bgBlue">참여연도</th>
-                                                                    <th scope="col" class="bgBlue">판판소싱공고명</th>
-                                                                    <th scope="col" class="bgBlue">대표 상품명</th>
-                                                                    <th scope="col" class="bgBlue">유통회사</th>
-                                                                    <th scope="col" class="bgBlue">참여결과</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td class="txtC">-</td>
-                                                                    <td class="txtC">-</td>
-                                                                    <td class="txtC">-</td>
-                                                                    <td class="txtC">-</td>
-                                                                    <td class="txtC">-</td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                    <!--// colTable -->
-                                                </div>
+                                            <!-- colTable -->
+                                            <div class="colTable">
+                                                <table>
+                                                    <caption>참여연도, 판판소싱공고명, 대표상품명, 유통회사, 참여결과 항목으로 구성된 판판소싱 참여이력 현황 표
+                                                    </caption>
+                                                    <colgroup>
+                                                        <col style="width:130px">
+                                                        <col style="width:250px">
+                                                        <col style="width:130px">
+                                                        <col style="width:130px">
+                                                        <col style="width:120px">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col" class="bgBlue">참여연도</th>
+                                                            <th scope="col" class="bgBlue">판판소싱공고명</th>
+                                                            <th scope="col" class="bgBlue">대표 상품명</th>
+                                                            <th scope="col" class="bgBlue">유통회사</th>
+                                                            <th scope="col" class="bgBlue">참여결과</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="txtC">-</td>
+                                                            <td class="txtC">-</td>
+                                                            <td class="txtC">-</td>
+                                                            <td class="txtC">-</td>
+                                                            <td class="txtC">-</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
                                             </div>
+                                            <!--// colTable -->
                                         </div>
 
                                         <div class="section">
                                             <div class="titArea">
                                                 <h3>지원사업 참여이력</h3>
                                             </div>
-                                            <div class="mdArea">
-                                                <div class="lt">
-                                                    <!-- colTable -->
-                                                    <div class="colTable">
-                                                        <table>
-                                                            <caption>참여연도, 지원사업명, 운영기관, 참여결과 항목으로 구성된 지원사업 참여이력 현황 표
-                                                            </caption>
-                                                            <!-- 2025-09-19 -->
-                                                            <colgroup>
-                                                                <col style="width:120px">
-                                                                <col style="width:120px">
-                                                                <col style="width:120px">
-                                                                <col style="width:120px">
-                                                            </colgroup>
-                                                            <!--// 2025-09-19 -->
-                                                            <thead>
-                                                                <tr>
-                                                                    <th scope="col" class="bgBlue">참여연도</th>
-                                                                    <th scope="col" class="bgBlue">지원사업명</th>
-                                                                    <th scope="col" class="bgBlue">운영기관</th>
-                                                                    <th scope="col" class="bgBlue">참여결과</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td class="txtC">-</td>
-                                                                    <td class="txtC">-</td>
-                                                                    <td class="txtC">-</td>
-                                                                    <td class="txtC">-</td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                    <!--// colTable -->
-                                                </div>
+                                            <!-- colTable -->
+                                            <div class="colTable">
+                                                <table>
+                                                    <caption>참여연도, 지원사업명, 운영기관, 참여결과 항목으로 구성된 지원사업 참여이력 현황 표
+                                                    </caption>
+                                                    <colgroup>
+                                                        <col style="width:130px">
+                                                        <col style="width:250px">
+                                                        <col style="width:130px">
+                                                        <col style="width:120px">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col" class="bgBlue">참여연도</th>
+                                                            <th scope="col" class="bgBlue">지원사업명</th>
+                                                            <th scope="col" class="bgBlue">운영기관</th>
+                                                            <th scope="col" class="bgBlue">참여결과</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="txtC">-</td>
+                                                            <td class="txtC">-</td>
+                                                            <td class="txtC">-</td>
+                                                            <td class="txtC">-</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
                                             </div>
+                                            <!--// colTable -->
                                         </div>
 
                                         <div class="section">
                                             <div class="titArea">
-                                                <h3>상품 등록</h3>
                                                 <div class="left">
-                                                    <a href="" class="btn borGray">상품추가</a>
+                                                    <h3>상품 등록</h3>
+                                                </div>
+                                                <div class="right">
+                                                    <a href="" class="btn bgSecond">상품추가</a>
                                                     <a href="" class="btn bgPrima">신규등록</a>
                                                 </div>
                                             </div>
-                                            <div class="mdArea">
-                                                <div class="lt mb20">
-                                                    <!-- colTable -->
-                                                    <div class="colTable">
-                                                        <table>
-                                                            <caption>이미지, 상품명, 카테고리, 가격 항목으로 구성된 지원사업 상품등록 표
-                                                            </caption>
-                                                            <!-- 2025-09-19 -->
-                                                            <colgroup>
-                                                                <col style="width:120px">
-                                                                <col style="width:120px">
-                                                                <col style="width:120px">
-                                                                <col style="width:120px">
-                                                            </colgroup>
-                                                            <!--// 2025-09-19 -->
-                                                            <thead>
-                                                                <tr>
-                                                                    <th scope="col" class="bgBlue">이미지</th>
-                                                                    <th scope="col" class="bgBlue">상품명</th>
-                                                                    <th scope="col" class="bgBlue">카테고리</th>
-                                                                    <th scope="col" class="bgBlue">가격</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td class="txtC">
-                                                                        <div class="img">
-                                                                            <img src="../assets/images/content/img-tv01.png" alt="">
-                                                                        </div>
-                                                                    </td>
-                                                                    <td class="txtC">[제이유퍼] 페미닌 라인 티</td>
-                                                                    <td class="txtC">의류 > 여성의류 > 블라우스/셔츠/남방</td>
-                                                                    <td class="txtC">69,000원</td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                    <!--// colTable -->
-                                                </div>
+                                            <!-- colTable -->
+                                            <div class="colTable inImg">
+                                                <table>
+                                                    <caption>이미지, 상품명, 카테고리, 가격 항목으로 구성된 지원사업 상품등록 표</caption>
+                                                    <colgroup>
+                                                        <col style="width:250px">
+                                                        <col style="width:250px">
+                                                        <col style="width:250px">
+                                                        <col style="width:150px">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col" class="bgBlue">이미지</th>
+                                                            <th scope="col" class="bgBlue">상품명</th>
+                                                            <th scope="col" class="bgBlue">카테고리</th>
+                                                            <th scope="col" class="bgBlue">가격</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="txtC">
+                                                                <div class="img">
+                                                                    <img src="../assets/images/content/img-tv01.png" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td class="txtC">[제이유퍼] 페미닌 라인 티</td>
+                                                            <td class="txtC">의류 > 여성의류 > 블라우스/셔츠/남방</td>
+                                                            <td class="txtC">69,000원</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
                                             </div>
+                                            <!--// colTable -->
                                             <!-- formTable -->
                                             <div class="formTable">
                                                 <dl>

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<!-- E : mobile -->
+<title>aaaa</title>
+<link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+<script type="text/javascript" src="../assets/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../assets/js/moment.min.js"></script>
+<script type="text/javascript" src="../assets/js/daterangepicker.min.js"></script>
+<script type="text/javascript" src="../assets/js/swiper.js"></script>
+<script type="text/javascript" src="../assets/js/common.js"></script>
+<!-- <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="js/selectivizr.js">
+ -->
+<!--[if lte IE 9]>
+</script>
+<![endif]-->
+</head>
+<body>
+<!-- skipNav -->
+<dl id="skipNav">
+	<dt>바로가기 메뉴</dt>
+	<dd><a href="#container">본문 바로가기</a></dd>
+	<dd><a href="#gnb">주메뉴 바로가기</a></dd>
+	<dd><a href="#footer">풋터 바로가기</a></dd>
+</dl>
+<!-- //skipNav -->
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<!-- inner -->
+		<div class="inner">
+			<div class="headTop">
+				<ul class="etc">
+					<li><a href="" class="btnIco btnHref xsm"><img src="../assets/images/common/ico-logo01.png" alt="">소담인프라</a></li>
+					<li><a href="" class="btnIco btnHref xsm"><img src="../assets/images/common/ico-logo02.svg" alt="">동행축제</a></li>
+				</ul>
+			</div>
+			<div class="headBody">
+				<div class="logo">
+					<a href=""><img src="../assets/images/common/logo.svg" alt="KODMA 판판대로"></a>
+				</div>
+				<ul class="util">
+					<li>
+						<button type="button" class="btnSearchForm">통합검색</button>
+						<div class="headSearch">
+							<div class="inner">
+								<strong>판판대로 통합검색</strong>
+								<div class="in">
+									<div class="sesarchInp">
+										<input type="text" placeholder="검색어를 입력해주세요." title="검색어">
+										<button type="button" class="btnHeadSearch"><span class="hide">검색</span></button>
+									</div>
+									<div class="searchInpBot">
+										<p>무엇이 궁금하세요?</p>
+										<ul>
+											<li><button type="button">#전담셀러</button></li>
+											<li><button type="button">#상세페이지</button></li>
+											<li><button type="button">#마트</button></li>
+											<li><button type="button">#브랜드k</button></li>
+										</ul>
+									</div>
+								</div>
+								<button type="button" class="btnCls btnHeaeSearCls"><span class="hide">닫기</span></button>
+							</div>
+						</div>
+					</li>
+					<!-- 로그인 전 -->
+					<li><a href="" class="btnLogin">로그인</a></li>
+					<li><a href="" class="btnJoin">회원가입</a></li>
+					<!--// 로그인 전 -->
+					<!-- 로그인 후 -->
+					<li><a href="" class="btnLogout">로그아웃</a></li>
+					<li><a href="" class="btnMypage">김판판님 마이페이지</a></li>
+					<!--// 로그인 후 -->
+					<li class="btnMobLi"><a href="" class="btnHam">전체메뉴</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--// inner -->
+		<!-- gnb -->
+		<div id="gnb">
+			<div class="inner">
+				<!-- gnbArea -->
+				<div class="gnbArea">
+					<ul class="gnbUl">
+						<li>
+							<a href="">운영기관 소개</a>
+							<div class="subDepth">
+								<p>운영기관 소개</p>
+								<ul>
+									<li><a href="">운영기관 소개</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="">사업공고 및 신청</a>
+							<div class="subDepth">
+								<p>사업공고 및 신청</p>
+								<ul>
+									<li><a href="">지원사업 안내</a></li>
+									<li>
+										<a href="">지원사업 공고</a>
+										<ul>
+											<li><a href="">지원사업 공고ㆍ신청</a></li>
+											<li><a href="">국내 판로지원사업 전체보기</a></li>
+											<li>
+												<a href="">지원사업 신청현황</a>
+												<ul>
+													<li><a href="">지원사업 신청/수정/제출 목록</a></li>
+													<li><a href="">지원사업 신청</a></li>
+													<li><a href="">지원사업 임시저장</a></li>
+													<li><a href="">지원사업 수정</a></li>
+													<li><a href="">지원사업 제출</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li><a href="">지원사업 공고</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="">홍보·알림</a>
+							<div class="subDepth">
+								<p>홍보·알림</p>
+								<ul>
+									<li><a href="">우수제품</a></li>
+									<li><a href="">우수사례</a></li>
+									<li>
+										<a href="">판로정보</a>
+										<ul>
+											<li><a href="">중소기업 행사정보</a></li>
+											<li><a href="">조달청 입찰정보</a></li>
+											<li><a href="">기타 연계정보 제공</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="">MRO 지원정보</a>
+										<ul>
+											<li><a href="">알기쉬운 사업안내</a></li>
+											<li><a href="">납품업체 검색</a></li>
+											<li><a href="">실태조사</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="">주요 서비스</a>
+							<div class="subDepth">
+								<p>주요 서비스</p>
+								<ul>
+									<li><a href="">플랫폼소개</a></li>
+									<li>
+										<a href="">소담인프라</a>
+										<ul>
+											<li>
+												<a href="">소담스퀘어 안내</a>
+												<ul>
+													<li><a href="">상암</a></li>
+													<li><a href="">당산</a></li>
+													<li><a href="">보라매</a></li>
+													<li><a href="">대구</a></li>
+													<li><a href="">부산</a></li>
+													<li><a href="">전주</a></li>
+													<li><a href="">강원</a></li>
+													<li><a href="">광주</a></li>
+													<li><a href="">충북</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="">소담상회 안내</a>
+												<ul>
+													<li><a href="">인사</a></li>
+													<li><a href="">서교</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="">판판소싱</a>
+										<ul>
+											<li>
+												<a href="">판판소싱 공고</a>
+												<ul>
+													<li><a href="">공고 보기</a></li>
+													<li><a href="">입점신청</a></li>
+												</ul>
+											</li>
+											<li><a href="">판판소싱 소개</a></li>
+										</ul>
+									</li>
+									<li><a href="" target="_blank">판판셀러</a></li>
+									<li><a href="" target="_blank">동행축제</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="">이용안내</a>
+							<div class="subDepth">
+								<p>이용안내</p>
+								<ul>
+									<li><a href="">공지사항</a></li>
+									<li><a href="">자주하는 질문</a></li>
+									<li><a href="">1:1 문의</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<!-- hover depth -->
+					<div class="in hoverDepth"></div>
+					<!--// hover depth -->
+				</div>
+				<!--// gnbArea -->
+				<div class="sitemapArea">
+					<button type="button" class="btnSitemap"><span class="hide">사이트맵</span></button>
+					<div id="sitemap">
+						<div class="inner">
+							<strong>판판대로 사이트맵</strong>
+							<!-- sitemap gnb -->
+							<div class="in"></div>
+							<!--// sitemap gnb -->
+							<button type="button" class="btnCls btnSitemapCls"><span class="hide">닫기</span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--// gnb -->
+		<!-- gnbMob -->
+		<div class="gnbMobArea">
+			<div class="gnbMob">
+				<div class="head">
+					<div class="headTop">
+						<ul class="etc">
+							<li><a href="" class="btnIco btnHref xsm"><img src="../assets/images/common/ico-logo01.png" alt="">소담인프라</a></li>
+							<li><a href="" class="btnIco btnHref xsm"><img src="../assets/images/common/ico-logo02.svg" alt="">동행축제</a></li>
+						</ul>
+					</div>
+					<div>
+						<p class="logTxt">로그인을 해주세요.</p>
+					</div>
+				</div>
+				<div class="body">
+					<div class="left">
+						<ul class="gnbNav">
+							<li class="curr"><a href="#mGnb01">운영기관 소개</a></li>
+							<li><a href="#mGnb02">사업공고 및 신청</a></li>
+							<li><a href="#mGnb03">홍보·알림</a></li>
+							<li><a href="#mGnb04">주요 서비스</a></li>
+							<li><a href="#mGnb05">이용안내</a></li>
+						</ul>
+					</div>
+					<div class="right">
+						<div class="in">
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="btnCls btnHamCls"><span class="hide">닫기</span></button>
+		</div>
+		<!--// gnbMob -->
+	</div>
+	<!--// header -->
+
+	<!-- container -->
+	<div id="container">
+		<!-- contents -->
+		<div class="contents">
+			<!-- lnb -->
+			<div id="lnb">
+				<div class="in">
+                    <div class="lnbTop">
+                        <div class="top">
+                            <h4>마이페이지</h4>
+                            <button type="button" class="btnTxt download">매뉴얼 다운로드</button>
+                        </div>
+                        <div class="myInfo">
+                            <p class="name"><span class="v5">예비</span>홍길동 님</p>
+                            <span class="recentDate">최근접속일 : 2025.08.01 10:11:15</span>
+                        </div>
+                    </div>
+					<ul class="lnbUl">
+						<li>
+                            <a href="">회원정보</a>
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                            </ul>
+                        </li>
+						<li>
+                            <a href="">지원사업 신청내역</a>
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                            </ul>
+                        </li>
+                        </li>
+						<li>
+                            <a href="">수행기관 공모 신청내역</a>
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                            </ul>
+                        </li>
+						<li>
+                            <a href="">자가진단 신청내역</a>
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                            </ul>
+                        </li>
+						<li>
+                            <a href="">상품소싱 신청내역</a>
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                            </ul>
+                        </li>
+						<li>
+                            <a href="">상품 관리</a>
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                            </ul>
+                        </li>
+						<li>
+                            <a href="">문의/알림</a>
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                            </ul>
+                        </li>
+						<li>
+                            <a href="">MRO</a>
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                            </ul>
+                        </li>
+					</ul>
+				</div>
+			</div>
+			<!--// lnb -->
+			<div class="inner">
+				<!-- breadcrumb -->
+				<div class="breadcrumb">
+					<ol>
+						<li class="home"><a href="">홈</a></li>
+						<li><a href="#"><strong>마이페이지</strong></a></li>
+						<li><a href="#"><strong>문의/알림</strong></a></li>
+					</ol>
+				</div>
+				<!-- breadcrumb -->
+				<!-- subTop -->
+				<div class="subTop v8">
+					<div class="titArea">
+                        <div class="left">
+                            <h2>문의하기</h2>
+                        </div>
+                        <div class="right">
+                            <button type="button" class="btnTxt download">매뉴얼 다운로드</button>
+                        </div>
+					</div>
+				</div>
+				<!--// subTop -->
+
+				<!-- subCont -->
+				<div class="subCont">
+					<div class="cont">
+                        <div class="section">
+                            <div style="display: flex; align-items: center; justify-content: center; height: 200px; background: #ccc;">검색필터 영역입니다.</div>
+                        </div>
+
+                        <div class="section">
+                            <!-- tableTop -->
+                            <div class="tableTop">
+                                <div class="left">
+                                    <div class="total">
+                                        <p>총</p>
+                                        <p><b class="cPoint">000</b>개</p>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <button type="button" class="btn bgPrima">문의하기</button>
+                                </div>
+                            </div>
+                            <!--// tableTop -->
+                            <!-- colTable -->
+                            <div class="colTable">
+                                <table>
+                                    <caption>번호, 카테고리, 제목, 등록일, 상태 항목으로 구성된 문의하기 표</caption>
+                                    <colgroup>
+                                        <col style="width:60px">
+                                        <col style="width:130px">
+                                        <col style="width:250px">
+                                        <col style="width:130px">
+                                        <col style="width:120px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            </th>
+                                            <th scope="col" class="bgBlue">번호</th>
+                                            <th scope="col" class="bgBlue">카테고리</th>
+                                            <th scope="col" class="bgBlue">제목</th>
+                                            <th scope="col" class="bgBlue">등록일</th>
+                                            <th scope="col" class="bgBlue">상태</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="txtC">10</td>
+                                            <td class="txtC">카테고리</td>
+                                            <td>문의하기 제목입니다.</td>
+                                            <td class="txtC">2025.08.04</td>
+                                            <td class="txtC">신청</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="txtC">9</td>
+                                            <td class="txtC">카테고리</td>
+                                            <td>문의하기 제목입니다.</td>
+                                            <td class="txtC">2025.08.04</td>
+                                            <td class="txtC">신청</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--// colTable -->
+                            <!-- paging -->
+                            <div class="pagination">
+                                <div>
+                                    <a class="pageNavi first" href="#"><span class="hide">처음</span></a>
+                                    <a class="pageNavi prev" href="#">이전</a>
+                                    <div class="pageLinks">
+                                        <a class="pageLink" href="#">1</a>
+                                        <span class="pageLink linkDot"></span>
+                                        <a class="pageLink" href="#">6</a>
+                                        <a class="pageLink" href="#">7</a>
+                                        <a class="pageLink curr" href="#" title="선택됨">8</a>
+                                        <a class="pageLink" href="#">9</a>
+                                        <a class="pageLink" href="#">10</a>
+                                        <a class="pageLink" href="#">11</a>
+                                        <span class="pageLink linkDot"></span>
+                                        <a class="pageLink" href="#">120</a>
+                                    </div>
+                                    <a class="pageNavi next" href="#">다음</a>
+                                    <a class="pageNavi last" href="#"><span class="hide">마지막</span></a>
+                                </div>
+                            </div>
+                            <!-- //paging -->
+                        </div>
+					</div>
+				</div>
+				<!--// subCont -->
+			</div>
+		</div>
+		<!--// contents -->
+
+		<!-- quickmenu -->
+		<div id="quickmenu">
+			<div class="quick">
+				<ul>
+					<li class="m1"><a href="">공지사항</a></li>
+					<li class="m2"><a href="">위원신청</a></li>
+					<li class="m3"><a href="">상담하기</a></li>
+					<li class="m4"><a href="">원격지원</a></li>
+				</ul>
+				<button type="button" class="btnQuick"><span class="hide">퀵메뉴</span></button>
+			</div>
+			<button type="button" class="btnTop"><span class="hide">상단으로 이동</span></button>
+		</div>
+		<!--// quickmenu -->
+	</div>
+	<!--// container -->
+
+	<!-- footer -->
+	<footer id="footer">
+		<div class="inner">
+			<div class="footerCont">
+				<div class="left">
+					<div class="footerLogo">
+						<img src="../assets/images/common/logo-footer01.png" alt="중소벤처기업부">
+						<img src="../assets/images/common/logo-footer02.png" alt="한국중소벤처기업유통원">
+					</div>
+					<div class="fInfo">
+						<p class="addr">(07997) 서울특별시 양천구 목동동로309 <br class="mBlock">한국중소벤처기업유통원</p>
+						<ul class="cs">
+							<li><strong>대표자</strong>이태식</li>
+							<li><strong>사업자등록번호</strong><span>107-81-53660</span></li>
+						</ul>
+						<ul class="cs">
+							<li><strong>기능문의</strong><span>02-2656-9021</span></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="fLink">
+					<div class="familySite">
+						<div class="select">
+							<button type="button">관련사이트</button>
+							<ul>
+								<li class="curr"><a href="" target="_blank">판판셀러</a></li>
+								<li><a href="" target="_blank">전자계약시스템</a></li>
+								<li><a href="" target="_blank">평가관리시스템</a></li>
+								<li><a href="" target="_blank">공공구매종합정보망</a></li>
+								<li><a href="" target="_blank">브랜드K</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="menu">
+						<a href="#" class="btnIco">찾아오시는 길</a>
+					</div>
+					<div class="sns">
+						<a href="#" class="facebook" target="_blank"><span class="hide">페이스북</span></a>
+						<a href="#" class="blog" target="_blank"><span class="hide">블로그</span></a>
+					</div>
+				</div>
+			</div>
+			<div class="footerBottom">
+				<div class="fBot">
+					<div class="menu">
+						<a href="#"><strong>개인정보처리방침</strong></a>
+						<a href="#">이용안내</a>
+						<a href="#">이용약관</a>
+						<a href="#">저작권정책</a>
+						<a href="#">이메일무단수집거부</a>
+					</div>
+					<p class="copyright">Copyright 2025. 판판대로 All Rights Reserved.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--// footer -->
+</div>
+<!--// wrap -->
+</body>
+</html>
