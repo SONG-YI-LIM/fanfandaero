@@ -2046,8 +2046,16 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
 
 .biWrap { display: flex; flex-wrap: wrap; gap: 60px; }
 .biWrap .biIntro { width: 100%; line-height: 1.5; font-size: 17px; color: var(--color-base); }
-.biWrap .lt { flex: 1; }
-.biWrap .rt { flex: 0 0 410px; }
+.biWrap .lt { flex: 1; display: flex; flex-direction: column; gap: 16px; }
+.biWrap .rt { flex: 0 0 410px; display: flex; flex-direction: column; gap: 16px; }
+.biWrap .titArea { margin-bottom: 0; }
+.biWrap .btnBottom { margin-top: 0; }
+.biColor { position: relative; width: 410px; height: 240px; background-repeat: no-repeat; background-position: center; background-size: 100% auto; }
+.biColor.main { background-image: url(../images/content/img-bi02.png); }
+.biColor.sub { background-image: url(../images/content/img-bi03.png); }
+.biColor .inTxt { position: absolute; top: 40px; left: 40px; color: var(--color-white); }
+.biColor .inTxt strong { font-size: 21px; }
+.biColor .inTxt p { margin-top: 16px; font-size: 15px; }
 @media (max-width: 1160px) {
     .mainService p { font-size: 23px; }
     .conceptMap > ul { flex-direction: column; }
@@ -2063,6 +2071,11 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
     .conceptMap > ul > li { flex-direction: column; gap: 30px; }
     .conceptMap > ul > li:last-child { width: 100%; }
     .conceptMap dl dt { font-size: 19px; }
+
+    .biWrap { gap: 40px; }
+    .biWrap .rt { flex: none; width: 100%; }
+    .biColor { width: 100%; height: 193px; }
+    .biColor .inTxt { top: 20px; left: 20px;}
 }
 /*** 페이지명1 ***/
 /* 페이지내 분할1 */
