@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<!-- E : mobile -->
+<title>aaaa</title>
+<link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+<script type="text/javascript" src="../assets/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../assets/js/moment.min.js"></script>
+<script type="text/javascript" src="../assets/js/daterangepicker.min.js"></script>
+<script type="text/javascript" src="../assets/js/swiper.js"></script>
+<script type="text/javascript" src="../assets/js/common.js"></script>
+<!-- <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="js/selectivizr.js">
+ -->
+<!--[if lte IE 9]>
+</script>
+<![endif]-->
+</head>
+<body>
+<style>
+.showroomWrap { height: 100%; min-height: 100vh; }
+.srHeader { position: relative; height: 80px; background: #1A2A58; }
+.srHeader p { margin: 0 auto; width: 735px; height: 300px; text-indent: -9999px; background: url(../assets/images/content/img-showroom01.png) no-repeat center/100% auto; }
+.srInfo { display: flex; flex-direction: column; justify-content: space-between; position: relative; margin: 0 auto; padding: 30px 30px 0; width: 100%; max-width: 626px; min-height: 220px; background: var(--color-white); }
+.srInfo .top { display: flex; flex-wrap: wrap; gap: 30px; }
+.srInfo .top > p { flex: 0 0 186px; font-size: 23px; font-weight: 700; color: var(--color-black); }
+.srInfo .top > ul { flex: 1; display: flex; flex-direction: column; gap: 6px; }
+.srInfo .top > ul li { display: flex; gap: 20px; }
+.srInfo .top > ul li span { flex-shrink: 0; font-size: 15px; font-weight: 700; color: var(--color-base); }
+.srInfo .top > ul li p { font-size: 15px; color: var(--color-base); }
+.srInfo .bottom ul { display: flex; }
+.srInfo .bottom ul li { flex: 1; padding: 12px 0; text-align: center; line-height: 1.3; font-size: 15px; font-weight: 700; color: #717171; background: #ECECEC; }
+.srInfo .bottom ul li + li { border-left: 1px solid #ccc; }
+.srCont { margin: 0 auto; padding: 40px; width: 100%; max-width: 735px;  }
+.srCont .catItem .imgBox { width: 100%; height: 198px; }
+.srCont .catItem p br { display: none; }
+.srCont .iframeBox { width: 100%; height: 620px; }
+.srCont .iframeBox iframe { width: 100%; height: 100%; }
+.srFooter { margin:0 auto; padding: 8px 20px; width: 100%; max-width: 735px; background: #F4F4F4; }
+.srFooter p { margin-bottom: 5px; line-height: 1.3; font-size: 15px; font-weight: 700; color: var(--color-base); }
+.srFooter span { display: block; font-size: 13px; color: var(--color-gray-70); }
+</style>
+<!-- showroomWrap -->
+<div class="showroomWrap">
+    <div class="srHeader">
+        <p>SHOWROOM</p>
+    </div>
+    <div class="srInfo">
+        <div class="top">
+            <p>중소기업유통센터15</p>
+            <ul>
+                <li>
+                    <span>대표전화</span>
+                    <p>02-6674-9831</p>
+                </li>
+                <li>
+                    <span>대표팩스</span>
+                    <p>02-6678-9831</p>
+                </li>
+                <li>
+                    <span>홈페이지</span>
+                    <p>www.fanfandaero.kr</p>
+                </li>
+                <li>
+                    <span>회사주소</span>
+                    <p>(07997) 서울특별시 양천구 목동동로 309 (목동)</p>
+                </li>
+            </ul>
+        </div>
+        <div class="bottom">
+            <ul>
+                <li>디지털/가전<br class="mBlock">(000개)</li>
+                <li>컴퓨터/주변기기<br class="mBlock">(000개)</li>
+                <li>자동차/공구<br class="mBlock">(000개)</li>
+            </ul>
+        </div>
+    </div>
+    <div class="srCont">
+        <div class="catItem">
+            <ul>
+                <li>
+                    <a href="">
+                        <div class="imgBox">
+                            <img src="../assets/images/content/img-catalog02.png" alt="">
+                            <span>대표</span>
+                        </div>
+                        <p>LG 그램 <br>39.6cm</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="imgBox">
+                            <img src="../assets/images/content/img-catalog02.png" alt="">
+                        </div>
+                        <p>LG 그램 <br>39.6cm</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="imgBox">
+                            <img src="../assets/images/content/img-catalog02.png" alt="">
+                        </div>
+                        <p>LG 그램 <br>39.6cm</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="srCont">
+        <div class="titArea">
+            <div class="left">
+                <h4>카탈로그</h4>
+            </div>
+            <div class="right">
+                <button type="button" class="btnTxt rt fold">접기</button>
+            </div>
+        </div>
+        <div class="iframeBox">
+            <iframe src="08마이페이지(기업회원)_07상품관리_05전자카탈로그관리_02카탈로그메인.html" frameborder="0"></iframe>
+        </div>
+    </div>
+    <div class="srFooter">
+        <p>중소기업유통센터15</p>
+        <span>(우. 07997) 서울특별시 양천구 목동동로 309 (목동) 본사셍세주소 / TEL. 02-6674-9831</span>
+    </div>
+</div>
+<!--// showroomWrap -->
+</body>
+</html>

@@ -392,11 +392,56 @@
                             </div>
                         </div>
 
-                        <!-- 2025-09-19 -->
+                        <!-- 2025-09-30 -->
                         <div class="section">
-                            <div style="display: flex; align-items: center; justify-content: center; height: 200px; background: #ccc;">검색필터 영역입니다.</div>
-                        </div>
-                        <!--// 2025-09-19 -->
+                            <div class="searchArea">
+                                <div class="in">
+                                    <div class="lt">
+                                        <div class="searchDefault">
+                                            <div class="keywordcmb">
+                                                <select title="검색어">
+                                                    <option value="">선택</option>
+                                                </select>
+                                                <input type="text" title="검색어" placeholder="검색어를 입력하세요">
+                                            </div>
+                                        </div>
+                                        <div class="searchDetail">
+                                            <ul>
+                                                <li class="full">
+                                                    <dl>
+                                                        <dt>카테고리</dt>
+                                                        <dd>
+                                                            <div class="flexForm">
+                                                                <div>
+                                                                    <select title="대분류">
+                                                                        <option value="">선택</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div>
+                                                                    <select title="중분류">
+                                                                        <option value="">선택</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div>
+                                                                    <select title="소분류">
+                                                                        <option value="">선택</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </dd>
+                                                    </dl>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                    <div class="rt">
+                                        <button type="button" class="btn bgPrima lg">검색</button>
+                                        <button type="button" class="btn bgSecond lg btnIco btnSearchDetail">고급검색</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>            
+                        <!--// 2025-09-30 -->
 
                         <div class="section"> 
                             <!-- tableTop -->
@@ -598,134 +643,6 @@
                             <!-- //paging -->
                         </div>
 					</div>
-					<!-- side -->
-					<div class="side">
-						<div class="in">
-                            <div class="top">
-                                <h3>검색필터</h3>
-                                <button type="button" class="btn bgSecond btnIco btnReset">초기화</button>
-                            </div>
-							<div class="searchArea">
-                                <dl>
-                                    <dt>대분류</dt>
-                                    <dd>
-                                        <!-- checkbox -->
-                                        <div class="checkboxWrap">
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk01" id="chk0101">
-                                                <label for="chk0101">전체</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk01" id="chk0102">
-                                                <label for="chk0102">디지털/가전</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk01" id="chk0103">
-                                                <label for="chk0103">컴퓨터/주변기기</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk01" id="chk0104">
-                                                <label for="chk0104">자동차/공구</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk01" id="chk0105">
-                                                <label for="chk0105">홈인테리어/홈테코</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk01" id="chk0106">
-                                                <label for="chk0106">생활/주방/욕실</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk01" id="chk0107">
-                                                <label for="chk0107">레저/취미 게임/악기</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk01" id="chk0108">
-                                                <label for="chk0108">유아동/출산</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk01" id="chk0109">
-                                                <label for="chk0109">뷰티</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk01" id="chk0110">
-                                                <label for="chk0110">의류</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk01" id="chk0111">
-                                                <label for="chk0111">패션잡화</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk01" id="chk0112">
-                                                <label for="chk0112">식품</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk01" id="chk0113">
-                                                <label for="chk0113">기타</label>
-                                            </div>
-                                        </div>
-                                        <!--// checkbox -->
-                                    </dd> 
-                                </dl>
-                                <dl>
-                                    <dt>중분류</dt>
-                                    <dd>
-                                        <!-- checkbox -->
-                                        <div class="checkboxWrap">
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk02" id="chk0201">
-                                                <label for="chk0201">대형가전</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk02" id="chk0202">
-                                                <label for="chk0202">주방가전</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk02" id="chk0203">
-                                                <label for="chk0203">생활/소형가전</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk02" id="chk0204">
-                                                <label for="chk0204">카메라/용품</label>
-                                            </div>
-                                        </div>
-                                        <!--// checkbox -->
-                                    </dd> 
-                                </dl>
-                                <dl>
-                                    <dt>소분류</dt>
-                                    <dd>
-                                        <!-- checkbox -->
-                                        <div class="checkboxWrap">
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk03" id="chk0301">
-                                                <label for="chk0301">TV/DVD</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk03" id="chk0302">
-                                                <label for="chk0302">냉장고</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk03" id="chk0303">
-                                                <label for="chk0303">세탁기</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk03" id="chk0304">
-                                                <label for="chk0304">기타</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk03" id="chk0305">
-                                                <label for="chk0305">중형가전</label>
-                                            </div>
-                                        </div>
-                                        <!--// checkbox -->
-                                    </dd> 
-                                </dl>
-								<button type="button" class="btn lg">검색</button>
-							</div>
-						</div>
-					</div>
-					<!--// side -->
 				</div>
 				<!--// subCont -->
 			</div>

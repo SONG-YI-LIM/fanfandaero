@@ -378,11 +378,49 @@
 				<!-- subCont -->
 				<div class="subCont">
 					<div class="cont">
-                        <!-- 2025-09-18 -->
+                        <!-- 2025-09-30 -->
                         <div class="section">
-                            <div style="display: flex; align-items: center; justify-content: center; height: 200px; background: #ccc;">검색필터 영역입니다.</div>
-                        </div>
-                        <!--// 2025-09-18 -->
+                            <div class="searchArea">
+                                <div class="in">
+                                    <div class="lt">
+                                        <div class="searchDefault">
+                                            <input type="text" title="검색어" placeholder="검색어를 입력하세요">
+                                        </div>
+                                        <div class="searchDetail">
+                                            <ul>
+                                                <li class="full">
+                                                    <dl>
+                                                        <dt>신청일</dt>
+                                                        <dd>
+                                                            <div class="dateWrap">
+                                                                <div class="flexWrap">
+                                                                    <div>
+                                                                        <div class="date">
+                                                                            <input type="text" title="시작날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
+                                                                        </div>
+                                                                    </div>
+                                                                    <span>~</span>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="date">
+                                                                        <input type="text" title="종료날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </dd>
+                                                    </dl>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                    <div class="rt">
+                                        <button type="button" class="btn bgPrima lg">검색</button>
+                                        <button type="button" class="btn bgSecond lg btnIco btnSearchDetail">고급검색</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>            
+                        <!--// 2025-09-30 -->
 
                         <!-- 2025-09-18 -->
                         <div class="section">
@@ -460,74 +498,6 @@
                         </div>
                         <!--// 2025-09-18 -->
 					</div>
-					<!-- side -->
-					<div class="side">
-						<div class="in">
-                            <div class="top">
-                                <h3>검색필터</h3>
-                                <button type="button" class="btn bgSecond btnIco btnReset">초기화</button>
-                            </div>
-							<div class="searchArea">
-                                <dl>
-                                    <dt>신청일</dt>
-                                    <dd>
-                                        <div class="flexCol">
-                                            <!-- checkbox -->
-                                            <div class="checkboxWrap column">
-                                                <div class="checkbox">
-                                                    <input type="checkbox" name="chk01" id="chk0101">
-                                                    <label for="chk0101">전체</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" name="chk01" id="chk0102">
-                                                    <label for="chk0102">기간설정</label>
-                                                </div>
-                                            </div>
-                                            <!--// checkbox -->
-                                            <div>
-                                                <p class="schTit">시작일</p>
-                                            </div>
-                                            <div>
-                                                <div class="date">
-                                                    <input type="text" title="시작날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <p class="schTit">종료일</p>
-                                            </div>
-                                            <div>
-                                                <div class="date">
-                                                    <input type="text" title="종료날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
-                                                </div>
-                                            </div>
-                                            <!-- checkbox -->
-                                            <div class="checkboxWrap">
-                                                <div class="checkbox">
-                                                    <input type="checkbox" name="chk02" id="chk0201">
-                                                    <label for="chk0201">특정년도</label>
-                                                </div>
-                                            </div>
-                                            <!--// checkbox -->
-                                            <div>
-                                                <select title="년도">
-                                                    <option value="">선택</option>
-                                                    <option value="">2025</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </dd>
-                                </dl>
-                                <dl>
-                                    <dt>수행기관 공모명</dt>
-                                    <dd>
-                                        <input type="text" title="수행기관 공모명" placeholder="수행기관 공모명을 입력해주세요.">
-                                    </dd>
-                                </dl>
-								<button type="button" class="btn lg">검색</button>
-							</div>
-						</div>
-					</div>
-					<!--// side -->
 				</div>
 				<!--// subCont -->
 			</div>

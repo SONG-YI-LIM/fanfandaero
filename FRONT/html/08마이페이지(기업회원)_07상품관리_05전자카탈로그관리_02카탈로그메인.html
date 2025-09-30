@@ -22,58 +22,6 @@
 <![endif]-->
 </head>
 <body>
-<style>
-.catWrap { height: 100%; min-height: 100vh; background-repeat: no-repeat; background-position: center; background-size: cover; }
-.catWrap.v1 { background-image: url(../assets/images/content/img-catalog-template01.svg); }
-.catWrap .catInner { display: flex; flex-direction: column; gap: 16px; margin: 0 auto; padding: 40px 0 20px; width: 100%; max-width: 520px; }
-.catHeader { display: flex; flex-wrap: wrap; justify-content: space-between; padding: 20px; background: var(--color-white); }
-.catHeader .lt { font-size: 23px; font-weight: 700; color: var(--color-black); }
-.catHeader .rt { display: flex; gap: 10px; }
-.catHeader .rt a { display: block; padding: 10px; border: 1px solid var(--color-gray-20); border-radius: 50%; width: 30px; height: 30px; text-indent: -9999px; background-repeat: no-repeat; background-position: center; background-size: 18px auto; }
-.catHeader .rt a.btnFacebook { background-image: url(../assets/images/content/ico-btn-catalog01.png); }
-.catHeader .rt a.btnTwitter { background-image: url(../assets/images/content/ico-btn-catalog02.png); }
-.catHeader .rt a.btnKakaotalk { background-image: url(../assets/images/content/ico-btn-catalog03.png); }
-.catHeader .rt a.btnKakaostory { background-image: url(../assets/images/content/ico-btn-catalog04.png); }
-.catHeader .rt a.btnPrint { background-image: url(../assets/images/content/ico-btn-catalog05.png); }
-.catFooter { padding: 8px 20px; background: var(--color-white); }
-.catFooter p { margin-bottom: 5px; line-height: 1.3; font-size: 15px; font-weight: 700; color: var(--color-base); }
-.catFooter span { display: block; font-size: 13px; color: var(--color-gray-70); }
-
-.catCont { padding: 40px; background: var(--color-white); }
-.catTab .catTit ul { display: flex; }
-.catTab .catTit ul li { flex: 1; text-align: center; font-size: 15px; font-weight: 700;  color: #717171; background: #ECECEC; }
-.catTab .catTit ul li + li { border-left: 1px solid #ccc; }
-.catTab .catTit ul li.curr { color: var(--color-white); background: var(--color-secondary); }
-.catTab .catTit ul li a { display: block; border-radius: 0; line-height: 36px; }
-.catTab .catTit ul li a:focus { color: inherit; background: transparent; }
-.catTab .tabCont { margin-top: 32px; }
-
-.catMain { display: flex; gap: 10px; }
-.catMain .rt ul { display: flex; flex-direction: column; gap: 30px; }
-.catMain .rt p { margin-top: 5px; line-height: 1.3; font-size: 15px; color: var(--color-gray-70); }
-.catIntro dl + dl { margin-top: 32px; }
-.catIntro dl dt { padding-bottom: 10px; border-bottom: 1px solid #ccc; font-size: 19px; font-weight: 700; color: var(--color-base); }
-.catIntro dl dd { padding-top: 10px; }
-.catIntro ul { display: flex; flex-direction: column; gap: 6px; }
-.catIntro ul li { display: flex; flex-wrap: wrap; }
-.catIntro ul li span { flex: 0 0 120px; line-height: 1.3; font-size: 15px; font-weight: 700; color: var(--color-base); }
-.catIntro ul li span.year { flex: 0 0 70px; }
-.catIntro ul li p { flex: 1; line-height: 1.3; font-size: 15px; color: var(--color-base); }
-.catIntro .introduce { overflow-y: auto; max-height: 110px; line-height: 1.3; font-size: 15px; color: var(--color-gray-70); }
-.catItem ul { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px 30px; }
-.catItem .imgBox { position: relative; margin-bottom: 5px; width: 130px; height: 130px; }
-.catItem .imgBox img { width: 100%; height: 100%; }
-.catItem .imgBox span { position: absolute; top: 0; left: 0; padding: 3px 0; border-radius: 4px; width: 35px; text-align: center; font-size: 13px; color: var(--color-white); background: var(--color-point); }
-.catItem p { line-height: 1.3; font-size: 15px; color: var(--color-gray-70); }
-.catContact { display: flex; flex-direction: column; gap: 32px; }
-.contact { display: flex; gap: 30px; padding: 20px 30px; border: 1px solid #ccc; border-radius: 16px; }
-.contact img { border-radius: 50%; width: 128px; height: 128px; object-fit: cover; }
-.contact dl dt { padding-bottom: 5px; border-bottom: 1px solid #ccc; font-size: 19px; font-weight: 700; color: var(--color-base);  }
-.contact dl dd { padding-top: 16px; }
-.contact dl dd ul { display: flex; flex-direction: column; gap: 5px; }
-.contact dl dd p { margin-bottom: 5px; line-height: 1.3; font-size: 15px; font-weight: 700; color: var(--color-base); }
-.contact dl dd span { display: block; line-height: 1.3; font-size: 15px; color: var(--color-gray-70); }
-</style>
 <!-- catWrap -->
 <div class="catWrap v1">
     <div class="catInner">
@@ -189,65 +137,135 @@
                     <!--// 회사소개 -->
                     <!-- 상품소개 -->
                     <div>
+                        <!-- 상품소개 리스트 -->
                         <div class="catItem">
                             <ul>
                                 <li>
-                                    <div class="imgBox">
-                                        <img src="../assets/images/content/img-catalog02.png" alt="">
-                                        <span>대표</span>
-                                    </div>
-                                    <p>LG 그램 <br>39.6cm</p>
+                                    <a href="">
+                                        <div class="imgBox">
+                                            <img src="../assets/images/content/img-catalog02.png" alt="">
+                                            <span>대표</span>
+                                        </div>
+                                        <p>LG 그램 <br>39.6cm</p>
+                                    </a>
                                 </li>
                                 <li>
-                                    <div class="imgBox">
-                                        <img src="../assets/images/content/img-catalog02.png" alt="">
-                                    </div>
-                                    <p>LG 그램 <br>39.6cm</p>
+                                    <a href="">
+                                        <div class="imgBox">
+                                            <img src="../assets/images/content/img-catalog02.png" alt="">
+                                        </div>
+                                        <p>LG 그램 <br>39.6cm</p>
+                                    </a>
                                 </li>
                                 <li>
-                                    <div class="imgBox">
-                                        <img src="../assets/images/content/img-catalog02.png" alt="">
-                                    </div>
-                                    <p>LG 그램 <br>39.6cm</p>
+                                    <a href="">
+                                        <div class="imgBox">
+                                            <img src="../assets/images/content/img-catalog02.png" alt="">
+                                        </div>
+                                        <p>LG 그램 <br>39.6cm</p>
+                                    </a>
                                 </li>
                                 <li>
-                                    <div class="imgBox">
-                                        <img src="../assets/images/content/img-catalog02.png" alt="">
-                                    </div>
-                                    <p>LG 그램 <br>39.6cm</p>
+                                    <a href="">
+                                        <div class="imgBox">
+                                            <img src="../assets/images/content/img-catalog02.png" alt="">
+                                        </div>
+                                        <p>LG 그램 <br>39.6cm</p>
+                                    </a>
                                 </li>
                                 <li>
-                                    <div class="imgBox">
-                                        <img src="../assets/images/content/img-catalog02.png" alt="">
-                                    </div>
-                                    <p>LG 그램 <br>39.6cm</p>
+                                    <a href="">
+                                        <div class="imgBox">
+                                            <img src="../assets/images/content/img-catalog02.png" alt="">
+                                        </div>
+                                        <p>LG 그램 <br>39.6cm</p>
+                                    </a>
                                 </li>
                                 <li>
-                                    <div class="imgBox">
-                                        <img src="../assets/images/content/img-catalog02.png" alt="">
-                                    </div>
-                                    <p>LG 그램 <br>39.6cm</p>
+                                    <a href="">
+                                        <div class="imgBox">
+                                            <img src="../assets/images/content/img-catalog02.png" alt="">
+                                        </div>
+                                        <p>LG 그램 <br>39.6cm</p>
+                                    </a>
                                 </li>
                                 <li>
-                                    <div class="imgBox">
-                                        <img src="../assets/images/content/img-catalog02.png" alt="">
-                                    </div>
-                                    <p>LG 그램 <br>39.6cm</p>
+                                    <a href="">
+                                        <div class="imgBox">
+                                            <img src="../assets/images/content/img-catalog02.png" alt="">
+                                        </div>
+                                        <p>LG 그램 <br>39.6cm</p>
+                                    </a>
                                 </li>
                                 <li>
-                                    <div class="imgBox">
-                                        <img src="../assets/images/content/img-catalog02.png" alt="">
-                                    </div>
-                                    <p>LG 그램 <br>39.6cm</p>
+                                    <a href="">
+                                        <div class="imgBox">
+                                            <img src="../assets/images/content/img-catalog02.png" alt="">
+                                        </div>
+                                        <p>LG 그램 <br>39.6cm</p>
+                                    </a>
                                 </li>
                                 <li>
-                                    <div class="imgBox">
-                                        <img src="../assets/images/content/img-catalog02.png" alt="">
-                                    </div>
-                                    <p>LG 그램 <br>39.6cm</p>
+                                    <a href="">
+                                        <div class="imgBox">
+                                            <img src="../assets/images/content/img-catalog02.png" alt="">
+                                        </div>
+                                        <p>LG 그램 <br>39.6cm</p>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
+                        <!--// 상품소개 리스트 -->
+
+                        <!-- 상품소개 상세 -->
+                        <!-- <div class="catDetail">
+                            <div class="lt">
+                                <img src="../assets/images/content/img-catalog02.png" alt="">
+                                <img src="../assets/images/content/img-tv01.png" alt="">
+                                <img src="../assets/images/content/img-tv02.png" alt="">
+                                <p class="price">1,840,000 <span>원</span></p>
+                            </div>
+                            <div class="rt">
+                                <ul>
+                                    <li>
+                                        <span>브랜드</span>
+                                        <p>한국중소벤처기업유통원/ KODMA</p>
+                                    </li>
+                                    <li>
+                                        <span>모델명</span>
+                                        <p>인텔® 코어™ Ultra 5 프로세서 225H</p>
+                                    </li>
+                                    <li>
+                                        <span>규격</span>
+                                        <p>39.6cm</p>
+                                    </li>
+                                    <li>
+                                        <span>공장도가격</span>
+                                        <p>1,600,000 원</p>
+                                    </li>
+                                    <li>
+                                        <span>제조사(사업자번호)</span>
+                                        <p>123-45-67890</p>
+                                    </li>
+                                    <li>
+                                        <span>출시월</span>
+                                        <p>2025.08</p>
+                                    </li>
+                                    <li>
+                                        <span>유통기한/품질보증기간</span>
+                                        <p>제조일로부터 12개월</p>
+                                    </li>
+                                    <li>
+                                        <span>원산지</span>
+                                        <p>국내</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="datailImg">
+                                <img src="../assets/images/content/img-catalog01.png" alt="">
+                            </div>
+                        </div> -->
+                        <!--// 상품소개 상세 -->
                     </div>
                     <!--// 상품소개 -->
                     <!-- 연락처 -->

@@ -394,11 +394,59 @@
                             </div>
                         </div>
 
-                        <!-- 2025-09-19 -->
+                        <!-- 2025-09-30 -->
                         <div class="section">
-                            <div style="display: flex; align-items: center; justify-content: center; height: 200px; background: #ccc;">검색필터 영역입니다.</div>
-                        </div>
-                        <!--// 2025-09-19 -->
+                            <div class="searchArea">
+                                <div class="in">
+                                    <div class="lt">
+                                        <div class="searchDefault">
+                                            <input type="text" title="검색어" placeholder="검색어를 입력하세요">
+                                        </div>
+                                        <div class="searchDetail">
+                                            <ul>
+                                                <li>
+                                                    <dl>
+                                                        <dt>매장명</dt>
+                                                        <dd>
+                                                            <select title="매장명">
+                                                                <option value="">선택</option>
+                                                            </select>
+                                                        </dd>
+                                                    </dl>
+                                                </li>
+                                                <li>
+                                                    <dl>
+                                                        <dt>기간</dt>
+                                                        <dd>
+                                                            <div class="dateWrap">
+                                                                <div class="flexWrap">
+                                                                    <div>
+                                                                        <div class="date">
+                                                                            <input type="text" title="시작날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
+                                                                        </div>
+                                                                    </div>
+                                                                    <span>~</span>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="date">
+                                                                        <input type="text" title="종료날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </dd>
+                                                    </dl>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                    <div class="rt">
+                                        <button type="button" class="btn bgPrima lg">검색</button>
+                                        <button type="button" class="btn bgSecond lg btnIco btnSearchDetail">고급검색</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>            
+                        <!--// 2025-09-30 -->
 
                         <div class="section">
                             <!-- tableTop -->
@@ -653,113 +701,6 @@
                             <!--// colTable -->
                         </div>
 					</div>
-                    <!-- side -->
-					<div class="side">
-						<div class="in">
-                            <div class="top">
-                                <h3>검색필터</h3>
-                                <button type="button" class="btn bgSecond btnIco btnReset">초기화</button>
-                            </div>
-							<div class="searchArea">
-                                <dl>
-                                    <dt>조회기간</dt>
-                                    <dd>
-                                        <div class="flexCol">
-                                            <div>
-                                                <p class="schTit">시작일</p>
-                                            </div>
-                                            <div>
-                                                <div class="date">
-                                                    <input type="text" title="시작날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD" disabled>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <p class="schTit">종료일</p>
-                                            </div>
-                                            <div>
-                                                <div class="date">
-                                                    <input type="text" title="종료날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD" disabled>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </dd> 
-                                </dl>
-                                <dl>
-                                    <dt>매장명</dt>
-                                    <dd>
-                                        <!-- checkbox -->
-                                        <div class="checkboxWrap">
-                                            <div class="checkbox">
-                                                <input type="radio" name="chk01" id="chk0101">
-                                                <label for="chk0101">전체</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="radio" name="chk01" id="chk0102">
-                                                <label for="chk0102">백화점사업단</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="radio" name="chk01" id="chk0103">
-                                                <label for="chk0103">화성매장</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="radio" name="chk01" id="chk0104">
-                                                <label for="chk0104">인천공항 서편</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="radio" name="chk01" id="chk0105">
-                                                <label for="chk0105">부산KTX</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="radio" name="chk01" id="chk0106">
-                                                <label for="chk0106">인천공항 동편</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="radio" name="chk01" id="chk0107">
-                                                <label for="chk0107">갤러리아 매장</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="radio" name="chk01" id="chk0108">
-                                                <label for="chk0108">에스엠 서울매장</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="radio" name="chk01" id="chk0109">
-                                                <label for="chk0109">신세계 센텀매장</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="radio" name="chk01" id="chk0110">
-                                                <label for="chk0110">신세계 명동매장</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="radio" name="chk01" id="chk0111">
-                                                <label for="chk0111">현대 판교매장</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="radio" name="chk01" id="chk0112">
-                                                <label for="chk0112">신세계 영등포매장</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="radio" name="chk01" id="chk0113">
-                                                <label for="chk0113">인천공항 T2</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="radio" name="chk01" id="chk0114">
-                                                <label for="chk0114">현대무역센터</label>
-                                            </div>
-                                        </div>
-                                        <!--// checkbox -->
-                                    </dd>
-                                </dl>
-                                <dl>
-                                    <dt>상품명</dt>
-                                    <dd>
-                                        <input type="text" title="상품명" placeholder="검색어를 입력해주세요.">
-                                    </dd>
-                                </dl>
-								<button type="button" class="btn lg">검색</button>
-							</div>
-						</div>
-					</div>
-					<!--// side -->
 				</div>
 				<!--// subCont -->
 			</div>
