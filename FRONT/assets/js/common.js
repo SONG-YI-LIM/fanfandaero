@@ -469,7 +469,7 @@ const fn_Content = () => {
 
     /* 검색필터 */
     $('.searchArea').each(function(){
-        let btnDetail = $('.btnSearchDetail');
+        let btnDetail = $(this).find('.btnSearchDetail');
         btnDetail.on('click', function(){
             if($(this).hasClass('open')){
                 $(this).removeClass('open');
@@ -572,14 +572,14 @@ const fn_Content = () => {
     });
 
     $('.btnTxt.fold').each(function(){
-        const $formTable = $(this).closest(".titArea").nextAll(".formTable, .colTable").first();
+        const $div = $(this).closest(".titArea").nextAll("div").first();
         $(this).click(function(){
             if($(this).hasClass('open')){
                 $(this).removeClass('open').text('접기');
-                $formTable.slideDown(200);
+                $div.slideDown(200);
             }else{
                 $(this).addClass('open').text('펼치기');
-                $formTable.slideUp(200);
+                $div.slideUp(200);
             }
         })
     })
