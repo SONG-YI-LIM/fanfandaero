@@ -1441,13 +1441,17 @@ v9 고객지원
 
 /* 저작권정책 */
 .copyBox { display: flex; gap: 30px; padding: 40px; border-radius: 20px; background-color: #EDF0F5; } 
-.copyBox .icoArea { display: flex; align-items: center; justify-content: center; flex-shrink: 0; border-radius: 8px; width: 284px; height: 164px; background-color: #fff; } 
+.copyBox .icoArea { display: flex; align-items: center; justify-content: center; flex-shrink: 0; border-radius: 8px; max-width: 284px; width:100%; height: 164px; background-color: #fff; } 
 .copyBox .icoArea img { width: 165px; } 
 .copyBox .txtBox strong { display: block; margin-bottom: 16px; font-size: 18px; } 
 .copyBox ol { margin-top: 16px; } 
 .copyBox ol li { font-size: 17px; } 
 .copyBgTxt { padding: 16px; border-radius: 6px; text-align: center; font-weight: 700; color: #fff; background: #697C9B; } 
 .copyBox.v2 .icoArea img { width: 100px; } 
+@media(max-width:767px) {
+    .copyBox {flex-direction:column; padding:24px;}
+    .copyBox .icoArea {align-self:center;}
+}
 
 /* 이용약관 */
 .agreeUl strong { display: block; margin-bottom: 10px; font-size: 19px; color: var(--color-base); } 
@@ -1456,6 +1460,11 @@ v9 고객지원
 .agreeUl ol > li > p:first-child { margin-top: 16px; } 
 .agreeUl ol ol li { text-indent: -18px; font-size: 15px; list-style: none; } 
 .agreeUl > li + li { margin-top: 64px; } 
+@media(max-width:767px){
+    .agreeUl strong {font-size:17px;}
+    .agreeUl li {font-size:15px;}
+    .agreeUl > li + li { margin-top: 40px; } 
+}
 
 /* 개인정보처리방침 */
 .policyBox .policyTop strong { display: block; margin-bottom: 10px; } 
