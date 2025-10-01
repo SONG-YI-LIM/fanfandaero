@@ -14,6 +14,7 @@
 <script type="text/javascript" src="../assets/js/daterangepicker.min.js"></script>
 <script type="text/javascript" src="../assets/js/swiper.js"></script>
 <script type="text/javascript" src="../assets/js/common.js"></script>
+<script type="text/javascript" src='../assets/js/index.global.min.js'></script>
 <!-- <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <script src="js/selectivizr.js">
  -->
@@ -434,10 +435,10 @@
                     <!-- applyList -->
                     <div class="applyList">
                         <div class="titBox">
-                            <h2>사업공고·신청</h2>
+                            <h2><span class="circular-badge n1">1</span>사업공고·신청</h2>
                             <p>
-                                비즈니스를 진행하면서<br>
-                                겪게되는 어려움을 판판대로를 통해<br>
+                                비즈니스를 진행하면서<br class="pBlock">
+                                겪게되는 어려움을 판판대로를 통해<br class="pBlock">
                                 해결해 보네요~~
                             </p>
                         </div>
@@ -470,7 +471,7 @@
                     <!--// applyList -->
                     <!-- calArea -->
                     <div class="calArea">
-                        
+                        <div id='calendar'></div>
                     </div>
                     <!--// calArea -->
                 </div>
@@ -487,7 +488,7 @@
                 <div class="tab tabFunc">
                     <div class="tabTit tabRow">
                         <div class="right">
-                            <h2>추천 지원사업</h2>
+                            <h2><span class="circular-badge badgeR">2</span>추천 지원사업</h2>
                             <div class="categoryList tabTit">
                                 <div class="categorySwiper">
                                     <div class="swiper-wrapper">
@@ -591,7 +592,7 @@
                         <div class="tab tabFunc">
                             <div class="tabTit tabRow">
                                 <div class="right">
-                                    <h2>홍보·알림</h2>
+                                    <h2><span class="circular-badge badgeR">3</span>홍보·알림</h2>
                                     <div class="categoryList tabTit">
                                         <div class="categorySwiper">
                                             <div class="swiper-wrapper">
@@ -673,27 +674,27 @@
                     <!-- etcWrap -->
                     <div class="etcWrap">
                         <div class="etcBox01">
-                            <h2>주요서비스</h2>
+                            <h2><span class="circular-badge n4">4</span>주요서비스</h2>
                             <ul>
-                                <li>
+                                <li class="box01">
                                     <a href="">
-                                        <span></span>
+                                        <span>판판소싱</span>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="box02">
                                     <a href="">
-                                        <span></span>
+                                        <span>판판셀러</span>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="box03">
                                     <a href="">
-                                        <span></span>
+                                        <span>동행축제</span>
                                     </a>
                                 </li>
                             </ul>
                         </div>
                         <div class="etcBox02">
-                            <h2>함께하는 기관</h2>
+                            <h2><span class="circular-badge n5">5</span>함께하는 기관</h2>
                             <ul>
                                 <li><a href=""><img src="../assets/images/main/img-partnerLogo01.svg" alt=""></a></li>
                                 <li><a href=""><img src="../assets/images/main/img-partnerLogo02.svg" alt=""></a></li>
@@ -799,11 +800,58 @@
                 prevEl: ".swiper-button-prev",
             },
         });
-         var recommendSwiper = new Swiper(".recommendSwiper", {
+        var recommendSwiper = new Swiper(".recommendSwiper", {
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                headerToolbar: {
+                    left: 'title prev,next',
+                    center: '',
+                    right: ''
+                },
+                initialView: 'dayGridMonth',
+                initialDate: '2025-10-01',
+                locale: "ko",
+                dayCellContent: function (arg) {
+                    const { date } = arg;
+                    return date.getDate();
+                },
+                moreLinkText: "",
+                moreLinkWillUnmount: "",
+                fixedWeekCount : false,
+                dayMaxEventRows : 1,
+                // eventMaxStack: 0,
+                eventDisplay:"list-item",
+                events: [
+                    {
+                        title: '일정일정일정',
+                        start: '2025-10-08'
+                    },
+                    {
+                        title: '2025 판판셀러 (온라인쇼핑몰 통합관리시스템)',
+                        start: '2025-10-10'
+                    },
+                    {
+                        title: '소싱위크 내수구매상담회 참여기업 모집',
+                        start: '2025-10-10'
+                    },
+                    {
+                        title: '소싱위크 내수구매상담회 참여기업 모집2',
+                        start: '2025-10-10'
+                    },
+                    {
+                        title: '소싱위크 내수구매상담회 참여기업 모집3',
+                        start: '2025-10-10'
+                    },
+                ],
+            });
+            calendar.render();
         });
     </script>
 </div>
