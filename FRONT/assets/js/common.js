@@ -482,23 +482,6 @@ const fn_Content = () => {
             }
             
         });
-
-        // let $this = $(this),
-        //     $dl = $this.find('dl'),
-        //     $dt = $this.find('dt');
-        // $dt.append(`<span class="hide">닫힘</span>`);
-        // $dl.addClass('open');
-        // $dt.click(function(){
-        //     if($(this).closest('dl').hasClass('open')){
-        //         $(this).closest('dl').removeClass('open');
-        //         $(this).find('.hide').text('열림');
-        //         $(this).siblings().slideUp(200);
-        //     }else{
-        //         $(this).closest('dl').addClass('open');
-        //         $(this).find('.hide').text('닫힘');
-        //         $(this).siblings().slideDown(200);
-        //     }
-        // })
     })
 
     // 모바일 셀렉트
@@ -592,4 +575,36 @@ const fn_Content = () => {
 			prevEl: ".swiper-button-prev",
 		},
 	});
+
+    /* 지원사업 신청내역 */
+    if($('.anchorWrap').length){
+        $('html *').css({'overflow':'visible'});
+    }
+    var anchor = $(".anchorTit");
+    anchor.find("a").click(function(e){
+        e.preventDefault();
+        var id = $(this).attr("href");
+        if($(this).parent().hasClass("curr")){
+            anchor.find("li").removeClass("curr");
+        }else{
+            anchor.find("li").removeClass("curr");
+            $(this).parent().addClass("curr");
+        }
+        $("html, body").animate({scrollTop:$(id).offset().top - 180},300);
+    });
+
+    $(window).scroll(function(){
+        var sclTop = $(window).scrollTop();
+        anchor.css({"display":"block"});
+        var $cont = $("h3[id^='anchor']");
+        $.each($cont, function(index, item){
+            var $target = $cont.eq(index),
+                $targetTop = $target.offset().top - 250;
+            if($targetTop <= sclTop){
+                anchor.find("li").removeClass("curr");
+                anchor.find("li").eq(index).addClass("curr");
+            }
+            
+        });
+    });
 }

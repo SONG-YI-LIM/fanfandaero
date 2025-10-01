@@ -12,7 +12,6 @@
 <script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="../assets/js/moment.min.js"></script>
 <script type="text/javascript" src="../assets/js/daterangepicker.min.js"></script>
-<script type="text/javascript" src="../assets/js/yearpicker.js"></script><!-- year picker -->
 <script type="text/javascript" src="../assets/js/swiper.js"></script>
 <script type="text/javascript" src="../assets/js/common.js"></script>
 <!-- <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -285,7 +284,7 @@
                             <button type="button" class="btnTxt download">매뉴얼 다운로드</button>
                         </div>
                         <div class="myInfo">
-                            <p class="name"><span class="v5">예비</span>홍길동 님</p>
+                            <p class="name"><span class="v1">기업</span>홍길동 님</p>
                             <span class="recentDate">최근접속일 : 2025.08.01 10:11:15</span>
                         </div>
                     </div>
@@ -358,28 +357,124 @@
 						<li class="home"><a href="">홈</a></li>
 						<li><a href="#"><strong>마이페이지</strong></a></li>
 						<li><a href="#"><strong>지원사업 신청내역</strong></a></li>
-						<li><a href="#"><strong>결과이력</strong></a></li>
 					</ol>
 				</div>
 				<!-- breadcrumb -->
 				<!-- subTop -->
 				<div class="subTop v8">
 					<div class="titArea">
+                        <!-- 2025-09-18 -->
                         <div class="left">
-                            <h2>타 기관 지원사업</h2>
-                            <button type="button" class="btn xsm bgBlack">가이드</button>
+                            <h2>신청현황</h2>
                         </div>
                         <div class="right">
                             <button type="button" class="btnTxt download">매뉴얼 다운로드</button>
                         </div>
+                        <!--// 2025-09-18 -->
 					</div>
 				</div>
 				<!--// subTop -->
+
+                <!-- statusProcess -->
+                <div class="statusProcess">
+                    <ol>
+                        <li class="status01">
+                            <p>신청서<br>접수완료</p>
+                            <span>5</span>
+                        </li>
+                        <li class="status02">
+                            <p>담당자<br>확인중</p>
+                            <span>2</span>
+                        </li>
+                        <li class="status03">
+                            <p>심사위원이<br>심사중</p>
+                            <span>7</span>
+                        </li>
+                        <li class="status04">
+                            <p>지원사업<br>선정</p>
+                            <span>2</span>
+                        </li>
+                        <li class="status05">
+                            <p>지원사업<br>지원중</p>
+                            <span>9</span>
+                        </li>
+                        <li class="status06 dash"><!-- 2025-10-01 -->
+                            <p>취소/반려/<br>탈락/해지</p>
+                            <span>3</span>
+                        </li>
+                    </ol>
+                </div>
+                <!--// statusProcess -->
 
 				<!-- subCont -->
 				<div class="subCont">
 					<div class="cont">
                         <!-- 2025-10-01 -->
+                        <div class="section">
+                            <div class="titArea">
+                                <div class="left">
+                                    <h3>사업신청현황</h3>
+                                </div>
+                                <div class="right">
+                                    <button type="button" class="btn bgPrima">지원사업 공고 전체보기</button>
+                                </div>
+                            </div>
+                            <div class="grayBox border">
+                                <div>
+                                    <ul class="dotList">
+                                        <li>지원사업은 신청 후 신청완료 > 접수완료 > 심사중> 선정 > 지원완료 순으로 진행됩니다.</li>
+                                        <li>신청완료 상태에서는 신청서를 수정 , 신청취소 가 가능합니다.</li>
+                                        <li>접수반려 되셨다면 반려사유를 확인하여 조치하시고 , 유선으로 문의주시기 바랍니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--// 2025-10-01 -->
+
+                        <!-- 2025-10-01 -->
+                        <div class="section">
+                            <div class="spStatus">
+                                <dl class="status01">
+                                    <dt>신청완료</dt>
+                                    <dd>접수가 완료되어 담당자 확인중입니다.</dd>
+                                </dl>
+                                <dl class="status09">
+                                    <dt>취소완료</dt>
+                                    <dd>고객님의 요청으로 신청 취소되었습니다.</dd>
+                                </dl>
+                                <dl class="status02">
+                                    <dt>접수완료</dt>
+                                    <dd>신청서 검토 후 심사준비중입니다.</dd>
+                                </dl>
+                                <dl class="status04">
+                                    <dt>접수반려</dt>
+                                    <dd>신청서가 미흡해 접수 반려되었습니다.</dd>
+                                </dl>
+                                <dl class="status05">
+                                    <dt>심사중</dt>
+                                    <dd>평가위원이 신청서를 심사중입니다.</dd>
+                                </dl>
+                                <dl class="status07">
+                                    <dt>심사탈락</dt>
+                                    <dd>심사결과로 사업에 탈락되었습니다.</dd>
+                                </dl>
+                                <dl class="status06">
+                                    <dt>선정</dt>
+                                    <dd>수행기관 공모에 선정되어 지원중입니다.</dd>
+                                </dl>
+                                <dl class="status10">
+                                    <dt>지원해지</dt>
+                                    <dd>지원 중에 중도 해지되었습니다.</dd>
+                                </dl>
+                                <dl class="status11">
+                                    <dt>지원완료</dt>
+                                    <dd>지원이 정상 완료된 후입니다.</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!--// 2025-10-01 -->
+
+                        <!-- 2025-09-30 -->
                         <div class="section">
                             <div class="searchArea">
                                 <div class="in">
@@ -389,46 +484,22 @@
                                         </div>
                                         <div class="searchDetail">
                                             <ul>
-                                                <li>
-                                                    <dl>
-                                                        <dt>수혜기관</dt>
-                                                        <dd>
-                                                            <select title="수혜기관">
-                                                                <option value="">선택</option>
-                                                            </select>
-                                                        </dd>
-                                                    </dl>
-                                                </li>
                                                 <li class="full">
                                                     <dl>
-                                                        <dt>신청년도</dt>
+                                                        <dt>기간</dt>
                                                         <dd>
-                                                            <div class="flexWrapChk">
-                                                                <!-- checkbox -->
-                                                                <div class="checkboxWrap">
-                                                                    <div class="checkbox">
-                                                                        <input type="radio" name="chk01" id="chk0101">
-                                                                        <label for="chk0101">전체</label>
-                                                                    </div>
-                                                                    <div class="checkbox">
-                                                                        <input type="radio" name="chk01" id="chk0102">
-                                                                        <label for="chk0102">특정년도</label>
-                                                                    </div>
-                                                                </div>
-                                                                <!--// checkbox -->
-                                                                <div class="dateWrap">
-                                                                    <div class="flexWrap">
-                                                                        <div>
-                                                                            <div class="year">
-                                                                                <input type="text" class="yearpicker form-control" title="특정년도 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY">
-                                                                            </div>
-                                                                        </div>
-                                                                        <span>~</span>
-                                                                    </div>
+                                                            <div class="dateWrap">
+                                                                <div class="flexWrap">
                                                                     <div>
-                                                                        <div class="year">
-                                                                            <input type="text" class="yearpicker form-control" title="특정년도 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY">
+                                                                        <div class="date">
+                                                                            <input type="text" title="시작날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
                                                                         </div>
+                                                                    </div>
+                                                                    <span>~</span>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="date">
+                                                                        <input type="text" title="종료날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -445,8 +516,9 @@
                                 </div>
                             </div>
                         </div>            
-                        <!--// 2025-10-01 -->
+                        <!--// 2025-09-30 -->
 
+                        <!-- 2025-09-18 -->
                         <div class="section">
                             <!-- tableTop -->
                             <div class="tableTop">
@@ -457,31 +529,29 @@
                                     </div>
                                 </div>
                                 <div class="right">
-                                    <div class="btnArea">
-                                        <button type="button" class="btn bgSecond">삭제</button>
-                                        <button type="button" class="btn bgPrima">이력등록</button>
-                                    </div>
+                                    <button type="button" class="btn bgPrima">지원사업 신청현황</button>
                                 </div>
                             </div>
-                            <!--// tableTop -->
+                            <!--// tableTop --> 
                             <!-- colTable -->
                             <div class="colTable">
                                 <table>
-                                    <caption>번호, 신청일, 지원사업명, 참여결과, 등록일 항목으로 구성된 타 기관 지원사업 표</caption>
+                                    <caption>번호, 신청일, 지원사업명, 신청상태 항목으로 구성된 지원사업 신청현황 표</caption>
+                                    <!-- 2025-09-18 -->
                                     <colgroup>
                                         <col style="width:60px">
                                         <col style="width:130px">
                                         <col style="width:250px">
                                         <col style="width:120px">
-                                        <col style="width:130px">
+                                        <col style="width:180px">
                                     </colgroup>
+                                    <!--// 2025-09-18 -->
                                     <thead>
                                         <tr>
                                             <th scope="col" class="bgBlue">번호</th>
                                             <th scope="col" class="bgBlue">신청일</th>
                                             <th scope="col" class="bgBlue">지원사업명</th>
-                                            <th scope="col" class="bgBlue">참여결과</th>
-                                            <th scope="col" class="bgBlue">등록일</th>
+                                            <th scope="col" colspan="2" class="bgBlue">신청상태</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -490,14 +560,30 @@
                                             <td class="txtC">2025.08.04</td>
                                             <td>유통센터 공영홈쇼핑</td>
                                             <td class="txtC">신청완료</td>
-                                            <td class="txtC">2025.08.10</td>
+                                            <td>
+                                                <div class="flexWrap jcC">
+                                                    <button type="button" class="btn bgSecond">수정</button>
+                                                    <button type="button" class="btn bgSecond">신청취소</button>
+                                                </div>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td class="txtC">9</td>
                                             <td class="txtC">2025.08.04</td>
                                             <td>유통센터 공영홈쇼핑</td>
                                             <td class="txtC">접수완료</td>
-                                            <td class="txtC">&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="txtC">8</td>
+                                            <td class="txtC">2025.08.04</td>
+                                            <td>유통센터 공영홈쇼핑</td>
+                                            <td class="txtC">취소완료</td>
+                                            <td>
+                                                <div class="flexWrap jcC">
+                                                    <button type="button" class="btn bgSecond">취소정보</button>
+                                                </div>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -526,6 +612,7 @@
                             </div>
                             <!-- //paging -->
                         </div>
+                        <!--// 2025-09-18 -->
 					</div>
 				</div>
 				<!--// subCont -->

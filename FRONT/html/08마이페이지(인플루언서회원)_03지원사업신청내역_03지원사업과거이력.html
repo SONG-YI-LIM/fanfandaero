@@ -424,9 +424,83 @@
                             </div>
                         </div>
 
+                        <!-- 2025-10-01 -->
                         <div class="section">
-                            <div style="display: flex; align-items: center; justify-content: center; height: 200px; background: #ccc;">검색필터 영역입니다.</div>
-                        </div>
+                            <div class="searchArea">
+                                <div class="in">
+                                    <div class="lt">
+                                        <div class="searchDefault">
+                                            <input type="text" title="검색어" placeholder="검색어를 입력하세요">
+                                        </div>
+                                        <div class="searchDetail">
+                                            <ul>
+                                                <li>
+                                                    <dl>
+                                                        <dt>사업명</dt>
+                                                        <dd>
+                                                            <select title="사업명">
+                                                                <option value="">선택</option>
+                                                            </select>
+                                                        </dd>
+                                                    </dl>
+                                                </li>
+                                                <li>
+                                                    <dl>
+                                                        <dt>상태</dt>
+                                                        <dd>
+                                                            <select title="상태">
+                                                                <option value="">선택</option>
+                                                            </select>
+                                                        </dd>
+                                                    </dl>
+                                                </li>
+                                                <li class="full">
+                                                    <dl>
+                                                        <dt>신청년도</dt>
+                                                        <dd>
+                                                            <div class="flexWrapChk">
+                                                                <!-- checkbox -->
+                                                                <div class="checkboxWrap">
+                                                                    <div class="checkbox">
+                                                                        <input type="radio" name="chk01" id="chk0101">
+                                                                        <label for="chk0101">전체</label>
+                                                                    </div>
+                                                                    <div class="checkbox">
+                                                                        <input type="radio" name="chk01" id="chk0102">
+                                                                        <label for="chk0102">특정년도</label>
+                                                                    </div>
+                                                                </div>
+                                                                <!--// checkbox -->
+                                                                <div class="dateWrap">
+                                                                    <div class="flexWrap">
+                                                                        <div>
+                                                                            <div class="year">
+                                                                                <input type="text" class="yearpicker form-control" title="특정년도 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY">
+                                                                            </div>
+                                                                        </div>
+                                                                        <span>~</span>
+                                                                    </div>
+                                                                    <div>
+                                                                        <div class="year">
+                                                                            <input type="text" class="yearpicker form-control" title="특정년도 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </dd>
+                                                    </dl>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                    <div class="rt">
+                                        <button type="button" class="btn bgPrima lg">검색</button>
+                                        <button type="button" class="btn bgSecond lg btnIco btnSearchDetail">고급검색</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>            
+                        <!--// 2025-10-01 -->
 
                         <div class="section">
                             <!-- colTable -->

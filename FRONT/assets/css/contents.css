@@ -373,13 +373,15 @@ select:disabled, .select.disabled > button, input.disabled, .date input:disabled
 .daterangepicker .drp-calendar.right { display: none !important; } 
 
 .year { position: relative; }
-.year input { text-overflow: ellipsis; padding-right: 44px; width: 100%; background: url(../images/component/ico-input-cal.svg) no-repeat right 16px center; cursor: pointer; } 
+.year input { text-overflow: ellipsis; padding-right: 44px; width: 100%; max-width: 240px; background: url(../images/component/ico-input-cal.svg) no-repeat right 16px center; cursor: pointer; } 
 .yearpicker-items:hover, .yearpicker-items.selected, .yearpicker-prev:hover, .yearpicker-next:hover { color: var(--color-primary) !important; }
 @media (max-width: 767px) {
-    .dateWrap { flex-direction: column; }
+    .dateWrap { flex-direction: column; width: 100%; }
     .dateWrap > div { width: 100%; }
     .dateWrap .flexWrap { width: 100%; }
     .dateWrap .flexWrap input { max-width: 100%; }
+
+    .year input { max-width: 100%; }
 }
 
 /* 파일 업로드 */
@@ -414,6 +416,7 @@ select:disabled, .select.disabled > button, input.disabled, .date input:disabled
 
 /* 표 (Table) */
 .colTable + .tableTop { margin-top: 16px; }
+.formTable + .tableTop { margin-top: 16px; }
 .colTable + .formTable { margin-top: 16px; }
 .grayBox + .colTable { margin-top: 16px; }
 .tableTop { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 6px; margin-bottom: 16px; }
@@ -1112,7 +1115,7 @@ v9 고객지원
 .formTable + .formTable { margin-top: 16px; }
 .formTable { border-top: 1px solid #2567B0; } 
 .formTable > dl { display: flex; align-items: stretch; border-bottom: 1px solid #ccc; }  
-.formTable > dl > dt { display: flex; align-items: center; flex: 0 0 145px; padding: 16px; border-right: 1px solid #ccc; white-space: nowrap; font-size: 15px; font-weight: 700; background-color: #EDF1F5; } 
+.formTable > dl > dt { display: flex; align-items: center; flex: 0 0 160px; padding: 16px; border-right: 1px solid #ccc; white-space: nowrap; font-size: 15px; font-weight: 700; background-color: #EDF1F5; } 
 .formTable > dl > dd { display: flex; align-items: center; flex: 1; overflow: hidden; padding: 16px; }
 .formTable > dl > dd > div { flex: 1; overflow: hidden; }
 .formTable > dl > dd > div > strong,
@@ -1751,6 +1754,7 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
 .statusProcess ol { display: flex; flex-wrap: wrap; gap: 20px; }
 .statusProcess ol li { display: flex; align-items: center; justify-content: space-between; flex: 1; position: relative; padding: 10px 2%; border: 2px solid var(--color-secondary); border-radius: 80px; }
 .statusProcess ol li:before { content: ""; position: absolute; top: calc(50% - 7px); left: -22px; width: 20px; height: 14px; background: url(../images/content/ico-arrow-right.png) no-repeat center/100% auto; }
+.statusProcess ol li.dash:before { top: calc(50% - 16px); left: -12px; width: 1px; height: 32px; background: #666; }
 .statusProcess ol li p { position: relative; padding-left: 26px; line-height: 1.2; font-size: 15px; font-weight: 700; color: var(--color-gray-70); }
 .statusProcess ol li p:before { content: ""; position: absolute; top: calc(50% - 8px); left: 0; width: 16px; height: 16px; background-repeat: no-repeat; background-position: center; background-size: 100% auto; }
 .statusProcess ol li.status01 p:before { background-image: url(../images/content/ico-status07.png); }
@@ -1763,8 +1767,8 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
 .statusProcess ol li.status06 p,
 .statusProcess ol li.status06 span { color: var(--color-point); }
 
-.spStatus { display: flex; flex-wrap: wrap; gap: 0 32px; margin-bottom: 16px; }
-.spStatus dl { position: relative; padding: 12px 16px 12px 86px; border-top: 1px solid #ddd; width: calc(50% - 16px); }
+.spStatus { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 32px; margin-bottom: 16px; }
+.spStatus dl { position: relative; padding: 12px 16px 12px 86px; border-top: 1px solid #ddd; }
 .spStatus dl:before { content: ""; position: absolute; top: calc(50% - 25px); left: 16px; width: 50px; height: 50px; background-repeat: no-repeat; background-position: center; background-size: 100% auto; }
 .spStatus dl.status01:before { background-image: url(../images/content/img-status01.png); }
 .spStatus dl.status02:before { background-image: url(../images/content/img-status02.png); }
@@ -1788,13 +1792,27 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
 .spStatus dt { margin-bottom: 5px; font-size: 15px; font-weight: 700; color: var(--color-base); }
 .spStatus dd { position: relative; padding-left: 24px; font-size: 15px; color: var(--color-gray-70); }
 .spStatus dd:before { content: ""; position: absolute; top: 9px; left: 10px; border-radius: 50%; width: 4px; height: 4px; background: var(--color-gray-70); }
+
+.anchorWrap { display: flex; flex-direction: row-reverse; gap: 40px; }
+.anchorTit { position: sticky; top: 190px; }
+.anchorTit ul { display: flex; flex-direction: column; gap: 8px; width: 200px; }
+.anchorTit ul li { border: 2px solid var(--color-secondary); border-radius: 80px; }
+.anchorTit ul li a { display: block; overflow: hidden; padding: 16px 0; text-align: center; font-size: 15px; font-weight: 700; color: var(--color-gray-70); }
+.anchorTit ul li a:focus { background: transparent !important; }
+.anchorTit ul li.curr { background: var(--color-secondary); }
+.anchorTit ul li.curr a { color: var(--color-white); }
+.anchorCont { flex: 1; }
+@media (max-width: 1160px) {
+    .anchorWrap { flex-direction: row; }
+    .anchorSticky { display: none; }
+    .anchorCont { width: 100%; }
+}
 @media (max-width: 767px) {
     .statusProcess ol li { flex: none; width: calc(50% - 10px); }
     .statusProcess ol li:nth-child(2n+3) { margin-left: 20px; }
     .statusProcess ol li:nth-child(n+3) { width: calc(50% - 20px); }
 
-    .spStatus { gap: 0; }
-    .spStatus dl { width: 100%; }
+    .spStatus { grid-template-columns: repeat(1, 1fr); gap: 0; }
 }
 
 /* 상품관리 */
@@ -2047,9 +2065,10 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
 .stepTit { display: flex; align-items: center; gap: 10px; }
 .stepTit span { padding: 3px 4px; border-radius: 2px; font-size :13px; font-weight: 700; color: var(--color-white); background: #2568AF; }
 .inForm { display: flex; flex-direction: column; gap: 10px; }
-.inForm > dl { display: flex;}
+.inForm > dl { display: flex; align-items: center; }
 .inForm > dl > dt { /* flex: 0 0 72px; */ flex: 0 0 110px; padding:13px 0; font-size: 15px; font-weight: 700; color: var(--color-base); }
 .inForm > dl > dd { flex: 1; }
+.inForm > dl > dd > div > p { font-size: 15px; color: var(--color-gray-70); }
 @media(max-width:767px){
     .inForm .checkbox.flexNone {width:auto; flex:none!important}
 }
@@ -2174,6 +2193,10 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
     .biColor { width: 100%; height: 193px; }
     .biColor .inTxt { top: 20px; left: 20px;}
 }
+
+/* 이용현황 및 내역 */
+.formTop { display: flex; flex-wrap: wrap; justify-content: space-between; padding: 0 16px; background: #8997A6; }
+.formTop * { font-size: 15px; font-weight: 700; color: var(--color-white); }
 /*** 페이지명1 ***/
 /* 페이지내 분할1 */
 
