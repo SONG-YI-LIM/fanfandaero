@@ -445,27 +445,22 @@
                         <a href="">
                             <span>홍보·마케팅</span>
                             <strong>홍보와 마케팅을 시작해 볼까요?</strong>
-                            <img src="../assets/images/main/bg-main02.svg" alt="">
                         </a>
                         <a href="">
                             <span>유통·판로</span>
                             <strong>우리 제품, 더 많은 곳에 소개해 볼까요?</strong>
-                            <img src="../assets/images/main/bg-main03.svg" alt="">
                         </a>
                         <a href="">
                             <span>교육·컨설팅</span>
                             <strong>경영 고민, 전문가와 풀어보세요.</strong>
-                            <img src="../assets/images/main/bg-main04.svg" alt="">
                         </a>
                         <a href="">
                             <span>인프라</span>
                             <strong>경영에 힘이 되는 인프라를 준비해 볼까요?</strong>
-                            <img src="../assets/images/main/bg-main05.svg" alt="">
                         </a>
                         <a href="">
                             <span>사후관리</span>
                             <strong>한 번이 아닌, 지속적인 관리 필요하세요?</strong>
-                            <img src="../assets/images/main/bg-main06.svg" alt="">
                         </a>
                     </div>
                     <!--// applyList -->
@@ -695,18 +690,24 @@
                         </div>
                         <div class="etcBox02">
                             <h2><span class="circular-badge n5">5</span>함께하는 기관</h2>
-                            <ul>
-                                <li><a href=""><img src="../assets/images/main/img-partnerLogo01.svg" alt=""></a></li>
-                                <li><a href=""><img src="../assets/images/main/img-partnerLogo02.svg" alt=""></a></li>
-                                <li><a href=""><img src="../assets/images/main/img-partnerLogo03.svg" alt=""></a></li>
-                                <li><a href=""><img src="../assets/images/main/img-partnerLogo04.svg" alt=""></a></li>
-                                <li><a href=""><img src="../assets/images/main/img-partnerLogo05.svg" alt=""></a></li>
-                                <li><a href=""><img src="../assets/images/main/img-partnerLogo06.svg" alt=""></a></li>
-                                <li><a href=""><img src="../assets/images/main/img-partnerLogo07.svg" alt=""></a></li>
-                                <li><a href=""><img src="../assets/images/main/img-partnerLogo08.svg" alt=""></a></li>
-                                <li><a href=""><img src="../assets/images/main/img-partnerLogo09.svg" alt=""></a></li>
-                                <li><a href=""><img src="../assets/images/main/img-partnerLogo10.svg" alt=""></a></li>
-                            </ul>
+                            <div class="etcSwiper">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide"><a href=""><img src="../assets/images/main/img-partnerLogo01.svg" alt=""></a></li>
+                                    <li class="swiper-slide"><a href=""><img src="../assets/images/main/img-partnerLogo02.svg" alt=""></a></li>
+                                    <li class="swiper-slide"><a href=""><img src="../assets/images/main/img-partnerLogo03.svg" alt=""></a></li>
+                                    <li class="swiper-slide"><a href=""><img src="../assets/images/main/img-partnerLogo04.svg" alt=""></a></li>
+                                    <li class="swiper-slide"><a href=""><img src="../assets/images/main/img-partnerLogo05.svg" alt=""></a></li>
+                                    <li class="swiper-slide"><a href=""><img src="../assets/images/main/img-partnerLogo06.svg" alt=""></a></li>
+                                    <li class="swiper-slide"><a href=""><img src="../assets/images/main/img-partnerLogo07.svg" alt=""></a></li>
+                                    <li class="swiper-slide"><a href=""><img src="../assets/images/main/img-partnerLogo08.svg" alt=""></a></li>
+                                    <li class="swiper-slide"><a href=""><img src="../assets/images/main/img-partnerLogo09.svg" alt=""></a></li>
+                                    <li class="swiper-slide"><a href=""><img src="../assets/images/main/img-partnerLogo10.svg" alt=""></a></li>
+                                    <li class="swiper-slide"><a href=""><img src="../assets/images/main/img-partnerLogo11.svg" alt=""></a></li>
+                                </ul>
+                                <div class="swiper-button-next">다음</div>
+                                <div class="swiper-button-prev">이전</div>
+                                <div class="swiper-pagination"></div>
+                            </div>
                         </div>
                         <svg class="radiusLT" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
                             <path d="M3 43C2.33333 29.3333 9.6 2 44 2" stroke="#2567AF" stroke-width="4"/>
@@ -806,6 +807,23 @@
                 prevEl: ".swiper-button-prev",
             },
         });
+        var etcSwiper = new Swiper(".etcSwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            slidesPerView: 2,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                dynamicBullets: true,
+            },
+            breakpoints: {
+                768: {
+                slidesPerView: 2,
+                },
+            },
+        });
 
         document.addEventListener('DOMContentLoaded', function() {
             var calendarEl = document.getElementById('calendar');
@@ -815,17 +833,24 @@
                     center: '',
                     right: ''
                 },
+                titleFormat: { year: 'numeric', month: 'numeric' },
+                titleFormat: function (date) {
+                    const year = date.date.year;
+                    const month = date.date.month + 1; 
+                    return year + '.' + month;
+                },
                 initialView: 'dayGridMonth',
                 initialDate: '2025-10-01',
+                contentHeight: "100%",
                 locale: "ko",
                 dayCellContent: function (arg) {
                     const { date } = arg;
                     return date.getDate();
                 },
                 moreLinkText: "",
-                moreLinkWillUnmount: "",
                 fixedWeekCount : false,
                 dayMaxEventRows : 1,
+                height:"100%",
                 // eventMaxStack: 0,
                 eventDisplay:"list-item",
                 events: [
