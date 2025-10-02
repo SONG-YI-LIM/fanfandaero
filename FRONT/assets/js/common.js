@@ -607,4 +607,20 @@ const fn_Content = () => {
             
         });
     });
+
+    /* 이용현황 및 내역 */
+    let imgChk = $('.imgChk');
+    function setSquare() {
+        imgChk.each(function () {
+            let $width = $(this).width();
+            $(this).height($width);
+        });
+    }
+
+    setSquare();
+
+    // 리사이즈 시 실행
+    $(window).on('resize', function () {
+        setSquare();
+    });
 }

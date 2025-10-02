@@ -103,7 +103,7 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 .flexWrap > .btn { white-space: nowrap; } 
 .flexWrap.email { max-width: 750px; }
 .flexWrap.phone { max-width: 475px; }
-.flexWrapChk { display: flex; align-items: center; gap: 8px 10px; } 
+.flexWrapChk { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; } 
 .flexWrapChk > .flexWrap { flex: 1; max-width: 100%; }
 .flexWrapChk > .flexWrap > div { max-width: 100%; }
 .flexWrapChk > .flexWrap > div input { max-width: 100% !important; }
@@ -307,7 +307,7 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 .checkboxWrap.column { flex-direction: column; } 
 .checkboxWrap + .checkboxWrap { margin-top: 24px; } 
 [class*="checkbox"]:not(.checkboxWrap) { display: flex; flex-direction: column; gap: 12px; position: relative; padding-left: 25px; }
-[class*="checkbox"]:not(.checkboxWrap) input {position:absolute; left:0; top:0; opacity:0; }
+[class*="checkbox"]:not(.checkboxWrap) input { position: absolute; top: 0; left: 0; opacity: 0; }
 [class*="checkbox"]:not(.checkboxWrap) input + label { display: inline-block; line-height: 28px; cursor: pointer; }
 [class*="checkbox"]:not(.checkboxWrap) input + label::before { display: block; content: ""; position: absolute; top: 4px; left: 0; overflow: hidden; width: 20px; height: 20px; background: no-repeat left center / 100% auto; }
 [class*="checkbox"]:not(.checkboxWrap) input:focus + label:after {position:absolute; left:-5px; top:0; content:""; width:calc(100% + 11px); height:100%; outline: 2px solid var(--color-primary); background-color: var(--bg-primary); z-index:-1;}
@@ -333,7 +333,7 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 [class*="checkbox"]:not(.checkboxWrap) input[type=checkbox]:checked + label::before { background-image: url(../images/component/ico-check-checkbox-on.svg); }
 [class*="checkbox"]:not(.checkboxWrap) input[type=checkbox]:disabled + label::before { background-image: url(../images/component/ico-check-checkbox-disabled.svg); }
 .tableChk .checkbox { padding-left: 0; } 
-.tableChk .checkbox label { display: block; position: relative; margin: 0 auto; width: 18px; height: 22px; text-indent: -9999px; } 
+.tableChk .checkbox label { display: block; position: relative; margin: 0 auto; width: 18px; height: 22px; text-indent: -9999px; }
 
 /* 라디오 버튼 (Radio button) */
 .checkbox input[type=radio] + label::before { border-radius: 100%; } 
@@ -603,49 +603,43 @@ v9 고객지원
 .subCont .side .checkboxWrap { gap: 12px 45px; } 
 .section:not(:first-child) { margin-top: 40px; }
 
-/* .searchArea { display: flex; flex-direction: column; gap: 32px; }
-.searchArea dl dt { position: relative; font-size: 19px; font-weight: 700; color: var(--color-base); cursor: pointer; }
-.searchArea dl dt:after { content: ""; position: absolute; top: 6px; right: 0; width: 12px; height: 12px; background: url(../images/component/ico-lnb-arr01.png) no-repeat center right/100% auto; }
-.searchArea dl.open dt:after { transform: rotate(180deg); }
-.searchArea dl dd { padding-top: 12px;}
-.searchArea dl dd input { width: 100%; } */
 .searchArea { padding: 24px; border-radius: 6px; background: #F1F7F8; }
 .searchArea .in { position: relative; padding-right: 210px; }
 .searchArea .in .rt { display: flex; gap: 8px; position: absolute; right: 0; bottom: 0; }
+.searchArea ul { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 60px; }
+.searchArea ul li { width: calc(50% - 30px); }
+.searchArea dl { display: flex; align-items: center; min-height: 48px; }
+.searchArea dl dt { /* flex: 0 0 72px; */ flex: 0 0 92px; line-height: 1.5;  font-size: 15px; font-weight: 700; color: var(--color-base); }
+.searchArea dl dd { flex: 1; }
+.searchArea dl dd > select { max-width: 100%; }
+.searchArea dl dd input { background-color: var(--color-white) !important; }
+.searchArea dl dd .checkboxWrap { gap: 10px; }
+.searchArea dl dd .checkboxBtn input + label { border-color: var(--border-color) !important; line-height: 46px !important; font-weight: 400 !important; color: var(--color-base) !important; background: var(--color-white) !important; }
+.searchArea dl dd .checkboxBtn input:checked + label { font-weight: 700 !important; color: var(--color-white) !important; }
+.searchArea dl dd .checkboxBtn input.label01:checked + label { background: #4E6CB6 !important; }
+.searchArea dl dd .checkboxBtn input.label02:checked + label { background: #83579C !important; }
+.searchArea dl dd .checkboxBtn input.label03:checked + label { background: #229068 !important; }
+.searchArea dl dd .date input { max-width: 190px; }
 .searchDefault input { width: 100%; }
 .searchDefault .keywordcmb { display: flex; flex-wrap: wrap; gap: 10px; }
 .searchDefault .keywordcmb select { width: 200px; }
 .searchDefault .keywordcmb input { flex: 1; width: inherit; }
 .searchDetail { display: none; margin-top: 24px; }
-.searchDetail ul { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 60px; }
-.searchDetail ul li { width: calc(50% - 30px); }
-.searchDetail dl { display: flex; align-items: center; height: 48px; }
-.searchDetail dl dt { /* flex: 0 0 72px; */ flex: 0 0 92px; line-height: 1.5;  font-size: 15px; font-weight: 700; color: var(--color-base); }
-.searchDetail dl dd { flex: 1; }
-.searchDetail dl dd > select { max-width: 100%; }
-.searchDetail dl dd input { background-color: var(--color-white) !important; }
-.searchDetail dl dd .checkboxWrap { gap: 10px 12px; }
-.searchDetail dl dd .checkboxBtn input + label { border-color: var(--border-color) !important; line-height: 46px !important; font-weight: 400 !important; color: var(--color-base) !important; background: var(--color-white) !important; }
-.searchDetail dl dd .checkboxBtn input:checked + label { font-weight: 700 !important; color: var(--color-white) !important; }
-.searchDetail dl dd .checkboxBtn input.label01:checked + label { background: #4E6CB6 !important; }
-.searchDetail dl dd .checkboxBtn input.label02:checked + label { background: #83579C !important; }
-.searchDetail dl dd .checkboxBtn input.label03:checked + label { background: #229068 !important; }
-.searchDetail dl dd .date input { max-width: 190px; }
 .flexWrapChk .flexForm { flex: 1; width: 100%; }
 .flexForm { display: flex; flex-wrap: wrap; gap: 10px; }
 .flexForm > div { flex: 1; }
 .flexForm select { max-width: 100%; }
 @media (max-width: 1600px) {
     .searchArea .in { padding-right: 0 ; padding-bottom: 72px; }
-    .searchDetail ul { gap: 10px 20px; }
+    .searchArea ul { gap: 10px 20px; }
 }
 @media (max-width: 1160px) {
     .searchArea { padding: 24px 16px; }
-    .searchDetail ul li { width: 100%; }
-    .searchDetail dl { flex-direction: column; align-items: flex-start; height: inherit; }
-    .searchDetail dl dt { flex: none; margin-bottom: 8px; }
-    .searchDetail dl dd { width: 100%; }
-    .searchDetail dl dd .date input { max-width: 100%; }
+    .searchArea ul li { width: 100%; }
+    .searchArea dl { flex-direction: column; align-items: flex-start; height: inherit; }
+    .searchArea dl dt { flex: none; margin-bottom: 8px; }
+    .searchArea dl dd { width: 100%; }
+    .searchArea dl dd .date input { max-width: 100%; }
     .flexForm { flex-direction: column; }
 }
 @media(max-width:767px) {
@@ -1544,7 +1538,6 @@ v9 고객지원
     .termsList dl {justify-content: space-between;}
 } 
 
-/*** 마이페이지 ***/
 /* 나의 활동 */
 .supportStatus { display: flex; flex-wrap: wrap; gap: 14px; padding: 26px 30px; border: 1px solid #B5E2E2; border-radius: 16px; background: #F4F8F8;}
 .supportStatus.white {border-color:#ddd; background:#fff;}
@@ -2195,8 +2188,40 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
 }
 
 /* 이용현황 및 내역 */
-.formTop { display: flex; flex-wrap: wrap; justify-content: space-between; padding: 0 16px; background: #8997A6; }
-.formTop * { font-size: 15px; font-weight: 700; color: var(--color-white); }
+.formTop { display: flex; flex-wrap: wrap; justify-content: space-between; padding: 4px 16px; background: #8997A6; }
+.formTop > .lt,
+.formTop > .rt { display: flex; align-items: center; gap: 10px; }
+.formTop > .lt > p,
+.formTop > .rt > p { line-height: 1.5; font-size: 15px; font-weight: 700; color: var(--color-white); }
+.formTop .tooltip { margin-top: 0; }
+.imgChkList ul { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px 20px; }
+.imgChkList ul li { display: flex; flex-direction: column; gap: 8px; }
+.imgChkList ul li > span { display: block; margin-top: 8px; line-height: 1.5; font-size: 15px; color: var(--color-gray-70); }
+.imgChkList ul li > p { line-height: 1.3; font-size: 19px; font-weight: 600; color: var(--color-base); }
+.imgChk { display: inline-block; position: relative; width: 100%; max-width: 290px; max-height: 290px; }
+.imgChk input { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; }
+.imgChk input + label { display: block; cursor: pointer; }
+.imgChk input + label:before { display: block; content: ""; position: absolute; top: 20px; right: 20px; overflow: hidden; width: 20px; height: 20px; background: url(../images/component/ico-check-checkbox-off.svg) no-repeat left center / 100% auto; }
+.imgChk input:checked + label:before { background-image: url(../images/component/ico-check-checkbox-on.svg); }
+.imgChk input:focus + label:after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; outline-offset: -1px; outline: 1px solid var(--color-primary); }
+.imgChk img { overflow: hidden; border-radius: 10px; width: 100%; height: 100%; }
+@media (max-width: 1160px) {
+    .imgChkList ul { grid-template-columns: repeat(3, 1fr); }
+    .imgChk { max-width: 100%; max-height: 100%; }
+} 
+@media (max-width: 767px) {
+    .imgChkList ul { grid-template-columns: repeat(1, 1fr); }
+}
+
+/* 기업정보 */
+.radiobox { position: relative; }
+.radiobox input { position: absolute; top: 0; left: 0; opacity: 0; }
+.radiobox input + label { display: flex; align-items: center; padding: 8px 16px 8px 30px; border: 1px solid var(--border-color); border-radius: 8px; line-height: 30px; font-size: 15px; font-weight: 500; color: var(--color-gray-70); cursor: pointer; background: url(../images/component/ico-check-radio-text-off.svg) no-repeat center left 8px/16px auto; }
+.radiobox input:checked + label { color: var(--color-white); background-color: var(--color-secondary); background-image: url(../images/component/ico-check-radio-text-on.svg); }
+/* @media (max-width: 1400px) {
+    .flexWrapChk:has(.radiobox) { flex-direction: column; align-items: flex-start; }
+} */
+
 /*** 페이지명1 ***/
 /* 페이지내 분할1 */
 
