@@ -420,18 +420,26 @@ const fn_Content = () => {
             slidesPerView: 'auto',
             spaceBetween: 40,
             mousewheel: true,
-            breakpoints: {
-                1124: {
-
-                }
-            },
             on: {
                 slideChange: function(swiper){
                     $(swiper.el).find('.swiper-slide a, .swiper-slide button').attr('tabindex','-1');
                     $(swiper.el).find('.swiper-slide').eq(swiper.activeIndex).find('a, button').attr('tabindex','0');
                 }
-            }
+            },
 		});
+        
+        // 2025-10-14 추가
+        function updateSwiperControls() {
+            if (window.innerWidth <= 767) {
+                historySlide.allowTouchMove = false;
+                historySlide.mousewheel.disable();
+            } else {
+                historySlide.allowTouchMove = true;
+                historySlide.mousewheel.enable();
+            }
+        }
+        updateSwiperControls();
+        window.addEventListener("resize", updateSwiperControls);
 	})
 
     // 회원가입 step

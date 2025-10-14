@@ -338,17 +338,28 @@
 				<!-- subCont -->
 				<div class="subCont">
 					<div class="cont">
-						<!-- 검색필터 영역 (디자인 미확정) -->
+						<!-- 2025-10-14 검색필터 영역 추가 -->
                         <div class="section">
-                            <div style="display: flex; align-items: center; justify-content: center; height: 200px; background: #ccc;">검색필터 영역입니다.</div>
+                            <div class="searchArea">
+                                <div class="in">
+                                    <div class="lt">
+                                        <div class="searchDefault">
+                                            <input type="text" title="자료명" placeholder="자료명을 입력하세요">
+                                        </div>
+                                    </div> 
+                                    <div class="rt">
+                                        <button type="button" class="btn bgPrima lg">검색</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <!--// 검색필터 영역 (디자인 미확정) -->
+                        <!--// 2025-10-14 검색필터 영역 추가 -->
                         <div class="section">
 							<!-- tableTop -->
 							<div class="tableTop">
 								<div class="left">
 									<div class="total">
-										<p>정책자료 <b class="cBlue">‘전체’</b></p>
+										<p>정책자료 <b class="cBlue">‘<%검색어%>’</b></p> <!-- 2025-10-14 텍스트 수정 -->
 										<p><b class="cPoint">000<span>건</span></b></p>
 									</div>
 								</div>

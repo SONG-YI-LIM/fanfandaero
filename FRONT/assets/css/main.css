@@ -357,7 +357,8 @@
 .promoNotiWrap .btnBottom.borderT {margin-top:32px; padding-top:24px;}
 .promotionNoticeList {display:flex; flex-direction: column; gap:16px;}
 .promotionNoticeList li a {display:flex; gap:24px;}
-.promotionNoticeList li .imgBox {flex:none; display:flex; justify-content: center; align-items: center; width:220px; height:124px;}
+.promotionNoticeList li .imgBox {flex:none; display:flex; justify-content: center; align-items: center; position:relative; width:220px; height:124px;}
+.promotionNoticeList li .imgBox .inBadge {position:absolute; left:0; top:0; padding:3px 6px; line-height:1.3; font-size:13px; color:#fff; background:var(--color-base);}
 .promotionNoticeList li .imgBox img {width:100%; height:100%; object-fit: cover;}
 .promotionNoticeList li .txtBox strong {display:-webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow:hidden; text-overflow:ellipsis; margin-bottom:24px; max-height:54px; line-height:1.3; font-size:21px; font-weight:700;}
 .promotionNoticeList li .txtBox span {display:block; line-height:1; font-size:15px; color:#888;}

@@ -335,11 +335,62 @@
 				<!-- subCont -->
 				<div class="subCont">
 					<div class="cont">
-						<!-- 검색필터 영역 (디자인 미확정) -->
+						<!-- 2025-10-14 검색필터 영역 추가 -->
                         <div class="section">
-                            <div style="display: flex; align-items: center; justify-content: center; height: 200px; background: #ccc;">검색필터 영역입니다.</div>
+                            <div class="searchArea">
+                                <div class="in">
+                                    <div class="lt">
+                                        <div class="searchDefault">
+                                            <div class="keywordcmb">
+                                                <select title="업체명">
+                                                    <option value="">업체명</option>
+                                                </select>
+                                                <input type="text" title="검색어" placeholder="검색어를 입력하세요">
+                                            </div>     
+                                        </div>
+                                        <div class="searchDetail">
+                                            <ul>
+                                                <li>
+                                                    <dl>
+                                                        <dt>납품가능지역</dt>
+                                                        <dd>
+                                                            <select title="납품가능지역">
+                                                                <option value="">전국</option>
+                                                            </select>
+                                                        </dd>
+                                                    </dl>
+                                                </li>
+												<li>
+                                                    <dl>
+                                                        <dt>공고여부</dt>
+                                                        <dd>
+                                                            <select title="공고여부">
+                                                                <option value="">전체</option>
+                                                            </select>
+                                                        </dd>
+                                                    </dl>
+                                                </li>
+												<li>
+                                                    <dl>
+                                                        <dt>정렬</dt>
+                                                        <dd>
+                                                            <select title="정렬">
+                                                                <option value="">이름순</option>
+                                                            </select>
+                                                        </dd>
+                                                    </dl>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                    <div class="rt">
+                                        <button type="button" class="btn bgPrima lg">검색</button>
+                                        <button type="button" class="btn bgSecond lg btnIco btnSearchDetail">고급검색</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <!--// 검색필터 영역 (디자인 미확정) -->
+                        <!--// 2025-10-14 검색필터 영역 추가 -->
                         <div class="section">
 							<!-- blueBox -->
 							<div class="blueBox">
@@ -360,24 +411,24 @@
 							<div class="tableTop">
 								<div class="left">
 									<div class="total">
-										<p>납품업체 <b class="cBlue">‘직접 생산기업’</b></p>
+										<p>납품업체 <b class="cBlue">‘<%납품가능지역1%>’ ‘<%납품가능지역2%>’ ‘<%공고여부1%>’</b></p> <!-- 2025-10-14 텍스트 수정 -->
 										<p><b class="cPoint">000<span>건</span></b></p>
 									</div>
 								</div>
 							</div>
 							<!--// tableTop -->
-							<!-- lineBoxList02 -->
+							<!-- lineBoxList02 2025-10-14 구조 변경 됨 -->
 							<ul class="lineBoxList02">
 								<li>
 									<div class="topArea">
 										<strong>(복지)에덴복지재단 형원</strong>
 										<p>연락처 : 07043697006</p>
-									</div>
-									<div class="bottomArea">
 										<ul>
 											<li>#청소</li>
 											<li>#산업안전용품(안전보호장구)</li>
 										</ul>
+									</div>
+									<div class="bottomArea">
 										<div class="btnBox">
 											<button type="button" class="btn bgSecond">업체 상세정보 보기</button>
 											<button type="button" class="btn bgSecond btnIcoRt btnShortcut">업체 홈페이지 바로가기</button>
@@ -388,11 +439,11 @@
 									<div class="topArea">
 										<strong>(사단)한국장애인소비자연합 인쇄사업단</strong>
 										<p>연락처 : 07077287786</p>
-									</div>
-									<div class="bottomArea">
 										<ul>
 											<li>#사무용품</li>
 										</ul>
+									</div>
+									<div class="bottomArea">
 										<div class="btnBox">
 											<button type="button" class="btn bgSecond">업체 상세정보 보기</button>
 										</div>
@@ -401,12 +452,11 @@
 								<li>
 									<div class="topArea">
 										<strong>(주)그레이스씨앤씨</strong>
-										<p></p>
-									</div>
-									<div class="bottomArea">
 										<ul>
 											<li>#가전류(소형가전)</li>
 										</ul>
+									</div>
+									<div class="bottomArea">
 										<div class="btnBox">
 											<button type="button" class="btn bgSecond">업체 상세정보 보기</button>
 											<button type="button" class="btn bgSecond btnIcoRt btnShortcut">업체 홈페이지 바로가기</button>
@@ -417,11 +467,11 @@
 									<div class="topArea">
 										<strong>(주)더세이프코리아</strong>
 										<p>연락처 : 0319414057</p>
-									</div>
-									<div class="bottomArea">
 										<ul>
 											<li>#산업안전용품(안전보호장구)</li>
 										</ul>
+									</div>
+									<div class="bottomArea">
 										<div class="btnBox">
 											<button type="button" class="btn bgSecond">업체 상세정보 보기</button>
 											<button type="button" class="btn bgSecond btnIcoRt btnShortcut">업체 홈페이지 바로가기</button>
@@ -431,11 +481,11 @@
 								<li>
 									<div class="topArea">
 										<strong>(주)라온파워인터내셔널</strong>
-									</div>
-									<div class="bottomArea">
 										<ul>
 											<li>#전기/조명</li>
 										</ul>
+									</div>
+									<div class="bottomArea">
 										<div class="btnBox">
 											<button type="button" class="btn bgSecond">업체 상세정보 보기</button>
 										</div>
@@ -445,11 +495,11 @@
 									<div class="topArea">
 										<strong>(주)마이스브로</strong>
 										<p>연락처 : 0517408800</p>
-									</div>
-									<div class="bottomArea">
 										<ul>
 											<li>#사무용품 [외 5건]</li>
 										</ul>
+									</div>
+									<div class="bottomArea">
 										<div class="btnBox">
 											<button type="button" class="btn bgSecond">업체 상세정보 보기</button>
 										</div>
@@ -458,12 +508,12 @@
 								<li>
 									<div class="topArea">
 										<strong>(주)모어라이프</strong>
-									</div>
-									<div class="bottomArea">
 										<ul>
 											<li>#청소</li>
 											<li>#생활용품(위생자재)</li>
 										</ul>
+									</div>
+									<div class="bottomArea">
 										<div class="btnBox">
 											<button type="button" class="btn bgSecond">업체 상세정보 보기</button>
 											<button type="button" class="btn bgSecond btnIcoRt btnShortcut">업체 홈페이지 바로가기</button>
@@ -473,11 +523,11 @@
 								<li>
 									<div class="topArea">
 										<strong>(주)브로니스</strong>
-									</div>
-									<div class="bottomArea">
 										<ul>
 											<li>#사무용품 [외 4건]</li>
 										</ul>
+									</div>
+									<div class="bottomArea">
 										<div class="btnBox">
 											<button type="button" class="btn bgSecond">업체 상세정보 보기</button>
 											<button type="button" class="btn bgSecond btnIcoRt btnShortcut">업체 홈페이지 바로가기</button>
@@ -487,11 +537,11 @@
 								<li>
 									<div class="topArea">
 										<strong>(주)비엠코리아</strong>
-									</div>
-									<div class="bottomArea">
 										<ul>
 											<li>#사무용품 [외 1건]</li>
 										</ul>
+									</div>
+									<div class="bottomArea">
 										<div class="btnBox">
 											<button type="button" class="btn bgSecond">업체 상세정보 보기</button>
 											<button type="button" class="btn bgSecond btnIcoRt btnShortcut">업체 홈페이지 바로가기</button>
@@ -502,11 +552,11 @@
 									<div class="topArea">
 										<strong>(주)서광양행</strong>
 										<p>연락처 : 0232736181</p>
-									</div>
-									<div class="bottomArea">
 										<ul>
 											<li>#전산용품</li>
 										</ul>
+									</div>
+									<div class="bottomArea">
 										<div class="btnBox">
 											<button type="button" class="btn bgSecond">업체 상세정보 보기</button>
 											<button type="button" class="btn bgSecond btnIcoRt btnShortcut">업체 홈페이지 바로가기</button>
@@ -514,7 +564,7 @@
 									</div>
 								</li>
 							</ul>
-							<!--// lineBoxList02 -->
+							<!--// lineBoxList02 2025-10-14 구조 변경 됨 -->
 							<!-- btnBottom -->
 							<div class="btnBottom">
 								<div>
