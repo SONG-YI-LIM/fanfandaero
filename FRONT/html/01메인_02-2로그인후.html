@@ -795,18 +795,23 @@
 	</footer>
 	<!--// footer -->
     <script>
+        // 공지사항 스와이퍼
         var noticeSwiper = new Swiper(".noticeSwiper", {
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
         });
+
+        // 추천 지원사업 스와이퍼
         var recommendSwiper = new Swiper(".recommendSwiper", {
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
         });
+
+        // 함께하는 기관 스와이퍼 
         var etcSwiper = new Swiper(".etcSwiper", {
             navigation: {
                 nextEl: ".swiper-button-next",
@@ -825,6 +830,7 @@
             },
         });
 
+        // 캘린더
         document.addEventListener('DOMContentLoaded', function() {
             var calendarEl = document.getElementById('calendar');
             var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -849,9 +855,8 @@
                 },
                 moreLinkText: "",
                 fixedWeekCount : false,
-                dayMaxEventRows : 1,
+                dayMaxEventRows : 0,
                 height:"100%",
-                // eventMaxStack: 0,
                 eventDisplay:"list-item",
                 events: [
                     {
