@@ -608,10 +608,10 @@ const fn_Content = () => {
         });
     });
 
-    /* 이용현황 및 내역 */
-    let imgChk = $('.imgChk');
+    /* 이용현황 및 내역(리사이즈) */
+    let imgSquare = $('.imgSquare');
     function setSquare() {
-        imgChk.each(function () {
+        imgSquare.each(function () {
             let $width = $(this).width();
             $(this).height($width);
         });

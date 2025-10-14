@@ -62,7 +62,7 @@
             <ul>
                 <li>
                     <a href="">
-                        <div class="imgBox">
+                        <div class="imgBox imgSquare">
                             <img src="../assets/images/content/img-catalog02.png" alt="">
                             <span>대표</span>
                         </div>
@@ -71,7 +71,7 @@
                 </li>
                 <li>
                     <a href="">
-                        <div class="imgBox">
+                        <div class="imgBox imgSquare">
                             <img src="../assets/images/content/img-catalog02.png" alt="">
                         </div>
                         <p>LG 그램 <br>39.6cm</p>
@@ -79,7 +79,7 @@
                 </li>
                 <li>
                     <a href="">
-                        <div class="imgBox">
+                        <div class="imgBox imgSquare">
                             <img src="../assets/images/content/img-catalog02.png" alt="">
                         </div>
                         <p>LG 그램 <br>39.6cm</p>
@@ -97,38 +97,11 @@
                 <button type="button" class="btnTxt rt fold">접기</button>
             </div>
         </div>
-<style>
-.showroomWrap { height: 100%; min-height: 100vh; }
-.srHeader { position: relative; height: 80px; background: #1A2A58; }
-.srHeader p { margin: 0 auto; width: 735px; height: 300px; text-indent: -9999px; background: url(../assets/images/content/img-showroom01.png) no-repeat center/100% auto; }
-.srInfo { display: flex; flex-direction: column; justify-content: space-between; gap: 40px; position: relative; margin: 0 auto; padding: 30px 30px 0; width: 100%; max-width: 626px; min-height: 220px; background: var(--color-white); }
-.srInfo .top { display: flex; flex-wrap: wrap; gap: 30px; }
-.srInfo .top > p { flex: 0 0 186px; font-size: 23px; font-weight: 700; color: var(--color-black); }
-.srInfo .top > ul { flex: 1; display: flex; flex-direction: column; gap: 6px; }
-.srInfo .top > ul li { display: flex; gap: 20px; }
-.srInfo .top > ul li span { flex-shrink: 0; font-size: 15px; font-weight: 700; color: var(--color-base); }
-.srInfo .top > ul li p { font-size: 15px; color: var(--color-base); }
-.srInfo .bottom ul { display: flex; }
-.srInfo .bottom ul li { flex: 1; padding: 12px 0; text-align: center; line-height: 1.3; font-size: 15px; font-weight: 700; color: #717171; background: #ECECEC; }
-.srInfo .bottom ul li + li { border-left: 1px solid #ccc; }
-.srCont { margin: 0 auto; padding: 40px; width: 100%; max-width: 735px;  }
-.srCont .catItem .imgBox { width: 100%; height: 198px; }
-.srCont .catItem p br { display: none; }
-.srCont .iframeBox { width: 100%; height: 620px; }
-.srCont .iframeBox iframe { width: 100%; height: 100%; }
-.srFooter { margin:0 auto; padding: 8px 20px; width: 100%; max-width: 735px; background: #F4F4F4; }
-.srFooter p { margin-bottom: 5px; line-height: 1.3; font-size: 15px; font-weight: 700; color: var(--color-base); }
-.srFooter span { display: block; font-size: 13px; color: var(--color-gray-70); }
-.srSwiper { position: relative; overflow: hidden; }
-.srSwiper *[class^=swiper-button] { display: block; top: calc(50% - 14px); left: 30px; margin-top: 0; width: 28px; height: 28px; text-indent: -9999px; }
-.srSwiper .swiper-button-prev { background: url(../assets/images/content/ico-btn-sr-swiper-prev.png) no-repeat center; }
-.srSwiper .swiper-button-next { right: 30px; left: inherit; background: url(../assets/images/content/ico-btn-sr-swiper-next.png) no-repeat center; }
-</style>
         <div class="srSwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="iframeBox">
-                        <iframe src="08마이페이지(기업회원)_07상품관리_05전자카탈로그관리_02카탈로그메인.html" frameborder="0" scrolling="no"></iframe>
+                        <iframe src="08마이페이지(기업회원)_07상품관리_05전자카탈로그관리_02카탈로그메인.html" frameborder="0"></iframe>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -145,22 +118,20 @@
             <div class="swiper-button-prev">이전</div>
             <div class="swiper-button-next">다음</div>
         </div>
-        <script>
-            var swiper = new Swiper(".srSwiper", {
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-            });
-        </script>
-
-        
     </div>
     <div class="srFooter">
         <p>중소기업유통센터15</p>
-        <span>(우. 07997) 서울특별시 양천구 목동동로 309 (목동) 본사셍세주소 / TEL. 02-6674-9831</span>
+        <span>(우. 07997) 서울특별시 양천구 목동동로 309 (목동) 본사상세주소 / TEL. 02-6674-9831</span>
     </div>
 </div>
 <!--// showroomWrap -->
+<script>
+var swiper = new Swiper(".srSwiper", {
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+</script>
 </body>
 </html>
