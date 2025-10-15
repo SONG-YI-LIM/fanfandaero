@@ -2319,9 +2319,41 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
 .radiobox input { position: absolute; top: 0; left: 0; opacity: 0; }
 .radiobox input + label { display: flex; align-items: center; padding: 8px 16px 8px 30px; border: 1px solid var(--border-color); border-radius: 8px; line-height: 30px; font-size: 15px; font-weight: 500; color: var(--color-gray-70); cursor: pointer; background: url(../images/component/ico-check-radio-text-off.svg) no-repeat center left 8px/16px auto; }
 .radiobox input:checked + label { color: var(--color-white); background-color: var(--color-secondary); background-image: url(../images/component/ico-check-radio-text-on.svg); }
-/* @media (max-width: 1400px) {
-    .flexWrapChk:has(.radiobox) { flex-direction: column; align-items: flex-start; }
-} */
+
+/* 공고 보기 */
+.viewNotice { display: flex; flex-wrap: wrap; gap: 10px 24px; padding: 20px 30px; border-radius: 12px; background: var(--color-secondary-5); }
+.viewNotice dl { flex: 1; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 10px 24px; border-radius: 4px; background: var(--color-white); }
+.viewNotice dl dt { position: relative; padding-left: 25px; line-height: 20px; font-size: 15px; font-weight: 700; color: var(--color-gray-70); }
+.viewNotice dl dt:before { content: ""; position: absolute; top: 0; left: 0; width: 20px; height: 20px; background-repeat: no-repeat; background-position: center; background-size: 100% auto; }
+.viewNotice dl.notice01 dt:before { background-image: url(../images/content/ico-view-notice01.png); }
+.viewNotice dl.notice02 dt:before { background-image: url(../images/content/ico-view-notice02.png); }
+.viewNotice dl.notice03 dt:before { background-image: url(../images/content/ico-view-notice03.png); }
+.viewNotice dl p { font-size: 15px; color: var(--color-gray-70); }
+.viewNotice dl p strong { font-size: 25px; font-weight: 700; }
+
+.viewNoticeList > ul { display: flex; flex-direction: column; gap: 16px; }
+.viewNoticeList > ul > li { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; padding: 30px 40px; border: 1px solid #CCCCCC; border-radius: 12px; }
+.viewNoticeList .imgBox { width: 100%; max-width: 240px; height: 130px; }
+.viewNoticeList .viewNoticeInfo { display: flex; flex-direction: column; gap: 10px; max-width: calc(100% - 530px); }
+.viewNoticeList .viewNoticeInfo .category { display: flex; flex-wrap: wrap; gap: 5px; }
+.viewNoticeList .viewNoticeInfo .category li { padding: 0 6px; border-radius: 4px; line-height: 24px; font-size: 13px; color: #023CA4; background: #EFF5FF; }
+.viewNoticeList .viewNoticeInfo .category li.day { color: var(--color-white); background: var(--color-point); }
+.viewNoticeList .viewNoticeInfo p { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; line-height: 1.3; font-size: 21px; font-weight: 600; color: var(--color-base); }
+.viewNoticeList .viewNoticeInfo .hashtag { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px; }
+.viewNoticeList .viewNoticeInfo .hashtag li { font-size: 15px; color: var(--color-gray-70); }
+.viewNoticeList .viewNoticeInfo span { font-size: 15px; font-weight: 500; color: var(--color-base); }
+.viewNoticeList .viewNoticeInfoBtn { display: flex; flex-wrap: wrap; gap: 10px; margin-left: auto; }
+.viewNoticeList .viewNoticeInfoBtn .btn { width: 120px; }
+@media (max-width: 1160px) {
+    .viewNoticeList > ul > li { padding: 24px 16px; }
+}
+@media (max-width: 767px) {
+    .viewNotice { flex-direction: column; }
+    .viewNoticeList > ul > li { flex-direction: column; align-items: flex-start; }
+    .viewNoticeList .imgBox { margin: 0 auto; }
+    .viewNoticeList .viewNoticeInfo { max-width: 100%; }
+    .viewNoticeList .viewNoticeInfo p { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; white-space: inherit; max-height: 50px; font-size: 19px; }
+}
 
 /*** 페이지명1 ***/
 /* 페이지내 분할1 */
