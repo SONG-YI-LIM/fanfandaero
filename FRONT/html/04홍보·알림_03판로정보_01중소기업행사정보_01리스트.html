@@ -278,24 +278,38 @@
 			<!-- lnb -->
 			<div id="lnb">
 				<div class="in">
-                    <!-- 2025-09-03 -->
                     <div class="lnbTop">
                         <div class="top">
-                            <h4>사업공고·신청</h4>
+                            <h4>홍보·알림</h4>
                         </div>
                     </div>
-                    <!--// 2025-09-03 -->
 					<ul class="lnbUl">
-						<li><a href="">지원사업 안내</a></li>
-						<li>
-							<a href="">지원사업 공고</a>
+						<li><a href="">우수제품</a></li>
+						<li><a href="">우수사례</a></li>
+						<li class="curr">
+							<a href="">판로정보</a>
 							<ul>
-								<li><a href="">지원사업 공고·신청</a></li>
-								<li class="curr"><a href="">국내 판로지원사업 전체보기</a></li>
-								<li><a href="">지원사업 신청현황</a></li>
+								<li class="curr"><a href="">중소기업 행사정보</a></li>
+								<li><a href="">조달청 입찰정보</a></li>
+								<li>
+                                    <a href="">기타 연계정보 제공</a>
+                                    <ul>
+                                        <li><a href="">유행·트렌드 정보</a></li>
+                                        <li><a href="">정책자료</a></li>
+                                        <li><a href="">연구자료</a></li>
+                                        <li><a href="">동향·통계자료</a></li>
+                                    </ul>
+                                </li>
 							</ul>
 						</li>
-						<li><a href="">지원사업별 담당자</a></li>
+						<li>
+							<a href="">MRO 지원정보</a>
+							<ul>
+								<li><a href="">알기쉬운 사업안내</a></li>
+								<li><a href="">납품업체 검색</a></li>
+								<li><a href="">실태조사</a></li>
+							</ul>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -305,17 +319,17 @@
 				<div class="breadcrumb">
 					<ol>
 						<li class="home"><a href="">홈</a></li>
-						<li><a href="#"><strong>사업공고·신청</strong></a></li>
-						<li><a href="#"><strong>지원사업 공고</strong></a></li>
-						<li><a href="#"><strong>국내 판로지원사업 전체보기</strong></a></li>
+						<li><a href="#"><strong>홍보·알림</strong></a></li>
+						<li><a href="#"><strong>판로정보</strong></a></li>
+						<li><a href="#"><strong>중소기업 행사정보</strong></a></li>
 					</ol>
 				</div>
 				<!-- breadcrumb -->
 				<!-- subTop -->
-				<div class="subTop v3">
+				<div class="subTop v4">
 					<div class="titArea">
                         <div class="left">
-                            <h2>국내 판로지원사업 전체보기</h2>
+                            <h2>중소기업 행사정보</h2>
                         </div>
 					</div>
 				</div>
@@ -324,21 +338,25 @@
 				<!-- subCont -->
 				<div class="subCont">
 					<div class="cont">
-                        <!-- 2025-10-15 검색필터 영역 추가 -->
-                        <div class="section">
+						<div class="section">
                             <div class="searchArea">
                                 <div class="in">
                                     <div class="lt">
                                         <div class="searchDefault">
-                                            <input type="text" title="검색어" placeholder="검색어를 입력하세요">
+                                            <div class="keywordcmb">
+                                                <select title="검색 구분">
+                                                    <option value="">전체</option>
+                                                </select>
+                                                <input type="text" title="검색어" placeholder="검색어를 입력하세요">
+                                            </div>     
                                         </div>
                                         <div class="searchDetail">
                                             <ul>
                                                 <li>
                                                     <dl>
-                                                        <dt>대상</dt>
+                                                        <dt>행사지역</dt>
                                                         <dd>
-                                                            <select title="대상">
+                                                            <select title="행사지역">
                                                                 <option value="">전체</option>
                                                             </select>
                                                         </dd>
@@ -346,43 +364,11 @@
                                                 </li>
 												<li>
                                                     <dl>
-                                                        <dt>유형</dt>
+                                                        <dt>행사분야</dt>
                                                         <dd>
-                                                            <select title="유형">
+                                                            <select title="행사분야">
                                                                 <option value="">전체</option>
                                                             </select>
-                                                        </dd>
-                                                    </dl>
-                                                </li>
-												<li>
-                                                    <dl>
-                                                        <dt>지역</dt>
-                                                        <dd>
-                                                            <select title="지역">
-                                                                <option value="">전체</option>
-                                                            </select>
-                                                        </dd>
-                                                    </dl>
-                                                </li>
-												<li>
-                                                    <dl>
-                                                        <dt>신청기간</dt>
-                                                        <dd>
-                                                            <div class="dateWrap">
-                                                                <div class="flexWrap">
-                                                                    <div>
-                                                                        <div class="date">
-                                                                            <input type="text" title="시작날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
-                                                                        </div>
-                                                                    </div>
-                                                                    <span>~</span>
-                                                                </div>
-                                                                <div>
-                                                                    <div class="date">
-                                                                        <input type="text" title="종료날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
                                                         </dd>
                                                     </dl>
                                                 </li>
@@ -396,207 +382,209 @@
                                 </div>
                             </div>
                         </div>
-                        <!--// 2025-10-15 검색필터 영역 추가 -->
                         <div class="section">
-                            <!-- tableTop -->
-                            <div class="tableTop">
-                                <div class="left">
-                                    <div class="total">
-                                        <p>국내 판로지원사업 <b class="cBlue">‘&lt;%대상%&gt;’ ‘&lt;%유형%&gt;’ ‘&lt;%지역%&gt;’</b></p>
-                                        <p><b class="cPoint">000<span>건</span></b></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--// tableTop -->
-                            <!-- lineBoxList04 -->
-                            <ul class="lineBoxList04">
-                                <li>
+							<!-- tableTop -->
+							<div class="tableTop">
+								<div class="left">
+									<div class="total">
+										<p>중소기업 행사정보 <b class="cBlue">‘<%행사지역%>’ ‘<%행사분야%>’ ‘<%검색어%>’</b></p>
+										<p><b class="cPoint">000<span>건</span></b></p>
+									</div>
+								</div>
+							</div>
+							<!--// tableTop -->
+							<!-- lineBoxList05 -->
+							<ul class="lineBoxList05">
+								<li>
                                     <!-- badgeArea -->
                                     <div class="badgeArea">
                                         <div>
-                                            <span class="badge v10">소상공인</span>
-                                            <span class="badge">홍보·마케팅</span>
-                                            <span class="badge">부산</span>
+                                            <span class="badge">인력</span>
+                                            <span class="badge">전국</span>
+                                            <span class="badge">전북테크노파크</span>
                                         </div>
                                     </div>
                                     <!--// badgeArea -->
-                                    <strong>[부산] 게임 체험 팝업 전시 참가기업 모집 공고</strong>
-                                    <span>신청기간 : 2025-09-20 ~ 2025-09-28</span>
+                                    <strong>[전북] 1차 생성형 AI 실무 활용 마스터 과정 교육생 모집(AI 빅데이터 전문인력 양성사업)</strong>
+                                    <span>행사기간 : 2025-07-21 ~ 2025-07-28</span>
                                     <div class="btnBottom">
                                         <div class="right">
-                                            <button type="button" class="btn bgSecond btnIcoRt btnShortcut">사업안내</button>
+                                            <button type="button" class="btn bgSecond btnIcoRt btnShortcut">자세히보기</button>
                                         </div>
                                     </div>
                                 </li>
-                                <li>
+								<li>
                                     <!-- badgeArea -->
                                     <div class="badgeArea">
                                         <div>
-                                            <span class="badge v10">소상공인</span>
-                                            <span class="badge">홍보·마케팅</span>
-                                            <span class="badge">부산</span>
+                                            <span class="badge">경영</span>
+                                            <span class="badge">서울</span>
+                                            <span class="badge">한국산업기술협회</span>
                                         </div>
                                     </div>
                                     <!--// badgeArea -->
-                                    <strong>[강원] 태백시ㆍ영월군 2025년 5차 지역 광물자원 기반 산업경쟁력 강화를 통한 지역경제 활성화 및 위기대응 지원 공고(시군구 연고산업 육성사업)</strong>
-                                    <span>신청기간 : 2025-09-26 ~ 2025-09-28</span>
+                                    <strong>[전국] 2025년 7월 재직자 직무향상 무료교육</strong>
+                                    <span>행사기간 : 2025-06-30 ~ 2025-07-28</span>
                                     <div class="btnBottom">
                                         <div class="right">
-                                            <button type="button" class="btn bgSecond btnIcoRt btnShortcut">사업안내</button>
+                                            <button type="button" class="btn bgSecond btnIcoRt btnShortcut">자세히보기</button>
                                         </div>
                                     </div>
                                 </li>
-                                <li>
+								<li>
                                     <!-- badgeArea -->
                                     <div class="badgeArea">
                                         <div>
-                                            <span class="badge v8">중소기업</span>
-                                            <span class="badge">홍보·마케팅</span>
-                                            <span class="badge">부산</span>
+                                            <span class="badge">경영</span>
+                                            <span class="badge">서울</span>
+                                            <span class="badge">한국인터넷진흥원</span>
                                         </div>
                                     </div>
                                     <!--// badgeArea -->
-                                    <strong>2025년 5차 소상공인 플랫폼 협업교육 소상공인 모집 공고(해외)</strong>
-                                    <span>신청기간 : 2025-09-29 ~ 2025-09-29</span>
+                                    <strong>[전국] 2025년 1차 위치정보 보호조치 대면 실습교육</strong>
+                                    <span>행사기간 : 2025-07-28 ~ 2025-07-28</span>
                                     <div class="btnBottom">
                                         <div class="right">
-                                            <button type="button" class="btn bgSecond btnIcoRt btnShortcut">사업안내</button>
+                                            <button type="button" class="btn bgSecond btnIcoRt btnShortcut">자세히보기</button>
                                         </div>
                                     </div>
                                 </li>
-                                <li>
+								<li>
                                     <!-- badgeArea -->
                                     <div class="badgeArea">
                                         <div>
-                                            <span class="badge v10">소상공인</span>
-                                            <span class="badge">홍보·마케팅</span>
-                                            <span class="badge">부산</span>
+                                            <span class="badge">기술</span>
+                                            <span class="badge">서울</span>
+                                            <span class="badge">농림식품기술기획평가원</span>
                                         </div>
                                     </div>
                                     <!--// badgeArea -->
-                                    <strong>[경남] 2025년 4차 마산자유무역지역 역량강화 기업지원사업 지원기업 모집 공고</strong>
-                                    <span>신청기간 : 2025-09-29 ~ 2025-09-29</span>
+                                    <strong>[전국] 제38회 농림식품산업 미래성장포럼 개최 안내</strong>
+                                    <span>행사기간 : 2025-07-29 ~ 2025-07-29</span>
                                     <div class="btnBottom">
                                         <div class="right">
-                                            <button type="button" class="btn bgSecond btnIcoRt btnShortcut">사업안내</button>
+                                            <button type="button" class="btn bgSecond btnIcoRt btnShortcut">자세히보기</button>
                                         </div>
                                     </div>
                                 </li>
-                                <li>
+								<li>
                                     <!-- badgeArea -->
                                     <div class="badgeArea">
                                         <div>
-                                            <span class="badge v8">중소기업</span>
-                                            <span class="badge">홍보·마케팅</span>
-                                            <span class="badge">부산</span>
+                                            <span class="badge">인력</span>
+                                            <span class="badge">경북</span>
+                                            <span class="badge">포항테크노파크</span>
                                         </div>
                                     </div>
                                     <!--// badgeArea -->
-                                    <strong>[강원] 춘천시 2025년 ESG 경영 수준진단 지원사업 수혜기업 모집 공고(지역특성화육성사업)</strong>
-                                    <span>신청기간 : 2025-09-29 ~ 2025-09-29</span>
+                                    <strong>[전국] 3기 한국배터리아카데미 남부권캠퍼스 예비취업자과정 교육생 모집 공고</strong>
+                                    <span>행사기간 : 2025-07-21 ~ 2025-07-28</span>
                                     <div class="btnBottom">
                                         <div class="right">
-                                            <button type="button" class="btn bgSecond btnIcoRt btnShortcut">사업안내</button>
+                                            <button type="button" class="btn bgSecond btnIcoRt btnShortcut">자세히보기</button>
                                         </div>
                                     </div>
                                 </li>
-                                <li>
+								<li>
                                     <!-- badgeArea -->
                                     <div class="badgeArea">
                                         <div>
-                                            <span class="badge v8">중소기업</span>
-                                            <span class="badge">홍보·마케팅</span>
-                                            <span class="badge">부산</span>
+                                            <span class="badge">인력</span>
+                                            <span class="badge">서울</span>
+                                            <span class="badge">예술경영지원센터</span>
                                         </div>
                                     </div>
                                     <!--// badgeArea -->
-                                    <strong>[서울] 2025년 4차 지식재산 긴급지원 사업 모집 공고</strong>
-                                    <span>신청기간 : 2025-09-29 ~ 2025-09-30</span>
+                                    <strong>[전국] 2025년 예술산업아카데미 기업성장 활성화 예술기업ㆍ단체 성과관리 기초 수강생...</strong>
+                                    <span>행사기간 : 2025-07-08 ~ 2025-07-29</span>
                                     <div class="btnBottom">
                                         <div class="right">
-                                            <button type="button" class="btn bgSecond btnIcoRt btnShortcut">사업안내</button>
+                                            <button type="button" class="btn bgSecond btnIcoRt btnShortcut">자세히보기</button>
                                         </div>
                                     </div>
                                 </li>
-                                <li>
+								<li>
                                     <!-- badgeArea -->
                                     <div class="badgeArea">
                                         <div>
-                                            <span class="badge v10">소상공인</span>
-                                            <span class="badge">홍보·마케팅</span>
-                                            <span class="badge">부산</span>
+                                            <span class="badge">창업</span>
+                                            <span class="badge">경기</span>
+                                            <span class="badge">수원대학교</span>
                                         </div>
                                     </div>
                                     <!--// badgeArea -->
-                                    <strong>[인천] 2025년 ESG 교육 및 컨설팅 지원사업 참여기업 모집 공고</strong>
-                                    <span>신청기간 : 2025-08-12 ~ 2025-09-30</span>
+                                    <strong>[전국] 수원대학교 창업보육센터 PSST 핵심 노하우 맞춤 특강</strong>
+                                    <span>행사기간 : 2025-07-29 ~ 2025-07-29</span>
                                     <div class="btnBottom">
                                         <div class="right">
-                                            <button type="button" class="btn bgSecond btnIcoRt btnShortcut">사업안내</button>
+                                            <button type="button" class="btn bgSecond btnIcoRt btnShortcut">자세히보기</button>
                                         </div>
                                     </div>
                                 </li>
-                                <li>
+								<li>
                                     <!-- badgeArea -->
                                     <div class="badgeArea">
                                         <div>
-                                            <span class="badge v10">소상공인</span>
-                                            <span class="badge">홍보·마케팅</span>
-                                            <span class="badge">부산</span>
+                                            <span class="badge">인력</span>
+                                            <span class="badge">경북</span>
+                                            <span class="badge">포항테크노파크</span>
                                         </div>
                                     </div>
                                     <!--// badgeArea -->
-                                    <strong>[전남] 2025년 2차 하반기 중소기업 밀집지역 위기대응 체계 구축사업 Stand-up 맞춤지원 모집 공고</strong>
-                                    <span>신청기간 : 2025-07-21 ~ 2025-09-30</span>
+                                    <strong>[전국] 2025년 3차 한국배터리아카데미 남부권캠퍼스 재직자 직무역량 강화 과정 교육생...</strong>
+                                    <span>행사기간 : 2025-07-28 ~ 2025-07-29</span>
                                     <div class="btnBottom">
                                         <div class="right">
-                                            <button type="button" class="btn bgSecond btnIcoRt btnShortcut">사업안내</button>
+                                            <button type="button" class="btn bgSecond btnIcoRt btnShortcut">자세히보기</button>
                                         </div>
                                     </div>
                                 </li>
-                                <li>
+								<li>
                                     <!-- badgeArea -->
                                     <div class="badgeArea">
                                         <div>
-                                            <span class="badge v8">중소기업</span>
-                                            <span class="badge">홍보·마케팅</span>
-                                            <span class="badge">부산</span>
+                                            <span class="badge">창업</span>
+                                            <span class="badge">경기</span>
+                                            <span class="badge">하남스타트업캠퍼스</span>
                                         </div>
                                     </div>
                                     <!--// badgeArea -->
-                                    <strong>기존화학물질 유해성정보 DB를 활용한 등록전략 컨설팅 지원기업 모집 공고</strong>
-                                    <span>신청기간 : 2025-07-21 ~ 2025-09-30</span>
+                                    <strong>[경기] 하남시 2025년 스타트업 전문교육 스타트업을 위한 AI 활용 코딩 실무교육 신청...</strong>
+                                    <span>행사기간 : 2025-07-21 ~ 2025-07-29</span>
                                     <div class="btnBottom">
                                         <div class="right">
-                                            <button type="button" class="btn bgSecond btnIcoRt btnShortcut">사업안내</button>
+                                            <button type="button" class="btn bgSecond btnIcoRt btnShortcut">자세히보기</button>
                                         </div>
                                     </div>
                                 </li>
-                            </ul>
-                            <!--// lineBoxList04 -->
-                        </div>
-                        <!-- paging -->
-                        <div class="pagination">
-                            <div>
-                                <a class="pageNavi first" href="#"><span class="hide">처음</span></a>
-                                <a class="pageNavi prev" href="#">이전</a>
-                                <div class="pageLinks">
-                                    <a class="pageLink" href="#">1</a>
-                                    <span class="pageLink linkDot"></span>
-                                    <a class="pageLink" href="#">6</a>
-                                    <a class="pageLink" href="#">7</a>
-                                    <a class="pageLink curr" href="#" title="선택됨">8</a>
-                                    <a class="pageLink" href="#">9</a>
-                                    <a class="pageLink" href="#">10</a>
-                                    <a class="pageLink" href="#">11</a>
-                                    <span class="pageLink linkDot"></span>
-                                    <a class="pageLink" href="#">120</a>
-                                </div>
-                                <a class="pageNavi next" href="#">다음</a>
-                                <a class="pageNavi last" href="#"><span class="hide">마지막</span></a>
-                            </div>
-                        </div>
-                        <!-- //paging -->
+								<li>
+                                    <!-- badgeArea -->
+                                    <div class="badgeArea">
+                                        <div>
+                                            <span class="badge">경영</span>
+                                            <span class="badge">대구</span>
+                                            <span class="badge">첨단정보통신융합산업기술원</span>
+                                        </div>
+                                    </div>
+                                    <!--// badgeArea -->
+                                    <strong>[대구] CATIA V5 Surface 활용 교육</strong>
+                                    <span>행사기간 : 2025-07-28 ~ 2025-07-30</span>
+                                    <div class="btnBottom">
+                                        <div class="right">
+                                            <button type="button" class="btn bgSecond btnIcoRt btnShortcut">자세히보기</button>
+                                        </div>
+                                    </div>
+                                </li>
+							</ul>
+							<!--// lineBoxList05 -->
+							<!-- btnBottom -->
+							<div class="btnBottom">
+								<div>
+									<button type="button" class="btnBor btnMore">행사정보 더보기 (1/20)</button>
+								</div>
+							</div>
+							<!--// btnBottom -->
+						</div>
 					</div>
 					<!-- side -->
 					<div class="side">

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<!-- E : mobile -->
+<title>aaaa</title>
+<link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+<script type="text/javascript" src="../assets/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../assets/js/moment.min.js"></script>
+<script type="text/javascript" src="../assets/js/daterangepicker.min.js"></script>
+<script type="text/javascript" src="../assets/js/swiper.js"></script>
+<script type="text/javascript" src="../assets/js/common.js"></script>
+<!-- <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="js/selectivizr.js">
+ -->
+<!--[if lte IE 9]>
+</script>
+<![endif]-->
+</head>
+<body>
+<!-- skipNav -->
+<dl id="skipNav">
+	<dt>바로가기 메뉴</dt>
+	<dd><a href="#container">본문 바로가기</a></dd>
+	<dd><a href="#gnb">주메뉴 바로가기</a></dd>
+	<dd><a href="#footer">풋터 바로가기</a></dd>
+</dl>
+<!-- //skipNav -->
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<!-- inner -->
+		<div class="inner">
+			<div class="headTop">
+				<ul class="etc">
+					<li><a href="" class="btnIco btnHref xsm"><img src="../assets/images/common/ico-logo01.png" alt="">소담인프라</a></li>
+					<li><a href="" class="btnIco btnHref xsm"><img src="../assets/images/common/ico-logo02.svg" alt="">동행축제</a></li>
+				</ul>
+			</div>
+			<div class="headBody">
+				<div class="logo">
+					<a href=""><img src="../assets/images/common/logo.svg" alt="KODMA 판판대로"></a>
+				</div>
+				<ul class="util">
+					<li>
+						<button type="button" class="btnSearchForm">통합검색</button>
+						<div class="headSearch">
+							<div class="inner">
+								<strong>판판대로 통합검색</strong>
+								<div class="in">
+									<div class="sesarchInp">
+										<input type="text" placeholder="검색어를 입력해주세요." title="검색어">
+										<button type="button" class="btnHeadSearch"><span class="hide">검색</span></button>
+									</div>
+									<div class="searchInpBot">
+										<p>무엇이 궁금하세요?</p>
+										<ul>
+											<li><button type="button">#전담셀러</button></li>
+											<li><button type="button">#상세페이지</button></li>
+											<li><button type="button">#마트</button></li>
+											<li><button type="button">#브랜드k</button></li>
+										</ul>
+									</div>
+								</div>
+								<button type="button" class="btnCls btnHeaeSearCls"><span class="hide">닫기</span></button>
+							</div>
+						</div>
+					</li>
+					<!-- 로그인 전 -->
+					<li><a href="" class="btnLogin">로그인</a></li>
+					<li><a href="" class="btnJoin">회원가입</a></li>
+					<!--// 로그인 전 -->
+					<!-- 로그인 후 -->
+					<li><a href="" class="btnLogout">로그아웃</a></li>
+					<li><a href="" class="btnMypage">김판판님 마이페이지</a></li>
+					<!--// 로그인 후 -->
+					<li class="btnMobLi"><a href="" class="btnHam">전체메뉴</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--// inner -->
+		<!-- gnb -->
+		<div id="gnb">
+			<div class="inner">
+				<!-- gnbArea -->
+				<div class="gnbArea">
+					<ul class="gnbUl">
+						<li>
+							<a href="">운영기관 소개</a>
+							<div class="subDepth">
+								<p>운영기관 소개</p>
+								<ul>
+									<li><a href="">운영기관 소개</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="">사업공고 및 신청</a>
+							<div class="subDepth">
+								<p>사업공고 및 신청</p>
+								<ul>
+									<li><a href="">지원사업 안내</a></li>
+									<li>
+										<a href="">지원사업 공고</a>
+										<ul>
+											<li><a href="">지원사업 공고ㆍ신청</a></li>
+											<li><a href="">국내 판로지원사업 전체보기</a></li>
+											<li>
+												<a href="">지원사업 신청현황</a>
+												<ul>
+													<li><a href="">지원사업 신청/수정/제출 목록</a></li>
+													<li><a href="">지원사업 신청</a></li>
+													<li><a href="">지원사업 임시저장</a></li>
+													<li><a href="">지원사업 수정</a></li>
+													<li><a href="">지원사업 제출</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li><a href="">지원사업 공고</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="">홍보·알림</a>
+							<div class="subDepth">
+								<p>홍보·알림</p>
+								<ul>
+									<li><a href="">우수제품</a></li>
+									<li><a href="">우수사례</a></li>
+									<li>
+										<a href="">판로정보</a>
+										<ul>
+											<li><a href="">중소기업 행사정보</a></li>
+											<li><a href="">조달청 입찰정보</a></li>
+											<li><a href="">기타 연계정보 제공</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="">MRO 지원정보</a>
+										<ul>
+											<li><a href="">알기쉬운 사업안내</a></li>
+											<li><a href="">납품업체 검색</a></li>
+											<li><a href="">실태조사</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="">주요 서비스</a>
+							<div class="subDepth">
+								<p>주요 서비스</p>
+								<ul>
+									<li><a href="">플랫폼소개</a></li>
+									<li>
+										<a href="">소담인프라</a>
+										<ul>
+											<li>
+												<a href="">소담스퀘어 안내</a>
+												<ul>
+													<li><a href="">상암</a></li>
+													<li><a href="">당산</a></li>
+													<li><a href="">보라매</a></li>
+													<li><a href="">대구</a></li>
+													<li><a href="">부산</a></li>
+													<li><a href="">전주</a></li>
+													<li><a href="">강원</a></li>
+													<li><a href="">광주</a></li>
+													<li><a href="">충북</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="">소담상회 안내</a>
+												<ul>
+													<li><a href="">인사</a></li>
+													<li><a href="">서교</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="">판판소싱</a>
+										<ul>
+											<li>
+												<a href="">판판소싱 공고</a>
+												<ul>
+													<li><a href="">공고 보기</a></li>
+													<li><a href="">입점신청</a></li>
+												</ul>
+											</li>
+											<li><a href="">판판소싱 소개</a></li>
+										</ul>
+									</li>
+									<li><a href="" target="_blank">판판셀러</a></li>
+									<li><a href="" target="_blank">동행축제</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="">이용안내</a>
+							<div class="subDepth">
+								<p>이용안내</p>
+								<ul>
+									<li><a href="">공지사항</a></li>
+									<li><a href="">자주하는 질문</a></li>
+									<li><a href="">1:1 문의</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<!-- hover depth -->
+					<div class="in hoverDepth"></div>
+					<!--// hover depth -->
+				</div>
+				<!--// gnbArea -->
+				<div class="sitemapArea">
+					<button type="button" class="btnSitemap"><span class="hide">사이트맵</span></button>
+					<div id="sitemap">
+						<div class="inner">
+							<strong>판판대로 사이트맵</strong>
+							<!-- sitemap gnb -->
+							<div class="in"></div>
+							<!--// sitemap gnb -->
+							<button type="button" class="btnCls btnSitemapCls"><span class="hide">닫기</span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--// gnb -->
+		<!-- gnbMob -->
+		<div class="gnbMobArea">
+			<div class="gnbMob">
+				<div class="head">
+					<div class="headTop">
+						<ul class="etc">
+							<li><a href="" class="btnIco btnHref xsm"><img src="../assets/images/common/ico-logo01.png" alt="">소담인프라</a></li>
+							<li><a href="" class="btnIco btnHref xsm"><img src="../assets/images/common/ico-logo02.svg" alt="">동행축제</a></li>
+						</ul>
+					</div>
+					<div>
+						<p class="logTxt">로그인을 해주세요.</p>
+					</div>
+				</div>
+				<div class="body">
+					<div class="left">
+						<ul class="gnbNav">
+							<li class="curr"><a href="#mGnb01">운영기관 소개</a></li>
+							<li><a href="#mGnb02">사업공고 및 신청</a></li>
+							<li><a href="#mGnb03">홍보·알림</a></li>
+							<li><a href="#mGnb04">주요 서비스</a></li>
+							<li><a href="#mGnb05">이용안내</a></li>
+						</ul>
+					</div>
+					<div class="right">
+						<div class="in">
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="btnCls btnHamCls"><span class="hide">닫기</span></button>
+		</div>
+		<!--// gnbMob -->
+	</div>
+	<!--// header -->
+
+	<!-- container -->
+	<div id="container">
+		<!-- contents -->
+		<div class="contents">
+			<!-- lnb -->
+			<div id="lnb">
+				<div class="in">
+                    <div class="lnbTop">
+                        <div class="top">
+                            <h4>홍보·알림</h4>
+                        </div>
+                    </div>
+					<ul class="lnbUl">
+						<li><a href="">우수제품</a></li>
+						<li class="curr"><a href="">우수사례</a></li>
+						<li>
+							<a href="">판로정보</a>
+							<ul>
+								<li><a href="">중소기업 행사정보</a></li>
+								<li><a href="">조달청 입찰정보</a></li>
+								<li>
+                                    <a href="">기타 연계정보 제공</a>
+                                    <ul>
+                                        <li><a href="">유행·트렌드 정보</a></li>
+                                        <li><a href="">정책자료</a></li>
+                                        <li><a href="">연구자료</a></li>
+                                        <li><a href="">동향·통계자료</a></li>
+                                    </ul>
+                                </li>
+							</ul>
+						</li>
+						<li>
+							<a href="">MRO 지원정보</a>
+							<ul>
+								<li><a href="">알기쉬운 사업안내</a></li>
+								<li><a href="">납품업체 검색</a></li>
+								<li><a href="">실태조사</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--// lnb -->
+			<div class="inner">
+				<!-- breadcrumb -->
+				<div class="breadcrumb">
+					<ol>
+						<li class="home"><a href="">홈</a></li>
+						<li><a href="#"><strong>홍보·알림</strong></a></li>
+						<li><a href="#"><strong>우수사례</strong></a></li>
+					</ol>
+				</div>
+				<!-- breadcrumb -->
+				<!-- subTop -->
+				<div class="subTop v4">
+					<div class="titArea">
+						<h2>우수사례</h2>
+					</div>
+				</div>
+				<!--// subTop -->
+
+				<!-- subCont -->
+				<div class="subCont">
+					<div class="cont">
+						<!-- detailTable -->
+						<div class="detailTable">
+							<div class="detailTop borderB"> <!-- 아래 선이 있을 경우 borderB 클래스 추가 -->
+								<div class="subject">
+									<h3>국민건강에 도움을 주는 발효 전문 벤처기업(주)엔에스티바이오</h3>
+								</div>
+								<div class="detailInfo">
+									<div class="left">
+										<ul class="infoUl">
+											<li><strong>회사/대표</strong>1봉 120g~1.2kg 내외</li>
+											<li>
+                                                <strong>지원한 사업</strong>
+                                                <ul class="lineList">
+                                                    <li>(주)엔에스티바이오</li>
+                                                    <li>박은영 대표</li>
+                                                </ul>
+                                            </li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="detailCont">
+								<div>
+									<!-- imgWrap -->
+                                    <div class="imgWrap">
+                                        <img src="../assets/images/content/img-bestPractices-detail.png" alt="하단 내용을 참고해주세요">
+                                        <div class="hide">
+                                            <a href="https://nstbio.co.kr/">https://nstbio.co.kr/ QR코드</a>
+                                            <table>
+                                                <strong>기업을 만나다</strong>
+                                                <caption>업체명, 홈페이지, 주소, 연혁 항목으로 구성된 표</caption>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">업체명</th>
+                                                        <td>(주)엔에스티바이오</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">홈페이지</th>
+                                                        <td>www.nstbio.co.kr</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">주소</th>
+                                                        <td>경기도 김포시 양촌읍 고음달로 102</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">연혁</th>
+                                                        <td>
+                                                            <ul>
+                                                                <li>2013년 : 창업 및 제1,2공장설립</li>
+                                                                <li>2021년 : 대한민국 산업대상 제품 혁신상(2년 연속수상) 및 유산균발효 숙성노니 개발 8개국 수출 1.5천만불 달성</li>
+                                                                <li>현재 : 단독 박은영 대표 취임과 여성기업 인증</li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <strong>브랜드를 만나다</strong>
+                                            <p>
+                                                <span>브랜드의 시작과 브랜드 이야기</span>
+                                                오늘 내가 먹는 음식이 내일의 나를 만든다는 말이 있습니다. 건강한 음식이 10년, 20년 후 삶의 질을 바꿀 수 있다는 이 말의 의미가 최근 암이나 성인병의 증가 추세를 보면 더욱 더 공감됩니다. 
+                                                고객 스스로 품질 좋은 건강식품을 잘 선택하는 것도 중요하지만 기업 또한 꾸준한 연구개발과 위생적인 품질관리로 믿고 먹을 수 있는 제품을 만드는 것에 대한 사명감을 가져야 합니다. 
+                                                엔에스티바이오는 이러한 사명감으로 당사만의 유산균 발효 숙성 제조 기술을 접목하여 다양한 발효제품을 제조하고, 전 세계 널리 알려진 슈퍼푸드를 한국의 발효 기술로 재해석한 프리미엄 K-푸드로 글로벌 시장을 공략하고 있습니다. 
+                                                엔에스티바이오는 중소기업도 좋은 제품을 개발, 세계시장에 도전할 수 있다고 믿습니다.
+                                            </p>
+                                            <strong>대표를 만나다</strong>
+                                            <p>
+                                                <span>기업인으로서의 이야기</span>
+                                                엔에스티바이오는 생물전화작용을 활용한 유산균 발효 기술로 국민건 강에 도움을 드리는 발효 전문 벤처기업입니다. 그리고 건강식품 개발 프로젝트를 꾸준히 진행하고 있어요. 
+                                                저는 '정직'을 식품기업이 가져야 할 최고의 가치로 여기고 있습니다. '정직'에 대한 고객과의 약속을 지 키기 위해 원료 선정과 입고, 제조 그리고 유통까지 전 과정을깐깐하게 책임지고 관리하려 늘 노력하고 있고요. 
+                                                해외 파트너와의 협력을 통해 국가별 전략제품을 선정, 개발하여 해외 진출을 목표로 하고 있죠 전직 원이 전사적인 노력을 다해 K-푸드의 기능성과 우수성을 앞장서 알리 고 있으며 엔에스티바이오는 앞으로도 쭉 세계적 
+                                                기업으로 크게 성장 해나가고자 합니다.
+                                            </p>
+                                            <p>
+                                                66 푸드테크 시대를
+                                                Juice
+                                                열어가는 우리는
+                                                건강한 삶을 지향합니다.
+                                            </p>
+                                            <p>
+                                                <span>회사의 방향, 비전에 대한 이야기</span>
+                                                우리나라의 천연물뿐 아니라 세계적으로 알려진 슈퍼푸드를 발굴하고 다양한 기능성 연구를 통해 원료표준화 및 효능입증에 매진하고 있으며 발효 건강식품 및 기능성 원료개발에도 주력하고 있습니다. 
+                                                특히, 2017년부터 200여 가지의 파이토케미 칼이 풍부한 노니열매를 당사 관리하에 해외에서 유기농 재배, 
+                                                급속 냉동 후 우리나라로 들여오고 있으며 당사 전용 제조시설에서 독자적인 유산균 발효 기술을 접목하여 관능과 효능을 개선한 발효 노니 원액을 국내 생산하고 있습니다.
+                                                노니 원액은 글로벌 제품 개발단계부터 수출에 걸 림돌이 거의 없어요. 그리고 모두에게 잘 알려진 슈퍼푸드를 한국의 발효 기술 및 품질관리로 제품 화한 뒤 세계진출을 
+                                                목표로한 제품이었는데요. 저 희엔에스티바이오가 2019년 정부의 글로벌 소재 개발지원 프로젝트인 'BIG-3, 바이오헬스분야 지 원기업으로 선정되었습니다. 
+                                                그 후 글로벌 바이오 헬스소재로 발효 숙성 노니 추출액'의 다양한 기 능성을 연구하고 세계인 입맛에 딱 맞는 K-푸드 발효 건강음료로 '글로벌 발효 노니주스'를 개발 했죠. 
+                                                덕분에 미국을 비롯한 해외 8개국에 '역수 출하는 쾌거를 올렸습니다. 또한 고려대, 경희대, 강원대, 가톨릭대, 한양대와 산학협력을 통해 여러 정부과제를 수행하고 있습니다.
+                                            </p>
+                                            AllBIO
+                                            <strong>오로지 품질에 집중하다</strong>
+                                            <ul>
+                                                <li>건강을 위해 깐깐하게 깨끗한 토양에서 자란 유기농 노니</li>
+                                                <li>원재료 확인은 필수 물 한 방울 없이, 100% 착즙액</li>
+                                                <li>특유의 맛과 향을 개선 특허받은 노니 발효숙성 제조 공법으로 제조</li>
+                                            </ul>
+                                            <a href="https://nstbio.co.kr/">https://nstbio.co.kr/ QR코드</a>
+                                            <p>지금 바로 연예스타바이오의 대표상품 유기농 노니주스를 만나보세요</p>
+                                        </div>
+                                    </div>
+									<!--// imgWrap -->
+								</div>
+							</div>
+							<div class="detailNav">
+								<ul>
+									<li class="prev"><strong>이전글</strong><p>이전 글이 없습니다.</p></li>
+									<li class="next"><strong>다음글</strong><a href="">2025 대한민국 글로벌 소싱위크 참여기업 모집 공고</a></li>
+								</ul>
+							</div>
+						</div>
+						<!--// detailTable -->
+						<!-- btnBottom -->
+						<div class="btnBottom">
+							<div class="right">
+								<a href="" class="btn xlg">이전화면</a>
+								<a href="" class="btn bgPrima xlg">목록</a>
+							</div>
+						</div>
+						<!--// btnBottom -->
+					</div>
+				</div>
+				<!--// subCont -->
+			</div>
+		</div>
+		<!--// contents -->
+
+		<!-- quickmenu -->
+		<div id="quickmenu">
+			<div class="quick">
+				<ul>
+					<li class="m1"><a href="">공지사항</a></li>
+					<li class="m2"><a href="">위원신청</a></li>
+					<li class="m3"><a href="">상담하기</a></li>
+					<li class="m4"><a href="">원격지원</a></li>
+				</ul>
+				<button type="button" class="btnQuick"><span class="hide">퀵메뉴</span></button>
+			</div>
+			<button type="button" class="btnTop"><span class="hide">상단으로 이동</span></button>
+		</div>
+		<!--// quickmenu -->
+	</div>
+	<!--// container -->
+
+	<!-- footer -->
+	<footer id="footer">
+		<div class="inner">
+			<div class="footerCont">
+				<div class="left">
+					<div class="footerLogo">
+						<img src="../assets/images/common/logo-footer01.png" alt="중소벤처기업부">
+						<img src="../assets/images/common/logo-footer02.png" alt="한국중소벤처기업유통원">
+					</div>
+					<div class="fInfo">
+						<p class="addr">(07997) 서울특별시 양천구 목동동로309 <br class="mBlock">한국중소벤처기업유통원</p>
+						<ul class="cs">
+							<li><strong>대표자</strong>이태식</li>
+							<li><strong>사업자등록번호</strong><span>107-81-53660</span></li>
+						</ul>
+						<ul class="cs">
+							<li><strong>기능문의</strong><span>02-2656-9021</span></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="fLink">
+					<div class="familySite">
+						<div class="select">
+							<button type="button">관련사이트</button>
+							<ul>
+								<li class="curr"><a href="" target="_blank">판판셀러</a></li>
+								<li><a href="" target="_blank">전자계약시스템</a></li>
+								<li><a href="" target="_blank">평가관리시스템</a></li>
+								<li><a href="" target="_blank">공공구매종합정보망</a></li>
+								<li><a href="" target="_blank">브랜드K</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="menu">
+						<a href="#" class="btnIco">찾아오시는 길</a>
+					</div>
+					<div class="sns">
+						<a href="#" class="facebook" target="_blank"><span class="hide">페이스북</span></a>
+						<a href="#" class="blog" target="_blank"><span class="hide">블로그</span></a>
+					</div>
+				</div>
+			</div>
+			<div class="footerBottom">
+				<div class="fBot">
+					<div class="menu">
+						<a href="#"><strong>개인정보처리방침</strong></a>
+						<a href="#">이용안내</a>
+						<a href="#">이용약관</a>
+						<a href="#">저작권정책</a>
+						<a href="#">이메일무단수집거부</a>
+					</div>
+					<p class="copyright">Copyright 2025. 판판대로 All Rights Reserved.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--// footer -->
+</div>
+<!--// wrap -->
+</body>
+</html>

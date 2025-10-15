@@ -7,6 +7,7 @@
 @media (max-width: 767px){
     .pBlock { display: none; }
 }
+.swiper-notification {display:none;}
 
 /* 공통 */
 .borderB { margin-bottom: 0; padding-bottom: 16px; border-bottom: 1px solid #ccc; } 
@@ -261,11 +262,11 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 .pagination.mobile {display:none;}
 
 /* 탭 (Tab) */
-.tab .tabTit ul { display: inline-flex; align-items: stretch; gap: 5px; width: 100%; } 
-.tab .tabTit li a { display: block; padding: 10px 20px; border-radius: 50px; text-align: center; line-height: 18px; font-size: 15px; font-weight: 700; color: var(--color-gray-50); background-color: #F1F1F1; } 
-.tab .tabTit li.curr a { position: relative; color: var(--color-white); background-color: var(--color-secondary); } 
-.tab .tabTit li a:hover { background-color: var(--color-primary-20); }
-.tab .tabCont { margin-top: 40px; } 
+.tab > .tabTit ul { display: inline-flex; align-items: stretch; gap: 5px; width: 100%; } 
+.tab > .tabTit li a { display: block; padding: 10px 20px; border-radius: 50px; text-align: center; line-height: 18px; font-size: 15px; font-weight: 700; color: var(--color-gray-50); background-color: #F1F1F1; } 
+.tab > .tabTit li.curr a { position: relative; color: var(--color-white); background-color: var(--color-secondary); } 
+.tab > .tabTit li a:hover { background-color: var(--color-primary-20); }
+.tab > .tabCont { margin-top: 40px; } 
 .tab.tabFucn .tabCont > div { display: none; } 
 .tabRow { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; } 
 
@@ -340,6 +341,7 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 [class*="checkbox"]:not(.checkboxWrap) input[type=checkbox] + label::before { background-image: url(../images/component/ico-check-checkbox-off.svg); }
 [class*="checkbox"]:not(.checkboxWrap) input[type=checkbox]:checked + label::before { background-image: url(../images/component/ico-check-checkbox-on.svg); }
 [class*="checkbox"]:not(.checkboxWrap) input[type=checkbox]:disabled + label::before { background-image: url(../images/component/ico-check-checkbox-disabled.svg); }
+[class*="checkbox"]:not(.checkboxWrap) input[type=checkbox]:checked:disabled + label::before { background-image: url(../images/component/ico-check-checkbox-checked-disabled.svg); }
 .tableChk .checkbox { padding-left: 0; } 
 .tableChk .checkbox label { display: block; position: relative; margin: 0 auto; width: 18px; height: 22px; text-indent: -9999px; }
 
@@ -348,6 +350,7 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 .checkbox input[type=radio] + label::before { background-image: url(../images/component/ico-check-radio-off.svg); } 
 .checkbox input[type=radio]:checked + label::before { background-image: url(../images/component/ico-check-radio-on.svg); } 
 .checkbox input[type=radio]:disabled + label::before { background-image: url(../images/component/ico-check-radio-disabled.svg); } 
+.checkbox input[type=radio]:checked:disabled + label::before { background-image: url(../images/component/ico-check-radio-checked-disabled.svg); } 
 .checkbox.only input + label { padding-left: 20px; text-indent: -9999px; }
 
 /* 셀렉트 (Select) */
@@ -999,9 +1002,22 @@ v9 고객지원
 .lineBoxList .bottomArea .btnBox .btnTxt:before {top:calc(50% - 10px); left:calc(50% - 10px); width:20px; height:20px;}
 .lineBoxList .bottomArea .btnBox .btnTxt.view,
 .lineBoxList .bottomArea .btnBox .btnTxt.download {padding-left:30px; width:30px; height:30px;}
+/* 중소기업행사정보, 조달청입찰정보 */
+.lineBoxList05 {display:flex; flex-wrap:wrap; gap:24px;}
+.lineBoxList05 li {padding:30px; border:1px solid #ccc; border-radius:12px; width:calc(100%/2 - 12px);}
+.lineBoxList05 li .badgeArea {margin-bottom:10px;}
+.lineBoxList05 li > strong {display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient: vertical; overflow:hidden; margin-bottom:27px; height:54px; text-overflow:ellipsis; line-height:1.3; font-size:21px; font-weight:600;}
+.lineBoxList05 li > span {display:block; line-height:1.3; font-size:15px; color:#556E96; font-weight:600;}
+.lineBoxList05 .btnBottom {margin-top:16px;}
+.lineBoxList05 .btnBottom .btn {width:185px;}
+@media(max-width:900px) {
+    .lineBoxList05 li {width:100%;}
+}
 @media(max-width:767px) {
     .lineBoxList > li {width:100%;}
     .lineBoxList .bottomArea .btn {max-width:100%;}
+    .lineBoxList05 li {padding:16px;}
+    .lineBoxList05 li > strong {height:49px; font-size:19px;}
 }
 
 /* MRO 지원정보 */
@@ -1069,6 +1085,71 @@ v9 고객지원
     .mroInfoArea .overview {background-image:none}
 }
 
+/*** 주요서비스 ***/
+/* 소담인프라 */
+.inBox01 .inImgWrap {display:flex; gap:12px; margin-top:24px;}
+.inBox01 .inImgWrap > div {position:relative; overflow:hidden; aspect-ratio: 650/380;}
+.inBox01 .inImgWrap > div:first-child {border-radius: 20px 0 0 20px;}
+.inBox01 .inImgWrap > div:last-child {border-radius: 0 20px 20px 0;}
+.inBox01 .inImgWrap > div img {width:100%; height:100%; object-fit: cover;}
+.inBox01 .inImgWrap p {position:absolute; left:5%; bottom:8%; line-height:1; font-size:30px; color:#F6FF00; font-weight:300;}
+.inBox01 .inImgWrap p span {display:block; margin-bottom:16px; line-height:1; font-size:19px; color:#fff; font-weight:700;}
+.sodamLineBox {padding:30px 40px; border:1px solid #ccc; border-radius:16px;}
+.sodamLineBox .tit {display:block; margin-bottom:10px; line-height:1.3; font-size:21px; font-weight:700;}
+.sodamLineBox .txt {display:block; line-height:1.3; color:var(--color-gray-70);}
+.sodamTitArea {display:flex; align-items:center; flex-wrap:wrap; gap:10px; margin:40px 0 10px;}
+.sodamTitArea:first-child {margin-top:0;}
+.sodamTitArea .left {display:flex; align-items:center; flex-wrap:wrap; gap:10px;}
+.sodamTitArea .left .location {display:flex; align-items:center; gap:0 6px; position:relative; margin-left:10px; padding-left:20px; line-height:1; color:var(--color-gray-70); font-weight:700;}
+.sodamTitArea .left .location:before {position: absolute; left:0; top:calc(50% - 8px); content:""; width:1px; height:16px; background:#ccc}
+.sodamTitArea .right {margin-left:auto;}
+.sodamTitArea .dotTit {display:block; position:relative; padding-left:10px; line-height:1.3; font-size:19px; font-weight:700;}
+.sodamTitArea .dotTit:before {position:absolute; left:0; top:10px; content:""; border-radius:50%; width:4px; height:4px; background:var(--color-base);}
+.sodamTitArea .txt {font-size:15px;}
+.benefitList {display:flex; flex-wrap: wrap; gap:12px 20px;}
+.benefitList li {display:flex; align-items:center; gap:0 16px; padding:18px 16px; border-radius:8px; width:calc(100%/4 - 15px); line-height:1.3; color:var(--color-black); font-weight:600; background-color:var(--color-secondary-5)}
+.sodamImgTab {display:flex; gap:40px;}
+.sodamImgTab .tabTit {order:2; width:calc(33% - 20px);}
+.sodamImgTab .tabTit ul {display:flex; flex-direction: column; gap:0;}
+.sodamImgTab .tabTit li {border-bottom:1px solid #ccc;}
+.sodamImgTab .tabTit li a {display:flex; flex-direction:column; justify-content: center; padding:0 20px; border-radius:0; min-height:94px; line-height:1.3; font-size:19px; color:var(--color-base); font-weight:700; background-color:#fff;}
+.sodamImgTab .tabTit li a:hover {background-color:#F0F9F9}
+.sodamImgTab .tabTit li a span {display:block; margin-top:5px; line-height:1.3;font-size:15px; color:var(--color-gray-70); font-weight:400}
+.sodamImgTab .tabTit li.curr a {border:2px solid var(--color-primary); color:var(--color-base); background:#F0F9F9}
+.sodamImgTab .tabCont {width:calc(67% - 20px);}
+.sodamImgTab .tabCont > div {height:100%;}
+.imgSwiper {position:relative; overflow:hidden; height:100%;}
+.imgSwiper img {width:100%; height:100%; object-fit: cover;}
+.imgSwiper .swiper-button-next, 
+.imgSwiper .swiper-button-prev {top:initial; bottom:0; width:40px; height:40px; text-indent:-9999px; background:var(--color-black); z-index: 30;}
+.imgSwiper .swiper-button-next {right:0;} 
+.imgSwiper .swiper-button-prev {left:initial; right:40px;} 
+.imgSwiper .swiper-button-prev.swiper-button-disabled,
+.imgSwiper .swiper-button-next.swiper-button-disabled {opacity: 0.4;}
+.imgSwiper .swiper-button-lock {display:flex;}
+.imgSwiper .swiper-button-prev:after,
+.imgSwiper .swiper-button-next:after {content:""; width:16px; height:16px; background:url("../images/content/ico-btn-swiper-prev-arr-white.svg") no-repeat center}
+.imgSwiper .swiper-button-next:after {transform: rotate(180deg);}
+.sodamLineList {display:flex; gap:16px;}
+.sodamLineList li {display:flex; align-items:center; gap: 0 30px; padding:0 30px; border:1px solid #ccc; border-radius:8px; width:calc(100%/4 - 12px); min-height:130px; line-height:1; font-size:19px;}
+.sodamLineList li img {width:60px; height:60px;}
+.sodamLineList li b {display:inline-block; font-size:30px; font-weight:700;}
+.sodamLineList li span {display:block; margin-top:10px; line-height:1; font-size:19px; color:var(--color-gray-70); font-weight:700;}
+.sodamReview {display:flex; gap:16px;}
+.sodamReview li {width:calc(100%/4 - 12px); border-radius:16px; overflow:hidden; aspect-ratio: 312/280;}
+.sodamReview li a {display:flex; justify-content: center; align-items: center; position:relative; object-fit: cover;}
+.sodamReview li a .more {position:absolute; top:24px; right:24px; display:block; padding:9px; border-radius: 4px; line-height:1.3; font-size:13px; color:var(--color-white); font-weight:600; background:var(--color-black)}
+.sodamReview li a .txtBox {position:absolute; bottom:24px; left:0; padding:0 24px}
+.sodamReview li a .txtBox span {display:block; margin-bottom:5px; line-height: 1.3; font-size: 13px; color:#FFFB82; font-weight: 700;}
+.sodamReview li a .txtBox strong {display:-webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp:2; overflow:hidden; text-overflow:ellipsis; height:50px; line-height: 1.3; font-size: 19px; color:var(--color-white); font-weight: 600;}
+.sodamSprtPrgrmInfo {display:flex; gap:16px;}
+.sodamSprtPrgrmInfo li {width:calc(100%/4 - 12px); border:1px solid #ccc; border-radius:16px; overflow:hidden; aspect-ratio: 312/260;}
+.sodamSprtPrgrmInfo li a {display:flex; flex-direction: column; gap:50px 0; padding:30px;}
+.sodamSprtPrgrmInfo li a strong {display:-webkit-box; position:relative; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow:hidden; padding-bottom:20px; text-overflow:ellipsis; height:54px; line-height:1.3; font-size:21px; font-weight:600; box-sizing:content-box}
+.sodamSprtPrgrmInfo li a strong:after {display:-webkit-box; position:relative; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow:hidden;position:absolute; left:0; bottom:0; content: ""; width:36px; height:2px; background:var(--color-black)}
+.sodamSprtPrgrmInfo li a .btm p {display:-webkit-box; position:relative; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow:hidden; height:38px; line-height:1.3; font-size:15px; color:var(--color-gray-70)}
+.sodamSprtPrgrmInfo li a .btm span {display:block; position:relative; margin-top:20px; line-height:1.3; font-size:15px; color:var(--color-gray-70); font-weight:700;}
+
 /*** 이용안내 ***/
 /* 공지사항 */
 /* 목록 */
@@ -1094,11 +1175,16 @@ v9 고객지원
 .detailTop .subject { display: flex; gap: 22px; margin-bottom: 32px; } 
 .detailTop .subject h3 {line-height:1.3; font-size:21px; font-weight:600;}
 .detailTop .subject .badge { flex-shrink: 0; margin: 5px 0; } 
+.detailTop.borderB {padding-bottom:40px;}
 .detailInfo { display: flex; flex-wrap: wrap; align-items: flex-end; } 
 .infoUl > li { display: flex; align-items: center; color: #555; } 
 .infoUl > li + li { margin-top: 10px; } 
 .infoUl > li strong { min-width: 120px; font-size: 15px; color: var(--color-base); } 
-.detailInfo .right { margin-left: auto; } 
+.detailInfo .right { margin-left: auto; }
+.detailInfo .lineList {display:flex; flex-wrap:wrap;} 
+.detailInfo .lineList > * {position:relative;}
+.detailInfo .lineList > * + * {margin-left:10px; padding-left:10px}
+.detailInfo .lineList > * + *:before {position:absolute; left:0; top:calc(50% - 5px); content:""; width:1px; height:10px; background:#ccc;}
 .shareList { display: flex; align-items: center; gap: 10px; } 
 .shareList > li > :is(a, button) { display: flex; border: 1px solid var(--color-gray-20); border-radius: 100%; width: 40px; height: 40px; } 
 .shareList > li > .shareFa { background: url(../images/content/ico-share01.png) no-repeat center / 24px; } 
@@ -1117,6 +1203,7 @@ v9 고객지원
 .attachDo { background: url(../images/content/ico-attach-down.png) no-repeat center / 20px; } 
 .attachDo.lg { background-size: 30px; } 
 .detailTable .detailCont { padding: 50px 60px; } 
+.detailTable .detailCont .imgWrap {display:flex; justify-content: center; } 
 .detailNav { margin-top: 40px; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; } 
 .detailNav ul { display: flex; } 
 .detailNav ul > li { display: flex; align-items: center; gap: 16px; padding: 12px 30px; width: 50%; color: #555; } 
