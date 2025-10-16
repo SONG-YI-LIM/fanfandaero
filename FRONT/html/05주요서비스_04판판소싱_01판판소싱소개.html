@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<!-- E : mobile -->
+<title>aaaa</title>
+<link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+<script type="text/javascript" src="../assets/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../assets/js/moment.min.js"></script>
+<script type="text/javascript" src="../assets/js/daterangepicker.min.js"></script>
+<script type="text/javascript" src="../assets/js/swiper.js"></script>
+<script type="text/javascript" src="../assets/js/common.js"></script>
+<!-- <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="js/selectivizr.js">
+ -->
+<!--[if lte IE 9]>
+</script>
+<![endif]-->
+</head>
+<body>
+<!-- skipNav -->
+<dl id="skipNav">
+	<dt>바로가기 메뉴</dt>
+	<dd><a href="#container">본문 바로가기</a></dd>
+	<dd><a href="#gnb">주메뉴 바로가기</a></dd>
+	<dd><a href="#footer">풋터 바로가기</a></dd>
+</dl>
+<!-- //skipNav -->
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<!-- inner -->
+		<div class="inner">
+			<div class="headTop">
+				<ul class="etc">
+					<li><a href="" class="btnIco btnHref xsm"><img src="../assets/images/common/ico-logo01.png" alt="">소담인프라</a></li>
+					<li><a href="" class="btnIco btnHref xsm"><img src="../assets/images/common/ico-logo02.svg" alt="">동행축제</a></li>
+				</ul>
+			</div>
+			<div class="headBody">
+				<div class="logo">
+					<a href=""><img src="../assets/images/common/logo.svg" alt="KODMA 판판대로"></a>
+				</div>
+				<ul class="util">
+					<li>
+						<button type="button" class="btnSearchForm">통합검색</button>
+						<div class="headSearch">
+							<div class="inner">
+								<strong>판판대로 통합검색</strong>
+								<div class="in">
+									<div class="sesarchInp">
+										<input type="text" placeholder="검색어를 입력해주세요." title="검색어">
+										<button type="button" class="btnHeadSearch"><span class="hide">검색</span></button>
+									</div>
+									<div class="searchInpBot">
+										<p>무엇이 궁금하세요?</p>
+										<ul>
+											<li><button type="button">#전담셀러</button></li>
+											<li><button type="button">#상세페이지</button></li>
+											<li><button type="button">#마트</button></li>
+											<li><button type="button">#브랜드k</button></li>
+										</ul>
+									</div>
+								</div>
+								<button type="button" class="btnCls btnHeaeSearCls"><span class="hide">닫기</span></button>
+							</div>
+						</div>
+					</li>
+					<!-- 로그인 전 -->
+					<li><a href="" class="btnLogin">로그인</a></li>
+					<li><a href="" class="btnJoin">회원가입</a></li>
+					<!--// 로그인 전 -->
+					<!-- 로그인 후 -->
+					<li><a href="" class="btnLogout">로그아웃</a></li>
+					<li><a href="" class="btnMypage">김판판님 마이페이지</a></li>
+					<!--// 로그인 후 -->
+					<li class="btnMobLi"><a href="" class="btnHam">전체메뉴</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--// inner -->
+		<!-- gnb -->
+		<div id="gnb">
+			<div class="inner">
+				<!-- gnbArea -->
+				<div class="gnbArea">
+					<ul class="gnbUl">
+						<li>
+							<a href="">운영기관 소개</a>
+							<div class="subDepth">
+								<p>운영기관 소개</p>
+								<ul>
+									<li><a href="">운영기관 소개</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="">사업공고 및 신청</a>
+							<div class="subDepth">
+								<p>사업공고 및 신청</p>
+								<ul>
+									<li><a href="">지원사업 안내</a></li>
+									<li>
+										<a href="">지원사업 공고</a>
+										<ul>
+											<li><a href="">지원사업 공고ㆍ신청</a></li>
+											<li><a href="">국내 판로지원사업 전체보기</a></li>
+											<li>
+												<a href="">지원사업 신청현황</a>
+												<ul>
+													<li><a href="">지원사업 신청/수정/제출 목록</a></li>
+													<li><a href="">지원사업 신청</a></li>
+													<li><a href="">지원사업 임시저장</a></li>
+													<li><a href="">지원사업 수정</a></li>
+													<li><a href="">지원사업 제출</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li><a href="">지원사업 공고</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="">홍보·알림</a>
+							<div class="subDepth">
+								<p>홍보·알림</p>
+								<ul>
+									<li><a href="">우수제품</a></li>
+									<li><a href="">우수사례</a></li>
+									<li>
+										<a href="">판로정보</a>
+										<ul>
+											<li><a href="">중소기업 행사정보</a></li>
+											<li><a href="">조달청 입찰정보</a></li>
+											<li><a href="">기타 연계정보 제공</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="">MRO 지원정보</a>
+										<ul>
+											<li><a href="">알기쉬운 사업안내</a></li>
+											<li><a href="">납품업체 검색</a></li>
+											<li><a href="">실태조사</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="">주요 서비스</a>
+							<div class="subDepth">
+								<p>주요 서비스</p>
+								<ul>
+									<li><a href="">플랫폼소개</a></li>
+									<li>
+										<a href="">소담인프라</a>
+										<ul>
+											<li>
+												<a href="">소담스퀘어 안내</a>
+												<ul>
+													<li><a href="">상암</a></li>
+													<li><a href="">당산</a></li>
+													<li><a href="">보라매</a></li>
+													<li><a href="">대구</a></li>
+													<li><a href="">부산</a></li>
+													<li><a href="">전주</a></li>
+													<li><a href="">강원</a></li>
+													<li><a href="">광주</a></li>
+													<li><a href="">충북</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="">소담상회 안내</a>
+												<ul>
+													<li><a href="">인사</a></li>
+													<li><a href="">서교</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="">판판소싱</a>
+										<ul>
+											<li>
+												<a href="">판판소싱 공고</a>
+												<ul>
+													<li><a href="">공고 보기</a></li>
+													<li><a href="">입점신청</a></li>
+												</ul>
+											</li>
+											<li><a href="">판판소싱 소개</a></li>
+										</ul>
+									</li>
+									<li><a href="" target="_blank">판판셀러</a></li>
+									<li><a href="" target="_blank">동행축제</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="">이용안내</a>
+							<div class="subDepth">
+								<p>이용안내</p>
+								<ul>
+									<li><a href="">공지사항</a></li>
+									<li><a href="">자주하는 질문</a></li>
+									<li><a href="">1:1 문의</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<!-- hover depth -->
+					<div class="in hoverDepth"></div>
+					<!--// hover depth -->
+				</div>
+				<!--// gnbArea -->
+				<div class="sitemapArea">
+					<button type="button" class="btnSitemap"><span class="hide">사이트맵</span></button>
+					<div id="sitemap">
+						<div class="inner">
+							<strong>판판대로 사이트맵</strong>
+							<!-- sitemap gnb -->
+							<div class="in"></div>
+							<!--// sitemap gnb -->
+							<button type="button" class="btnCls btnSitemapCls"><span class="hide">닫기</span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--// gnb -->
+		<!-- gnbMob -->
+		<div class="gnbMobArea">
+			<div class="gnbMob">
+				<div class="head">
+					<div class="headTop">
+						<ul class="etc">
+							<li><a href="" class="btnIco btnHref xsm"><img src="../assets/images/common/ico-logo01.png" alt="">소담인프라</a></li>
+							<li><a href="" class="btnIco btnHref xsm"><img src="../assets/images/common/ico-logo02.svg" alt="">동행축제</a></li>
+						</ul>
+					</div>
+					<div>
+						<p class="logTxt">로그인을 해주세요.</p>
+					</div>
+				</div>
+				<div class="body">
+					<div class="left">
+						<ul class="gnbNav">
+							<li class="curr"><a href="#mGnb01">운영기관 소개</a></li>
+							<li><a href="#mGnb02">사업공고 및 신청</a></li>
+							<li><a href="#mGnb03">홍보·알림</a></li>
+							<li><a href="#mGnb04">주요 서비스</a></li>
+							<li><a href="#mGnb05">이용안내</a></li>
+						</ul>
+					</div>
+					<div class="right">
+						<div class="in">
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="btnCls btnHamCls"><span class="hide">닫기</span></button>
+		</div>
+		<!--// gnbMob -->
+	</div>
+	<!--// header -->
+
+	<!-- container -->
+	<div id="container">
+		<!-- contents -->
+		<div class="contents">
+			<!-- lnb -->
+			<div id="lnb">
+				<div class="in">
+                    <div class="lnbTop">
+                        <div class="top">
+                            <h4>주요 서비스</h4>
+                        </div>
+                    </div>
+					<ul class="lnbUl">
+						<li>
+                            <a href="">회원정보</a>
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                            </ul>
+                        </li>
+						<li>
+                            <a href="">지원사업 신청내역</a>
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                            </ul>
+                        </li>
+                        </li>
+						<li>
+                            <a href="">수행기관 공모 신청내역</a>
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                            </ul>
+                        </li>
+						<li>
+                            <a href="">자가진단 신청내역</a>
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                            </ul>
+                        </li>
+						<li>
+                            <a href="">상품소싱 신청내역</a>
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                            </ul>
+                        </li>
+						<li>
+                            <a href="">상품 관리</a>
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                            </ul>
+                        </li>
+						<li>
+                            <a href="">문의/알림</a>
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                            </ul>
+                        </li>
+						<li>
+                            <a href="">MRO</a>
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                            </ul>
+                        </li>
+					</ul>
+				</div>
+			</div>
+			<!--// lnb -->
+			<div class="inner">
+				<!-- breadcrumb -->
+				<div class="breadcrumb">
+					<ol>
+						<li class="home"><a href="">홈</a></li>
+						<li><a href="#"><strong>주요 서비스</strong></a></li>
+						<li><a href="#"><strong>판판소싱</strong></a></li>
+					</ol>
+				</div>
+				<!-- breadcrumb -->
+				<!-- subTop -->
+				<div class="subTop v5">
+					<div class="titArea">
+                        <div class="left">
+                            <h2>판판소싱 소개</h2>
+                        </div>
+					</div>
+				</div>
+				<!--// subTop -->
+
+				<!-- subCont --> 
+				<div class="subCont">
+					<div class="cont">
+                        <div class="section">
+<style>
+.introTxt { display: flex; flex-direction: column; gap: 10px; }
+.introTxt p { line-height: 1.3; font-size: 21px; font-weight: 300; color: var(--color-base); }
+.introTxt .color01 { font-weight: 700; color: #4E6CB6; }
+.introTxt .color02 { font-weight: 700; color: #1A7C75; }
+.introTxt h3 { line-height: 1.3; font-size: 30px; }
+.sourcing { display: flex; flex-wrap: wrap; gap: 40px; margin-top: 24px; }
+.sourcing .lt { flex: 0 0 610px; }
+.sourcing .lt > ol { display: flex; flex-direction: column; }
+.sourcing .lt > ol > li { padding: 30px; border-top: 1px solid #ccc; }
+.sourcing .lt dl { display: flex; flex-direction: column; gap: 16px; }
+.sourcing .lt dl dd { display: flex; flex-direction: column; gap: 16px; padding-left: 55px; }
+.sourcing .lt .num { display: flex; gap: 5px; }
+.sourcing .lt .num span { position: relative; width: 50px; text-indent: -9999px; }
+.sourcing .lt .num span:before { content: ""; position: absolute; top: 0; left: 0; width: 50px; height: 38px; }
+.sourcing .lt .sourcing01 .num span:before { background: url(../assets/images/content/img-platform01.svg) no-repeat center/100% auto; }
+.sourcing .lt .sourcing02 .num span:before { background: url(../assets/images/content/img-platform02.svg) no-repeat center/100% auto; }
+.sourcing .lt .num p { font-size: 19px; font-weight: 700; color: var(--color-base); }
+.sourcing .lt ol ol { display: flex; flex-wrap: wrap; gap: 5px 0; }
+.sourcing .lt ol ol li { position: relative; padding: 0 16px; margin-right: 34px; border-radius: 60px; line-height: 24px; font-size: 13px; font-weight: 700; color: var(--color-gray-70); background: #EBEBEB; }
+.sourcing .lt ol ol li:after { content: ""; position: absolute; top: 5px; right: -24px; width: 14px; height: 14px; background: url(../assets/images/content/ico-sourcing-arrow.png) no-repeat center/100% auto; }
+.sourcing .lt ol ol li:last-child::after { display: none; }
+.sourcing .lt .sourcing01 ol li:last-child { color: #4E6CB6; }
+.sourcing .lt .sourcing02 ol li:last-child { color: #229068; }
+.sourcing .lt dl dl { display: flex; gap: 10px; }
+.sourcing .lt .merit { display: flex; gap: 10px; }
+.sourcing .lt .merit span { flex-shrink: 0; display: flex; align-items: center; justify-content: center; border-radius: 50%; width: 50px; height: 50px; line-height: 1.2; font-size: 13px; font-weight: 700; color: var(--color-white); }
+.sourcing .lt .sourcing01 .merit span { background: #4E6CB6; }
+.sourcing .lt .sourcing02 .merit span { background: #229068; }
+.sourcing .lt .merit ul li { line-height: 1.5; font-size: 17px; color: var(--color-base); }
+.sourcing .lt .merit ul li + li { margin-top: 3px; }
+.sourcing .rt { flex: 1; }
+
+.companyTxt { margin: 16px 0 32px; line-height: 1.3; font-size: 17px; color: var(--color-base); }
+.companyList ul { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px 0; }
+.companyList ul li { display: flex; align-items: center; justify-content: center; position: relative; height: 44px; }
+.companyList ul li:after { content: ""; position: absolute; top: 0; right: 0; width: 1px; height: 100%; background: #ccc; }
+@media (max-width: 1160px) {
+    .sourcing { flex-direction: column; gap: 40px; }
+    .sourcing .lt { flex: none; }
+
+    .companyList ul { grid-template-columns: repeat(4, 1fr); }
+} 
+@media (max-width: 767px) {
+    .introTxt p { font-size: 17px; }
+    .introTxt h3 { font-size: 23px; }
+    .sourcing .lt > ol > li { padding: 16px 0; }
+    .sourcing .lt .merit ul li { font-size: 15px; }
+    
+    .companyTxt { font-size: 15px; }
+    .companyList ul { grid-template-columns: repeat(3, 1fr); }
+    .companyList img { width: 50%; }
+}
+</style>
+                            <div class="introTxt">
+                                <p>쇼핑몰에 입점 시킬 <strong class="color01">상품을 찾으시는 유통MD</strong>, 상품을 민간 유통사에 직접 <strong class="color02">제안을 희망하시는 사업자님</strong></p>
+                                <h3>판판소싱에서 모집 및 입점하세요!</h3>
+                            </div>
+                            <div class="sourcing">
+                                <div class="lt">
+                                    <ol>
+                                        <li>
+                                            <dl class="sourcing01">
+                                                <dt class="num">
+                                                    <span>01</span>
+                                                    <p>소싱사 민간 유통 MD</p>
+                                                </dt>
+                                                <dd>
+                                                    <ol>
+                                                        <li>MD회원 가입</li>
+                                                        <li>마이페이지 들어가기</li>
+                                                        <li>판판소싱 게시 신청</li>
+                                                        <li>희망 업체 모집</li>
+                                                    </ol>
+                                                    <div class="merit">
+                                                        <span>활용<br>장점</span>
+                                                        <ul>
+                                                            <li>모집공고부터 상품 선정까지 <strong>ONE-STOP 서비스</strong> 제공!</li>
+                                                            <li>원활한 공고 홍보를 위한 <strong>메일링 서비스 무료</strong> 제공!</li>
+                                                        </ul>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl class="sourcing02">
+                                                <dt class="num">
+                                                    <span>02</span>
+                                                    <p>상품 제안 희망 업체</p>
+                                                </dt>
+                                                <dd>
+                                                    <ol>
+                                                        <li>기업회원 가입</li>
+                                                        <li>판판소싱 들어가기</li>
+                                                        <li>판판소싱 입점 신청</li>
+                                                        <li>유통사 협의 및 입점</li>
+                                                    </ol>
+                                                    <div class="merit">
+                                                        <span>활용<br>장점</span>
+                                                        <ul>
+                                                            <li>민간 유통사에 <strong>직접 제안 가능</strong></li>
+                                                            <li>편리한 입점 신청 기능을 통해 <strong>판로개척을 한 곳</strong>에서!</li>
+                                                        </ul>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div class="rt">
+                                    <img src="../assets/images/content/img-sourcing.png" alt="판판소싱 '우리 몰에 입점 시킬 상품 소싱 어디서 하지?' '우리 상품 민간유통사에 직접 제안하는 방법 없나?'">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <h3>주요 민간 유통사</h3>
+                            <p class="companyTxt">신세계, 롯데홈쇼핑, 공영쇼핑, 옥션, 이마트 등 지금까지 97개사 이상 유통업체가 참여중입니다!</p>
+                            <div class="companyList">
+                                <ul>
+                                    <li>
+                                        <img src="../assets/images/content/img-sourcing-company01.png" alt="NHN COMMERCE">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/images/content/img-sourcing-company02.png" alt="공영쇼핑">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/images/content/img-sourcing-company03.png" alt="LOTTE ON">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/images/content/img-sourcing-company04.png" alt="롯데홈쇼핑">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/images/content/img-sourcing-company05.png" alt="멸치쇼핑">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/images/content/img-sourcing-company06.png" alt="NAVER SmartStore">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/images/content/img-sourcing-company07.png" alt="SHINSEGAE">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/images/content/img-sourcing-company08.png" alt="11번가">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/images/content/img-sourcing-company09.png" alt="CJONSTYLE">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/images/content/img-sourcing-company10.png" alt="AK PLAZA">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/images/content/img-sourcing-company11.png" alt="SK 스토아">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/images/content/img-sourcing-company12.png" alt="wadiz">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/images/content/img-sourcing-company13.png" alt="OASiS">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/images/content/img-sourcing-company14.png" alt="AUCTION.">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/images/content/img-sourcing-company15.png" alt="emart">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/images/content/img-sourcing-company16.png" alt="gmarket">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/images/content/img-sourcing-company17.png" alt="kakao commerce">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/images/content/img-sourcing-company18.png" alt="coupang">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/images/content/img-sourcing-company19.png" alt="Hmall">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/images/content/img-sourcing-company20.png" alt="Homeplus">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+					</div>
+				</div>
+				<!--// subCont -->
+			</div>
+		</div>
+		<!--// contents -->
+
+		<!-- quickmenu -->
+		<div id="quickmenu">
+			<div class="quick">
+				<ul>
+					<li class="m1"><a href="">공지사항</a></li>
+					<li class="m2"><a href="">위원신청</a></li>
+					<li class="m3"><a href="">상담하기</a></li>
+					<li class="m4"><a href="">원격지원</a></li>
+				</ul>
+				<button type="button" class="btnQuick"><span class="hide">퀵메뉴</span></button>
+			</div>
+			<button type="button" class="btnTop"><span class="hide">상단으로 이동</span></button>
+		</div>
+		<!--// quickmenu -->
+	</div>
+	<!--// container -->
+
+	<!-- footer -->
+	<footer id="footer">
+		<div class="inner">
+			<div class="footerCont">
+				<div class="left">
+					<div class="footerLogo">
+						<img src="../assets/images/common/logo-footer01.png" alt="중소벤처기업부">
+						<img src="../assets/images/common/logo-footer02.png" alt="한국중소벤처기업유통원">
+					</div>
+					<div class="fInfo">
+						<p class="addr">(07997) 서울특별시 양천구 목동동로309 <br class="mBlock">한국중소벤처기업유통원</p>
+						<ul class="cs">
+							<li><strong>대표자</strong>이태식</li>
+							<li><strong>사업자등록번호</strong><span>107-81-53660</span></li>
+						</ul>
+						<ul class="cs">
+							<li><strong>기능문의</strong><span>02-2656-9021</span></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="fLink">
+					<div class="familySite">
+						<div class="select">
+							<button type="button">관련사이트</button>
+							<ul>
+								<li class="curr"><a href="" target="_blank">판판셀러</a></li>
+								<li><a href="" target="_blank">전자계약시스템</a></li>
+								<li><a href="" target="_blank">평가관리시스템</a></li>
+								<li><a href="" target="_blank">공공구매종합정보망</a></li>
+								<li><a href="" target="_blank">브랜드K</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="menu">
+						<a href="#" class="btnIco">찾아오시는 길</a>
+					</div>
+					<div class="sns">
+						<a href="#" class="facebook" target="_blank"><span class="hide">페이스북</span></a>
+						<a href="#" class="blog" target="_blank"><span class="hide">블로그</span></a>
+					</div>
+				</div>
+			</div>
+			<div class="footerBottom">
+				<div class="fBot">
+					<div class="menu">
+						<a href="#"><strong>개인정보처리방침</strong></a>
+						<a href="#">이용안내</a>
+						<a href="#">이용약관</a>
+						<a href="#">저작권정책</a>
+						<a href="#">이메일무단수집거부</a>
+					</div>
+					<p class="copyright">Copyright 2025. 판판대로 All Rights Reserved.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--// footer -->
+</div>
+<!--// wrap -->
+</body>
+</html>
