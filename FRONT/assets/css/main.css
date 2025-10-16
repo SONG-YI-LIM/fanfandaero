@@ -388,11 +388,11 @@
 .etcSwiper .swiper-pagination {display:none; top:initial; bottom:0; height:30px;}
 .etcSwiper .swiper-pagination-bullet {width:8px; height:8px; background:#ccc; top: 50%;transform: translateY(-50%) !important;}
 .etcSwiper .swiper-pagination-bullet-active {background:#097C7C;}
-.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {transform: scale(1);}
-.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {transform: scale(1);}
-.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {transform: scale(1);}
-.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev {transform: scale(1);}
-.swiper-pagination-bullets-dynamic .swiper-pagination-bullet  {transform: scale(1);}
+.etcSwiper .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {transform: scale(1);}
+.etcSwiper .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {transform: scale(1);}
+.etcSwiper .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {transform: scale(1);}
+.etcSwiper .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev {transform: scale(1);}
+.etcSwiper .swiper-pagination-bullets-dynamic .swiper-pagination-bullet  {transform: scale(1);}
 @media(min-width:1161px){
    .etcSwiper .swiper-wrapper {transform:translate3d(0px, 0, 0) !important}
 }

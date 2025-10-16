@@ -377,18 +377,18 @@
                             </div>
                         </div>
                         <div class="section">
-							<div class="sodamTitArea">
-								<h3>프로그램 소개</h3>
-							</div>
                             <!-- tab -->
-							<div class="tab tabFunc"> <!-- 탭 기능 필요 없을 시 : tabFunc 클래스 삭제 , tabCont 안 div 하나만 남기고 삭제 -->
-								<div class="categoryList tabTit">
-									<div class="categorySwiper">
+							<div class="tab tabFunc sodam"> <!-- 탭 기능 필요 없을 시 : tabFunc 클래스 삭제 , tabCont 안 div 하나만 남기고 삭제 -->
+								<div class="categoryList tabTit rBtn">
+									<h3>프로그램 소개</h3>
+									<div class="rBtnArea">
+										<div class="categorySwiper">
 										<div class="swiper-wrapper">
 											<div class="swiper-slide"><a href="" class="curr">소담스퀘어</a></div>
 											<div class="swiper-slide"><a href="">소담상회</a></div>
 										</div>
 										<div class="swiper-button-next">다음</div>
+									</div>
 									</div>
 								</div>
 								<div class="tabCont">
@@ -528,8 +528,136 @@
 									<button class="btn bgSecond">위치기반 서비스 이용약관 동의</button>
 								</div>
 							</div>
-							<div style="width:100%; height:400px; background:#ccc">
-								영역
+							<div class="sodamMapArea">
+								<!-- 목록 -->
+								<div class="sodamMapList">
+									<!-- tab -->
+									<div class="sodamMapTab tabFunc">
+										<div class="tabTit">
+											<ul>
+												<li class="curr"><a href="">소담스퀘어</a></li>
+												<li><a href="">소담상회</a></li>
+											</ul>
+										</div>
+										<div class="tabCont">
+											<!-- 소담스퀘어 -->
+											<div>
+												<h4>나와 가까운 소담인프라</h4>
+												<div class="sodamInfraWrap sodamInfraSwiper">
+													<ul class="sodamInfraList swiper-wrapper">
+														<li class="swiper-slide">
+															<button type="button" class="btnBranch">소담스퀘어 상암점</button>
+															<ul class="dotList">
+																<li>영업 : 09~16시까지</li>
+																<li>서울 마포구 상암동</li>
+															</ul>
+															<span>#2025디지털커머스 전문기관 ...</span>
+														</li>
+														<li class="swiper-slide">
+															<button type="button" class="btnBranch">소담스퀘어 상암점</button>
+															<ul class="dotList">
+																<li>영업 : 09~16시까지</li>
+																<li>서울 마포구 상암동</li>
+															</ul>
+															<span>#2025디지털커머스 전문기관 ...</span>
+														</li>
+														<li class="swiper-slide">
+															<button type="button" class="btnBranch">소담스퀘어 상암점</button>
+															<ul class="dotList">
+																<li>영업 : 09~16시까지</li>
+																<li>서울 마포구 상암동</li>
+															</ul>
+															<span>#2025디지털커머스 전문기관 ...</span>
+														</li>
+													</ul>
+													<div class="swiper-pagination"></div>
+												</div>
+											</div>
+											<!--// 소담스퀘어 -->
+											<!-- 소담상회 -->
+											<div>
+												소담상회 내용
+											</div>
+											<!--// 소담상회 -->
+										</div>
+									</div>
+									<!--// tab -->
+								</div>
+								<!--// 목록 -->
+								<!-- 지도 영역 -->
+								<div class="sodamMapBox">
+									<!-- 지도 영역 -->
+									<div class="sodamMap">
+										<button type="button" class="locationCircle" style="left:50%; top:50%; transform:translate(-50%, -50%);" onclick="sodamMap_layer('layer01', 340)">소담스퀘어 <br>상암점</button> <!-- 지점 위치 -->
+										<!-- 키워드 버튼 -->
+										<ul class="sodamKeywordList">
+											<li><button type="button">라운지</button></li>
+											<li><button type="button">쿠킹스튜디오</button></li>
+											<li><button type="button">회의실</button></li>
+											<li><button type="button" class="pBlock">공유오피스</button></li>
+											<li class="moreBox">
+												<button type="button">...</button>
+												<div class="moreListWrap">
+													<ul class="inList">
+														<li><button type="button">메뉴1</button></li>
+														<li><button type="button">메뉴2</button></li>
+														<li><button type="button">메뉴3</button></li>
+														<li><button type="button">메뉴4</button></li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+										<!--// 키워드 버튼 -->	
+										<img src="../assets/images/content/img-sodam-map.png" alt="" style="width:100%; height:100%; object-fit: cover;"> <!-- 개발 시 이미지 삭제 -->
+									</div>
+									<!--// 지도 영역 --> 
+									<!-- 팝업 -->
+									<div class="sodamMapPop" id="layer01">
+										<div class="popTit">
+											<img src="../assets/images/content/img-sodam08.png" alt="">
+											<h5>소담스퀘어 상암점</h5>
+										</div>
+										<div class="popCont">
+											<p>소담스퀘어 in 상암은 소상공인들을 대상으로 온라인 진출에 필요한 장비·시설 대여와 디지털 콘텐츠 제작 교육, 채널 육성을 통해 소상공인들의 디지털 사업 촉진 및 자립적 성장을 지원하고 있습니다</p>
+											<a href="" class="btn bgSecond btnIcoRt btnShortcut" target="_blank" title="새 창 열림">시설 예약하기(네이버)</a>
+											<a href="" class="btn bgSecond btnIcoRt btnShortcut" target="_blank" title="새 창 열림">전용 홈페이지 가기</a>
+											<div class="inSwiperWrap">
+												<div class="inSwiper">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide">
+															<a href="">
+																<strong>2025 디지털커머스 전문기관 (소담스퀘어 in 상암)</strong>
+																<p>1. 소상공인 디지털 전환 및 온라인 판로확대 도모 2. 수행사(국립한국교통대) 매...</p>
+																<span>~ 예산소진시까지</span>
+															</a>
+														</div>
+														<div class="swiper-slide">
+															<a href="">
+																<strong>2026 디지털커머스 전문기관 (소담스퀘어 in 상암)</strong>
+																<p>1. 소상공인 디지털 전환 및 온라인 판로확대 도모 2. 수행사(국립한국교통대) 매...</p>
+																<span>~ 예산소진시까지</span>
+															</a>
+														</div>
+														<div class="swiper-slide">
+															<a href="">
+																<strong>2027 디지털커머스 전문기관 (소담스퀘어 in 상암)</strong>
+																<p>1. 소상공인 디지털 전환 및 온라인 판로확대 도모 2. 수행사(국립한국교통대) 매...</p>
+																<span>~ 예산소진시까지</span>
+															</a>
+														</div>
+													</div>
+													<div class="swiper-button-area">
+														<div class="swiper-button-next">다음</div>
+														<div class="swiper-button-prev">이전</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<button type="button" class="popClose" onclick="sodamMap_layer_close(this)">닫기</button>
+									</div>
+									<!--// 팝업 -->
+								</div>
+								<!--// 지도 영역 -->
 							</div>
                         </div>
 						<div class="section">
@@ -572,7 +700,7 @@
 								<li>
 									<a href="">
 										<img src="../assets/images/content/img-sodam04.png" alt="">
-										<span class="more">+</span>
+										<span class="more">+3</span>
 										<div class="txtBox">
 											<span>소담스퀘어 당산점</span>
 											<strong>창업자를 위한 최고의 공간인 것 같습니다.</strong>
@@ -582,7 +710,7 @@
 								<li>
 									<a href="">
 										<img src="../assets/images/content/img-sodam05.png" alt="">
-										<span class="more">+</span>
+										<span class="more">+1</span>
 										<div class="txtBox">
 											<span>소담스퀘어 보라매점</span>
 											<strong>(소담스퀘어 당산 X 쿠팡) 쿠팡 기획전 참여기업 모집</strong>
@@ -592,7 +720,7 @@
 								<li>
 									<a href="">
 										<img src="../assets/images/content/img-sodam06.png" alt="">
-										<span class="more">+</span>
+										<span class="more">+4</span>
 										<div class="txtBox">
 											<span>라이브스튜디오 목동점</span>
 											<strong>소상공인 전용 라이브스튜디오(서울 목동) - (A관) 패션 스...</strong>
@@ -602,7 +730,7 @@
 								<li>
 									<a href="">
 										<img src="../assets/images/content/img-sodam07.png" alt="">
-										<span class="more">+</span>
+										<span class="more">+3</span>
 										<div class="txtBox">
 											<span>소담스퀘어 상암점</span>
 											<strong>상암에도 여름이 왔어요~  소담스퀘어 가는 길~</strong>
@@ -674,14 +802,6 @@
 			</div>
 		</div>
 		<!--// contents -->
-        <script>
-            var swiper = new Swiper(".imgSwiper", {
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-            });
-        </script>
 
 		<!-- quickmenu -->
 		<div id="quickmenu">

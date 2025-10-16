@@ -510,6 +510,61 @@ const fn_Content = () => {
         }
     });
 
+    /*** 소담인프라 ***/
+    // 시설 사진 스와이퍼
+    var imgSwiper = new Swiper(".imgSwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+    //  나와 가까운 소담인프라 목록 스와이퍼
+    var sodamInfraSwiper = new Swiper(".sodamInfraSwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: true,
+        },
+    });
+
+    // 지도 안 키워드 버튼 클릭
+    let keywordMore = $(".sodamKeywordList .moreBox button");
+    keywordMore.on("click", function(){
+        if($(this).hasClass("on")){
+            $(this).removeClass("on").next().hide();
+        }else{
+            $(this).addClass("on").next().css("display","flex");
+        }
+    });
+    // 영역 밖 클릭 시 닫기
+    $(document).on("click", function(e) {
+        if (!$(e.target).closest(".sodamKeywordList").length) {
+            keywordMore.removeClass("on").next().hide();
+        }
+    });
+
+    // 팝업 안 스와이퍼
+    var inSwiper = new Swiper(".inSwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+    // 소담인프라 팝업
+    const sodamMap_layer = (name, width) => {
+        $('*:focus').addClass('focusTarget')
+        $(`#${name}`).css('width', width)
+        $(`#${name}`).fadeIn(200).addClass('on')
+        $(`#${name}`).find('> .popCont').attr('tabindex', 0).focus();
+    }
+
+    // 소담인프라 팝업 닫기
+    const sodamMap_layer_close = (target) => {
+        $(target).closest('.sodamMapPop').fadeOut(200).removeClass('on')
+        $(target).removeAttr('style')
+        $('.focusTarget').focus().removeClass('focusTarget')
+    }
+
     /*** 마이페이지 ***/
     /* 나의 활동 */
     var swiper = new Swiper(".actSwiper", {
