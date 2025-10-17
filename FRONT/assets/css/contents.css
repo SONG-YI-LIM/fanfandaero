@@ -1101,7 +1101,7 @@ v9 고객지원
 .sodamLineBox {padding:30px 40px; border:1px solid #ccc; border-radius:16px;}
 .sodamLineBox .tit {display:block; margin-bottom:10px; line-height:1.3; font-size:21px; font-weight:700;}
 .sodamLineBox .txt {display:block; line-height:1.3; color:var(--color-gray-70);}
-.sodamTitArea {display:flex; align-items:center; flex-wrap:wrap; gap:10px; margin:40px 0 10px;}
+.sodamTitArea {display:flex; align-items:center; flex-wrap:wrap; gap:10px; margin:40px 0 16px;}
 .sodamTitArea:first-child {margin-top:0;}
 .sodamTitArea .left {display:flex; align-items:center; flex-wrap:wrap; gap:10px;}
 .sodamTitArea .left .location {display:flex; align-items:center; gap:0 6px; position:relative; margin-left:10px; padding-left:20px; line-height:1; color:var(--color-gray-70); font-weight:700;}
@@ -1176,7 +1176,7 @@ v9 고객지원
 .sodamMapPop .popTit {position:relative; padding:57px 20px 20px; overflow: hidden;}
 .sodamMapPop .popTit img {position:absolute; left:50%; top:50%; width:100%; height:100%; transform: translate(-50%, -50%);}
 .sodamMapPop .popTit h5 {position:relative; z-index:3; line-height:1.3; font-size:19px; color:var(--color-white); font-weight:700;}
-.sodamMapPop .popCont {display:flex; flex-direction: column; gap:10px; padding:10px 20px;}
+.sodamMapPop .popCont {display:flex; flex-direction: column; gap:10px; padding:10px 20px 30px;}
 .sodamMapPop .popCont p {font-size:15px; color:var(--color-gray-70)}
 .sodamMapPop .popCont .inSwiperWrap {padding:20px 20px 10px; border:1px solid #ccc; border-radius:16px;}
 .sodamMapPop .popCont .inSwiper {position:relative; overflow:hidden;}
@@ -1258,6 +1258,7 @@ v9 고객지원
     .sodamInfraList > li + li {margin-top:0}
     .sodamMapBox {flex:none; flex-direction: column;}
     .sodamMap {aspect-ratio: 328/612;}
+    .sodamKeywordList {top:30px}
     .sodamMapPop {position: relative;width: calc(100% - 30px) !important;margin: 0 auto;right: 0;}
     .sodamLineList li {gap:0 20px; padding:0 20px; width:100%}
     .sodamReview li {width:100%;}
@@ -1267,7 +1268,63 @@ v9 고객지원
 @media(max-width:360px) {
     .sodamKeywordList > li > button {padding:0 8px;}
 }
-
+/* 소담스퀘어 안내 */
+:is(.monthPrgrmSwiperWrap, .sodamSprtPrgrmSwiperWrap, .thisYearOwnerSwiperWrap) {position:relative;}
+:is(.monthPrgrmSwiperWrap, .sodamSprtPrgrmSwiperWrap, .thisYearOwnerSwiperWrap) .swiper-button-wrap  {display:flex; gap: 4px; position:absolute; top:-46px; left:272px; width: 60px;}
+:is(.monthPrgrmSwiperWrap, .sodamSprtPrgrmSwiperWrap, .thisYearOwnerSwiperWrap) .swiper-button-lock {display:flex;}
+:is(.monthPrgrmSwiperWrap, .sodamSprtPrgrmSwiperWrap, .thisYearOwnerSwiperWrap) .swiper-button-prev, 
+:is(.monthPrgrmSwiperWrap, .sodamSprtPrgrmSwiperWrap, .thisYearOwnerSwiperWrap) .swiper-button-next {position:initial; margin-top:0; width:28px; height:28px; text-indent:-9999px; }
+:is(.monthPrgrmSwiperWrap, .sodamSprtPrgrmSwiperWrap, .thisYearOwnerSwiperWrap) .swiper-button-next {order:2;}
+:is(.monthPrgrmSwiperWrap, .sodamSprtPrgrmSwiperWrap, .thisYearOwnerSwiperWrap) .swiper-button-prev:after, 
+:is(.monthPrgrmSwiperWrap, .sodamSprtPrgrmSwiperWrap, .thisYearOwnerSwiperWrap) .swiper-button-next:after {content:""; width:28px; height:28px; background:no-repeat center;}
+:is(.monthPrgrmSwiperWrap, .sodamSprtPrgrmSwiperWrap, .thisYearOwnerSwiperWrap) .swiper-button-prev:after {background-image: url("../images/content/ico-btn-swiper-prev.png");} 
+:is(.monthPrgrmSwiperWrap, .sodamSprtPrgrmSwiperWrap, .thisYearOwnerSwiperWrap) .swiper-button-next:after {background-image: url("../images/content/ico-btn-swiper-next.png");}
+.inBox02 {display:flex; gap:0 36px;}
+.inBox02 .subImg {display:flex; flex-direction: column; justify-content: space-between;}
+.sodamMapPop .info dt {font-size:15px; font-weight:700}
+.sodamMapPop .info dd {font-size:15px; color:var(--color-gray-70);}
+.monthPrgrmSwiper {overflow:hidden;}
+.monthPrgrmSwiper .swiper-slide {overflow: hidden; border-radius:16px; aspect-ratio: 1/1;}
+.monthPrgrmSwiper .swiper-slide a {display:block;}
+.monthPrgrmSwiper .swiper-slide a img {width:100%; height:100%; object-fit: cover;}
+.sodamSprtPrgrmSwiperWrap {position:relative;}
+.sodamSprtPrgrmSwiperWrap .swiper-button-wrap {top:-48px; left:138px;}
+.sodamSprtPrgrmSwiperWrap .sodamSprtPrgrmInfo {flex-wrap:nowrap; gap:0;}
+.thisYearOwnerSwiperWrap .swiper-button-wrap {top:-54px; left:304px;}
+.thisYearOwnerSwiper .swiper-slide {overflow:hidden; border-radius:16px;}
+.thisYearOwnerSwiper .swiper-slide a {display:flex;}
+.thisYearOwnerSwiper .swiper-slide a .imgBox {display:flex; justify-content: center; align-items: center; width:171px;}
+.thisYearOwnerSwiper .swiper-slide a .imgBox img {width:100%; height:100%; object-fit: cover;}
+.thisYearOwnerSwiper .swiper-slide a .txtBox {display:flex; flex-direction:column; justify-content:space-between; padding:30px; width:calc(100% - 171px); object-fit: cover;}
+.thisYearOwnerSwiper .swiper-slide a .txtBox.bg01 {background-color:#4E6CB6}
+.thisYearOwnerSwiper .swiper-slide a .txtBox.bg02 {background-color:#147EA1}
+.thisYearOwnerSwiper .swiper-slide a .txtBox.bg03 {background-color:#229068}
+.thisYearOwnerSwiper .swiper-slide a .txtBox strong {display:block; position:relative; padding-bottom:16px; line-height: 1.3; font-size:21px; color:var(--color-white); font-weight:400;}
+.thisYearOwnerSwiper .swiper-slide a .txtBox strong:after {position: absolute; left:0; bottom:0; content:""; width:36px; height:2px; background:var(--color-white)}
+.thisYearOwnerSwiper .swiper-slide a .txtBox p {line-height:1.3; font-size:15px; color:var(--color-white);}
+@media (max-width:1470px) {
+    .sodamSprtPrgrmSwiperWrap .sodamSprtPrgrmInfo {flex-wrap:wrap;}
+}
+@media(max-width:1160px) {
+    .inBox02 {gap:0 16px}
+    .monthPrgrmSwiperWrap .swiper-button-wrap {left:254px}
+    .sodamSprtPrgrmSwiperWrap .swiper-button-wrap {top:-46px; left:130px;}
+    .thisYearOwnerSwiperWrap .swiper-button-wrap {left:278px}
+}
+@media(max-width:767px) {
+    .inBox02 {flex-direction: column; gap:14px}
+    .inBox02 .inImg ,
+    .inBox02 .inImg img {width:100%;}
+    .inBox02 .mainImg img {content:url("../images/content/img-sodam10-m.png")}
+    .inBox02 .subImg {gap:14px;}
+    .inBox02 .subImg .inImg:first-child img {content:url("../images/content/img-sodam11-m.png")}
+    .inBox02 .subImg .inImg:last-child img {content:url("../images/content/img-sodam12-m.png")}
+    .monthPrgrmSwiperWrap .swiper-button-wrap {left:232px} 
+    .sodamSprtPrgrmSwiperWrap .swiper-button-wrap {top:-44px; left:118px;}
+    .thisYearOwnerSwiperWrap .swiper-button-wrap {top:-102px; left:254px}
+    .thisYearOwnerSwiper .swiper-slide a .imgBox {width:140px;}
+    .thisYearOwnerSwiper .swiper-slide a .txtBox {padding:16px; width:calc(100% - 140px);}
+}
 /*** 이용안내 ***/
 /* 공지사항 */
 /* 목록 */

@@ -29,7 +29,6 @@ const fn_layer_close = (target) => {
     $(target).find('> .inner').removeAttr('style')
     $('.focusTarget').focus().removeClass('focusTarget')
 }
-
 // 건너뛰기 링크 (Skip link)
 const fn_SkipNav = () => {
     $("a[href^='#']").click(function (evt) {
@@ -550,21 +549,6 @@ const fn_Content = () => {
         },
     });
 
-    // 소담인프라 팝업
-    const sodamMap_layer = (name, width) => {
-        $('*:focus').addClass('focusTarget')
-        $(`#${name}`).css('width', width)
-        $(`#${name}`).fadeIn(200).addClass('on')
-        $(`#${name}`).find('> .popCont').attr('tabindex', 0).focus();
-    }
-
-    // 소담인프라 팝업 닫기
-    const sodamMap_layer_close = (target) => {
-        $(target).closest('.sodamMapPop').fadeOut(200).removeClass('on')
-        $(target).removeAttr('style')
-        $('.focusTarget').focus().removeClass('focusTarget')
-    }
-
     /*** 마이페이지 ***/
     /* 나의 활동 */
     var swiper = new Swiper(".actSwiper", {
@@ -686,4 +670,19 @@ const fn_Content = () => {
     $(window).on('resize', function () {
         setSquare();
     });
+}
+
+// 소담인프라 팝업
+const sodamMap_layer = (name, width) => {
+    $('*:focus').addClass('focusTarget')
+    $(`#${name}`).css('width', width)
+    $(`#${name}`).fadeIn(200).addClass('on')
+    $(`#${name}`).find('> .popCont').attr('tabindex', 0).focus();
+}
+
+// 소담인프라 팝업 닫기
+const sodamMap_layer_close = (target) => {
+    $(target).closest('.sodamMapPop').fadeOut(200).removeClass('on')
+    $(target).removeAttr('style')
+    $('.focusTarget').focus().removeClass('focusTarget')
 }
