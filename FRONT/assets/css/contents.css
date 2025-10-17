@@ -2555,19 +2555,17 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
 .sourcingNote p { position: relative; margin: 0 auto; padding-left: 104px; width: 58%; line-height: 1.5; font-size: 17px; font-weight: 300; color: var(--color-black); }
 .sourcingNote p strong { font-size: 19px; font-weight: 600; }
 .sourcingNote p:before { content: ""; position: absolute; top: 0; left: 0; width: 80px; height: 80px; background: url(../images/content/img-sourcing02.png) no-repeat center/100% auto; }
-.sourcingList > ul { display: flex; flex-wrap: wrap; gap: 36px 18px; }
-.sourcingList > ul li { width: calc(25% - 9px); }
-.sourcingList > ul li a { display: block; }
-.sourcingList .imgBox { margin-bottom: 16px; width: 100%; max-width: 312px; height: 160px; }
+.sourcingList > ul { display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px 18px; }
+.sourcingList > ul li { min-width: 0; }
+.sourcingList > ul li a { display: block; min-width: 0; }
+.sourcingList .imgBox { margin-bottom: 16px; width: 100%; height: 160px; }
 .sourcingList .imgBox img { width: 100%; height: 100%; object-fit: cover; }
 .sourcingList .listTit { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-bottom: 10px; line-height: 1.3; font-size: 19px; font-weight: 600; color: var(--color-base); }
 .sourcingList .hashtag { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; line-height: 1.5; font-size: 15px; color: var(--color-gray-70); }
 .sourcingList .hashtag + .hashtag { margin-top: 5px; }
 .sourcingList span { display: block; margin-top: 5px; line-height: 1.3; font-size: 15px; font-weight: 500; color: var(--color-base); }
-
 .sourcingList.v2 > ul { gap: 44px 60px; }
-.sourcingList.v2 > ul li { width: calc(25% - 30px); }
-.sourcingList.v2 .imgBox { overflow: hidden;  border-radius: 10px; max-width: 280px; height: 290px; }
+.sourcingList.v2 .imgBox { overflow: hidden;  border-radius: 10px; height: 290px; }
 .sourcingList.v2 .listTit { overflow: inherit; text-overflow: inherit; white-space: inherit; }
 
 @media (max-width: 1160px) {
@@ -2577,8 +2575,8 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
     .sourcingNote p { padding-left: 0; padding-top: 104px; width: 100%; }
     .sourcingNote p:before { left: 50%; transform: translateX(-50%); }
 
-    .sourcingList.v2 > ul { gap: 44px 18px; }
-    .sourcingList.v2 > ul li { width: calc(25% - 9px); }
+    .sourcingList > ul { grid-template-columns: repeat(2, 1fr); }
+    .sourcingList.v2 > ul { gap: 28px 18px; }
 }
 @media (max-width: 767px) {
     .viewNotice { flex-direction: column; }
@@ -2590,11 +2588,48 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
     .sourcingNote { padding: 30px 24px; }
     .sourcingNote p { font-size: 15px; }
     .sourcingNote p strong { font-size: 17px; }
-    .sourcingList > ul li { width: 100%; }
-    .sourcingList .imgBox { max-width: 100%; }
-    .sourcingList.v2 > ul { gap: 44px 20px; }
-    .sourcingList.v2 > ul li { width: calc(50% - 10px); }
-    
+    .sourcingList > ul { grid-template-columns: repeat(1, 1fr); }
+    .sourcingList.v2 > ul { grid-template-columns: repeat(2, 1fr); gap: 44px 20px; }
+    .sourcingList.v2 .imgBox { height: 160px; }
+}
+
+/* 라이브 스튜디오 */
+.avg { position: relative; padding-left: 40px; line-height: 30px; font-size: 30px; font-weight: 700; color: var(--color-point); }
+.avg:before { content: ""; position: absolute; top: 0; left: 0; width: 30px; height: 30px; background: url(../images/content/ico-star.png) no-repeat center/100% auto; }
+.reviewSearch { margin-bottom: 32px; border: 1px solid #ccc; border-radius: 6px; }
+.reviewSearch .in { display: flex; flex-wrap: wrap; gap: 8px; padding: 24px; }
+.reviewSearch .searchFilter { flex: 1; display: flex; flex-wrap: wrap; gap: 8px; }
+.reviewSearch .searchFilter div:has(select) { width: 220px; }
+.reviewSearch .searchFilter div:has(input) { flex: 1; }
+.reviewSearch .searchFilter select,
+.reviewSearch .searchFilter input { border-color: #717171; width: 100%; color: var(--color-gray-70); }
+.booker { display: flex; flex-direction: column; gap: 16px; padding: 24px 0; border-bottom: 1px solid #ccc; }
+.booker .top { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 16px; }
+.booker .top .scope { position: relative; padding-left: 96px; font-size: 15px; font-weight: 700; color: var(--color-base); }
+.booker .top .scope:before { content: ""; position: absolute; top: 0; left: 0; width: 80px; height: 16px; background-repeat: no-repeat; background-position: center; background-size: 100% auto; }
+.booker .top .scope.star01:before { background-image: url(../images/content/img-start01.png); }
+.booker .top .scope.star02:before { background-image: url(../images/content/img-start02.png); }
+.booker .top .scope.star03:before { background-image: url(../images/content/img-start03.png); }
+.booker .top .scope.star04:before { background-image: url(../images/content/img-start04.png); }
+.booker .top .scope.star05:before { background-image: url(../images/content/img-start05.png); }
+.booker .top p { font-size: 15px; color: var(--color-gray-70); }
+.booker .review { font-size: 17px; color: var(--color-black); }
+.booker .bot ul { display: flex; flex-wrap: wrap; gap: 5px 24px; }
+.booker .bot ul li { font-size: 15px; color: var(--color-gray-70); }
+@media (max-width: 1160px) {
+    .avg { padding-left: 33px; line-height: 23px; font-size: 23px; }
+    .avg:before { width: 23px; height: 23px; }
+    .reviewSearch .searchFilter div:has(select) { width: 150px; }
+    .booker .top { margin-bottom: 0; }
+} 
+@media (max-width: 767px) {
+    .avg { padding-left: 30px; line-height: 20px; font-size: 17px; }
+    .avg:before { width: 20px; height: 20px; }
+    .reviewSearch .in { flex-direction: column; padding: 16px; }
+    .reviewSearch .searchFilter { flex-direction: column; }
+    .reviewSearch .searchFilter div:has(select) { width: 100%; }
+    .reviewSearch .searchFilter select { max-width: 100%; }
+    .booker .review { font-size: 15px; }
 }
 
 /*** 페이지명1 ***/
