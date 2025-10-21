@@ -686,4 +686,41 @@ const fn_Content = () => {
     $(window).on('resize', function () {
         setSquare();
     });
+
+    // 예약자 리뷰
+    $('.scope').each(function(){
+        const $el = $(this);
+        let rating = parseFloat($el.data('rating')) || parseFloat($el.text()) || 0;
+        rating = Math.max(0, Math.min(5, rating)); // 0~5 사이 제한
+
+        // 소수점 1자리까지 고정
+        const displayRating = rating.toFixed(1);
+
+        // 이미지 경로
+        const fullStar = '../assets/images/content/ico-star.png';       // 꽉찬 별
+        const halfStar = '../assets/images/content/ico-star-half.png';  // 반 별
+        const emptyStar = '../assets/images/content/ico-star-empty.png';// 빈 별
+
+        // 별 표시 컨테이너
+        const $stars = $('<span class="rating" role="img" aria-label="'+displayRating+'"></span>');
+
+        // 별 이미지 5개 생성
+        for (let i = 1; i <= 5; i++) {
+            let src;
+            if (rating >= i) {
+            src = fullStar;
+            } else if (rating >= i - 0.5) {
+            src = halfStar;
+            } else {
+            src = emptyStar;
+            }
+            $stars.append('<img src="'+src+'" alt="'+(i <= rating ? '별' : '빈 별')+'" />');
+        }
+
+        // 이미지 뒤에 숫자(소수점 1자리) 추가
+        $stars.append('<span class="rating-num">'+displayRating+'</span>');
+
+        // 기존 span 안에 별 이미지와 숫자 추가
+        $el.empty().append($stars);
+    });
 }

@@ -2605,13 +2605,9 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
 .reviewSearch .searchFilter input { border-color: #717171; width: 100%; color: var(--color-gray-70); }
 .booker { display: flex; flex-direction: column; gap: 16px; padding: 24px 0; border-bottom: 1px solid #ccc; }
 .booker .top { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 16px; }
-.booker .top .scope { position: relative; padding-left: 96px; font-size: 15px; font-weight: 700; color: var(--color-base); }
-.booker .top .scope:before { content: ""; position: absolute; top: 0; left: 0; width: 80px; height: 16px; background-repeat: no-repeat; background-position: center; background-size: 100% auto; }
-.booker .top .scope.star01:before { background-image: url(../images/content/img-start01.png); }
-.booker .top .scope.star02:before { background-image: url(../images/content/img-start02.png); }
-.booker .top .scope.star03:before { background-image: url(../images/content/img-start03.png); }
-.booker .top .scope.star04:before { background-image: url(../images/content/img-start04.png); }
-.booker .top .scope.star05:before { background-image: url(../images/content/img-start05.png); }
+.booker .top .rating { display: flex; align-items: center; justify-content: center; }
+.booker .top .rating img { width: 16px; height: 16px; }
+.booker .top .rating-num { margin-left: 16px; font-size: 15px; font-weight: 700; color: var(--color-base); }
 .booker .top p { font-size: 15px; color: var(--color-gray-70); }
 .booker .review { font-size: 17px; color: var(--color-black); }
 .booker .bot ul { display: flex; flex-wrap: wrap; gap: 5px 24px; }
