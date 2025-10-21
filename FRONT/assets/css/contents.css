@@ -1362,6 +1362,15 @@ v9 고객지원
     .sodamChannel li {width:calc(100%/2)}
     .sodamLineBox.liveStudio .benefitList li {width:100%}
 }
+/* 라이브 스튜디오 */
+.inBox03 {display:flex; gap:32px;}
+@media(max-width:767px){
+    .inBox03 {flex-wrap:wrap; justify-content: center;}
+    .inBox03 .mainImg,
+    .inBox03 .inImg,
+    .inBox03 .inImg img {width:100%}
+}
+
 /*** 이용안내 ***/
 /* 공지사항 */
 /* 목록 */
