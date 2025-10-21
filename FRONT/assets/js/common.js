@@ -29,7 +29,6 @@ const fn_layer_close = (target) => {
     $(target).find('> .inner').removeAttr('style')
     $('.focusTarget').focus().removeClass('focusTarget')
 }
-
 // 건너뛰기 링크 (Skip link)
 const fn_SkipNav = () => {
     $("a[href^='#']").click(function (evt) {
@@ -550,20 +549,81 @@ const fn_Content = () => {
         },
     });
 
-    // 소담인프라 팝업
-    const sodamMap_layer = (name, width) => {
-        $('*:focus').addClass('focusTarget')
-        $(`#${name}`).css('width', width)
-        $(`#${name}`).fadeIn(200).addClass('on')
-        $(`#${name}`).find('> .popCont').attr('tabindex', 0).focus();
-    }
+    // 이달의 지원 프로그램 스와이퍼
+    var monthPrgrmSwiper = new Swiper(".monthPrgrmSwiper", {
+		slidesPerView: 2,
+		spaceBetween: 16,
+		grid: {
+			rows: 2,
+			fill: "row", 
+		},
+		slidesPerGroup :4,
+		navigation: {
+			nextEl: ".monthPrgrmSwiperWrap .swiper-button-next",
+			prevEl: ".monthPrgrmSwiperWrap .swiper-button-prev",
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 4,
+				grid: {
+					rows: 1,
+				},
+			},
+		},
+    });
 
-    // 소담인프라 팝업 닫기
-    const sodamMap_layer_close = (target) => {
-        $(target).closest('.sodamMapPop').fadeOut(200).removeClass('on')
-        $(target).removeAttr('style')
-        $('.focusTarget').focus().removeClass('focusTarget')
-    }
+    // 지원 사업정보 스와이퍼
+    var sodamSprtPrgrmSwiper = new Swiper(".sodamSprtPrgrmSwiper", {
+		slidesPerView:1,
+		spaceBetween: 16,
+		grid: {
+			rows: 4,
+			fill: "row"
+		},
+		// slidesPerGroup :2,
+		navigation: {
+			nextEl: ".sodamSprtPrgrmSwiperWrap .swiper-button-next",
+			prevEl: ".sodamSprtPrgrmSwiperWrap .swiper-button-prev",
+		},
+		breakpoints: {
+        768: {
+			slidesPerView: 2,
+			grid: {
+				rows: 2,
+			},
+        },
+		1471: {
+			slidesPerView: 4,
+			grid: {
+				rows: 1,
+			},
+        },
+      },
+    });
+
+    // 소담스퀘어 올해의 사장님 스와이퍼
+    var thisYearOwnerSwiper = new Swiper(".thisYearOwnerSwiper", {
+		slidesPerView:1,
+		spaceBetween: 16,
+		grid: {
+			rows: 3,
+			fill: "row"
+		},
+		// slidesPerGroup :2,
+		navigation: {
+			nextEl: ".thisYearOwnerSwiperWrap .swiper-button-next",
+			prevEl: ".thisYearOwnerSwiperWrap .swiper-button-prev",
+		},
+		breakpoints: {
+		1471: {
+			spaceBetween: 16,
+			slidesPerView: 3,
+			grid: {
+				rows: 1,
+			},
+        },
+      },
+    });
 
     /*** 마이페이지 ***/
     /* 나의 활동 */
@@ -723,4 +783,19 @@ const fn_Content = () => {
         // 기존 span 안에 별 이미지와 숫자 추가
         $el.empty().append($stars);
     });
+}
+
+// 소담인프라 팝업
+const sodamMap_layer = (name, width) => {
+    $('*:focus').addClass('focusTarget')
+    $(`#${name}`).css('width', width)
+    $(`#${name}`).fadeIn(200).addClass('on')
+    $(`#${name}`).find('> .popCont').attr('tabindex', 0).focus();
+}
+
+// 소담인프라 팝업 닫기
+const sodamMap_layer_close = (target) => {
+    $(target).closest('.sodamMapPop').fadeOut(200).removeClass('on')
+    $(target).removeAttr('style')
+    $('.focusTarget').focus().removeClass('focusTarget')
 }

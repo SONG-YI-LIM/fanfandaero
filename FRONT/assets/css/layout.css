@@ -86,10 +86,10 @@
 .gnbMob .subDepth > ul li li.hasDepth > a:after { background-size: 16px; } 
 .gnbMob .subDepth > ul li.hasDepth > ul { display: none; } 
 .btnHamCls { top: 0; right: 0; z-index: 50; background-image: url(../images/component/ico-layer-close.svg); background-size: 24px;} 
-@media (min-width: 1025px){
+@media (min-width: 1161px){
     .btnMobLi { display: none !important; }
 }
-@media (max-width: 1024px){
+@media (max-width: 1160px){
     #gnb { display: none; } 
     #header { border-bottom: 1px solid var(--color-gray-40); } 
     .headBody .util { gap: 8px; } 
@@ -123,7 +123,7 @@
 
 /* WRAP */
 #wrap { padding-top: 174px; } 
-@media(max-width:1024px) {
+@media(max-width:1160px) {
     #wrap {padding-top: 110px; }
 }
 
