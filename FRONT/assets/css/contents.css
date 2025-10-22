@@ -2283,6 +2283,15 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
 .srSwiper *[class^=swiper-button] { display: block; top: calc(50% - 14px); left: 30px; margin-top: 0; width: 28px; height: 28px; text-indent: -9999px; }
 .srSwiper .swiper-button-prev { background: url(../images/content/ico-btn-sr-swiper-prev.png) no-repeat center; }
 .srSwiper .swiper-button-next { right: 30px; left: inherit; background: url(../images/content/ico-btn-sr-swiper-next.png) no-repeat center; }
+
+.selBox { display: flex; flex-wrap: wrap; gap: 40px; margin-top: 16px; }
+.selBox div[class^="sel-"] { flex: 1; display: flex; flex-direction: column; align-items: flex-end; justify-content: space-between; gap: 24px; position: relative; padding: 24px 30px 24px 114px; border: 1px solid #ccc; border-radius: 20px; background: var(--color-gray-5); }
+.selBox div[class^="sel-"]:before { content: ""; position: absolute; top: 24px; left: 30px; width: 60px; height: 60px; background-repeat: no-repeat; background-position: center top; background-size: 100% auto; }
+.selBox div.sel-01:before { background-image: url(../images/content/ico-sel01.png); }
+.selBox div.sel-02:before { background-image: url(../images/content/ico-sel02.png); }
+.selBox .selTxt strong { display: block; margin-bottom: 10px; font-size: 17px; font-weight: 700; color: var(--color-base); }
+.selBox .selTxt p { line-height: 1.5; font-size: 15px; color: var(--color-gray-70); }
+.selBox div[class^="sel-"] .btn { width: fit-content; }
 @media (max-width: 1160px) {
     .itemDetail { flex-direction: column; gap: 40px; }
     .itemDetail .lt { flex: none; max-width: 100%; }
@@ -2315,6 +2324,9 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
     .srInfo .top { flex-direction: column; gap: 20px; }
     .srInfo .top > p { flex: none; font-size: 19px; }
     .srCont { padding: 16px; }
+    .selBox { gap: 20px; }
+    .selBox div[class^="sel-"] { padding: 20px 20px 20px 80px; }
+    .selBox div[class^="sel-"]:before { top: 20px; left: 20px; width: 40px; height: 40px; }
 }
 
 /* 카탈로그 */
