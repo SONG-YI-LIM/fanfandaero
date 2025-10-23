@@ -2048,6 +2048,11 @@ v7 예비
 .halfArea > * { width: calc(50% - 20px); }
 .graph { padding: 40px 50px; border: 1px solid #ccc; background: var(--color-white); }
 .graph > * { min-height: 415px; }
+
+.periodWrap { display: flex; flex-direction: column; gap: 10px; }
+.periodWrap span { min-width: 16px; text-align: center; line-height: 48px; font-size: 15px; color: var(--color-gray-70); }
+.period { display: flex; gap: 10px; }
+.period > div { flex: 1; min-width: 110px; }
 @media (max-width: 1160px) {
     .userInfo { padding: 24px; }
     .userInfo .user { padding: 16px; }
