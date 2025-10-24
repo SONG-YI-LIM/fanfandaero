@@ -2049,13 +2049,41 @@ v7 예비
 
 .halfArea { display: flex; flex-wrap: wrap; gap: 64px 40px; }
 .halfArea > * { width: calc(50% - 20px); }
-.graph { padding: 40px 50px; border: 1px solid #ccc; background: var(--color-white); }
-.graph > * { min-height: 415px; }
+.graph { position: relative; padding: 40px 50px; border: 1px solid #ccc; background: var(--color-white); }
+.graph > div:nth-of-type(1) { display: flex; gap: 13px; width: 100% !important; height: inherit !important; }
+.graph > div:nth-of-type(1) ul { display: flex; position: relative !important; padding-left: 0 !important; width: 100%; }
+.graph > div:nth-of-type(1) ul:before { content: ""; position: absolute; top: 0; left: 0; width: 1px; height: calc(100% - 28px); background: #aaa; }
+.graph > div:nth-of-type(1) ul:after { content: ""; position: absolute; bottom: 28px; left: 0; width: 100%; height: 1px; background: #aaa; }
+.graph > div:nth-of-type(1) ul li { flex: 1; float: inherit !important; margin-left: 0 !important; }
+.graph > div:nth-of-type(1) ul li .barWrap { justify-content: center; gap: 8px; }
+.graph > div:nth-of-type(1) ul li .barWrap div { width: 24px !important; border-radius: 4px; }
+.graph > div:nth-of-type(1) ul li p { margin-top: 10px; }
+.graph > div:nth-of-type(2) { position: relative !important; right: inherit !important; bottom: inherit !important; margin-top: 10px; padding: 14px; border: 1px solid #ccc; }
+.graph > div:nth-of-type(2) > ul { display: flex; flex-wrap: wrap; gap: 5px 24px; align-items: center; justify-content: center; }
+.graph > div:nth-of-type(2) > ul li { margin-bottom: 0 !important; }
+.graph > div:nth-of-type(2) div { display: none !important; }
+.graph > div:nth-of-type(2) span { position: relative; margin-left: 0 !important; padding-left: 42px; font-size: 15px; color: var(--color-gray-70); }
+.graph > div:nth-of-type(2) span:before { content: ""; position: absolute; top: 3px; left: 0; border-radius: 4px; width: 37px; height: 17px; }
+.graph > div:nth-of-type(2) ul li:first-child span:before { background: #246BEB; }
+.graph > div:nth-of-type(2) ul li:last-child span:before { background: #363B5C; }
+.graph > div .vertical_x { flex-shrink: 0; display: flex; flex-direction: column; width: 26px; }
+.graph > div .vertical_x li { flex: 1; width: 26px !important; font-size: 15px !important; font-weight: 700; color: var(--color-base); }
+.graph > div .vertical_x li:nth-of-type(2) { top: 40px !important; }
+.graph > div .vertical_x li:nth-of-type(3) { top: 80px !important; }
+.graph > div .vertical_x li:nth-of-type(4) { top: 120px !important; }
+.graph > div .vertical_x li:nth-of-type(5) { top: 160px !important; }
+.graph > div .vertical_x li:nth-of-type(6) { top: 200px !important; }
+.graph > div .vertical_x li:before { content: ""; position: absolute; top: 50%; left: 39px; border: 1px dashed #aaa; width: calc(100vw - 26px); }
+.graph > div .vertical_x li:last-child:before { display: none; }
+#chartUl .dataName { line-height: 23px; font-size: 15px; font-weight: 700; color: var(--color-black); }
 
 .periodWrap { display: flex; flex-direction: column; gap: 10px; }
 .periodWrap span { min-width: 16px; text-align: center; line-height: 48px; font-size: 15px; color: var(--color-gray-70); }
 .period { display: flex; gap: 10px; }
 .period > div { flex: 1; min-width: 110px; }
+@media (max-width: 1280px) {
+    .graph { padding: 30px; }
+}
 @media (max-width: 1160px) {
     .userInfo { padding: 24px; }
     .userInfo .user { padding: 16px; }
@@ -2064,7 +2092,6 @@ v7 예비
 
     .halfArea.col { flex-direction: column; }
     .halfArea.col > * { width: 100%; }
-    .graph { padding: 30px; }
 }
 @media (max-width: 767px) {
     .userInfo .user { padding: 16px; width: 100%; }
