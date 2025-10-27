@@ -1943,7 +1943,7 @@ v9 고객지원
 .actSwiper .swiper-button-prev { right: 33px; background: url(../images/content/ico-btn-swiper-prev.png) no-repeat center; }
 .actSwiper .swiper-button-next { right: 0; background: url(../images/content/ico-btn-swiper-next.png) no-repeat center; }
 .act { overflow: hidden; padding: 30px 40px; border: 1px solid #ccc; border-radius: 12px; background: var(--color-white); }
-.act.actNone { display: flex; align-items: center; justify-content: center; height: calc(100% - 50px); }
+.act.actNone { display: flex; align-items: center; justify-content: center; height: calc(100% - 51px); }
 .act.actNone p { font-size: 17px; color: var(--color-gray-70); }
 .act .label { margin-bottom: 10px; }
 .act .label ul { display: flex; flex-wrap: wrap; gap: 5px; }
@@ -1977,6 +1977,17 @@ v9 고객지원
 .mdArea .lt { flex: 1; }
 .mdArea .rt { width: 260px; }
 .mdArea .rt a { display: block; }
+.statusWrap { display: flex; flex-direction: column; gap: 16px; }
+.newDetailStatus { display: flex; flex-direction: column; gap: 15px; padding: 16px 40px; border-radius: 16px; background: #F3F3F3; }
+.newDetailStatus > p { font-size: 19px; font-weight: 700; color: var(--color-base); }
+.newDetailStatus ol { display: flex; justify-content: space-between; position: relative; }
+.newDetailStatus ol:before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: #ccc; }
+.newDetailStatus ol li { flex: 1; display: flex; justify-content: center; position: relative; padding-top: 13px; }
+.newDetailStatus ol li:before { content: ""; position: absolute; top: -10px; left: calc(50% - 10px); border: 5px solid #48599F; border-radius: 50%; width: 10px; height: 10px; background: var(--color-white); }
+.newDetailStatus ol li > p { font-size: 19px; font-weight: 700; color: #717171; }
+.newDetailStatus .currDetail { display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 10px 0; border-radius: 80px; min-width: 130px; background: var(--color-secondary); }
+.newDetailStatus .currDetail p { line-height: 1.2; font-size: 17px; font-weight: 700; color: var(--color-white); }
+.newDetailStatus .currDetail span { line-height: 1.2; font-size: 13px; font-weight: 700; color: var(--color-white); }
 @media (max-width: 1280px) {
     .act .bot { flex-direction: column; align-items: flex-start; }
     .act .bot button {  margin-left: auto; }
@@ -2008,6 +2019,23 @@ v9 고객지원
     .act.actNone { height: 150px; }
     .goArea img { width: 100%; max-width: 100%; }
     .goArea .goBox a { flex: none; height: 64px; }
+    .newDetailStatus { gap: 21px; padding: 16px 24px; }
+    .newDetailStatus > p { font-size: 17px; }
+    .newDetailStatus ol li { padding-top: 18px; }
+    .newDetailStatus ol li > p { visibility: hidden; }
+
+    /* .statusWrap { display: flex; flex-direction: column; gap: 16px; }
+    .newDetailStatus { display: flex; flex-direction: column; gap: 15px; padding: 16px 40px; border-radius: 16px; background: #F3F3F3; }
+    .newDetailStatus > p { font-size: 19px; font-weight: 700; color: var(--color-base); }
+    .newDetailStatus ol { display: flex; justify-content: space-between; position: relative; }
+    .newDetailStatus ol:before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: #ccc; }
+    .newDetailStatus ol li { flex: 1; display: flex; justify-content: center; position: relative; padding-top: 13px; }
+    .newDetailStatus ol li:before { content: ""; position: absolute; top: -10px; left: calc(50% - 10px); border: 5px solid #48599F; border-radius: 50%; width: 10px; height: 10px; background: var(--color-white); }
+    .newDetailStatus ol li > p { font-size: 19px; font-weight: 700; color: #717171; }
+    .newDetailStatus .currDetail { display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 10px 0; border-radius: 80px; min-width: 130px; line-height: 1.2; background: var(--color-secondary); }
+    .newDetailStatus .currDetail p { font-size: 17px; font-weight: 700; color: var(--color-white); }
+    .newDetailStatus .currDetail span { font-size: 13px; font-weight: 700; color: var(--color-white); } */
+
 }
 
 /* 비밀번호 확인 */
