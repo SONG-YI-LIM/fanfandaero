@@ -95,6 +95,7 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 .flexCol.v2 input,
 .flexCol.v2 select { max-width: 450px; }
 .flexCol.v2 .flexWrap input { max-width: 450px; }
+.flexCol.v2.bd { padding: 16px 0; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; }
 .flexWrap { display: flex; align-items: center; gap: 10px; max-width: 100%; } 
 .flexWrap > div { flex: auto; max-width: 460px; }
 .flexWrap > div :is(input, select) { width: 100%; max-width: 240px; } 
