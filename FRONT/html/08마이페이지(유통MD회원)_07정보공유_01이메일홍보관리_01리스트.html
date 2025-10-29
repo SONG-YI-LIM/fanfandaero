@@ -380,25 +380,48 @@
                         <div class="section">
                             <div class="searchArea">
                                 <div class="in">
+                                    <!-- 2025-10-29 -->
                                     <div class="lt">
                                         <div class="searchDefault">
-                                            <input type="text" title="검색어" placeholder="검색어를 입력하세요">
+                                            <div class="keywordcmb">
+                                                <select title="검색어">
+                                                    <option value="">선택</option>
+                                                </select>
+                                                <input type="text" title="검색어" placeholder="검색어를 입력하세요">
+                                            </div>
                                         </div>
                                         <div class="searchDetail">
                                             <ul>
                                                 <li>
                                                     <dl>
-                                                        <dt>진행상태</dt>
+                                                        <dt>진행 상태</dt>
                                                         <dd>
-                                                            <select title="상태">
-                                                                <option value="">진행상태</option>
-                                                            </select>
+                                                            <!-- checkbox -->
+                                                            <div class="checkboxWrap">
+                                                                <div class="checkbox">
+                                                                    <input type="radio" name="chk01" id="chk0101">
+                                                                    <label for="chk0101">전체</label>
+                                                                </div>
+                                                                <div class="checkbox">
+                                                                    <input type="radio" name="chk01" id="chk0102">
+                                                                    <label for="chk0102">승인 대기</label>
+                                                                </div>
+                                                                <div class="checkbox">
+                                                                    <input type="radio" name="chk01" id="chk0103">
+                                                                    <label for="chk0103">승인 완료</label>
+                                                                </div>
+                                                                <div class="checkbox">
+                                                                    <input type="radio" name="chk01" id="chk0103">
+                                                                    <label for="chk0103">발송 완료</label>
+                                                                </div>
+                                                            </div>
+                                                            <!--// checkbox -->
                                                         </dd>
                                                     </dl>
                                                 </li>
                                                 <li>
                                                     <dl>
-                                                        <dt>기간</dt>
+                                                        <dt>발송일</dt>
                                                         <dd>
                                                             <div class="dateWrap">
                                                                 <div class="flexWrap">
@@ -421,6 +444,7 @@
                                             </ul>
                                         </div>
                                     </div> 
+                                    <!--// 2025-10-29 -->
                                     <div class="rt">
                                         <button type="button" class="btn bgPrima lg">검색</button>
                                         <button type="button" class="btn bgSecond lg btnIco btnSearchDetail">고급검색</button>
