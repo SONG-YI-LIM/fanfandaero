@@ -243,7 +243,7 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 }
 
 /* 페이지네이션 (Pagination) */
-.pagination { display: flex; flex-direction: column; align-items: center; gap: 24px; margin: 40px auto 0; } 
+.pagination { display: flex; align-items: center; justify-content: center; margin: 40px auto 0; } 
 .pagination > div { display: flex; align-items: stretch; justify-content: center; gap: 20px; } 
 .pagination .pageNavi, .pagination .pageLink, .pagination .pagingBtn input, .pagination .pagingBtn .pageTotal { display: flex; align-items: center; justify-content: center; padding: 0 4px; border-radius: 6px; min-width: 40px; height: 40px; font-size: 15px; font-weight: 700; color: var(--color-gray-70); } 
 .pagination .pageLinks { display: flex; align-items: center;} 
@@ -261,6 +261,18 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 .pagination .pagingBtn input:disabled { border-color: var(--color-gray-40); color: var(--color-gray-60); background: var(--color-gray-30); } 
 .pagination .pagingBtn .btn { margin-left: 16px; } 
 .pagination.mobile {display:none;}
+
+.pagination .page_arrow { display: flex; align-items: center; justify-content: center; white-space: nowrap; padding: 0; border-radius: 6px; min-width: 22px; height: 40px; font-size: 15px; color: var(--color-gray-70); }
+.pagination .page_arrow.l2, .pagination .page_arrow.l1 { margin-right: 20px; }
+.pagination .page_arrow.r1, .pagination .page_arrow.r2 { margin-left: 20px; }
+.pagination .page_arrow.l2:after, .pagination .page_arrow.l1:before, .pagination .page_arrow.r1:after, .pagination .page_arrow.r2:after { content: ""; flex-shrink: 0; width: 22px; height: 22px; }
+.pagination .page_arrow.l2:after { background:url(../images/component/ico-pagination-first.svg) no-repeat center; }
+.pagination .page_arrow.l1:before { background:url(../images/component/ico-pagination-prev.svg) no-repeat center; }
+.pagination .page_arrow.r1:after { background:url(../images/component/ico-pagination-next.svg) no-repeat center; }
+.pagination .page_arrow.r2:after { background:url(../images/component/ico-pagination-last.svg) no-repeat center; }
+.pagination .page_arrow i { display: none; }
+.pagination > a:not(.page_arrow) { display: flex; align-items: center; justify-content: center; padding: 0 4px; border-radius: 6px; min-width: 40px; height: 40px; font-size: 15px; font-weight: 700; color: var(--color-gray-70); }
+.pagination > a.active { font-weight: 700; color: var(--color-white) !important; background: var(--color-secondary) !important; } 
 
 /* 탭 (Tab) */
 .tab > .tabTit ul { display: inline-flex; align-items: stretch; gap: 5px; width: 100%; } 
