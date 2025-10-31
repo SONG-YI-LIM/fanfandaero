@@ -492,9 +492,9 @@ table { table-layout: fixed; width: auto; max-width: none; min-width: 100%; }
 .btnTooltip::before { display: inline-flex; align-items: center; justify-content: center; content: ""; border-radius: 100%; width: 14px; height: 14px; background: url(../images/component/ico-tooltip.png) no-repeat center; } 
 .btnTooltip.v2 { background-image: none; } 
 .btnTooltip.v2::before { content: "ⓘ"; font-size: 100%; color: inherit; background: none; } 
-.tooltip { display: inline-flex; position: relative; margin-top: 4px; } 
+.tooltip { display: inline-flex; position: relative; } 
 .tooltip > p { display: flex; align-items: center; gap: 4px; } 
-.tooltip .tooltipCont { display: none; position: absolute; top: 100%; left: 50%; z-index: 50; margin-left: -100px; border: 1px solid #ccc; max-width:500px; width: max-content;} 
+.tooltip .tooltipCont { display: none; position: absolute; top: 100%; left: 50%; z-index: 50; border: 1px solid #ccc; max-width:500px; width: max-content;} 
 .tooltip .tooltipCont .inner { padding: 10px 30px 10px 10px; text-align: left; line-height: 1.4; font-size: 13px; font-weight: 400; color: var(--color-base); background-color: #fff; } 
 .tooltip .tooltipCont .inner .tit {display:block; margin-bottom:10px; font-size:17px; font-weight:700;}
 .tooltip.open .tooltipCont { display: block; }
@@ -2819,6 +2819,17 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
     .booker .review { font-size: 15px; }
 }
 
+/* 상품소싱 신청내역 */
+.ssDetail { padding: 24px 40px; border-radius: 16px; background: #F4F8F8; }
+.ssDetail ol { display: flex; justify-content: space-between; gap: 10px; position: relative; }
+.ssDetail ol:before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: #ccc; }
+.ssDetail ol li { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 8px; position: relative; margin-top: -12px; }
+.ssDetail ol li span { border: 3px solid #48599F; border-radius: 24px; width: 24px; height: 24px; text-align: center; font-size: 13px; font-weight: 700; color: var(--color-base); background: var(--color-white); }
+.ssDetail ol li p { text-align: center; line-height: 1.3; font-size: 15px; font-weight: 700; color: var(--color-gray-70); }
+@media (max-width: 767px) {
+    .ssDetail { padding: 24px 20px; }
+    .ssDetail ol li p { font-size: 13px; }
+}
 /*** 페이지명1 ***/
 /* 페이지내 분할1 */
 
