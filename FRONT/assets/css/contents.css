@@ -332,13 +332,14 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 .checkboxWrap { display: flex; align-items:center; flex-wrap: wrap; gap: 12px 24px; } 
 .checkboxWrap.column { flex-direction: column; } 
 .checkboxWrap + .checkboxWrap { margin-top: 24px; } 
-[class*="checkbox"]:not(.checkboxWrap) { display: flex; flex-direction: column; gap: 12px; position: relative; padding-left: 25px; }
+[class*="checkbox"]:not(.checkboxWrap) { display: flex; flex-direction: column; gap: 12px; position: relative; }
 [class*="checkbox"]:not(.checkboxWrap) input { position: absolute; top: 0; left: 0; opacity: 0; }
-[class*="checkbox"]:not(.checkboxWrap) input + label { display: inline-block; line-height: 28px; cursor: pointer; }
+[class*="checkbox"]:not(.checkboxWrap) input + label { display: inline-block; position:relative; padding-left: 25px; line-height: 28px; cursor: pointer; z-index:1;}
 [class*="checkbox"]:not(.checkboxWrap) input + label::before { display: block; content: ""; position: absolute; top: 4px; left: 0; overflow: hidden; width: 20px; height: 20px; background: no-repeat left center / 100% auto; }
-[class*="checkbox"]:not(.checkboxWrap) input:focus + label:after {position:absolute; left:-5px; top:0; content:""; width:calc(100% + 11px); height:100%; outline: 2px solid var(--color-primary); background-color: var(--bg-primary); z-index:-1;}
-.checkbox.only { padding-left: 20px; width: 20px; }
-.checkbox.only input + label { text-indent: -9999px; }
+[class*="checkbox"]:not(.checkboxWrap) input:focus + label:after {position:absolute; left:-2px; top:50%; content:""; width:calc(100% + 4px); height:calc(100% - 4px); outline: 2px solid var(--color-primary); background-color: var(--bg-primary); z-index:-1; transform: translateY(-50%);}
+[class*="checkbox"].only:not(.checkboxWrap) {width: 20px; height:20px;}
+[class*="checkbox"].only:not(.checkboxWrap) input + label {padding-left:0; text-indent: -9999px; height:20px;}
+[class*="checkbox"].only:not(.checkboxWrap) input + label::before {top:0;}
 .checkboxWrap.col2 .checkbox {width:calc(50% - 12px)}
 .checkboxWrap.col4 .checkbox {width:calc(25% - 18px)}
 .checkboxWrap.col4 .w50p {width:calc(50% - 12px)}
@@ -368,15 +369,16 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 [class*="checkbox"]:not(.checkboxWrap) input[type=checkbox]:disabled + label::before { background-image: url(../images/component/ico-check-checkbox-disabled.svg); }
 [class*="checkbox"]:not(.checkboxWrap) input[type=checkbox]:checked:disabled + label::before { background-image: url(../images/component/ico-check-checkbox-checked-disabled.svg); }
 .tableChk .checkbox { padding-left: 0; } 
-.tableChk .checkbox label { display: block; position: relative; margin: 0 auto; width: 18px; height: 22px; text-indent: -9999px; }
+.tableChk [class*="checkbox"]:not(.checkboxWrap) input + label { margin: 0 auto; padding-left:0; width: 20px; height: 20px; text-indent: -9999px; }
+.tableChk [class*="checkbox"]:not(.checkboxWrap) input + label::before {top:0;}
+.tableChk [class*="checkbox"]:not(.checkboxWrap) input:focus + label:after {height:calc(100% + 2px)}
 
 /* 라디오 버튼 (Radio button) */
 .checkbox input[type=radio] + label::before { border-radius: 100%; } 
 .checkbox input[type=radio] + label::before { background-image: url(../images/component/ico-check-radio-off.svg); } 
 .checkbox input[type=radio]:checked + label::before { background-image: url(../images/component/ico-check-radio-on.svg); } 
 .checkbox input[type=radio]:disabled + label::before { background-image: url(../images/component/ico-check-radio-disabled.svg); } 
-.checkbox input[type=radio]:checked:disabled + label::before { background-image: url(../images/component/ico-check-radio-checked-disabled.svg); } 
-.checkbox.only input + label { padding-left: 20px; text-indent: -9999px; }
+.checkbox input[type=radio]:checked:disabled + label::before { background-image: url(../images/component/ico-check-radio-checked-disabled.svg); }
 
 /* 셀렉트 (Select) */
 .select { position: relative; z-index: 1; width: 100%; max-width: 360px; } 
@@ -460,6 +462,7 @@ select:disabled, .select.disabled > button, input.disabled, .date input:disabled
 .tableTop > .left,
 .tableTop > .right { display: flex; align-items: center; gap: 10px; }
 .tableTop > .right { margin-left: auto; }
+.tableTop > .right .btn {flex:none}
 .tableBottom { display: flex; flex-direction: column; gap: 24px; margin-top: 16px; }
 .tableBottom > .left { margin-right: auto; }
 .tableBottom > .right { margin-left: auto; }

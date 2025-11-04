@@ -192,6 +192,7 @@
 .recommendPanel {position:relative;}
 .recommendSwiper {overflow:hidden; width:470px;}
 .recommendSwiper .badgeArea {margin-bottom:10px;}
+.recommendSwiper .swiper-slide a {display:block;}
 .recommendSwiper .swiper-slide a > strong {display:block; margin-bottom:10px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; line-height:1.3; font-size:21px; color:var(--color-black); font-weight:700;}
 .recommendSwiper .txt {display:block; line-height:1.3; font-size:17px; color:#556E96; font-weight:500;}
 .recommendSwiper .date {display:block; margin-top:13px; padding-top:16px; border-top:1px solid #c6c6c6; text-align:right;}
