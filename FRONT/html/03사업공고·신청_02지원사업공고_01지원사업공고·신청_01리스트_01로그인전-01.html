@@ -443,29 +443,33 @@
                         </div>
                         <!--// 2025-10-14 검색필터 영역 추가 -->
 						<div class="section">
-							<!-- tableTop 2025-09-25 위치 변경 -->
-							<div class="tableTop">
-								<div class="left">
-									<div class="total">
-										<p>지원사업 공고 <b class="cBlue">‘전체’ ‘지원사업’</b></p>
-										<p><b class="cPoint">000<span>건</span></b></p>
-									</div>
-								</div>
-								<div class="right">
-									<button type="button" class="btn bgPrima">선택지원 일괄신청</button>
-								</div>
-							</div>
-							<!--// tableTop -->
+                            <!-- tableTop -->
+                            <div class="tableTop">
+                                <div class="left">
+                                    <div class="total">
+                                        <p>지원사업 공고 <b class="cBlue">‘유통·판로체’ ‘지원사업’</b></p>
+                                        <p><b class="cPoint">000<span>건</span></b></p>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <button type="button" class="viewBtn girdView active">그리드 보기</button> <!-- 선택 된 버튼에 active 클래스 추가 -->
+                                    <button type="button" class="viewBtn listView">리스트 보기</button>
+                                </div>
+                            </div>
+                            <!--// tableTop -->
+							<!-- 그리드 보기 -->
 							<!-- supportProgramList -->
-							<ul class="supportProgramList">
+							<ul class="supportProgramList gird"> <!-- grid 클래스 추가 그리드 보기는 화면 1300px 부터 짝수로 보이게 해주세요. --> 
 								<li>
 									<div class="infoBox">
 										<!-- badgeArea -->
 										<div class="badgeArea">
-											<div>
+											<div class="top">
 												<span class="badge v9">D-2</span>
 												<span class="badge v8">중소기업</span>
-												<span class="badge v10">소상공인</span> <!-- 2025-09-29 클래스 수정 -->
+												<span class="badge v10">소상공인</span>
+											</div>
+											<div>
 												<span class="badge">지원</span>
 												<span class="badge">홍보·마케팅</span>
 												<span class="badge">전국</span>
@@ -477,12 +481,290 @@
 										<!-- checkbox -->
 										<div class="checkbox">
 											<input type="checkbox" id="chk0101">
-											<label for="chk0101"><span class="badge sideLine">준비단계</span><em>조선일보 연계 중소기업 홍보·판매 지원</em></label> <!-- 2025-09-29 텍스트 수정 -->
+											<label for="chk0101"><span class="badge sideLine">준비단계</span><em>조선일보 연계 중소기업 홍보·판매 지원</em></label>
 										</div>
 										<!--// checkbox -->
-										<p>· 목적 : 언론사 보유 홍보 네트워크를 활용한 중소기업 제품 홍보, 판매 지원</p> <!-- 2025-09-29 텍스트 수정 -->
-										<em>· 지원규모 : 중기업,소기업,소상공인</em> <!-- 2025-09-29 텍스트 수정 -->
-										<span>모집기간 : 2025-01-01 ~ 2025-12-31</span> <!-- 2025-09-29 텍스트 수정 -->
+										<p>· 목적 : 언론사 보유 홍보 네트워크를 활용한 중소기업 제품 홍보, 판매 지원</p>
+										<span>모집기간 : 2025-01-01 ~ 2025-12-31</span>
+									</div>
+									<div class="btnBox">
+										<button type="button" class="btn bgSecond">자세히보기</button>
+										<button type="button" class="btn bgPrima">사업신청</button>
+									</div>
+								</li>
+								<li>
+									<div class="infoBox">
+										<!-- badgeArea -->
+										<div class="badgeArea">
+											<div class="top">
+												<span class="badge v9">D-2</span>
+												<span class="badge v8">중소기업</span>
+											</div>
+											<div>
+												<span class="badge">지원</span>
+												<span class="badge">유통·판로</span>
+												<span class="badge">전국</span>
+												<span class="badge">자부담</span>
+												<span class="badge">중복제한</span>
+											</div>
+										</div>
+										<!--// badgeArea -->
+										<!-- checkbox -->
+										<div class="checkbox">
+											<input type="checkbox" id="chk0101">
+											<label for="chk0101"><span class="badge sideLine">준비단계</span><em>2025 대·중소기업 매칭데이 in 대구</em></label>
+										</div>
+										<!--// checkbox -->
+										<p>· 목적 : 지자체 협업으로 지역 중소기업의 신규 판로 개척 및 마케팅 역량 강화</p>
+										<span>모집기간 : 2025-09-17 ~ 예산소진시까지</span>
+									</div>
+									<div class="btnBox">
+										<button type="button" class="btn bgSecond">자세히보기</button>
+										<button type="button" class="btn bgPrima">사업신청</button>
+									</div>
+								</li>
+								<li>
+									<div class="infoBox">
+										<!-- badgeArea -->
+										<div class="badgeArea">
+											<div class="top">
+												<span class="badge v8">중소기업</span>
+											</div>
+											<div>
+												<span class="badge">지원</span>
+												<span class="badge">유통·판로</span>
+												<span class="badge">전국</span>
+												<span class="badge">자부담</span>
+												<span class="badge">중복제한</span>
+											</div>
+										</div>
+										<!--// badgeArea -->
+										<!-- checkbox -->
+										<div class="checkbox">
+											<input type="checkbox" id="chk0101">
+											<label for="chk0101"><span class="badge sideLine v4">실전단계</span><em>2025 대·중소기업 매칭데이 in 광주</em></label>
+										</div>
+										<!--// checkbox -->
+										<p>· 목적 : 지자체 협업으로 지역 중소기업의 신규 판로 개척 및 마케팅 역량 강화</p>
+										<span>모집기간 : 2025-09-17 ~ 예산소진시까지</span>
+									</div>
+									<div class="btnBox">
+										<button type="button" class="btn bgSecond">자세히보기</button>
+										<button type="button" class="btn bgPrima">사업신청</button>
+									</div>
+								</li>
+								<li>
+									<div class="infoBox">
+										<!-- badgeArea -->
+										<div class="badgeArea">
+											<div class="top">
+												<span class="badge v8">중소기업</span>
+											</div>
+											<div>
+												<span class="badge">지원</span>
+												<span class="badge">유통∙판로</span>
+												<span class="badge">전국</span>
+												<span class="badge">자부담</span>
+												<span class="badge">중복제한</span>
+											</div>
+										</div>
+										<!--// badgeArea -->
+										<!-- checkbox -->
+										<div class="checkbox">
+											<input type="checkbox" id="chk0101">
+											<label for="chk0101"><span class="badge sideLine v2">도약단계</span><em>25년 대형유통망 입점연계지원 신세계...</em></label>
+										</div>
+										<!--// checkbox -->
+										<p>· 목적 : 대형유통망 보유 대중견기업, 공공기관 등과 협업 통해 국내 중소기업 제품 판로진출 지원</p>
+										<span>모집기간 : 2025-09-22 ~ 2025-10-05</span>
+									</div>
+									<div class="btnBox">
+										<button type="button" class="btn bgSecond">자세히보기</button>
+										<button type="button" class="btn bgPrima">사업신청</button>
+									</div>
+								</li>
+								<li>
+									<div class="infoBox">
+										<!-- badgeArea -->
+										<div class="badgeArea">
+											<div class="top">
+												<span class="badge v8">중소기업</span>
+											</div>
+											<div>
+												<span class="badge">지원</span>
+												<span class="badge">유통∙판로</span>
+												<span class="badge">전국</span>
+												<span class="badge">자부담</span>
+												<span class="badge">중복제한</span>
+											</div>
+										</div>
+										<!--// badgeArea -->
+										<!-- checkbox -->
+										<div class="checkbox">
+											<input type="checkbox" id="chk0101">
+											<label for="chk0101"><span class="badge sideLine v3">기반구축</span><em>2025 대·중소기업 매칭데이 in 부산</em></label>
+										</div>
+										<!--// checkbox -->
+										<p>· 목적 : 지자체 협업으로 지역 중소기업의 신규 판로 개척 및 마케팅 역량 강화</p>
+										<span>모집기간 : 2025-09-15 ~ 2025-10-13</span>
+									</div>
+									<div class="btnBox">
+										<button type="button" class="btn bgSecond">자세히보기</button>
+										<button type="button" class="btn bgPrima">사업신청</button>
+									</div>
+								</li>
+								<li>
+									<div class="infoBox">
+										<!-- badgeArea -->
+										<div class="badgeArea">
+											<div class="top">
+												<span class="badge v8">중소기업</span>
+											</div>
+											<div>
+												<span class="badge">지원</span>
+												<span class="badge">유통∙판로</span>
+												<span class="badge">전국</span>
+												<span class="badge">자부담</span>
+												<span class="badge">중복제한</span>
+											</div>
+										</div>
+										<!--// badgeArea -->
+										<!-- checkbox -->
+										<div class="checkbox">
+											<input type="checkbox" id="chk0101">
+											<label for="chk0101"><span class="badge sideLine v3">기반구축</span><em>2025 대·중소기업 매칭데이 in 부산</em></label>
+										</div>
+										<!--// checkbox -->
+										<p>· 목적 : 지자체 협업으로 지역 중소기업의 신규 판로 개척 및 마케팅 역량 강화</p>
+										<span>모집기간 : 2025-09-15 ~ 2025-10-13</span>
+									</div>
+									<div class="btnBox">
+										<button type="button" class="btn bgSecond">자세히보기</button>
+										<button type="button" class="btn bgPrima">사업신청</button>
+									</div>
+								</li>
+								<li>
+									<div class="infoBox">
+										<!-- badgeArea -->
+										<div class="badgeArea">
+											<div class="top">
+												<span class="badge v8">중소기업</span>
+											</div>
+											<div>
+												<span class="badge">지원</span>
+												<span class="badge">유통∙판로</span>
+												<span class="badge">전국</span>
+												<span class="badge">자부담</span>
+												<span class="badge">중복제한</span>
+											</div>
+										</div>
+										<!--// badgeArea -->
+										<!-- checkbox -->
+										<div class="checkbox">
+											<input type="checkbox" id="chk0101">
+											<label for="chk0101"><span class="badge sideLine v2">도약단계</span><em>오프라인 기획전 현대아울렛 송도점, 1...</em></label>
+										</div>
+										<!--// checkbox -->
+										<p>· 목적 : 민간 대형유통망에서 오프라인 기획전 진행, 판로 지원 및 홍보 효과 제고</p>
+										<span>모집기간 : 2025-10-15 ~ 2025-10-24</span>
+									</div>
+									<div class="btnBox">
+										<button type="button" class="btn bgSecond">자세히보기</button>
+										<button type="button" class="btn bgPrima">사업신청</button>
+									</div>
+								</li>
+								<li>
+									<div class="infoBox">
+										<!-- badgeArea -->
+										<div class="badgeArea">
+											<div class="top">
+												<span class="badge v8">중소기업</span>
+											</div>
+											<div>
+												<span class="badge">지원</span>
+												<span class="badge">홍보·마케팅</span>
+												<span class="badge">전국</span>
+												<span class="badge">자부담</span>
+												<span class="badge">중복제한</span>
+											</div>
+										</div>
+										<!--// badgeArea -->
+										<!-- checkbox -->
+										<div class="checkbox">
+											<input type="checkbox" id="chk0101">
+											<label for="chk0101"><span class="badge sideLine v3">기반구축</span><em>오프라인 행사 기획전</em></label>
+										</div>
+										<!--// checkbox -->
+										<p>· 사업명 : 오프라인 행사 기획전</p>
+										<p>· 유통사 : 롯데 잠실점 오프라인 행사</p>
+										<span>모집기간 : 2025-09-22 ~ 2025-10-19</span>
+									</div>
+									<div class="btnBox">
+										<button type="button" class="btn bgSecond">자세히보기</button>
+										<button type="button" class="btn bgPrima">사업신청</button>
+									</div>
+								</li>
+								<li>
+									<div class="infoBox">
+										<!-- badgeArea -->
+										<div class="badgeArea">
+											<div class="top">
+												<span class="badge v9">D-2</span>
+												<span class="badge v8">중소기업</span>
+											</div>
+											<div>
+												<span class="badge">지원</span>
+												<span class="badge">홍보·마케팅</span>
+												<span class="badge">전국</span>
+												<span class="badge">자부담</span>
+												<span class="badge">중복제한</span>
+											</div>
+										</div>
+										<!--// badgeArea -->
+										<!-- checkbox -->
+										<div class="checkbox">
+											<input type="checkbox" id="chk0101">
+											<label for="chk0101"><span class="badge sideLine">준비단계</span><em>2025년 공영홈쇼핑 충북지역 혁신기업제품 코칭 상담회</em></label>
+										</div>
+										<!--// checkbox -->
+										<p>· 목적 : 충북지역 소상공인·중소기업 상품 발굴(TV홈쇼핑/라이브커머스/면세점)</p>
+										<span>모집기간 : 2025-09-22 ~ 2025-10-19</span>
+									</div>
+									<div class="btnBox">
+										<button type="button" class="btn bgSecond">자세히보기</button>
+										<button type="button" class="btn bgPrima">사업신청</button>
+									</div>
+								</li>
+							</ul>
+							<!--// supportProgramList -->
+							<!--// 그리드 보기 -->
+							<!-- 리스트 보기 -->
+							<!-- supportProgramList -->
+							<ul class="supportProgramList">
+								<li>
+									<div class="infoBox">
+										<!-- badgeArea -->
+										<div class="badgeArea">
+											<div>
+												<span class="badge v9">D-2</span>
+												<span class="badge v8">중소기업</span>
+												<span class="badge">지원</span>
+												<span class="badge">홍보·마케팅</span>
+												<span class="badge">전국</span>
+												<span class="badge">자부담</span>
+												<span class="badge">중복제한</span>
+											</div>
+										</div>
+										<!--// badgeArea -->
+										<!-- checkbox -->
+										<div class="checkbox">
+											<input type="checkbox" id="chk0101">
+											<label for="chk0101"><span class="badge sideLine">준비단계</span><em>2025년 공영홈쇼핑 충북지역 혁신기업제품 코칭 상담회</em></label> <!-- 2025-09-29 텍스트 수정 -->
+										</div>
+										<!--// checkbox -->
+										<p>· 목적 : 충북지역 소상공인·중소기업 상품 발굴(TV홈쇼핑/라이브커머스/면세점)</p> <!-- 2025-09-29 텍스트 수정 -->
+										<em>· 지원규모 : 중기업,소기업</em> <!-- 2025-09-29 텍스트 수정 -->
+										<span>모집기간 : 2025-09-22 ~ 2025-10-19</span> <!-- 2025-09-29 텍스트 수정 -->
 									</div>
 									<div class="btnBox">
 										<button type="button" class="btn bgSecond">자세히보기</button>
@@ -586,6 +868,8 @@
 												<span class="badge">지원</span>
 												<span class="badge">홍보·마케팅</span>
 												<span class="badge">전국</span>
+												<span class="badge">자부담</span>
+												<span class="badge">중복제한</span>
 											</div>
 										</div>
 										<!--// badgeArea -->
@@ -606,6 +890,7 @@
 								</li>
 							</ul>
 							<!--// supportProgramList -->
+							<!--// 리스트 보기 -->
 							<!-- btnBottom -->
 							<div class="btnBottom">
 								<div>
@@ -615,82 +900,7 @@
 							<!--// btnBottom -->
 						</div>
 					</div>
-					<!-- side -->
-					<div class="side">
-						<div class="in">
-                            <div class="top">
-                                <h3>검색필터</h3>
-                                <button type="button" class="btn bgSecond btnIco btnReset">초기화</button>
-                            </div>
-							<div class="searchArea">
-								<dl>
-                                    <dt>년도</dt>
-                                    <dd>
-                                        <select title="년도">
-											<option value="">선택</option>
-											<option value="">2025</option>
-										</select>
-                                    </dd>
-                                </dl>
-                                <dl>
-                                    <dt>대상</dt>
-                                    <dd>
-                                        <!-- checkbox -->
-                                        <div class="checkboxWrap">
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk01" id="chk0101">
-                                                <label for="chk0101">전체</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk01" id="chk0102">
-                                                <label for="chk0102">중소기업</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk01" id="chk0103">
-                                                <label for="chk0103">소상공인</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk01" id="chk0104">
-                                                <label for="chk0104">기타</label>
-                                            </div>
-                                        </div>
-                                        <!--// checkbox -->
-                                    </dd>
-                                </dl>
-                                <dl>
-                                    <dt>유형</dt>
-                                    <dd>
-                                        <!-- checkbox -->
-                                        <div class="checkboxWrap">
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk02" id="chk0201">
-                                                <label for="chk0201">홍보·마케팅</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk02" id="chk0202">
-                                                <label for="chk0202">유통·판로</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk02" id="chk0203">
-                                                <label for="chk0203">교육·컨설팅</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk02" id="chk0204">
-                                                <label for="chk0204">인프라</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <input type="checkbox" name="chk02" id="chk0205">
-                                                <label for="chk0205">사후관리</label>
-                                            </div>
-                                        </div>
-                                        <!--// checkbox -->
-                                    </dd>
-                                </dl>
-								<button type="button" class="btn lg">검색</button>
-							</div>
-						</div>
-					</div>
-					<!--// side -->
+					
 				</div>
 				<!--// subCont -->
 			</div>

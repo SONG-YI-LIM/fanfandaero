@@ -164,6 +164,12 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 .bgSecond:hover:not(:disabled) { background-color: var(--color-primary-20) !important; } 
 .bgSecond:active:not(:disabled) { background-color: var(--color-primary-30) !important; }
 .bgBlack { border-color: var(--color-base); color: var(--color-white); background: var(--color-base); }
+.viewBtn {border:1px solid #ccc; border-radius:8px; width:40px; height:40px; text-indent:-9999px; background:no-repeat center#fff; transition: all 0.2s;}
+.viewBtn.active {border-color:var(--color-primary); background-color:var(--color-primary-10);}
+.viewBtn.girdView {background-image: url("../images/component/ico-grid-view.svg");}
+.viewBtn.listView {background-image: url("../images/component/ico-list-view.svg");}
+.viewBtn.girdView.active {background-image: url("../images/component/ico-grid-view-active.svg");}
+.viewBtn.listView.active {background-image: url("../images/component/ico-list-view-active.svg");}
 
 .btnBottom { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 40px; } 
 .btnBottom > div { display: flex; flex-wrap: wrap; gap: 10px; } 
@@ -216,6 +222,8 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 .badge.v8 { color: #FFFFFF; background: #4E6CB6; }
 .badge.v9 { color: #FFFFFF; background: #FF3600; }
 .badge.v10 { color: #FFFFFF; background: #83579C; }
+.badge.v11 { color: #514213; background: #EAE2C9; }
+.badge.v12 { color: #2D5924; background: #DAF3D5; }
 .badge.sideLine {padding:0 10px; border-left:1px solid #4E6CB6; border-right:1px solid #4E6CB6; color:#4E6CB6; font-weight:700; background:#F2F6FF}
 .badge.sideLine.v2 {border-color:#229068; color:#229068; background:#EDFFF8;}
 .badge.sideLine.v3 {border-color:#622D80; color:#622D80; background:#FBF4FF;}
@@ -655,7 +663,7 @@ v9 고객지원
 .searchArea dl dd > select { max-width: 100%; }
 .searchArea dl dd input { background-color: var(--color-white) !important; }
 .searchArea dl dd .checkboxWrap { gap: 10px; }
-.searchArea dl dd .checkboxBtn input + label { border-color: var(--border-color) !important; line-height: 46px !important; font-weight: 400 !important; color: var(--color-base) !important; background: var(--color-white) !important; }
+.searchArea dl dd .checkboxBtn input + label {padding-left:16px; border-color: var(--border-color) !important; line-height: 46px !important; font-weight: 400 !important; color: var(--color-base) !important; background: var(--color-white) !important; }
 .searchArea dl dd .checkboxBtn input:checked + label { font-weight: 700 !important; color: var(--color-white) !important; }
 .searchArea dl dd .checkboxBtn input.label01:checked + label { background: #4E6CB6 !important; }
 .searchArea dl dd .checkboxBtn input.label02:checked + label { background: #83579C !important; }
@@ -837,16 +845,31 @@ v9 고객지원
 .supportProgramList .infoBox {width:calc(100% - 164px)}
 .supportProgramList .infoBox > strong {display: -webkit-box; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; -webkit-line-clamp: 2; max-height:63px; line-height:1.3; font-size: 21px; font-weight:600;}
 .supportProgramList .infoBox > p {display: -webkit-box; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; -webkit-line-clamp: 2; margin-top:16px; max-height: 39px; line-height:1.3; font-size: 15px; color: var(--color-gray-70);}
+.supportProgramList .infoBox > p + p {margin-top:0;}
 .supportProgramList .infoBox > em {display:block; margin-top:28px; line-height:1.3; font-size:17px; color:#556E96; font-weight:500;}
 .supportProgramList .infoBox > span {display:block; border-top:1px solid var(--color-gray-40); margin-top:13px; padding-top:16px; line-height:1.3; font-size:15px; font-weight:500;}
 .supportProgramList .badgeArea {margin-bottom:10px;}
+.supportProgramList .badgeArea > .top {display:flex; margin-bottom:5px;} 
 .supportProgramList .btnBox {width:124px;}
 .supportProgramList .btnBox button {width:100%;}
 .supportProgramList .btnBox > * + * {margin-top:10px;}
-.supportProgramList [class*="checkbox"]:not(.checkboxWrap) {padding-left:30px;}
-.supportProgramList [class*="checkbox"]:not(.checkboxWrap) input + label {display:flex; flex-wrap:wrap; align-items:center; gap:10px; line-height:1.3; font-size:21px; font-weight:600;}
+.supportProgramList [class*="checkbox"]:not(.checkboxWrap) .badge {flex:none;}
+.supportProgramList [class*="checkbox"]:not(.checkboxWrap) input + label {display:flex; align-items:center; gap:10px; line-height:1.3; font-size:21px; font-weight:600;}
 .supportProgramList [class*="checkbox"]:not(.checkboxWrap) input + label::before {top:5px;}
-.supportProgramList [class*="checkbox"]:not(.checkboxWrap) input + label > em {display:-webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow:hidden; text-overflow:ellipsis; max-height:63px;}
+.supportProgramList [class*="checkbox"]:not(.checkboxWrap) input + label > em {display:-webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; overflow:hidden; text-overflow:ellipsis; max-height:63px;}
+.supportProgramList.gird {display:flex; flex-wrap:wrap; gap:16px;}
+.supportProgramList.gird > li {flex-direction:column; justify-content:flex-start; width:calc(100%/3 - 11px)}
+.supportProgramList.gird > li + li {margin-top:0;}
+.supportProgramList.gird .badgeArea {margin-bottom:24px;}
+.supportProgramList.gird .infoBox,
+.supportProgramList.gird .btnBox {width:100%;}
+.supportProgramList.gird .infoBox > span {margin-top:24px;}
+.supportProgramList.gird .btnBox {display:flex; justify-content: flex-end; gap:10px}
+.supportProgramList.gird .btnBox > * + * {margin-top:0;}
+.supportProgramList.gird .btnBox button {width:124px;}
+.supportProgramList.gird [class*="checkbox"]:not(.checkboxWrap) input + label {flex-direction: column; align-items: flex-start;}
+.supportProgramList.gird [class*="checkbox"]:not(.checkboxWrap) input + label::before {top:2px;}
+.supportProgramList.gird [class*="checkbox"]:not(.checkboxWrap) input + label > em {margin-left:-25px;}
 .serviceSection {display:flex; gap:20px;}
 .serviceSection > li {position:relative; overflow:hidden; flex:1; border:2px solid #ddd; border-radius:16px;}
 .serviceSection > li:before {position:absolute; right:0; bottom:0; content:""; width:116px; height:86px; background:url("../images/content/bg-service01.svg") no-repeat right bottom; filter:grayscale(1)}
@@ -866,6 +889,9 @@ v9 고객지원
     .serviceSection {flex-wrap:wrap;}
     .serviceSection > li:nth-child(-n+3) {flex:1 0 calc(100%/3 - 16px);}
 }
+@media(max-width:1300px) {
+    .supportProgramList.gird > li {width:calc(100%/2 - 8px)}
+}
 @media(max-width:767px) {
     .supportProgramList > li {flex-direction:column; align-items:stretch; padding:24px;}
     .supportProgramList .infoBox {width:100%;}
@@ -875,8 +901,10 @@ v9 고객지원
     .supportProgramList .btnBox {display:flex; gap:10px; width:100%;}
     .supportProgramList .btnBox > * + * {margin-top:0;}
     .supportProgramList [class*="checkbox"]:not(.checkboxWrap) {padding: 0;}
-    .supportProgramList [class*="checkbox"]:not(.checkboxWrap) input + label::before {position:initial;}
+    /* .supportProgramList [class*="checkbox"]:not(.checkboxWrap) input + label::before {position:initial;} */
     .supportProgramList [class*="checkbox"]:not(.checkboxWrap) input + label > em {width:100%;}
+    .supportProgramList.gird > li {width:100%}
+    .supportProgramList.gird .badgeArea {margin-bottom:16px;}
     .serviceSection {flex-direction: column; gap:10px;}
     .serviceSection > li:before {width:70px; height:52px; background-size:100%;}
     .serviceSection > li a {padding:18px 20px; height:80px}
@@ -987,39 +1015,56 @@ v9 고객지원
 
 /*** 홍보·알림 ***/
 /* 우수제품 */
-.bestProductList {display:flex; flex-wrap:wrap; gap:64px 32px;}
-.bestProductList > li {width:calc(33.333% - 22px)}
-.bestProductList > li > a {display:block;}
-.bestProductList > li > a p {display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2; overflow:hidden; text-overflow:ellipsis; margin-top:16px; height:54px; line-height:1.3; font-size:21px; font-weight:600}
-.bestProductList .imgBox {display:flex; justify-content: center; align-items: center; overflow:hidden; border-radius:10px; aspect-ratio:280/290;}
+.bestProductList {display:flex; flex-wrap:wrap; gap:60px; margin-top:40px;}
+.bestProductList > li {width:calc(25% - 45px)}
+.bestProductList > li > a {display:block; position:relative;}
+.bestProductList > li > a .mdMark {display:flex; justify-content:flex-end; gap:5px; position:absolute; top:5%; left:0; padding-right:7%; width:100%;}
+.bestProductList > li > a .mdMark img {width:15%;}
+.bestProductList > li > a span {display:block; font-size:15px; color:#556E96; font-weight:700;}
+.bestProductList > li > a p {display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2; overflow:hidden; text-overflow:ellipsis; height:52px; line-height:1.3; font-size:19px; font-weight:600}
+.bestProductList .imgBox {display:flex; justify-content: center; align-items: center; overflow:hidden; margin-bottom:16px; border-radius:10px; aspect-ratio:280/290;}
 .bestProductList .imgBox img {width:100%; height:100%; object-fit: cover;}
-.bestProductList .btnBox {display:flex; gap:10px; margin-top:16px;}
-.bestProductList .btnBox button {flex:1;}
-.bestProductList .hashTagBox {margin-top:10px;}
-.bestProductList .hashTagWrap {display:flex; gap:6px;}
-.bestProductList .hashTagWrap span {line-height:1.5; font-size:15px; color:var(--color-gray-70);}
+@media(max-width:1500px) {
+    .bestProductList {gap:50px 40px;}
+    .bestProductList > li {width:calc(25% - 30px)}
+}
 @media(max-width:767px) {
     .bestProductList {gap:40px 16px;}
     .bestProductList > li {width:calc(50% - 8px);}
-    .bestProductList .btnBox {flex-direction: column;}
-    .bestProductList .btnBox button {flex:none;}
+}
+/* 우수사례 (판판사례) */
+.excellentCaseList {display:flex; flex-wrap: wrap; gap:40px 24px; margin-top:40px;}
+.excellentCaseList > li {border:1px solid #ccc; border-radius: 12px; width:calc(33.333% - 16px);}
+.excellentCaseList > li a {display:block; padding:30px}
+.excellentCaseList > li a .imgBox {overflow:hidden; border-radius: 8px; margin-bottom:16px; aspect-ratio: 11/5;}
+.excellentCaseList > li a .imgBox img {width:100%; height:100%; object-fit: cover;}
+.excellentCaseList > li a span {display:block; margin-bottom:8px; line-height:1.3; font-size:19px; font-weight:600;}
+.excellentCaseList > li a p {overflow:hidden; white-space:nowrap; padding-bottom:16px; text-overflow:ellipsis; line-height:1.3; font-size:15px; color:var(--color-gray-70)}
+@media(max-width:1160px) {
+    .excellentCaseList > li a {padding:20px;}
+}
+@media(max-width:767px) {
+    .excellentCaseList {gap:24px;}
+    .excellentCaseList > li {width:100%;}
 }
 
 /* 유행·트렌드 정보 */
-.trendList {display:flex; flex-wrap: wrap; gap:40px 30px;}
-.trendList .trendListItem {width: calc(100%/4 - 23px);}
-.trendList .trendListItem > a {display:block;}
-.trendList .trendListItem .trendCardThumb {margin-bottom:16px; aspect-ratio: 280/156;}
-.trendList .trendListItem .trendCardThumb img {width:100%; height:100%; object-fit: cover;}
-.trendList .trendListItem .trendCardBody .badge {margin-bottom:10px;}
-.trendList .trendListItem .trendCardBody .inTit {display:-webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom:10px; text-overflow: ellipsis; height:50px; line-height:1.3; font-size:19px; font-weight:600;}
-.trendList .trendListItem .trendCardBody .date {display:block; text-align:right; line-height:1.3; font-size:13px; color:var(--color-gray-70)}
+.fanfanMediaList {display:flex; flex-wrap: wrap; gap:24px;}
+.fanfanMediaList .fanfanMediaItem {border:1px solid #ccc; border-radius:8px; width: calc(100%/4 - 18px);}
+.fanfanMediaList .fanfanMediaItem > a {display:flex; flex-direction: column; padding:20px 16px; height:100%;}
+.fanfanMediaList .fanfanMediaItem .fanfanMediaCardThumb {margin-bottom:16px; aspect-ratio: 275/152;}
+.fanfanMediaList .fanfanMediaItem .fanfanMediaCardThumb img {width:100%; height:100%; object-fit: cover;}
+.fanfanMediaList .fanfanMediaItem .fanfanMediaCardBody {display:flex; flex-direction: column; flex:1;}
+.fanfanMediaList .fanfanMediaItem .fanfanMediaCardBody .badge {align-self:flex-start; margin-bottom:10px;}
+.fanfanMediaList .fanfanMediaItem .fanfanMediaCardBody .name {display:block; margin-bottom:3px; line-height:1.3; font-size:15px; color:#023CA4; font-weight:600;}
+.fanfanMediaList .fanfanMediaItem .fanfanMediaCardBody .inTit {display:-webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom:10px; text-overflow: ellipsis; height:46px; line-height:1.3; font-size:17px; font-weight:600;}
+.fanfanMediaList .fanfanMediaItem .fanfanMediaCardBody .date {display:block; margin-top:auto; text-align:right; line-height:1.3; font-size:15px; color:var(--color-gray-70)}
 @media(max-width:1160px) {
-    .trendList {gap:26px 16px;}
-    .trendList .trendListItem {width: calc(100%/3 - 11px);}
+    .fanfanMediaList {gap:26px 16px;}
+    .fanfanMediaList .fanfanMediaItem {width: calc(50% - 8px);}
 }
 @media(max-width:767px) {
-    .trendList .trendListItem {width: 100%;}
+    .fanfanMediaList .fanfanMediaItem {width: 100%;}
 }
 
 /* 판로정보 */
@@ -1083,7 +1128,7 @@ v9 고객지원
 .lineBoxList02 .topArea ul {display:flex; flex-wrap:wrap; gap:5px; margin-top:auto;}
 .lineBoxList02 .topArea ul li {line-height:1.5; font-size:15px; color:var(--color-gray-70);}
 .lineBoxList02 .bottomArea .btnBox {display:flex; flex-direction:column; gap:10px;}
-.lineBoxList02 .bottomArea .btnBox .btn {word-break: keep-all;}
+.lineBoxList02 .bottomArea .btnBox .btn {min-width:194px; word-break: keep-all;}
 .grayBox .list > li + li {margin-top:24px;}
 .grayBox .list .sTit {display:block; margin-bottom:5px; line-height:1.3; font-size:17px; color:var(--color-gray-70); font-weight:700;}
 .grayBox .list .cont {font-size:15px; color:var(--color-gray-70);}
