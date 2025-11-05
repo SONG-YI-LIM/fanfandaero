@@ -284,7 +284,7 @@
                             <button type="button" class="btnTxt download">매뉴얼 다운로드</button>
                         </div>
                         <div class="myInfo">
-                            <p class="name"><span class="v2">MD</span>홍길동 님</p>
+                            <p class="name"><span class="v1">기업</span>홍길동 님</p>
                             <span class="recentDate">최근접속일 : 2025.08.01 10:11:15</span>
                         </div>
                     </div>
@@ -356,8 +356,7 @@
 					<ol>
 						<li class="home"><a href="">홈</a></li>
 						<li><a href="#"><strong>마이페이지</strong></a></li>
-						<li><a href="#"><strong>MD성과등록</strong></a></li>
-						<li><a href="#"><strong>일괄 등록</strong></a></li>
+						<li><a href="#"><strong>텍스트</strong></a></li>
 					</ol>
 				</div>
 				<!-- breadcrumb -->
@@ -365,7 +364,7 @@
 				<div class="subTop v8">
 					<div class="titArea">
                         <div class="left">
-                            <h2>MD성과 일과 등록</h2>
+                            <h2>텍스트</h2>
                         </div>
                         <div class="right">
                             <button type="button" class="btnTxt download">매뉴얼 다운로드</button>
@@ -377,126 +376,149 @@
 				<!-- subCont -->
 				<div class="subCont">
 					<div class="cont">
-                        <!-- 2025-11-05 -->
                         <div class="section">
-                            <!-- step -->
-                            <div class="step stepSwiper evaluator"><!-- evaluator : 아이콘 프로세스 -->
-                                <ol class="swiper-wrapper">
-                                    <li class="swiper-slide sourcing01">
-                                        <span>STEP 01</span>
-                                        <p>사업명 선택</p>
-                                    </li>
-                                    <li class="swiper-slide sourcing02">
-                                        <span>STEP 02</span>
-                                        <p>엑셀파일 찾기</p>
-                                    </li>
-                                    <li class="swiper-slide sourcing03">
-                                        <span>STEP 03</span>
-                                        <p>데이터 대량업로드</p>
-                                    </li>
-                                    <li class="swiper-slide sourcing04">
-                                        <span>STEP 04</span>
-                                        <p>저장</p>
-                                    </li>
-                                </ol>
-                            </div>
-                            <!--// step -->
-                        </div>
-                        <!--// 2025-11-05 -->
-
-                        <div class="section">
-                            <div class="grayBox border">
-                                <ul class="dotList">
-                                    <li>한번에 대량의 데이터를 등록하시면 데이터 양에 따라서 작업 시간이 오래 걸릴 수도 있습니다.</li>
-                                    <li>작업 시작 전에 엑셀 데이터의 이상유무를 다시 한번 점검 부탁드립니다.</li>
-                                    <li>작업 도중 화면을 종료하면 작업에 오류가 발생합니다. 끝날 때까지 기다려주세요.</li>
-                                    <li>저장 버튼을 클릭하셔야 업로드한 내용이 반영됩니다.</li>
-                                </ul>
-                            </div>
-							<!-- formTable -->
-							<div class="formTable">
-                                <dl>
-									<dt><p>사업명</p></dt>
-									<dd>
-										<div>
-											<select title="사업명">
-                                                <option value="">선택</option>
-                                            </select>
-										</div>
-									</dd>
-								</dl>
-                                <dl>
-                                    <dt><p>업로드</p></dt>
-                                    <dd>
-                                        <div>
-                                            <!-- fileWrap -->
-											<div class="fileWrap">
-												<input type="text" class="fileInput" disabled />
-												<div class="fileCol">
-                                                    <div class="fileBtn">
-                                                        <input type="file" title="파일선택">
-                                                        <button type="button" class="btn bgSecond btnUpload">파일찾기</button>
-                                                    </div>
-                                                    <button type="button" class="btn bgSecond btnDelete">파일삭제</button>
-												</div>
-											</div>
-											<!--/// fileWrap -->
-                                            <button type="button" class="btn bgSecond mt10">엑셀 양식 다운로드</button>
-                                            <p class="stxt cPoint">* 업로드할 엑셀파일을 선택하세요</p>
+                            <div class="searchArea">
+                                <div class="in">
+                                    <div class="lt">
+                                        <div class="searchDefault">
+                                            <ul>
+                                                <li class="full">
+                                                    <dl>
+                                                        <dt>계약명</dt>
+                                                        <dd>
+                                                            <input type="text" title="계약명">
+                                                        </dd>
+                                                    </dl>
+                                                </li>
+                                                <li>
+                                                    <dl>
+                                                        <dt>계약상태</dt>
+                                                        <dd>
+                                                            <select title="계약상태">
+                                                                <option value="">선택</option>
+                                                            </select>
+                                                        </dd>
+                                                    </dl>
+                                                </li>
+                                                <li>
+                                                    <dl>
+                                                        <dt>계약번호</dt>
+                                                        <dd>
+                                                            <input type="text" title="계약번호">
+                                                        </dd>
+                                                    </dl>
+                                                </li>
+                                            </ul>
                                         </div>
-                                    </dd>
-                                </dl>
-							</div>
-							<!--// formTable -->
-						</div>
+                                    </div> 
+                                    <div class="rt">
+                                        <button type="button" class="btn bgPrima lg">검색</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>            
 
                         <div class="section">
                             <!-- tableTop -->
                             <div class="tableTop">
+                                <div class="left">
+                                    <div class="total">
+                                        <p>총</p>
+                                        <p><b class="cPoint">000</b>개</p>
+                                    </div>
+                                </div>
                                 <div class="right">
-                                    <button type="button" class="btn bgSecond">업로드 작업 시작</button>
+                                    <button type="button" class="btn bgSecond">계약서다운로드 </button>
+                                    <button type="button" class="btn bgPrima">단일계약서등록</button>
+                                    <button type="button" class="btn bgPrima">일괄계약서등록</button>
                                 </div>
                             </div>
                             <!--// tableTop -->
-                            <!-- colTable -->
+                            <!-- colTable --> 
                             <div class="colTable">
                                 <table>
-                                    <caption>유통채널명, 사업자번호, 업체명, 상품코드, 상품명, 매출액, 주문건수, 주문수량, 진행 항목으로 구성된 MD성과 일괄 등록 표</caption>
+                                    <caption>번호, 선택, 계약번호, 차수, 계약명, 계약일, 계약시작일, 계약종료일, 상태코드, 상태명, 거래처명, 담당자명, 취소, 반려, 서명, 보험증권 항목으로 구성된 전자계약 관리 표</caption>
                                     <colgroup>
+                                        <col span="2" style="width:60px">
+                                        <col style="width:180px">
+                                        <col style="width:60px">
+                                        <col style="width:180px">
+                                        <col style="width:120px">
+                                        <col style="width:120px">
+                                        <col style="width:120px">
+                                        <col style="width:120px">
                                         <col style="width:130px">
                                         <col style="width:130px">
                                         <col style="width:130px">
-                                        <col style="width:130px">
-                                        <col style="width:130px">
-                                        <col style="width:130px">
-                                        <col style="width:130px">
-                                        <col style="width:130px">
-                                        <col style="width:130px">
+                                        <col style="width:120px">
+                                        <col style="width:120px">
+                                        <col style="width:120px">
+                                        <col style="width:120px">
                                     </colgroup>
                                     <thead>
                                         <tr>
-                                            <th scope="col" class="bgBlue">유통채널명</th>
-                                            <th scope="col" class="bgBlue">사업자번호</th>
-                                            <th scope="col" class="bgBlue">업체명</th>
-                                            <th scope="col" class="bgBlue">상품코드</th>
-                                            <th scope="col" class="bgBlue">상품명</th>
-                                            <th scope="col" class="bgBlue">매출액</th>
-                                            <th scope="col" class="bgBlue">주문건수</th>
-                                            <th scope="col" class="bgBlue">주문수량</th>
-                                            <th scope="col" class="bgBlue">진행</th>
+                                            <th scope="col" class="bgBlue">번호</th>
+                                            <th scope="col" class="bgBlue tableChk">
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="chkThAll01" id="chkThAll01">
+                                                    <label for="chkThAll01">전체선택</label>
+                                                </div>
+                                            </th>
+                                            <th scope="col" class="bgBlue">계약번호</th>
+                                            <th scope="col" class="bgBlue">차수</th>
+                                            <th scope="col" class="bgBlue">계약명</th>
+                                            <th scope="col" class="bgBlue">계약일</th>
+                                            <th scope="col" class="bgBlue">계약시작일</th>
+                                            <th scope="col" class="bgBlue">계약종료일</th>
+                                            <th scope="col" class="bgBlue">상태코드</th>
+                                            <th scope="col" class="bgBlue">상태명</th>
+                                            <th scope="col" class="bgBlue">거래처명</th>
+                                            <th scope="col" class="bgBlue">담당자명</th>
+                                            <th scope="col" class="bgBlue">취소</th>
+                                            <th scope="col" class="bgBlue">반려</th>
+                                            <th scope="col" class="bgBlue">서명</th>
+                                            <th scope="col" class="bgBlue">보험증권</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="txtC">텍스트</td>
-                                            <td class="txtC">텍스트</td>
-                                            <td class="txtC">텍스트</td>
-                                            <td class="txtC">텍스트</td>
-                                            <td class="txtC">텍스트</td>
-                                            <td class="txtC">텍스트</td>
-                                            <td class="txtC">텍스트</td>
-                                            <td class="txtC">텍스트</td>
-                                            <td class="txtC">텍스트</td>
+                                            <td class="txtC">10</td>
+                                            <td class="tableChk">
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="chkTd01" id="chkTd0101">
+                                                    <label for="chkTd0101">선택</label>
+                                                </div>
+                                            </td>
+                                            <td class="txtC">333320251000027</td>
+                                            <td class="txtC">0</td>
+                                            <td class="txtC">모바일계약1030</td>
+                                            <td class="txtC">2025-10-31</td>
+                                            <td class="txtC">2025-01-01</td>
+                                            <td class="txtC">2025-12-31</td>
+                                            <td class="txtC">30</td>
+                                            <td class="txtC">서명진행중</td>
+                                            <td class="txtC">NICE데이터(주)</td>
+                                            <td class="txtC">관리자</td>
+                                            <td>
+                                                <div class="flexWrap jcC">
+                                                    <button type="button" class="btn bgSecond" disabled>취소</button>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flexWrap jcC">
+                                                    <button type="button" class="btn bgSecond">반려</button>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flexWrap jcC">
+                                                    <button type="button" class="btn bgSecond">서명</button>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flexWrap jcC">
+                                                    <button type="button" class="btn bgSecond">증권관리</button>
+                                                </div>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -525,14 +547,6 @@
                             </div>
                             <!-- //paging -->
                         </div>
-                        <!-- btnBottom -->
-						<div class="btnBottom">
-							<div class="right">
-								<a href="" class="btn xlg bgPrima">저장</a>
-								<a href="" class="btn xlg">목록</a>
-							</div>
-						</div>
-						<!--// btnBottom -->
 					</div>
 				</div>
 				<!--// subCont -->

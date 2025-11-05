@@ -344,6 +344,7 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 .checkboxWrap.col4 .checkbox {width:calc(25% - 18px)}
 .checkboxWrap.col4 .w50p {width:calc(50% - 12px)}
 .checkNextInput {display:inline-flex; flex-wrap:wrap; align-items:center; gap:10px;}
+
 /* 버튼형 체크박스 */
 .btnCheckbox {position:relative; border:1px solid #717171; border-radius:8px; height:48px;}
 .btnCheckbox input[type="checkbox"] {position:absolute; left:0; top:0; width:100%; height:100%; opacity: 0;}
@@ -2755,6 +2756,11 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
 .step.evaluator ol > li:nth-child(2):after { background-image: url(../images/content/ico-evaluator02.png); }
 .step.evaluator ol > li:nth-child(3):after { background-image: url(../images/content/ico-evaluator03.png); }
 .step.evaluator ol > li:nth-child(4):after { background-image: url(../images/content/ico-evaluator04.png); }
+.step.evaluator ol > li[class*="sourcing"]:after { top: calc(50% - 15px); width: 30px; height: 30px; }
+.step.evaluator ol > li.sourcing01:after { background-image: url(../images/content/ico-evaluator05.png); }
+.step.evaluator ol > li.sourcing02:after { background-image: url(../images/content/ico-evaluator06.png); }
+.step.evaluator ol > li.sourcing03:after { background-image: url(../images/content/ico-evaluator07.png); }
+.step.evaluator ol > li.sourcing04:after { background-image: url(../images/content/ico-evaluator08.png); }
 .step.evaluator ol > li p { color: var(--color-base); }
 .step.evaluator ol > li em { display: block; margin-top: 5px; min-height: 39px; word-break: break-word; line-height: 1.3; font-size: 15px; color: var(--color-gray-70); }
 .lineForm > ul { display: flex; flex-direction: column; gap: 10px; }
@@ -2764,6 +2770,7 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
 @media (max-width: 1160px) {
     .step.evaluator ol > li { padding-top: 60px; padding-left: 20px; text-align: center; }
     .step.evaluator ol > li:after { top: 10px; left: calc(50% - 20px); }
+    .step.evaluator ol > li[class*="sourcing"]:after { top: 10px; left: calc(50% - 15px); }
 }
 @media (max-width: 767px) {
     .step.evaluator ol > li { padding-left: 10px; padding-right: 10px; }
@@ -2828,6 +2835,7 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
     .ssDetail { padding: 24px 20px; }
     .ssDetail ol li p { font-size: 13px; }
 }
+
 /*** 페이지명1 ***/
 /* 페이지내 분할1 */
 
