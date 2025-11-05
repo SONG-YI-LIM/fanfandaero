@@ -1300,7 +1300,7 @@ v9 고객지원
 .sodamReview li a .txtBox span {display:block; margin-bottom:5px; line-height: 1.3; font-size: 13px; color:#FFFB82; font-weight: 700;}
 .sodamReview li a .txtBox strong {display:-webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp:2; overflow:hidden; text-overflow:ellipsis; line-height: 1.3; font-size: 19px; color:var(--color-white); font-weight: 600;}
 .sodamSprtPrgrmInfo {display:flex; flex-wrap:wrap; gap:16px;}
-.sodamSprtPrgrmInfo li {position:relative; width:calc(100%/4 - 12px); border:1px solid #ccc; border-radius:16px;}
+.sodamSprtPrgrmInfo li {position:relative; width:calc(100%/4 - 12px); height:auto !important; border:1px solid #ccc; border-radius:16px;}
 .sodamSprtPrgrmInfo li:before {position:absolute; left:-1px; top:-1px; content:""; border:2px solid var(--color-secondary); border-radius:16px; width:calc(100% - 2px); height:calc(100% - 2px); opacity:0; transition:opacity 0.2s;}
 .sodamSprtPrgrmInfo li:hover:before {opacity:1; border-color: var(--color-secondary);}
 .sodamSprtPrgrmInfo li a {display:flex; flex-direction: column; gap:50px 0; padding:30px; height:100%;}
@@ -1370,6 +1370,17 @@ v9 고객지원
     .sodamKeywordList > li > button {padding:0 8px;}
 }
 /* 소담스퀘어 안내 */
+#wrap.sodamMainPage {padding-top:0;}
+.sodamMainArea {background:url("../images/content/img-sodam-35.png") no-repeat center/cover; aspect-ratio: 1920/650;}
+.sodamMainArea .inner {max-width:1348px; padding: 100px 24px 60px}
+.sodamMainArea span {display:flex; flex-wrap:wrap; gap:34px; margin-bottom:16px; line-height:1; font-size:80px; color:var(--color-white); font-weight:200; word-break: keep-all;}
+.sodamMainArea span b {font-weight:700;}
+.sodamMainArea .logo01 {display:block; float: right;}
+.sodamMainArea p {font-size:17px; color:var(--color-white);}
+.sodamMainArea em {display:block; margin-top:24px; font-style:normal; font-size:15px; color:var(--color-white); font-weight:700;}
+.sodamMainArea .snsBtnList {display:flex; gap:16px; margin-top:64px;}
+.sodamMainArea .bottom {display:flex; justify-content: flex-end; align-items:flex-end; gap:16px; margin-top:60px;}
+.sodamMainArea .bottom strong {text-align:right; color:var(--color-white);}
 :is(.monthPrgrmSwiperWrap, .sodamSprtPrgrmSwiperWrap, .thisYearOwnerSwiperWrap) {position:relative;}
 :is(.monthPrgrmSwiperWrap, .sodamSprtPrgrmSwiperWrap, .thisYearOwnerSwiperWrap) .swiper-button-wrap  {display:flex; gap: 4px; position:absolute; top:-46px; left:272px; width: 60px;}
 :is(.monthPrgrmSwiperWrap, .sodamSprtPrgrmSwiperWrap, .thisYearOwnerSwiperWrap) .swiper-button-lock {display:flex;}
@@ -1386,7 +1397,7 @@ v9 고객지원
 .sodamMapPop .info dd {font-size:15px; color:var(--color-gray-70);}
 .monthPrgrmSwiper {overflow:hidden;}
 .monthPrgrmSwiper .swiper-slide {overflow: hidden; border-radius:16px; aspect-ratio: 1/1;}
-.monthPrgrmSwiper .swiper-slide a {display:block;}
+.monthPrgrmSwiper .swiper-slide a {display:block; height:100%;}
 .monthPrgrmSwiper .swiper-slide a img {width:100%; height:100%; object-fit: cover;}
 .sodamSprtPrgrmSwiperWrap {position:relative;}
 .sodamSprtPrgrmSwiperWrap .swiper-button-wrap {top:-48px; left:138px;}
@@ -1400,7 +1411,7 @@ v9 고객지원
 .thisYearOwnerSwiper .swiper-slide a .txtBox.bg01 {background-color:#4E6CB6}
 .thisYearOwnerSwiper .swiper-slide a .txtBox.bg02 {background-color:#147EA1}
 .thisYearOwnerSwiper .swiper-slide a .txtBox.bg03 {background-color:#229068}
-.thisYearOwnerSwiper .swiper-slide a .txtBox strong {display:block; position:relative; padding-bottom:16px; line-height: 1.3; font-size:21px; color:var(--color-white); font-weight:400;}
+.thisYearOwnerSwiper .swiper-slide a .txtBox strong {display:block; position:relative; padding-bottom:16px; margin-bottom:20px; line-height: 1.3; font-size:21px; color:var(--color-white); font-weight:400;}
 .thisYearOwnerSwiper .swiper-slide a .txtBox strong:after {position: absolute; left:0; bottom:0; content:""; width:36px; height:2px; background:var(--color-white)}
 .thisYearOwnerSwiper .swiper-slide a .txtBox p {line-height:1.3; font-size:15px; color:var(--color-white);}
 .sodamColArea {display:flex; gap:24px;}
@@ -1439,12 +1450,19 @@ v9 고객지원
     .sodamLineBox.liveStudio .benefitList li {width:calc(100%/2 - 10px)}
 }
 @media(max-width:1160px) {
+    .sodamMainArea span {gap:24px; font-size:60px;}
     .inBox02 {gap:0 16px}
     .monthPrgrmSwiperWrap .swiper-button-wrap {left:254px}
     .sodamSprtPrgrmSwiperWrap .swiper-button-wrap {top:-46px; left:130px;}
     .thisYearOwnerSwiperWrap .swiper-button-wrap {left:278px}
 }
 @media(max-width:767px) {
+    .sodamMainArea .inner {padding: 60px 24px 40px}
+    .sodamMainArea span {gap: 5px 14px; font-size:40px;}
+    .sodamMainArea .logo01 {float: none; margin-bottom:24px; text-align:center;}
+    .sodamMainArea .snsBtnList {justify-content:center; margin-top:44px;}
+    .sodamMainArea .bottom {justify-content: center; margin-top:40px;}
+    .sodamMainArea .bottom .logo02 {width:95px}
     .inBox02 {flex-direction: column; gap:14px}
     .inBox02 .inImg ,
     .inBox02 .inImg img {width:100%;}
@@ -1579,6 +1597,14 @@ v9 고객지원
 .listTable .listType li .subject { display: flex; align-items:center; flex: 1; overflow: hidden; } 
 .listTable .listType li .subject .badge { margin-right: 10px; } 
 .listTable .listType li .title { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%; font-size: 17px; font-weight: 600; color: var(--color-base); } 
+.listTable .listType li .date {min-width:160px; text-align:center;}
+.listTable .listType li .views {min-width:112px; text-align:right;}
+.listTable .listType li.noticeImportant {background-color:#F0F4F8;}
+.listTable .listType li.noticeImportant .badge {color:var(--color-point); font-weight:700; background-color:#fff;}
+@media(max-width:1160px) {
+    .listTable .listType li .date {min-width:120px;}
+    .listTable .listType li .views {min-width:72px;}
+}
 @media(max-width:767px){
     .listTable .listType li {padding:10px 16px; height:auto;}
     .listTable .listType li > *  {padding:0;} 
@@ -1591,9 +1617,9 @@ v9 고객지원
 }
 
 /* 상세 */
-.detailTop .subject { display: flex; gap: 22px; margin-bottom: 32px; } 
+.detailTop .subject { display: flex; flex-direction: column; align-items:flex-start; gap: 5px; margin-bottom: 24px; } 
 .detailTop .subject h3 {line-height:1.3; font-size:21px; font-weight:600;}
-.detailTop .subject .badge { flex-shrink: 0; margin: 5px 0; } 
+.detailTop .subject .badge { flex-shrink: 0;} 
 .detailTop.borderB {padding-bottom:40px;}
 .detailInfo { display: flex; flex-wrap: wrap; align-items: flex-end; } 
 .infoUl > li { display: flex; align-items: center; color: #555; } 
@@ -1621,8 +1647,9 @@ v9 고객지원
 .attachPr { background: url(../images/content/ico-attach-view.svg) no-repeat center / 20px; } 
 .attachDo { background: url(../images/content/ico-attach-down.png) no-repeat center / 20px; } 
 .attachDo.lg { background-size: 30px; } 
-.detailTable .detailCont { padding: 50px 60px; } 
+.detailTable .detailCont { padding: 40px; } 
 .detailTable .detailCont .imgWrap {display:flex; justify-content: center; } 
+.detailTable .detailCont + .detailNav {margin-top:0;}
 .detailNav { margin-top: 40px; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; } 
 .detailNav ul { display: flex; } 
 .detailNav ul > li { display: flex; align-items: center; gap: 16px; padding: 12px 30px; width: 50%; color: #555; } 
@@ -2322,7 +2349,7 @@ v7 예비
 .esgDetailArea .rt p { display: flex; align-items: center; justify-content: center; font-family: "TimesNewerRoman", sans-serif; font-weight: 400; color: #24376B; }
 .esgDetailArea .lt strong { position: absolute; top: 18%; left: calc(50% - 37px); width: 74px; height: 100px; font-size: 100px; }
 .esgDetailArea .lt .detail { display: flex; gap: 8px; position: absolute; bottom: 100px; left: 50%; transform:translateX(-50%); -ms-transform:translateX(-50%); -moz-transform:translateX(-50%); -webkit-transform:translateX(-50%)}
-.esgDetailArea .lt .detail p { width: 78px; height: 40px; text-align: center; font-size: 40px; }
+.esgDetailArea .lt .detail p { width: 78px; height: 53px; text-align: center; font-size: 40px; }
 .esgDetailArea .ct { width: 100%; max-width: 250px; height: 400px; }
 .esgDetailArea .ct .desc { padding: 30px; border: 1px solid #ccc; border-radius: 16px; height: 100%; background: var(--color-white); }
 .esgDetailArea .ct .desc strong { display: block; margin-bottom: 5px; font-size: 17px; font-weight: 700; color: var(--color-base); }
@@ -2330,13 +2357,13 @@ v7 예비
 .esgDetailArea .rt ul li { display: flex; gap: 20px; padding: 20px 30px; border-bottom: 1px solid #ccc; }
 .esgDetailArea .rt ul li:first-child { border-top: 1px solid #ccc; }
 .esgDetailArea .rt .detailResult { flex-shrink: 0; position: relative; border:1px solid #ccc; border-radius:8px; width: 80px; height: 80px; background: url(../images/content/img-esg-detail.svg) no-repeat center/contain; }
-.esgDetailArea .rt .detailResult p { position: absolute; top: 36%; left: calc(50% - 10px); width: 20px; height: 26px; font-size: 30px; }
+.esgDetailArea .rt .detailResult p { position: absolute; top: 32%; left: calc(50% - 10px); width: 20px; height: 26px; font-size: 30px; }
 .esgDetailArea .rt dt { font-size: 17px; font-weight: 700; color: var(--color-base); }
 .esgDetailArea .rt dd { position: relative; padding-left: 20px; color:var(--color-gray-70)}
 .esgDetailArea .rt dd:before { content: ""; position: absolute; top: 10px; left: 10px; border-radius: 50%; width: 4px; height: 4px; background: var(--color-gray-70); }
 .esgDetailArea.sm  {align-items: center;}
 .esgDetailArea.sm .lt {width:300px !important; height:334px; background-image:url("../images/content/img-esg-sm.svg");}
-.esgDetailArea.sm .lt strong {top:20%;}
+.esgDetailArea.sm .lt strong {top:19%;}
 .esgDetailArea.sm .lt .detail {bottom:45px;}
 .esgDetailArea.sm .rt dd {font-size:15px;}
 .esgDetailArea.sm .rt ul li {padding:0; border-bottom:0;}
