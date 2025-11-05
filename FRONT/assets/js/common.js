@@ -52,7 +52,7 @@ const fn_SkipNav = () => {
     $('.scroll').attr('tabindex','0');
 }
 const fn_Layout = () => {
-    const gnbHtml = $('.gnbUl').html();
+    /* const gnbHtml = $('.gnbUl').html();
     $('.gnbArea .in').append(`<div><ul>${gnbHtml}</ul></div>`)
     $('.gnbMob .in').append(`<ul class="mobUl">${gnbHtml}</ul>`)
     $('#sitemap .in').append(`<ul class="sitemapGnb">${gnbHtml}</ul>`)
@@ -65,7 +65,7 @@ const fn_Layout = () => {
     })
     $('.gnbArea').on('mouseleave focusout', function(){
         $('.hoverDepth').stop().slideUp(200);
-    })
+    }) */
 
     // mobile menu
     $('.mobUl > li > a').on('click', function(e){
@@ -580,7 +580,6 @@ const fn_Content = () => {
 			rows: 4,
 			fill: "row"
 		},
-		// slidesPerGroup :2,
 		navigation: {
 			nextEl: ".sodamSprtPrgrmSwiperWrap .swiper-button-next",
 			prevEl: ".sodamSprtPrgrmSwiperWrap .swiper-button-prev",
@@ -609,19 +608,18 @@ const fn_Content = () => {
 			rows: 3,
 			fill: "row"
 		},
-		// slidesPerGroup :2,
 		navigation: {
 			nextEl: ".thisYearOwnerSwiperWrap .swiper-button-next",
 			prevEl: ".thisYearOwnerSwiperWrap .swiper-button-prev",
 		},
 		breakpoints: {
-		1471: {
-			spaceBetween: 16,
-			slidesPerView: 3,
-			grid: {
-				rows: 1,
-			},
-        },
+            1471: {
+                spaceBetween: 16,
+                slidesPerView: 3,
+                grid: {
+                    rows: 1,
+                },
+            },
       },
     });
 
