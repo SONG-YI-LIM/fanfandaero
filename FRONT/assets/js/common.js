@@ -15,11 +15,21 @@ $(function () {
 
 /* 모달 (Modal) */
 const fn_layer = (name, width) => {
+    /* 2025-11-06 */
     $('body, html').css({ overflow: 'hidden' })
     $('*:focus').addClass('focusTarget')
     $(`#${name}`).find('> .inner').css('width', width)
     $(`#${name}`).fadeIn(200).addClass('on')
-    $(`#${name}`).find('> .inner .cont').attr('tabindex', 0).focus()
+    var pdt = $(`#${name}`).find(".inner").css('padding-top').replace(/[^-\d\.]/g, ''),
+        pdb = $(`#${name}`).find(".inner").css('padding-bottom').replace(/[^-\d\.]/g, '');
+    $(window).resize(function(){
+		if($(window).width() > 767){
+			$(`#${name}`).find('.cont').css({'max-height':$(`#${name}`).height()*0.9 - (Number(pdt) + Number(pdb))});
+		}else{
+			$(`#${name}`).find('.cont').css({'max-height':$(`#${name}`).height() - (Number(pdt) + Number(pdb))});
+		}
+	}).resize();
+    /*-- 2025-11-06 */
 }
 
 /* 모달 (Modal) */
@@ -803,6 +813,28 @@ const fn_Content = () => {
         // 기존 span 안에 별 이미지와 숫자 추가
         $el.empty().append($stars);
     });
+
+    // 2025-11-06
+    // ESG 자가진단소개
+    $('.esgYears').each(function () {
+        const esgYear = $(this).find('> dl');
+
+        esgYear.find('a').append(`<span class="hide">열림</span>`);
+        esgYear.on('click', 'a', function (e) {
+            e.preventDefault();
+            console.log('클릭');
+            if($(this).hasClass('curr')){
+                $(this).removeClass('curr');
+                $(this).parent().next().slideUp(200);
+                $(this).find('.hide').text('열림');
+            }else{
+                $(this).addClass('curr');
+                $(this).parent().next().slideDown(200);
+                $(this).find('.hide').text('닫힘');
+            }
+        })
+    })
+    //-- 2025-11-06
 }
 
 // 소담인프라 팝업
