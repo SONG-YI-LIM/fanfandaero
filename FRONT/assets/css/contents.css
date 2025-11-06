@@ -1336,7 +1336,7 @@ v9 고객지원
 .locationCircle {position: absolute; display:block; padding:27px 17px; border-radius:50%; min-width:114px; line-height:1.3; text-align:center; font-size:15px; color:var(--color-white); font-weight:700; background:var(--color-primary); aspect-ratio: 1/1;}
 .locationCircle:focus {background:var(--color-primary)}
 .sodamMapPop {display:none; position:absolute; right:4%; top:5%; overflow:hidden; border-radius:10px; width:100%; max-width:100%; background:#fff; box-shadow: 4px 4px 15px 0 rgba(0, 0, 0, 0.15);}
-.sodamMapPop .popTit {position:relative; padding:57px 20px 20px; overflow: hidden;}
+.sodamMapPop .popTit {display:flex; align-items:flex-end; position:relative; padding:57px 20px 20px; overflow: hidden;}
 .sodamMapPop .popTit img {position:absolute; left:50%; top:50%; width:100%; height:100%; transform: translate(-50%, -50%);}
 .sodamMapPop .popTit h5 {position:relative; z-index:3; line-height:1.3; font-size:19px; color:var(--color-white); font-weight:700;}
 .sodamMapPop .popCont {display:flex; flex-direction: column; gap:10px; padding:10px 20px 30px;}
@@ -1352,6 +1352,7 @@ v9 고객지원
 .sodamMapPop .popCont .inSwiper .swiper-button-lock {display:flex;}
 .sodamMapPop .popCont .inSwiper .swiper-button-next:after {content:""; width:100%; height:100%; background-image:url("../images/content/ico-btn-swiper-next.png")}
 .sodamMapPop .popCont .inSwiper .swiper-button-prev:after {content:""; width:100%; height:100%; background-image:url("../images/content/ico-btn-swiper-prev.png")}
+.sodamMapPop .btnArea > * {flex:1}
 .sodamMapPop .popClose {position:absolute; right:20px; top:23px; width:24px; height:24px; text-indent:-9999px; background:url("../images/content/ico-sodam-pop-close.svg") no-repeat center}
 .sodamReview {display:flex; flex-wrap:wrap; gap:16px;}
 .sodamReview li {width:calc(100%/4 - 12px); border-radius:16px; overflow:hidden; aspect-ratio: 312/280;}
@@ -1423,6 +1424,7 @@ v9 고객지원
     .sodamMap {aspect-ratio: 328/612;}
     .sodamKeywordList {top:30px}
     .sodamMapPop {position: relative;width: calc(100% - 30px) !important;margin: 0 auto;right: 0;}
+    .sodamMapPop .popTit {aspect-ratio: 328/102;}
     .sodamLineList li {gap:0 20px; padding:0 20px; width:100%}
     .sodamReview li {width:100%;}
     .sodamSprtPrgrmInfo li {width:100%;}
@@ -1541,6 +1543,17 @@ v9 고객지원
     .sodamColArea > *:last-child .benefitList li {flex:1 0 100%;}
     .sodamChannel li {width:calc(100%/2)}
     .sodamLineBox.liveStudio .benefitList li {width:100%}
+}
+/* 소담상회 */
+.inBox04 {display:flex; gap:32px;}
+.inBox04 .txtBox {display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; position:absolute; bottom:15%; left:5%; width:calc(100% - 10%);}
+.inBox04 > [class *= "Img"] {position:relative; border-radius:8px; overflow: hidden;}
+.inBox04 > [class *= "Img"] > img {width:100%; height:100%; object-fit: cover;}
+.inBox04 .mainImg {aspect-ratio: 960/337;}
+.inBox04 .inImg {aspect-ratio:300/336}
+.swiperBtnPositionV2 .swiper-button-wrap {left:204px;}
+@media(max-width:1160px) {
+    .inBox04 {flex-direction: column;}
 }
 /* 라이브 스튜디오 */
 .inBox03 {display:flex; gap:32px;}

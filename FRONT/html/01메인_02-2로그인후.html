@@ -303,9 +303,26 @@
                     </div>
                     <div class="infoBoard">
                         <div class="bannerBox">
-                            <a href="">
-                                <img src="../assets/images/main/img-banner01.png" alt="중소벤처기업부, 한국중소벤처기업유통원 2025 판판셀러 참여기업 모집 2025.3.10(월) ~ 2025.12.28(일) 1. 중소기업이 제조·위탁하여 생산한 중소기업 소비재 완제품 2. 국내 제조기업에서 공급받아 판매하는 중소기업">
-                            </a>
+                            <div class="bannerSwiperWrap">
+                                <div class="bannerSwiper">
+                                    <div class="swiper-wrapper">
+                                        <a href="" class="swiper-slide">
+                                            <img src="../assets/images/main/img-banner01.png" alt="중소벤처기업부, 한국중소벤처기업유통원 2025 판판셀러 참여기업 모집 2025.3.10(월) ~ 2025.12.28(일) 1. 중소기업이 제조·위탁하여 생산한 중소기업 소비재 완제품 2. 국내 제조기업에서 공급받아 판매하는 중소기업">
+                                        </a>
+                                        <a href="" class="swiper-slide">
+                                            <img src="../assets/images/main/img-banner01.png" alt="중소벤처기업부, 한국중소벤처기업유통원 2025 판판셀러 참여기업 모집 2025.3.10(월) ~ 2025.12.28(일) 1. 중소기업이 제조·위탁하여 생산한 중소기업 소비재 완제품 2. 국내 제조기업에서 공급받아 판매하는 중소기업">
+                                        </a>
+                                    </div>
+                                    <div class="swiperControlBox">
+                                        <div class="swiper-pagination"></div>
+                                        <div class="swiper-button-wrap">
+                                            <button type="button" class="swiperAutoplayBtn">정지</button>
+                                            <div class="swiper-button-next">다음</div>
+                                            <div class="swiper-button-prev">이전</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="noticeBox">
                             <h2>공지사항</h2>
@@ -798,6 +815,32 @@
 	</footer>
 	<!--// footer -->
     <script>
+        // 상단 배너 스와이퍼
+        var bannerSwiper = new Swiper(".bannerSwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
+        // 재생, 정지 버튼
+        $('.swiperAutoplayBtn').click(function () {
+            if ($(this).hasClass('on')) {
+                bannerSwiper.autoplay.start();
+                $('.swiperAutoplayBtn').text("정지");
+            } else {
+                bannerSwiper.autoplay.stop();
+                $('.swiperAutoplayBtn').text("재생");
+            }
+            $(this).toggleClass('on');
+        })
         // 공지사항 스와이퍼
         var noticeSwiper = new Swiper(".noticeSwiper", {
             navigation: {

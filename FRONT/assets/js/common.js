@@ -100,10 +100,25 @@ const fn_Layout = () => {
     $('#sitemap .in').append(`<ul class="sitemapGnb">${gnbHtml}</ul>`)
 
     /*** mobile menu ***/
+    let gnbNavBtn = $(".gnbNav > li:not(.myPage) > a");
+    let mobUlList = $(".mobUl > li");
+    let gnbNavCurrIndex = $(".gnbNav > li.curr").index();
+    mobUlList.hide();
+    mobUlList.eq(gnbNavCurrIndex).show();
+    gnbNavBtn.on("click", function(){
+        if($(this).parent("li").hasClass("curr")) {
+            $(this).parent("li").removeClass("curr");
+        }else {
+            gnbNavBtn.parent("li").removeClass("curr");
+            $(this).parent("li").addClass("curr");
+        }
+        let newIndex = $(this).parent("li.curr").index();
+        mobUlList.hide().eq(newIndex).show();
+    });
     $('.mobUl > li > a').on('click', function(e){
         e.preventDefault();
     })
-    $('.mobUl li').each(function(){
+    $('.mobUl > li .subDepthItem > ul > li > ul li').each(function(){
         const hasDepth = $(this).find('> ul').length
         if(!!hasDepth) $(this).addClass('hasDepth');
     })
@@ -121,26 +136,6 @@ const fn_Layout = () => {
         e.preventDefault();
         $('.gnbMobArea').removeClass('open');
         $('.btnHam').focus();
-    })
-    $('.gnbMob .body').on('scroll', function(){
-        let scrollTop = $('.gnbMob .body').scrollTop(),
-            scrollEnd = $('.gnbMob .body').prop('scrollHeight') - $('.gnbMob .body').height() - 10, // 마지막 메뉴 curr;
-            lastChild = $('.gnbNav > li').length - 1;
-
-        $('.mobUl > li').each(function(idx){
-            let target = Math.floor($(this).position().top - $('.gnbMob .head').height() - 36);
-            if(target < 0 && scrollTop <= scrollEnd) $('.gnbNav > li').removeClass('curr').eq(idx).addClass('curr');
-            else if(scrollTop > scrollEnd) $('.gnbNav > li').removeClass('curr').eq(lastChild).addClass('curr');
-            console.log(scrollTop, scrollEnd)
-        })
-    })
-    $('.gnbNav > li > a').on('click', function(e){
-        e.preventDefault();
-        let scrollTop = $('.gnbMob .body').scrollTop(),
-            idx = $(this).closest('li').index(),
-            target = Math.floor($('.mobUl > li').eq(idx).position().top - $('.gnbMob .head').height() - 36);
-            
-        $('.gnbMob .body').stop().animate({scrollTop: (scrollTop+target+10)}, 500)
     })
 
     /*** 통합검색 ***/
