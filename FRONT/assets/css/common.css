@@ -15,7 +15,7 @@ html {line-height: 1.5; font-family: "Pretendard GOV", sans-serif; overflow-x: h
 body { position:relative; overflow-y:auto; font-size: 17px; color:var(--color-base, #1d1d1d); } 
 body, div, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, a, button, select, ul, li, span, em, label, :before, :after {margin:0; padding:0;line-height: 1.5;letter-spacing: inherit; font-family: inherit; -webkit-text-size-adjust: none; } 
 span, strong, em, a, button {font-size: 100%; color: inherit; } 
-pre { white-space:pre-line; margin:0; padding:0; word-wrap:break-word } 
+pre {white-space:pre-line;margin:0;padding:0;word-wrap:break-word;font-family: "Pretendard GOV", sans-serif;color: var(--color-gray-70);font-size: 15px;} 
 table { border:0; border-collapse:collapse; border-spacing:0; width:100% } 
 fieldset, img { border:0; vertical-align:top } 
 img { border: 0; max-width: 100%; max-height: 100%; } 

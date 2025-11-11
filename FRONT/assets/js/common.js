@@ -100,7 +100,7 @@ const fn_Layout = () => {
     $('#sitemap .in').append(`<ul class="sitemapGnb">${gnbHtml}</ul>`)
 
     /*** mobile menu ***/
-    let gnbNavBtn = $(".gnbNav > li:not(.myPage) > a");
+    let gnbNavBtn = $(".gnbNav > li:not(.myPage, .home) > a");
     let mobUlList = $(".mobUl > li");
     let gnbNavCurrIndex = $(".gnbNav > li.curr").index();
     mobUlList.hide();
