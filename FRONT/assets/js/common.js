@@ -280,6 +280,7 @@ const fn_Common = () => {
         // 초기 실행
         currEvent(currIndex)
     })
+    updatePaddingByLockButton();
 
     // 셀렉트 (Select)
     $('.select').not('.disabled').each(function () {
@@ -770,6 +771,7 @@ const fn_Content = () => {
     // 리사이즈 시 실행
     $(window).on('resize', function () {
         setSquare();
+        updatePaddingByLockButton();
     });
 
     // 예약자 리뷰
@@ -845,4 +847,13 @@ const sodamMap_layer_close = (target) => {
     $(target).closest('.sodamMapPop').fadeOut(200).removeClass('on')
     $(target).removeAttr('style')
     $('.focusTarget').focus().removeClass('focusTarget')
+}
+
+// 탭 스와이퍼 버튼 존재 여부에 따라 스와이퍼에 패딩 값 업데이트
+const updatePaddingByLockButton = () => {
+    if($(".categorySwiper .swiper-button-lock").length > 1) {
+        $(".categorySwiper").removeClass("btnLock");
+    }else{
+        $(".categorySwiper").addClass("btnLock");
+    }
 }

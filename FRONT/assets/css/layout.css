@@ -34,8 +34,8 @@
     .headBody .util { gap: 0; } 
     .headBody .util > li:nth-child(n+2):nth-child(-n+5) {display:none;}
     .headBody .util > li > :is(a, button) { flex-direction: column; padding: 4px 12px; } 
-    .headBody .util > li > .btnSearchForm {flex-direction: row;}
-    .headBody .util > li > .btnHam span {position: absolute !important; overflow: hidden !important; white-space: nowrap !important; margin: -1px !important; padding: 0 !important; border: 0 !important; width: 1px !important; height: 1px !important; clip: rect(0, 0, 0, 0) !important;}
+    /* .headBody .util > li > .btnSearchForm {flex-direction: row;} */
+    /* .headBody .util > li > .btnHam span {position: absolute !important; overflow: hidden !important; white-space: nowrap !important; margin: -1px !important; padding: 0 !important; border: 0 !important; width: 1px !important; height: 1px !important; clip: rect(0, 0, 0, 0) !important;} */
 }
 @media(max-width:767px) {
     .headBody .logo a {width:92px;}
@@ -214,10 +214,11 @@
 .inner { margin-right: auto; margin-left: auto; padding-right: 24px; padding-left: 24px; width: 100%; max-width: 1620px; } 
 .subCont > .cont { margin: 0 auto; max-width: 1300px; }
 @media (max-width: 1160px) {
+    #container .contents {padding-top:40px}
     #container .contents > #lnb { display: none; }
 }
 @media (max-width: 767px) {
-    #container .contents { padding-right: 16px; padding-left: 16px; }
+    #container .contents {padding-right: 16px; padding-left: 16px; }
     .inner {padding-right: 16px; padding-left: 16px;}
 }
 
@@ -276,9 +277,11 @@
 #quickmenu .quick li.m2::before { background-image: url(../images/common/ico-quick02.png); } 
 #quickmenu .quick li.m3::before { background-image: url(../images/common/ico-quick03.png); } 
 #quickmenu .quick li.m4::before { background-image: url(../images/common/ico-quick04.png); } 
+#quickmenu .quick li a {display:block; text-align:center; color:var(--color-white)}
 #quickmenu button { display: flex; margin: 16px auto 0; border-radius: 100%; width: 30px; height: 30px; } 
 #quickmenu .btnTop { background: #333 url(../images/common/btn-top.png) no-repeat center / 20px; } 
 #quickmenu .btnQuick { background: #333 url(../images/common/btn-quick-on.png) no-repeat center / 10px; } 
+#quickmenu .quick.open {padding:5px 0; border-radius: 999px; background:rgba(0, 0, 0, 0.6)}
 #quickmenu .quick.open .btnQuick { background: #333 url(../images/common/btn-quick-off.png) no-repeat center / 8px; }
 
 @media (min-width: 1161px) { } 
