@@ -280,7 +280,9 @@ const fn_Common = () => {
         // 초기 실행
         currEvent(currIndex)
     })
-    updatePaddingByLockButton();
+    setTimeout(function(){
+        updatePaddingByLockButton();
+    },200)
 
     // 셀렉트 (Select)
     $('.select').not('.disabled').each(function () {
@@ -727,7 +729,7 @@ const fn_Content = () => {
 
     /* 지원사업 신청내역 */
     if($('.anchorWrap').length){
-        $('html *').css({'overflow':'visible'});
+        $('body, #container .contents > .inner, .subCont > div').css({'overflow':'visible'});
     }
     var anchor = $(".anchorTit");
     anchor.find("a").click(function(e){
@@ -771,7 +773,9 @@ const fn_Content = () => {
     // 리사이즈 시 실행
     $(window).on('resize', function () {
         setSquare();
-        updatePaddingByLockButton();
+        setTimeout(function(){
+            updatePaddingByLockButton();
+        },200);
     });
 
     // 예약자 리뷰
@@ -851,9 +855,17 @@ const sodamMap_layer_close = (target) => {
 
 // 탭 스와이퍼 버튼 존재 여부에 따라 스와이퍼에 패딩 값 업데이트
 const updatePaddingByLockButton = () => {
-    if($(".categorySwiper .swiper-button-lock").length > 1) {
-        $(".categorySwiper").removeClass("btnLock");
+    let $targets = $(".categorySwiper").not(".squareType .categorySwiper");
+    let hasLock = $targets.find(".swiper-button-lock").length > 0;
+    if(hasLock) {
+        $targets.removeClass("btnLock");
     }else{
-        $(".categorySwiper").addClass("btnLock");
+        $targets.addClass("btnLock");
+    }
+
+    if($(window).width() < 767) {
+        $(".squareType .categorySwiper").addClass("btnLock");
+    }else{
+        $(".squareType .categorySwiper").removeClass("btnLock");
     }
 }
