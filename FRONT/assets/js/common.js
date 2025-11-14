@@ -141,11 +141,11 @@ const fn_Layout = () => {
     /*** 통합검색 ***/
     $('.btnSearchForm').on('click', function(e){
         e.preventDefault();
-        $('.headSearch').slideDown(200);
+        $('.headSearchWrap').fadeIn(200);
     })
     $('.btnHeaeSearCls').on('click', function(e){
         e.preventDefault();
-        $('.headSearch').slideUp(200);
+        $('.headSearchWrap').fadeOut(200);
         $('.btnSearchForm').focus();
     })
 
@@ -429,6 +429,20 @@ const fn_Common = () => {
 
         }
     })
+
+    // 비민번호 표시/숨김 버튼
+    let $btnPsswrdToggle = $(".btnPsswrdToggle");
+    $btnPsswrdToggle.each(function(){
+        $(this).on("click",function(){
+            $(this).toggleClass("on");
+            if($(this).hasClass("on")) {
+            $(this).text("비밀번호 숨김");
+        }else{
+            $(this).text("비밀번호 표시");
+        }
+        });
+    });
+    
 }
 
 const fn_Content = () => {
@@ -471,14 +485,46 @@ const fn_Content = () => {
         window.addEventListener("resize", updateSwiperControls);
 	})
 
-    // 회원가입 step
+    // 회원가입 step 2025-11-14 수정
     let stepSwiper = new Swiper(".stepSwiper", {
         slidesPerView: "auto",
         spaceBetween: 20,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
         breakpoints: {
-            1121: {
+            0: {
+                spaceBetween: 0,
+                allowTouchMove: true,
+            },
+            601: {
+                spaceBetween: 0,
+                allowTouchMove: false,
+            },
+            768: {
+                spaceBetween: 20,
                 allowTouchMove: false,
             }
+        },
+        on: {
+            init: function () {
+                // 현재 스탭 단계로 슬라이드 이동
+                const idx = document.querySelector('.stepSwiper .swiper-slide.curr');
+                if (idx) {
+                    const i = [...idx.parentNode.children].indexOf(idx);
+                    this.slideTo(i, 0);
+                }
+            }
+        }
+    });
+    let $stepSwiper = $(".stepSwiper");
+    $stepSwiper.each(function(){
+        let $stepSlide = $(this).find(".swiper-slide");
+        if($stepSlide.length < 4) {
+             $(this).addClass("stepShort");
+        }else{
+            $(this).removeClass("stepShort");
         }
     });
 

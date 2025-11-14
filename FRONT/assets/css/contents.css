@@ -54,10 +54,12 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 .cPrima { color: var(--color-primary) !important; }
 .cBlue { color:#023CA4 !important;}
 .cGray { color: var(--color-gray-70) !important; }
+.cGray02 { color: var(--color-gray-50) !important; }
 .cLink {color:#4E6CB6 !important;}
 .cPurple {color:#622D80 !important;}
 
 /* 텍스트 */
+.xxsm { font-size: 13px !important; }  
 .xsm { font-size: 15px !important; }  
 .xlg { font-size: 19px; } 
 .bold { font-weight: 700 !important; }
@@ -109,8 +111,9 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 .flexWrap > strong { font-size: 15px; } 
 .flexWrap > span { min-width: 16px; text-align: center; line-height: 48px; font-size: 15px; color: var(--color-gray-70); }
 .flexWrap > .btn { white-space: nowrap; } 
-.flexWrap.email { max-width: 750px; }
+.flexWrap.email { max-width:1002px; /* max-width: 750px; */ }
 .flexWrap.phone { max-width: 475px; }
+.flexWrap.password {position:relative}
 .flexWrapChk { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; } 
 .flexWrapChk > .flexWrap { flex: 1; max-width: 100%; }
 .flexWrapChk > .flexWrap > div { max-width: 100%; }
@@ -142,6 +145,7 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
     .flexWrap > div { width: 100%; max-width: 100%;}
     .flexWrap.email { flex-direction: column; }
     .flexWrap.email > select { max-width: 100%; }
+    .flexWrap.email > div button { width: 100%; }
     .formTable .flexWrap > div :is(input, select) { max-width: 100%; }
     .assets {flex-direction:column;} 
     .addr .post { max-width: 100%; }
@@ -176,6 +180,8 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 .viewBtn.listView {background-image: url("../images/component/ico-list-view.svg");}
 .viewBtn.girdView.active {background-image: url("../images/component/ico-grid-view-active.svg");}
 .viewBtn.listView.active {background-image: url("../images/component/ico-list-view-active.svg");}
+.btnPsswrdToggle {position:absolute; top:50%; right:0; width:52px; height:100%; text-indent:-9999px; background:url("../images/common/ico-password-hide.svg") no-repeat center/20px; transform: translateY(-50%);}
+.btnPsswrdToggle.on {background-image:url("../images/common/ico-password-show.svg")}
 
 .btnBottom { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 40px; } 
 .btnBottom > div { display: flex; flex-wrap: wrap; gap: 10px; } 
@@ -686,6 +692,10 @@ v9 고객지원
 .searchArea { padding: 24px; border-radius: 6px; background: #F1F7F8; }
 .searchArea .in { position: relative; padding-right: 210px; }
 .searchArea .in .rt { display: flex; gap: 8px; position: absolute; right: 0; bottom: 0; }
+.searchArea .in h3 {margin-bottom:16px; font-size:17px;}
+.searchArea .inTit {flex:none; font-size:15px; font-weight:700;}
+.searchArea .flexInTitWrap {display:flex; flex-wrap:wrap; gap:10px;}
+.searchArea .flexInTitWrap > .flexWrap {flex:1 0 453px}
 .searchArea ul { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 60px; }
 .searchArea ul li { width: calc(50% - 30px); }
 .searchArea dl { display: flex; align-items: center; min-height: 48px; }
@@ -720,6 +730,8 @@ v9 고객지원
     .searchArea dl dt { flex: none; margin-bottom: 8px; }
     .searchArea dl dd { width: 100%; }
     .searchArea dl dd .date input { max-width: 100%; }
+    .searchArea .flexInTitWrap {flex-direction: column; align-items: stretch;}
+    .searchArea .flexInTitWrap > .flexWrap {flex-direction:column; align-items: stretch; flex:none}
     .flexForm { flex-direction: column; }
 }
 @media(max-width:767px) {
@@ -1906,7 +1918,8 @@ v9 고객지원
 .login .tabTit li .icoLog03::before { background: url(../images/content/ico-login03.png) no-repeat center / 40px; } 
 .login .tabTit li .icoLog04::before { background: url(../images/content/ico-login04.png) no-repeat center / 40px; } 
 .loginBox { display: flex; flex-direction: column; gap: 40px; } 
-.loginInp { display: flex; flex-direction: column; gap: 10px; } 
+.loginBox h3 {margin-bottom:10px; font-size:17px;}
+.loginInp { display: flex; flex-direction: column; gap: 24px; } 
 .loginInp input { width: 100%; } 
 .loginInp p { font-size: 15px; font-weight: 700; color: var(--color-gray-70); } 
 .loginChk { display: flex; justify-content: space-between; align-items: center; color: var(--color-gray-70); } 
@@ -1938,6 +1951,7 @@ v9 고객지원
 @media(max-width:767px) {
     .login .tabTit li a {padding:10px 5px; height:100%; border-radius:20px; font-size:15px;}
     .login .tabTit li a::before {width:30px; height:30px; background-size:30px !important;}
+    .loginBox h3 {font-size:15px;}
     .loginInp input {font-size:15px;}
     .loginChk li a {line-height:23px; font-size:15px;}
     .loginSns ul {flex-direction: column;}
@@ -2004,6 +2018,8 @@ v9 고객지원
     .joinType > div .icoArea {display:none;}
     .joinType .txtBox > strong {display:flex; align-items:center; position:relative; margin-bottom:14px; padding-left:70px; min-height:60px; font-size:19px;}
     .joinType .txtBox > strong:before {position: absolute; content: ""; left: 0; top: 0; z-index: 13; border: 1px solid #CCC; border-radius: 8px; width: 60px; height: 60px; background: no-repeat center /30px #e6ebf1;}
+    .joinType .btnArea {justify-content: center;}
+    .joinType .btnArea .btn {width:196px;}
     .joinType .join01 .txtBox > strong:before {background-image: url(../images/content/ico-join01.png);}
     .joinType .join02 .txtBox > strong:before {background-image: url(../images/content/ico-join02.png);}
     .joinType .join03 .txtBox > strong:before {background-image: url(../images/content/ico-join03.png);}
@@ -2011,14 +2027,13 @@ v9 고객지원
     .joinType .join05 .txtBox > strong:before {background-image: url(../images/content/ico-join05.png);}
     .joinType .join06 .txtBox > strong:before {background-image: url(../images/content/ico-join06.png);}
     .joinType .join07 .txtBox > strong:before {background-image: url(../images/content/ico-join07.png);}
-    .joinType .join02 .btnArea {align-items: flex-end;}
-    .joinType .join02 .btnArea .btn {width:196px;}
+    .joinType .join02 .btnArea {align-items: center;}
 } 
 
 .section > .step { margin: 0; }
 .step { margin: 46px auto 40px; } 
 .step ol { display: flex;} 
-.step ol > li { flex: 1; position: relative; padding: 16px 20px; border: 2px solid var(--color-gray-40); border-radius: 80px; min-width:134px; text-align: center; font-size: 15px; color: #8E8E8E; } 
+.step ol > li { flex: 1; position: relative; padding: 16px 20px; border: 2px solid var(--color-gray-40); border-radius: 80px; /* min-width:134px; */ text-align: center; font-size: 15px; color: #8E8E8E; } 
 .step ol > li + li::before { display: block; content: ""; position: absolute; top: calc(50% - 8px); left: -22px; width: 20px; height: 11px; background: url(../images/content/ico-arrow-right.png) no-repeat center/100% auto; } 
 .step ol > li:last-child {margin-right:0 !important;}
 .step ol > li span { display: inline-block; margin-bottom: 5px; padding: 0 10px; border-radius: 40px; line-height: 24px; font-size: 13px; font-weight: 500; color: var(--color-gray-50); background: #EBEBEB;}
@@ -2027,14 +2042,36 @@ v9 고객지원
 .step ol > li.curr::after { display: block; content: '현재페이지'; position: absolute; top: -99999px; text-indent: -999px; } 
 .step ol > li.curr span { color: var(--color-white); background: var(--color-secondary); }
 .step ol > li.curr p { color: var(--color-primary); }
-.step.step6 ol > li {min-width:162px;}
+/* .step.step6 ol > li {min-width:162px;} */
+.stepSwiper {position:relative}
+.stepSwiper .swiper-button-next,
+.stepSwiper .swiper-button-prev {display:none; width:32px; height:32px; text-indent: -9999px; background:no-repeat center}
+.stepSwiper .swiper-button-next {top:50%; right:0; margin-top:0; width:32px; height:calc(100% + 2px); text-indent:-9999px; background:url("../images/content/ico-btn-swiper-next-bgWhite.svg") no-repeat center #fff; transform: translateY(-50%);}
+.stepSwiper .swiper-button-next:before { position: absolute; left: -24px; top: 0; content: ""; z-index: 5; width: 24px; height: 100%; background: linear-gradient(90deg,rgba(255, 255, 255, 0) 0%,#fff 100%); }
+.stepSwiper .swiper-button-prev {top:50%; right:initial; left:0; margin-top:0; width:32px; height:calc(100% + 2px); text-indent:-9999px; background:url("../images/content/ico-btn-swiper-prev-bgWhite.svg") no-repeat center #fff; transform: translateY(-50%);}
+.stepSwiper .swiper-button-prev:before { position: absolute; right: -24px; top: 0; content: ""; z-index: 5; width: 24px; height: 100%; background: linear-gradient(270deg,rgba(255, 255, 255, 0) 0%,#fff 100%); }
+.stepSwiper.stepShort .swiper-wrapper {transform:translate3d(0px, 0px, 0px) !important;} 
 .joinTopTxt { text-align: center; }
-@media(min-width:1121px) {
+@media(min-width:601px) {
     .step .swiper-wrapper {transform:translate3d(0px, 0px, 0px) !important;} 
 }
+@media(max-width:1160px) {
+    .step ol > li {padding:6px 10px; border-radius:20px;}
+    .step ol > li p {font-size:15px;}
+}
 @media(max-width:767px) {
-    .step ol > li {border-radius:20px;}
+    .step ol > li {padding:0; /* border-radius:20px; */ border:none !important; min-width:auto;}
+    .step ol > li + li::before {top:7px; left:-8px; width:16px;}
+    .step ol > li p {font-size:13px;}
     .joinTopTxt {text-align:left;}
+}
+@media(max-width: 600px) {
+    .step ol > li {min-width:112px}
+    .stepSwiper {padding:0 32px;}
+    .stepSwiper .swiper-button-next,
+    .stepSwiper .swiper-button-prev {display:flex}
+    .stepSwiper.stepShort {padding:0;}
+    .stepSwiper.stepShort ol > li {padding:0 2px; min-width:auto;}
 }
 
 .grid6.checkboxWrap { display: grid; grid-template-columns: repeat(6, 1fr); }

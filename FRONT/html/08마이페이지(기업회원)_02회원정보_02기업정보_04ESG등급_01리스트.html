@@ -38,38 +38,55 @@
 		<div class="inner">
 			<div class="headTop">
 				<ul class="etc">
-					<li><a href="" class="btnIco btnHref xsm"><img src="../assets/images/common/ico-logo01.png" alt="">소담인프라</a></li>
-					<li><a href="" class="btnIco btnHref xsm"><img src="../assets/images/common/ico-logo02.svg" alt="">동행축제</a></li>
+					<li><a href=""><img src="../assets/images/common/ico-logo01.png" alt="">소담인프라</a></li> <!-- 2025-11-11 btnIco, btnHref, xsm 클래스 삭제 -->
+					<li><a href="" class="btnIco btnHref xsm" title="새 창 열림"><img src="../assets/images/common/ico-logo02.svg" alt="">동행축제</a></li> <!-- 2025-11-11 title 추가 / 웹 접근성 준수 -->
 				</ul>
 			</div>
 			<div class="headBody">
-				<div class="logo">
-					<a href=""><img src="../assets/images/common/logo.svg" alt="KODMA 판판대로"></a>
-				</div>
+				<!-- 수정 -->
+				<div class="left">
+                    <div class="logo">
+                        <a href=""><img src="../assets/images/common/logo.svg" alt="KODMA 판판대로"></a>
+                    </div>
+                    <div class="shortcutSite">
+                        <button type="button">관련사이트 바로가기</button>
+                        <ul>
+                            <li><a href="" target="_blank" title="새 창 열림"><img src="../assets/images/common/img-site01.svg" alt="KODMA 판판셀러"></a></li>
+                            <li><a href="" target="_blank" title="새 창 열림"><img src="../assets/images/common/img-site04.svg" alt="중소벤처기업부"></a></li>
+                            <li><a href="" target="_blank" title="새 창 열림"><img src="../assets/images/common/img-site02.svg" alt="공공구매종합정보망 Public e-Procurement Information"></a></li>
+                            <li><a href="" target="_blank" title="새 창 열림"><img src="../assets/images/common/img-site03.svg" alt="한국중소벤처기업유통원 Korea SMEs & Startups Distribution & Marketing Agency"></a></li>
+                        </ul>
+                    </div>
+                </div>
+				<!--// 수정 -->
 				<ul class="util">
 					<li>
 						<button type="button" class="btnSearchForm">통합검색</button>
-						<div class="headSearch">
-							<div class="inner">
-								<strong>판판대로 통합검색</strong>
-								<div class="in">
-									<div class="sesarchInp">
-										<input type="text" placeholder="검색어를 입력해주세요." title="검색어">
-										<button type="button" class="btnHeadSearch"><span class="hide">검색</span></button>
+						<!-- 2025-11-14 headSearchWrap 추가 -->
+						<div class="headSearchWrap">
+							<div class="headSearch">
+								<div class="inner">
+									<strong>판판대로 통합검색</strong>
+									<div class="in">
+										<div class="sesarchInp">
+											<input type="text" placeholder="검색어를 입력해주세요." title="검색어">
+											<button type="button" class="btnHeadSearch"><span class="hide">검색</span></button>
+										</div>
+										<div class="searchInpBot">
+											<p>무엇이 궁금하세요?</p>
+											<ul>
+												<li><button type="button">#전담셀러</button></li>
+												<li><button type="button">#상세페이지</button></li>
+												<li><button type="button">#마트</button></li>
+												<li><button type="button">#브랜드k</button></li>
+											</ul>
+										</div>
 									</div>
-									<div class="searchInpBot">
-										<p>무엇이 궁금하세요?</p>
-										<ul>
-											<li><button type="button">#전담셀러</button></li>
-											<li><button type="button">#상세페이지</button></li>
-											<li><button type="button">#마트</button></li>
-											<li><button type="button">#브랜드k</button></li>
-										</ul>
-									</div>
+									<button type="button" class="btnCls btnHeaeSearCls"><span class="hide">닫기</span></button>
 								</div>
-								<button type="button" class="btnCls btnHeaeSearCls"><span class="hide">닫기</span></button>
 							</div>
 						</div>
+						<!--// 2025-11-14 headSearchWrap 추가 -->
 					</li>
 					<!-- 로그인 전 -->
 					<li><a href="" class="btnLogin">로그인</a></li>
@@ -79,7 +96,7 @@
 					<li><a href="" class="btnLogout">로그아웃</a></li>
 					<li><a href="" class="btnMypage">김판판님 마이페이지</a></li>
 					<!--// 로그인 후 -->
-					<li class="btnMobLi"><a href="" class="btnHam">전체메뉴</a></li>
+					<li class="btnMobLi"><a href="" class="btnHam"><span>전체메뉴</span></a></li>
 				</ul>
 			</div>
 		</div>
@@ -90,127 +107,446 @@
 				<!-- gnbArea -->
 				<div class="gnbArea">
 					<ul class="gnbUl">
-						<li>
-							<a href="">운영기관 소개</a>
+						<li class="gnbMobOnly"> <!-- 모바일 화면에서만 보이는 메뉴 gnbMobOnly 클래스 추가 -->
+							<a href="">홈</a>
 							<div class="subDepth">
-								<p>운영기관 소개</p>
-								<ul>
-									<li><a href="">운영기관 소개</a></li>
-								</ul>
+								<div class="inner">
+									<p>홈</p>
+								</div>
 							</div>
 						</li>
 						<li>
-							<a href="">사업공고 및 신청</a>
+							<a href="">지원사업 안내</a>
 							<div class="subDepth">
-								<p>사업공고 및 신청</p>
-								<ul>
-									<li><a href="">지원사업 안내</a></li>
-									<li>
-										<a href="">지원사업 공고</a>
-										<ul>
-											<li><a href="">지원사업 공고ㆍ신청</a></li>
-											<li><a href="">국내 판로지원사업 전체보기</a></li>
-											<li>
-												<a href="">지원사업 신청현황</a>
-												<ul>
-													<li><a href="">지원사업 신청/수정/제출 목록</a></li>
-													<li><a href="">지원사업 신청</a></li>
-													<li><a href="">지원사업 임시저장</a></li>
-													<li><a href="">지원사업 수정</a></li>
-													<li><a href="">지원사업 제출</a></li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li><a href="">지원사업 공고</a></li>
-								</ul>
+								<div class="inner">
+									<p>지원사업 안내</p>
+									<div class="subDepthFlex">
+										<div class="subDepthItem tNone"> <!-- PC GNB에서만 노출되는 (모바일 GNB, 사이트맵에서는 안보임) 메뉴 tNone 클래스 추가 -->
+											<ul>
+												<li>
+													<a href="">홍보·마케팅 지원사업</a>
+													<ul>
+														<li>
+															<a href="">소상공인 상품 개선 지원</a>
+														</li>
+														<li>
+															<a href="">소상공인 콘텐츠 제작지원사업</a>
+														</li>
+														<li><a href="">SNS 활용 패키지 지원사업</a></li>
+														<li><a href="">소상공인 홍보 지원사업</a></li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+										<div class="subDepthItem tNone"> <!-- PC GNB에서만 노출되는 (모바일 GNB, 사이트맵에서는 안보임) 메뉴 tNone 클래스 추가 -->
+											<ul>
+												<li>
+													<a href="">유통·판로 지원사업</a>
+													<ul>
+														<li><a href="">오프라인 기획전</a></li>
+														<li><a href="">O2O 융합판매 기획전(동행축제)</a></li>
+														<li><a href="">온라인쇼핑몰 판매지원</a></li>
+														<li><a href="">온라인판로 종합지원사업</a></li>
+														<li><a href="">로컬상품관 입점지원 사업</a></li>
+														<li><a href="">온라인브랜드 소상공인육성사업 (TOPS)</a></li>
+														<li><a href="">대형유통망 입점</a></li>
+														<li><a href="">구매상담회</a></li>
+														<li><a href="">TV홈쇼핑 및 데이터홈쇼핑 입점</a></li>
+														<li><a href="">라이브커머스 제작·운영지원사업</a></li>
+														<li><a href="">글로벌시장 지원</a></li>
+														<li><a href="">소상공인 스마트물류 지원</a></li>
+														<li><a href="">소상공인 PB/직매입 상담회</a></li>
+														<li><a href="">중소기업제품 전용판매장</a></li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+										<div class="subDepthItem tNone"> <!-- PC GNB에서만 노출되는 (모바일 GNB, 사이트맵에서는 안보임) 메뉴 tNone 클래스 추가 -->
+											<ul>
+												<li>
+													<a href="">교육·컨설팅 지원사업</a>
+													<ul>
+														<li><a href="">브랜드 역량 강화</a></li>
+													</ul>
+												</li>
+											</ul>
+											<ul>
+												<li>
+													<a href="">인프라 지원사업</a>
+													<ul>
+														<li><a href="">디지털 커머스 전문기관</a></li>
+														<li><a href="">판판셀러</a></li>
+														<li><a href="">스마트 플래그십 스토어</a></li>
+													</ul>
+												</li>
+											</ul>
+											<ul>
+												<li>
+													<a href="">사후관리 지원사업</a>
+													<ul>
+														<li><a href="">공동A/S지원사업</a></li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+										<div class="subDepthItem">
+											<ul>
+												<li>
+													<a href="" class="ico icoArrow">지원사업 안내</a>
+													<p>
+														기업 경쟁력 강화, 판로 확대, 경영 안정화를 위한 맞춤형 지원 프로그램을 확인하실 수 있습니다.
+													</p>
+												</li>
+											</ul>
+											<ul>
+												<li>
+													<a href="" class="ico icoArrow">지원사업 공고</a>
+													<p>
+														기업 경쟁력 강화, 판로 확대, 경영 안정화를 위한 맞춤형 지원 프로그램을 확인하실 수 있습니다.
+													</p>
+												</li>
+											</ul>
+											<ul>
+												<li>
+													<a href="" class="ico icoArrow">소상공인 사업공고</a>
+													<p>소상공인을 위한 지원사업을 안내해드립니다.</p>
+												</li>
+											</ul>
+											<ul>
+												<li>
+													<a href="" class="ico icoArrow">중소기업 사업공고</a>
+													<p>대규모 상생·판촉행사와 같은 다양한 국내 행사의 정보를 한눈에 파악하고 홍보·판촉 지원을 받을 수 있습니다. </p>
+												</li>
+											</ul>
+										</div>
+										<div class="subDepthItem">
+											<ul>
+												<li>
+													<a href="" class="ico icoArrow">국내 판로지원사업 전체보기</a>
+													<p>다양한 유통·거래 기회를 연결하는 판로정보를 확인하세요.</p>
+												</li>
+											</ul>
+											<ul>
+												<li>
+													<a href="" class="ico icoArrow">지원사업 신청현황</a>
+													<p>
+														중소기업과 소상공인의 경쟁력 강화를 위해 추진되는 지원사업으로서 세부 지원내용, 신청 자격 및 절차는 공고 상세 내용을 통해 확인하실 수 있습니다.
+													</p>
+												</li>
+											</ul>
+											<ul>
+												<li>
+													<a href="" class="ico icoArrow">지원사업별 담당자</a>
+													<p>각 지원사업별 세부 내용 및 신청 관련 사항을 사업별 담당자에게 문의하시면 상세히 안내받으실 수 있습니다.</p>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
 							</div>
 						</li>
 						<li>
-							<a href="">홍보·알림</a>
+							<a href="">쓸쓸판판</a>
 							<div class="subDepth">
-								<p>홍보·알림</p>
-								<ul>
-									<li><a href="">우수제품</a></li>
-									<li><a href="">우수사례</a></li>
-									<li>
-										<a href="">판로정보</a>
-										<ul>
-											<li><a href="">중소기업 행사정보</a></li>
-											<li><a href="">조달청 입찰정보</a></li>
-											<li><a href="">기타 연계정보 제공</a></li>
-										</ul>
-									</li>
-									<li>
-										<a href="">MRO 지원정보</a>
-										<ul>
-											<li><a href="">알기쉬운 사업안내</a></li>
-											<li><a href="">납품업체 검색</a></li>
-											<li><a href="">실태조사</a></li>
-										</ul>
-									</li>
-								</ul>
+								<div class="inner">
+									<p>쓸쓸판판</p>
+									<div class="subDepthFlex">
+										<div class="subDepthItem">
+											<ul>
+												<li>
+													<a href="" class="ico icoArrow">공지사항</a>
+													<p>
+														판판대로 서비스의 최신 소식과 안내사항을 확인하실 수 있습니다.
+													</p>
+												</li>
+											</ul>
+										</div>
+										<div class="subDepthItem">
+											<ul>
+												<li>
+													<a href="" class="ico icoArrow">판판스토리</a>
+													<p>
+														중소·소상공인의 혁신과 기술력을 담은 성공적인 활용 경험과 성과를 담은 제품과 사례를 소개합니다.
+													</p>
+												</li>
+											</ul>
+										</div>
+										<div class="subDepthItem">
+											<ul>
+												<li>
+													<a href="" class="ico icoArrow">판판 미디어</a>
+													<p>
+														유통·트렌드 정보를 영상과 카드뉴스로 제공해드립니다.
+													</p>
+												</li>
+											</ul>
+										</div>
+										<div class="subDepthItem">
+											<ul>
+												<li>
+													<a href="" class="ico icoArrow">MRO 지원정보</a>
+													<p>
+														운영에 필요한 소모성 자재를 효율적으로 확보할 수 있는 MRO 지원 정보를 제공합니다.
+													</p>
+													<ul class="tBlock"> <!-- PC GNB에서는 비노출 / 사이트맵, 모바일 GNB에서는 노출되는 메뉴 tBlock 클래스 추가 -->
+														<li><a href="">알기쉬운 사업안내</a></li>
+														<li><a href="">납품업체 검색</a></li>
+														<li><a href="">실태조사</a></li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+										<div class="subDepthItem">
+											<ul>
+												<li>
+													<a href="" class="ico icoArrow">판판정보</a>
+													<p>
+														정책자료, 연구자료, 동향·통계자료 등을 제공해드립니다.
+													</p>
+													<ul class="tBlock"> <!-- PC GNB에서는 비노출 / 사이트맵, 모바일 GNB에서는 노출되는 메뉴 tBlock 클래스 추가 -->
+														<li><a href="">입찰정보</a></li>
+														<li><a href="">중소기업 행사정보</a></li>
+														<li><a href="">정책자료</a></li>
+														<li><a href="">연구자료</a></li>
+														<li><a href="">동향·통계자료</a></li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
 							</div>
 						</li>
 						<li>
-							<a href="">주요 서비스</a>
+							<a href="">판판센터</a>
 							<div class="subDepth">
-								<p>주요 서비스</p>
-								<ul>
-									<li><a href="">플랫폼소개</a></li>
-									<li>
-										<a href="">소담인프라</a>
-										<ul>
-											<li>
-												<a href="">소담스퀘어 안내</a>
-												<ul>
-													<li><a href="">상암</a></li>
-													<li><a href="">당산</a></li>
-													<li><a href="">보라매</a></li>
-													<li><a href="">대구</a></li>
-													<li><a href="">부산</a></li>
-													<li><a href="">전주</a></li>
-													<li><a href="">강원</a></li>
-													<li><a href="">광주</a></li>
-													<li><a href="">충북</a></li>
-												</ul>
-											</li>
-											<li>
-												<a href="">소담상회 안내</a>
-												<ul>
-													<li><a href="">인사</a></li>
-													<li><a href="">서교</a></li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li>
-										<a href="">판판소싱</a>
-										<ul>
-											<li>
-												<a href="">판판소싱 공고</a>
-												<ul>
-													<li><a href="">공고 보기</a></li>
-													<li><a href="">입점신청</a></li>
-												</ul>
-											</li>
-											<li><a href="">판판소싱 소개</a></li>
-										</ul>
-									</li>
-									<li><a href="" target="_blank">판판셀러</a></li>
-									<li><a href="" target="_blank">동행축제</a></li>
-								</ul>
+								<div class="inner">
+									<p>판판센터</p>
+									<div class="subDepthFlex">
+										<div class="subDepthItem">
+											<ul>
+												<li>
+													<a href="" class="ico icoShortcut" target="_blank" title="새 창 열림">판판셀러</a>
+													<p>
+														공공과 민간 시장을 연결하는 판매지원 플랫폼
+													</p>
+												</li>
+											</ul>
+										</div>
+										<div class="subDepthItem">
+											<ul>
+												<li>
+													<a href="" class="ico icoShortcut" target="_blank" title="새 창 열림">동행축제</a>
+													<p>
+														지역사회와 산업을 연결하는 다양한 행사와 축제 소식을 만나보세요.
+													</p>
+												</li>
+											</ul>
+										</div>
+										<div class="subDepthItem">
+											<ul>
+												<li>
+													<a href="" class="ico icoArrow">소담인프라</a>
+													<p>
+														온라인 유통판로 관련 정보습득부터, 교육, 실전 지원까지 모든 과정과 혜택 정보를 확인하실 수 있습니다.
+													</p>
+													<ul class="tBlock"> <!-- PC GNB에서는 비노출 / 사이트맵, 모바일 GNB에서는 노출되는 메뉴 tBlock 클래스 추가 -->
+														<li>
+															<a href="">소개</a>
+														</li>
+														<li>
+															<a href="">소담스퀘어 안내</a>
+															<ul>
+																<li><a href="">상암</a></li>
+																<li><a href="">당산</a></li>
+																<li><a href="">보라매</a></li>
+																<li><a href="">대구</a></li>
+																<li><a href="">부산</a></li>
+																<li><a href="">전주</a></li>
+																<li><a href="">강원</a></li>
+																<li><a href="">강원</a></li>
+																<li><a href="">광주</a></li>
+																<li><a href="">충북</a></li>
+															</ul>
+														</li>
+														<li>
+															<a href="">소담상회 안내</a>
+															<ul>
+																<li><a href="">인사점</a></li>
+																<li><a href="">서교점</a></li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+										<div class="subDepthItem">
+											<ul>
+												<li>
+													<a href="" class="ico icoArrow">라이브 스튜디오</a>
+													<p>
+														라이브 커머스 방송 제작에 필요한 스튜디오, 장비, 전문 인력 등을 지원합니다.
+													</p>
+												</li>
+											</ul>
+										</div>
+										<div class="subDepthItem">
+											<ul>
+												<li>
+													<a href="" class="ico icoArrow">판판소싱</a>
+													<p>
+														쇼핑몰에 입점하시고자 상품을 찾으시거나 제안을 희망하시는 분에게 정보를 제공합니다.
+													</p>
+													<ul class="tBlock"> <!-- PC GNB에서는 비노출 / 사이트맵, 모바일 GNB에서는 노출되는 메뉴 tBlock 클래스 추가 -->
+														<li>
+															<a href="">판판소싱 소개</a>
+														</li>
+														<li>
+															<a href="">판판소싱 공고</a>
+															<ul>
+																<li><a href="">공고 보기</a></li>
+																<li><a href="">입점신청</a></li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+										<div class="subDepthItem">
+											<ul>
+												<li>
+													<a href="" class="ico icoArrow">플랫폼소개</a>
+													<p>
+														중소·소상공인의 판로 확대를 위한 판판대로 플랫폼 주요 서비스 정보를 확인하실 수 있습니다.
+													</p>
+													<ul class="tBlock"> <!-- PC GNB에서는 비노출 / 사이트맵, 모바일 GNB에서는 노출되는 메뉴 tBlock 클래스 추가 -->
+														<li>
+															<a href="">플랫폼 소개</a>
+														</li>
+														<li>
+															<a href="">BI 소개</a>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
 							</div>
 						</li>
 						<li>
 							<a href="">이용안내</a>
 							<div class="subDepth">
-								<p>이용안내</p>
-								<ul>
-									<li><a href="">공지사항</a></li>
-									<li><a href="">자주하는 질문</a></li>
-									<li><a href="">1:1 문의</a></li>
-								</ul>
+								<div class="inner">
+									<p>이용안내</p>
+									<div class="subDepthFlex">
+										<div class="subDepthItem">
+											<ul>
+												<li>
+													<a href="" class="ico icoArrow">이용안내</a>
+													<p>
+														메뉴 및 회원과 관련된 사이트 이용 안내를 해드립니다.
+													</p>
+													<ul class="tBlock"> <!-- PC GNB에서는 비노출 / 사이트맵, 모바일 GNB에서는 노출되는 메뉴 tBlock 클래스 추가 -->
+														<li>
+															<a href="">메뉴안내</a>
+														</li>
+														<li>
+															<a href="">회원안내</a>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+										<div class="subDepthItem">
+											<ul>
+												<li>
+													<a href="" class="ico icoArrow">자주하는 질문</a>
+													<p>
+														판판대로 서비스 이용중 궁금한 사항을 빠르게 해결할 수 있습니다.
+													</p>
+												</li>
+											</ul>
+										</div>
+										<div class="subDepthItem">
+											<ul>
+												<li>
+													<a href="" class="ico icoArrow">1:1 문의</a>
+													<p>
+														서비스 이용 관련 궁금증을 1:1로 문의하고 답변을 받아보실 수 있습니다.
+													</p>
+												</li>
+											</ul>
+										</div>
+										<div class="subDepthItem sitemapOnlyNone">
+											<ul>
+												<li>
+													<a href="" class="ico icoArrow">사이트맵</a>
+													<p>
+														모든 메뉴와 페이지를 한눈에 보실 수 있습니다.
+													</p>
+												</li>
+											</ul>
+										</div>
+										<div class="subDepthItem">
+											<ul>
+												<li>
+													<a href="" class="ico icoArrow">운영기관 소개</a>
+													<p>
+														판판대로 서비스의 관리 및 운영 주체, 주요 기능과 역할을 확인하실 수 있습니다.
+													</p>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="sitemapOnly"> <!-- 사이트맵에서만 노출되는 메뉴 sitemapOnly 클래스 추가 -->
+							<a href="">고객지원</a>
+							<div class="subDepth">
+								<div class="inner">
+									<p>고객지원</p>
+									<div class="subDepthFlex">
+										<div class="subDepthItem">
+											<ul>
+												<li>
+													<a href="" class="ico icoArrow">개인정보처리방침</a>
+												</li>
+											</ul>
+										</div>
+										<div class="subDepthItem">
+											<ul>
+												<li>
+													<a href="" class="ico icoArrow">이용약관</a>
+													<ul>
+														<li>
+															<a href="">통합기업회원</a>
+														</li>
+														<li>
+															<a href="">일반회원</a>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+										
+										<div class="subDepthItem">
+											<ul>
+												<li>
+													<a href="" class="ico icoArrow">저작권정책</a>
+												</li>
+											</ul>
+										</div>
+										<div class="subDepthItem">
+											<ul>
+												<li>
+													<a href="" class="ico icoArrow">이메일무단수집거부</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
 							</div>
 						</li>
 					</ul>
@@ -219,8 +555,8 @@
 					<!--// hover depth -->
 				</div>
 				<!--// gnbArea -->
+				<button type="button" class="btnSitemap"><span class="hide">사이트맵</span></button>
 				<div class="sitemapArea">
-					<button type="button" class="btnSitemap"><span class="hide">사이트맵</span></button>
 					<div id="sitemap">
 						<div class="inner">
 							<strong>판판대로 사이트맵</strong>
@@ -240,22 +576,31 @@
 				<div class="head">
 					<div class="headTop">
 						<ul class="etc">
-							<li><a href="" class="btnIco btnHref xsm"><img src="../assets/images/common/ico-logo01.png" alt="">소담인프라</a></li>
-							<li><a href="" class="btnIco btnHref xsm"><img src="../assets/images/common/ico-logo02.svg" alt="">동행축제</a></li>
+							<li><a href="" class="xsm"><img src="../assets/images/common/ico-logo01.png" alt="">소담인프라</a></li> <!-- 2025-11-11 btnIco btnHref 클래스 삭제 -->
+							<li><a href="" class="btnIco btnHref xsm" target="_blank" title="새 창 열림"><img src="../assets/images/common/ico-logo02.svg" alt="">동행축제</a></li> <!-- 2025-11-11 title 추가 / 웹 접근성 준수 -->
 						</ul>
 					</div>
-					<div>
-						<p class="logTxt">로그인을 해주세요.</p>
+					<div class="headUtil">
+						<!-- 로그인 전 -->
+						<a href="" class="btnLogin">로그인</a>
+						<a href="" class="btnJoin">회원가입</a>
+						<!--// 로그인 전 -->
+						<!-- 로그인 후 -->
+						<a href="" class="btnMypage">김판판님</a> <!-- 링크 아닐경우 클래스는 그대로 놔두시고 a태그를 p 태그로 바꿔주세요 -->
+						<a href="" class="btnLogout">로그아웃</a>
+						<!--// 로그인 후 -->
+						<!-- <p class="logTxt">로그인을 해주세요.</p> -->
 					</div>
 				</div>
 				<div class="body">
 					<div class="left">
 						<ul class="gnbNav">
-							<li class="curr"><a href="#mGnb01">운영기관 소개</a></li>
-							<li><a href="#mGnb02">사업공고 및 신청</a></li>
-							<li><a href="#mGnb03">홍보·알림</a></li>
-							<li><a href="#mGnb04">주요 서비스</a></li>
-							<li><a href="#mGnb05">이용안내</a></li>
+							<li class="home"><a href="">홈</a></li>
+							<li class="curr"><a href="#mGnb01">지원사업 안내</a></li>
+							<li><a href="#mGnb02">쓸쓸판판</a></li>
+							<li><a href="#mGnb03">판판센터</a></li>
+							<li><a href="#mGnb04">이용안내</a></li>
+							<li class="myPage"><a href="">마이페이지</a></li>
 						</ul>
 					</div>
 					<div class="right">
@@ -399,56 +744,62 @@
                             <div class="searchArea">
                                 <div class="in">
                                     <div class="lt">
-                                        <!-- 2025-10-02 -->
+										<h3>진단일</h3> <!-- 2025-11-14 추가 -->
                                         <div class="searchDefault">
                                             <ul>
                                                 <li class="full">
                                                     <dl>
-                                                        <dt>진단일</dt>
                                                         <dd>
-                                                            <div class="flexWrapChk">
-                                                                <!-- checkbox -->
-                                                                <div class="checkboxWrap">
-                                                                    <div class="radiobox">
-                                                                        <input type="radio" name="chk01" id="chk0101">
-                                                                        <label for="chk0101">전체</label>
-                                                                    </div>
-                                                                    <div class="radiobox">
-                                                                        <input type="radio" name="chk01" id="chk0102">
-                                                                        <label for="chk0102">2025년</label>
-                                                                    </div>
-                                                                    <div class="radiobox">
-                                                                        <input type="radio" name="chk01" id="chk0103">
-                                                                        <label for="chk0103">2024년</label>
-                                                                    </div>
-                                                                    <div class="radiobox">
-                                                                        <input type="radio" name="chk01" id="chk0104">
-                                                                        <label for="chk0104">2023년</label>
-                                                                    </div>
-                                                                </div>
-                                                                <!--// checkbox -->
-                                                                <div class="dateWrap">
-                                                                    <div class="flexWrap">
-                                                                        <div>
-                                                                            <div class="date">
-                                                                                <input type="text" title="시작날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
-                                                                            </div>
-                                                                        </div>
-                                                                        <span>~</span>
-                                                                    </div>
-                                                                    <div>
-                                                                        <div class="date">
-                                                                            <input type="text" title="종료날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+															<!-- 2025-11-14 수정 -->
+                                                            <div class="flexInTitWrap">
+																<div class="flexWrap">
+																	<p class="inTit">년도검색</p>
+																	<!-- checkbox -->
+																	<div class="checkboxWrap">
+																		<div class="radiobox">
+																			<input type="radio" name="chk01" id="chk0101">
+																			<label for="chk0101">전체</label>
+																		</div>
+																		<div class="radiobox">
+																			<input type="radio" name="chk01" id="chk0102">
+																			<label for="chk0102">2025년</label>
+																		</div>
+																		<div class="radiobox">
+																			<input type="radio" name="chk01" id="chk0103">
+																			<label for="chk0103">2024년</label>
+																		</div>
+																		<div class="radiobox">
+																			<input type="radio" name="chk01" id="chk0104">
+																			<label for="chk0104">2023년</label>
+																		</div>
+																	</div>
+																</div>
+                                                                <div class="flexWrap">
+																	<p class="inTit">기간검색</p>
+																	<!--// checkbox -->
+																	<div class="dateWrap">
+																		<div class="flexWrap">
+																			<div>
+																				<div class="date">
+																					<input type="text" title="시작날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
+																				</div>
+																			</div>
+																			<span>~</span>
+																		</div>
+																		<div>
+																			<div class="date">
+																				<input type="text" title="종료날짜(년/월/일) 달력 선택(직접입력 권장, 스크린리더 미지원)" placeholder="YYYY-MM-DD">
+																			</div>
+																		</div>
+																	</div>
+																</div>
                                                             </div>
+															<!--// 2025-11-14 수정 -->
                                                         </dd>
                                                     </dl>
                                                 </li>
                                             </ul>
                                         </div>
-                                        <!--// 2025-10-02 -->
                                     </div> 
                                     <div class="rt">
                                         <button type="button" class="btn bgPrima lg">검색</button>
