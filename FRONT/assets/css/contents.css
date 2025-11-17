@@ -1549,8 +1549,8 @@ v9 고객지원
 .monthPrgrmSwiper .swiper-slide a img {width:100%; height:100%; object-fit: cover;}
 .sodamSprtPrgrmSwiperWrap {position:relative;}
 .sodamSprtPrgrmSwiperWrap .sodamSprtPrgrmInfo {flex-wrap:nowrap; gap:0;}
-.thisYearOwnerSwiper .swiper-slide {overflow:hidden; border-radius:16px;}
-.thisYearOwnerSwiper .swiper-slide a {display:flex;}
+.thisYearOwnerSwiper .swiper-slide {overflow:hidden; border-radius:16px; height:auto; align-items: stretch;}
+.thisYearOwnerSwiper .swiper-slide a {display:flex; height:100%}
 .thisYearOwnerSwiper .swiper-slide a .imgBox {display:flex; justify-content: center; align-items: center; position:relative; width:171px;}
 .thisYearOwnerSwiper .swiper-slide a .imgBox img {position:absolute; left:50%; top:50%; width:100%; height:100%; object-fit: cover; transform: translate(-50%, -50%);}
 .thisYearOwnerSwiper .swiper-slide a .txtBox {display:flex; flex-direction:column; justify-content:space-between; padding:30px; width:calc(100% - 171px); object-fit: cover;}
