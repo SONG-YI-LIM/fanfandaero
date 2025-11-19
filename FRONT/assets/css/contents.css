@@ -3163,7 +3163,18 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
     .benefitProduct a { display: inline-block; text-align: right; }
 }
 
-/*** 페이지명1 ***/
+/*** 사이트맵 ***/
+.sitemap .inner > strong {display:none;}
+.sitemap .sitemapGnb {display:flex; flex-wrap:wrap; gap:24px 16px;}
+.sitemap .sitemapGnb > li {flex:1;}
+.sitemap .sitemapGnb > li > a {display:none;}
+.sitemap .subDepth .inner {padding:0;}
+@media (max-width: 1440px) {
+     .sitemap .sitemapGnb > li {flex:none; width:calc(100%/2 - 8px);}
+} 
+@media (max-width: 767px) {
+    .sitemap .sitemapGnb > li {width:100%}
+}
 /* 페이지내 분할1 */
 
 /* 페이지내 분할2 */

@@ -97,7 +97,7 @@ const fn_Layout = () => {
 
     const gnbHtml = $('.gnbUl').html();
     $('.gnbMob .in').append(`<ul class="mobUl">${gnbHtml}</ul>`)
-    $('#sitemap .in').append(`<ul class="sitemapGnb">${gnbHtml}</ul>`)
+    $('#sitemap .in, .sitemap .in').append(`<ul class="sitemapGnb">${gnbHtml}</ul>`)
 
     /*** mobile menu ***/
     let gnbNavBtn = $(".gnbNav > li:not(.myPage, .home) > a");
