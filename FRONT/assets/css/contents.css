@@ -1613,6 +1613,7 @@ v9 고객지원
     .inBox02 .subImg {gap:14px;}
     .inBox02 .subImg .inImg:first-child img {content:url("../images/content/img-sodam11-m.png")}
     .inBox02 .subImg .inImg:last-child img {content:url("../images/content/img-sodam12-m.png")}
+    .monthPrgrmSwiper {height: calc((var(--slide-width) + 8px) * 2);}
     .thisYearOwnerSwiper .swiper-slide a .imgBox {width:140px;}
     .thisYearOwnerSwiper .swiper-slide a .txtBox {padding:16px; width:calc(100% - 140px);}
     .sodamColArea > *:first-child .benefitList li ,
@@ -2074,6 +2075,8 @@ v9 고객지원
     .stepSwiper .swiper-button-prev {display:flex}
     .stepSwiper.stepShort {padding:0;}
     .stepSwiper.stepShort ol > li {padding:0 2px; min-width:auto;}
+    .stepSwiper.stepShort .swiper-button-next,
+    .stepSwiper.stepShort .swiper-button-prev {display:none !important}
 }
 
 .grid6.checkboxWrap { display: grid; grid-template-columns: repeat(6, 1fr); }
