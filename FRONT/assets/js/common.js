@@ -647,16 +647,14 @@ const fn_Content = () => {
 			},
 		},
     });
-    // 이달의 지원 프로그램 grid 이슈 해결
-    setTimeout(updateSlideHeight, 200);
 
     // 지원 사업정보 스와이퍼
     var sodamSprtPrgrmSwiper = new Swiper(".sodamSprtPrgrmSwiper", {
+        slidesPerGroup : 4,
 		slidesPerView:1,
 		spaceBetween: 16,
 		grid: {
 			rows: 4,
-			fill: "row"
 		},
 		navigation: {
 			nextEl: ".sodamSprtPrgrmSwiperWrap .swiper-button-next",
@@ -680,11 +678,11 @@ const fn_Content = () => {
 
     // 소담스퀘어 올해의 사장님 스와이퍼
     var thisYearOwnerSwiper = new Swiper(".thisYearOwnerSwiper", {
+        slidesPerGroup : 3,
 		slidesPerView:1,
 		spaceBetween: 16,
 		grid: {
 			rows: 3,
-			fill: "row"
 		},
 		navigation: {
 			nextEl: ".thisYearOwnerSwiperWrap .swiper-button-next",
@@ -824,9 +822,8 @@ const fn_Content = () => {
         setTimeout(function(){
             updatePaddingByLockButton();
         },200);
-
-        // 이달의 지원 프로그램 grid 이슈 해결
-        setTimeout(updateSlideHeight, 30);
+        sodamSprtPrgrmSwiper.update();
+        thisYearOwnerSwiper.update();
     });
 
     // 예약자 리뷰
@@ -919,14 +916,4 @@ const updatePaddingByLockButton = () => {
     }else{
         $(".squareType .categorySwiper").removeClass("btnLock");
     }
-}
-
-// 이달의 지원 프로그램 모바일 화면 gird 화면 이슈 해결
-function updateSlideHeight() {
-    const $slide = $('.monthPrgrmSwiperWrap .swiper-slide').first();
-    if ($slide.length === 0) return;
-
-    const slideWidth = $slide.outerWidth(); 
-    const $wrap = $('.monthPrgrmSwiper');
-    $wrap.css('--slide-width', slideWidth + 'px'); 
 }
