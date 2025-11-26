@@ -822,8 +822,12 @@ const fn_Content = () => {
         setTimeout(function(){
             updatePaddingByLockButton();
         },200);
-        sodamSprtPrgrmSwiper.update();
-        thisYearOwnerSwiper.update();
+        if ($('.sodamSprtPrgrmSwiper').length) {
+            sodamSprtPrgrmSwiper.update();
+        }
+        if ($('.thisYearOwnerSwiper').length) {
+            thisYearOwnerSwiper.update();
+        }
     });
 
     // 예약자 리뷰

@@ -62,6 +62,7 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 /* 텍스트 */
 .xxsm { font-size: 13px !important; }  
 .xsm { font-size: 15px !important; }  
+.sm { font-size: 17px !important; }  
 .xlg { font-size: 19px; } 
 .bold { font-weight: 700 !important; }
 .txtLink {text-decoration: underline;}
@@ -1112,6 +1113,9 @@ v9 고객지원
 .fanfanMediaList .fanfanMediaItem .fanfanMediaCardBody .name {display:block; margin-bottom:3px; line-height:1.3; font-size:15px; color:#023CA4; font-weight:600;}
 .fanfanMediaList .fanfanMediaItem .fanfanMediaCardBody .inTit {display:-webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom:10px; text-overflow: ellipsis; height:46px; line-height:1.3; font-size:17px; font-weight:600;}
 .fanfanMediaList .fanfanMediaItem .fanfanMediaCardBody .date {display:block; margin-top:auto; text-align:right; line-height:1.3; font-size:15px; color:var(--color-gray-70)}
+@media(max-width:1470px) {
+    .fanfanMediaList .fanfanMediaItem {width: calc(50% - 12px);}
+}
 @media(max-width:1160px) {
     .fanfanMediaList {gap:26px 16px;}
     .fanfanMediaList .fanfanMediaItem {width: calc(50% - 8px);}
@@ -1225,7 +1229,8 @@ v9 고객지원
 
 /*** 주요서비스 ***/
 /* 플랫폼 소개 */
-.mainServiceList ol { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.mainServiceList {height:100%;}
+.mainServiceList ol { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; height:100%;}
 .mainServiceList ol li { padding: 30px; border: 1px solid #ccc; border-radius: 20px; }
 .mainServiceList dl dt { margin-bottom: 16px; width: 50px; height: 38px; text-indent: -9999px; }
 .mainServiceList li:nth-child(1) dl dt { background-image: url(../images/content/img-platform01.svg); }
@@ -1234,9 +1239,9 @@ v9 고객지원
 .mainServiceList li:nth-child(4) dl dt { background-image: url(../images/content/img-platform04.svg); }
 .mainServiceList dl dd span { font-size: 19px; font-weight: 700; color: var(--color-base); }
 .mainServiceList dl dd p { margin-top: 10px; line-height: 1.5; font-size: 15px; color: var(--color-gray-70); }
-.mainService { position: relative; overflow: hidden; border-top-left-radius: 20px; border-bottom-left-radius: 20px; height: 100%; }
-.mainService img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.mainService p { position: absolute; right: 50px; bottom: 50px; left: 50px; font-size: 30px; font-weight: 300; color: vaR(--color-white); }
+.mainService {display:flex; flex-direction: column; gap:34px; justify-content: center; align-items:center; position: relative; overflow: hidden; padding:88px 46px 80px; border: 1px solid #CCC; border-radius: 20px; box-shadow: 4px 4px 15px 0 rgba(0, 0, 0, 0.10); height:100%;}
+.mainService img {width:326px;}
+.mainService p {line-height:1.3; text-align:center; font-size: 30px; font-weight: 300; }
 .imgStyle { display: block; margin: 0 auto; }
 .conceptMap { padding-top: 20px; border-top: 1px solid #ccc; }
 .conceptMap > ul { display: flex; gap: 80px; }
@@ -1283,7 +1288,8 @@ v9 고객지원
     .mainServiceList ol li { padding: 20px; }
     .mainServiceList dl dt { margin-bottom: 0; }
     .mainServiceList dl dd span { font-size: 17px; }
-    .mainService p { right: 20px; bottom: 20px; left: 20px; font-size: 17px; }
+    .mainService { padding:68px 24px 60px }
+    .mainService p { font-size: 17px; }
     .conceptMap > ul > li { flex-direction: column; gap: 30px; }
     .conceptMap > ul > li:last-child { width: 100%; }
     .conceptMap dl dt { font-size: 19px; }
@@ -1549,7 +1555,6 @@ v9 고객지원
 .monthPrgrmSwiper .swiper-slide {overflow: hidden; border-radius:16px; aspect-ratio: 1/1;}
 .monthPrgrmSwiper .swiper-slide a {display:block; height:100%;}
 .monthPrgrmSwiper .swiper-slide a img {width:100%; height:100%; object-fit: cover;}
-.sodamSprtPrgrmSwiperWrap {position:relative;}
 .sodamSprtPrgrmSwiperWrap .sodamSprtPrgrmInfo {flex-wrap:nowrap; gap:0;}
 .sodamSprtPrgrmSwiper {overflow:hidden;}
 .thisYearOwnerSwiperWrap .swiper-wrapper {max-height:604px}
@@ -1935,9 +1940,9 @@ v9 고객지원
 .login { margin: 0 auto; max-width: 572px; } 
 .login .tabTit { padding-bottom: 0; border-bottom: 0; } 
 .login .tabTit li { flex: 1; } 
-.login .tabTit li a { display: flex; align-items: center; justify-content: center; gap: 5px; padding: 12px 16px; border: 2px solid var(--color-gray-40); line-height:1.3; text-align:left; font-size: 19px; color: var(--color-gray-60); background: var(--color-white); } 
+.login .tabTit li a { display: flex; align-items: center; justify-content: center; gap: 5px; padding: 12px 16px; border: 2px solid var(--color-gray-40); line-height:1.3; font-size: 19px; color: var(--color-gray-60); background: var(--color-white); } 
 .login .tabTit li.curr a { border: 2px solid var(--color-primary); color: var(--color-primary); background: #fff !important } 
-.login .tabTit li a::before { display: block; content: ""; width: 40px; height: 40px; } 
+/* .login .tabTit li a::before { display: block; content: ""; width: 40px; height: 40px; }  */
 .login .tabTit li a:active { outline-offset: inherit; outline: inherit }
 .login .tabTit li a:focus { outline-offset: inherit; outline: inherit; border-color: var(--color-primary); }
 .login .tabTit li .icoLog01::before { background: url(../images/content/ico-login01.png) no-repeat center / 40px; } 
@@ -1959,10 +1964,10 @@ v9 고객지원
 .loginBox .btnBottom a { flex: 1; font-size: 17px; } 
 .loginBottom { padding-top: 16px; border-top: 1px solid #ccc; } 
 .loginBottom p { margin-bottom: 16px; font-size: 15px; } 
-.loginSns ul { display: flex; gap: 16px; } 
-.loginSns ul li { flex: 1; } 
-.loginSns ul li :is(a, button) { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; border-radius: 10px; width: 100%; height: 155px; font-weight: 700; } 
-.loginSns ul li img { width: 60px; } 
+.loginSns ul { display: flex; justify-content:center ; gap: 16px; } 
+.loginSns ul li { width:130px; } 
+.loginSns ul li :is(a, button) { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; border-radius: 10px; width: 100%; height: 100px; font-size:14px; font-weight: 700; } 
+.loginSns ul li img { width: 30px; } 
 .loginSns ul li.naver :is(a, button) { color: var(--color-white); background-color: #03CF5D; } 
 .loginSns ul li.kakao :is(a, button) { color: #381E1F; background-color: #FEE500; } 
 .loginSns ul li.easy :is(a, button) { color: var(--color-white); background-color: #373A5B; }
@@ -1982,7 +1987,8 @@ v9 고객지원
     .loginInp input {font-size:15px;}
     .loginChk li a {line-height:23px; font-size:15px;}
     .loginSns ul {flex-direction: column;}
-    .loginSns ul li :is(a, button) {flex-direction:row; height:60px;}
+    .loginSns ul li {width:100%}
+    .loginSns ul li :is(a, button) {flex-direction:row; height:56px;}
     .loginSns ul li img {width:30px;}
 }
 @media(max-width:360px) {
@@ -2206,31 +2212,35 @@ v9 고객지원
 /*** 고객지원 ***/
 /* 이용안내 */
 .userGuide > ul { display: grid; gap: 20px 60px; grid-template-columns: repeat(2, 1fr); } 
-.userGuide > ul > li { display: flex; gap: 30px; } 
+.userGuide > ul > li { display: flex; align-items:center; gap: 30px; } 
 .userGuide > ul > li .icoArea { display: flex; align-items: center; justify-content: center; flex-shrink: 0; border:1px solid #ccc; border-radius: 8px; width: 120px; height: 120px; background-color: #E6EBF1; } 
 .userGuide > ul > li .icoArea img { width: 60px; } 
+.userGuide > ul > li .icoArea strong {display: block; text-align:center; font-size: 21px; word-break: keep-all;}
 .userGuide > ul > li .txtBox strong { display: block; margin-bottom: 10px; font-size: 21px; } 
 .userGuide > ul > li .txtBox li { font-size: 100%; } 
 .userGuide > ul > li .txtBox p {color:var(--color-gray-70)}
-.userGuide.v2 > ul > li { position: relative; margin-bottom: 20px; padding-bottom: 20px; } 
+.userGuide.v2 > ul > li { align-items:flex-start; position: relative; margin-bottom: 20px; padding-bottom: 20px; } 
 .userGuide.v2 > ul > li:nth-child(even)::before { display: block; content: ""; position: absolute; top: 100%; right: 0; width: calc(200% + 60px); height: 1px; background-color: var(--color-gray-40); } 
 @media(max-width:1160px) {
     .userGuide > ul {gap:20px 30px;}
     .userGuide > ul > li {gap:24px;}
     .userGuide > ul > li .icoArea {width:100px; height:100px;}
     .userGuide > ul > li .icoArea img {width:50px;}
+    .userGuide > ul > li .icoArea strong {font-size: 20px;}
 }
 @media(max-width:767px) {
     .userGuide > ul {grid-template-columns: 1fr; gap:32px;}
-    .userGuide > ul > li {gap:16px;}
+    .userGuide > ul > li {align-items:flex-start; gap:10px;}
     .userGuide > ul > li .icoArea {width:80px; height:80px;}
     .userGuide > ul > li .icoArea img {width:40px;}
+    .userGuide > ul > li .icoArea strong {font-size: 19px;}
     .userGuide.v2 > ul {gap:0;}
     .userGuide.v2 > ul > li {position:relative; margin-bottom:32px; border-bottom:1px solid var(--color-gray-40);}
     .userGuide.v2 > ul > li:last-child {margin-bottom:0;}
     .userGuide.v2 > ul > li:nth-child(even)::before {content:none;}
-    .userGuide.v2 > ul > li .icoArea {position:absolute; left:0; top: 0; width:60px; height:60px;}
+    .userGuide.v2 > ul > li .icoArea {/* position:absolute; left:0; top: 0;  */width:80px; height:80px;}
     .userGuide.v2 > ul > li .icoArea img {width:30px;}
+    .userGuide.v2 > ul > li .icoArea .sm {font-size:13px !important}
     .userGuide.v2 > ul > li .txtBox strong {display:flex; align-items:center; margin-bottom:24px; padding-left:70px; min-height:60px;}
 }
 
