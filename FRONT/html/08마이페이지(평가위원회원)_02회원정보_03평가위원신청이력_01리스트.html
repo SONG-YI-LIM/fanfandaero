@@ -838,18 +838,18 @@
                             <!--// tableTop -->
                             <!-- colTable --> 
                             <div class="colTable">
-                                <table>
+                                <table class="wAuto"> <!-- 2025-11-27 wAuto 클래스 추가 -->
                                     <caption>번호, 대분류, 중분류, 소분류, 세분류, 신청일, 선정여부, 상태, 변경일 항목으로 구성된 평가위원 신청이력 표</caption>
                                     <colgroup>
-                                        <col style="width:60px">
-                                        <col style="width:130px">
-                                        <col style="width:130px">
-                                        <col style="width:130px">
-                                        <col style="width:130px">
-                                        <col style="width:130px">
-                                        <col style="width:120px">
-                                        <col style="width:120px">
-                                        <col style="width:130px">
+                                        <col style="min-width:60px"> <!-- 2025-11-27 수정 -->
+                                        <col style="min-width:120px"> <!-- 2025-11-27 수정 -->
+                                        <col style="min-width:120px"> <!-- 2025-11-27 수정 -->
+                                        <col style="min-width:150px"> <!-- 2025-11-27 수정 -->
+                                        <col style="min-width:130px"> <!-- 2025-11-27 수정 -->
+                                        <col style="min-width:130px"> <!-- 2025-11-27 수정 -->
+                                        <col style="min-width:120px"> <!-- 2025-11-27 수정 -->
+                                        <col style="min-width:100px"> <!-- 2025-11-27 수정 -->
+                                        <col style="min-width:130px"> <!-- 2025-11-27 수정 -->
                                     </colgroup>
                                     <thead>
                                         <tr>
@@ -872,7 +872,11 @@
                                             <td class="txtC">블라우스/셔츠/남방</td>
                                             <td class="txtC">블라우스</td>
                                             <td class="txtC">2025.08.04</td>
-                                            <td class="txtC">선정</td>
+                                            <td class="txtC txtNowrap"> <!-- 2025-11-27 txtNowrap 클래스 추가  -->
+												선정
+												<button type="button" class="btn">재신청</button>
+												<button type="button" class="btn">재신청</button>
+											</td>
                                             <td class="txtC">선정</td>
                                             <td class="txtC">2025.08.04</td>
                                         </tr>
@@ -883,7 +887,10 @@
                                             <td class="txtC">블라우스/셔츠/남방</td>
                                             <td class="txtC">블라우스</td>
                                             <td class="txtC">2025.08.04</td>
-                                            <td class="txtC">선정</td>
+                                            <td class="txtC txtNowrap"> <!-- 2025-11-27 txtNowrap 클래스 추가  -->
+												선정
+												<button type="button" class="btn">선정완료</button>
+											</td>
                                             <td class="txtC">선정</td>
                                             <td class="txtC">2025.08.04</td>
                                         </tr>

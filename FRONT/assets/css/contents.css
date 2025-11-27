@@ -70,6 +70,7 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 /* 크기 */
 .full { width: 100% !important; max-width: 100% !important; }
 .w100 {width:100px !important}
+.wAuto {width:auto !important;}
 .mw220 {max-width:220px !important;} 
 .mx400 { max-width: 400px !important; }
 .mx600 { max-width: 596px !important; }
@@ -99,6 +100,7 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 .jcFS { justify-content: flex-start !important; }
 .jcC { justify-content: center !important; }
 .flexWR {flex-wrap: wrap !important;}
+.txtNowrap {white-space: nowrap !important;}
 
 .flexNone { flex: none !important; }
 .flexCol { display: flex; flex-direction: column; gap: 10px; }
@@ -337,6 +339,7 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 .accordion dl dd { display: none; position: relative; border-top: 1px solid #ccc; min-height: 76px; } 
 .accordion dl dd::before { display: flex; align-items: center; justify-content: center; content: "A"; position: absolute; top: 16px; left: 16px; border-radius: 100%; width: 40px; height: 40px; font-size: 21px; font-weight: 700; color: #FF3600; background-color: #ECECEC; } 
 .accordion dl dd > div { display: flex; flex-direction: column; gap: 5px; padding: 18px 0 18px 82px; } 
+.accordion dl dd > div span {font-weight:700;}
 .accordion dl dd > div ul li { display: flex; gap: 5px; } 
 .accordion dl dd > div ul li > strong { flex-shrink: 0; } 
 .accordion dl.curr dt button::after { transform: rotate(180deg); } 
@@ -1106,8 +1109,8 @@ v9 고객지원
 .fanfanMediaList {display:flex; flex-wrap: wrap; gap:24px;}
 .fanfanMediaList .fanfanMediaItem {border:1px solid #ccc; border-radius:8px; width: calc(100%/4 - 18px);}
 .fanfanMediaList .fanfanMediaItem > a {display:flex; flex-direction: column; padding:20px 16px; height:100%;}
-.fanfanMediaList .fanfanMediaItem .fanfanMediaCardThumb {margin-bottom:16px; aspect-ratio: 275/152;}
-.fanfanMediaList .fanfanMediaItem .fanfanMediaCardThumb img {width:100%; height:100%; object-fit: cover;}
+.fanfanMediaList .fanfanMediaItem .fanfanMediaCardThumb {position:relative; margin-bottom:16px; aspect-ratio: 275/152;}
+.fanfanMediaList .fanfanMediaItem .fanfanMediaCardThumb img {position:absolute; left:50%; top:50%; width:100%; height:100%; object-fit: cover; transform: translate(-50%, -50%);}
 .fanfanMediaList .fanfanMediaItem .fanfanMediaCardBody {display:flex; flex-direction: column; flex:1;}
 .fanfanMediaList .fanfanMediaItem .fanfanMediaCardBody .badge {align-self:flex-start; margin-bottom:10px;}
 .fanfanMediaList .fanfanMediaItem .fanfanMediaCardBody .name {display:block; margin-bottom:3px; line-height:1.3; font-size:15px; color:#023CA4; font-weight:600;}
