@@ -119,6 +119,7 @@
 .infoBoard .bannerBox a { display:block; height: auto;} 
 .infoBoard .bannerBox a img {position:absolute; left:50%; top:50%; width:100%; height:100%; object-fit: cover; transform: translate(-50%, -50%);} 
 .infoBoard .noticeBox { position:relative; padding:30px 136px 37px 40px; border-radius:20px; width:100%; background:url("../images/main/img-notice.png") #31477E no-repeat right center/cover;} 
+.infoBoard .noticeBox .txtMore { position: absolute; top: 32px; left: 206px; font-size: 15px; color: var(--color-white); }
 #container .mainCont .infoBoard .noticeBox h2 {margin-bottom:16px; line-height:1; font-size:25px; color:var(--color-white) } 
 .bannerSwiperWrap {position:relative; height:100%}
 .bannerSwiperWrap .bannerSwiper {overflow: hidden; border-radius:20px; height:100%;}
@@ -193,6 +194,7 @@
     .infoBoard  {width:100%;}
     .infoBoard .bannerBox {width: 100%; height:auto; aspect-ratio: 328.00/259.88;}
     .infoBoard .noticeBox {padding:30px 24px 26px 24px; background-color:#31477E; background-image: url("../images/main/img-notice-m.svg"); background-size:contain; background-position: right;}
+    .infoBoard .noticeBox .txtMore { left: 194px; }
     .noticeSwiper .swiper-slide ul li a {font-size:15px;}
     .noticeSwiper .swiper-button-wrap {left:122px;}
 }
