@@ -18,6 +18,7 @@
 .headBody .shortcutSite > ul {display:none; position:absolute; top:20px; left:0; overflow:hidden; z-index:101; border-radius:8px; width:200px; background-color: #fff; box-shadow: 4px 4px 15px 0 rgba(0, 0, 0, 0.15);}
 .headBody .shortcutSite > ul li {border-bottom:1px solid #ccc;}
 .headBody .shortcutSite > ul li a {display:block; padding:16px; min-height:60px; text-align: center;} 
+.headBody .shortcutSite > ul li a:focus {border-radius:8px;}
 .headBody .util { display: flex; gap: 30px; } 
 .headBody .util > li > :is(a, button) { display: inline-flex; align-items: center; gap: 5px; border-radius: 4px; font-weight: 700; }
 .headBody .util > li > :is(a, button)::before { display: block; content: ""; width: 20px; height: 20px; background-size: 20px; }
@@ -48,7 +49,7 @@
 #gnb .gnbUl { display: flex; gap: 32px; } 
 #gnb .gnbUl > li > a { display: block; position: relative; padding: 0 40px 0 16px; line-height: 62px; font-size: 19px; font-weight: 700; background: url(../images/common/ico-btn-arr-bot.svg) no-repeat center right 16px/16px auto; } 
 #gnb .gnbUl > li > a::before { display: block; content: ""; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background-color: var(--color-primary); opacity: 0; transition: all 0.3s ease; } 
-#gnb .gnbUl > li > a:focus { outline-offset: -3px; outline: 3px solid var(--color-primary); }
+#gnb .gnbUl > li > a:focus { outline-offset: -2px; outline: 2px solid var(--color-black); }
 #gnb .gnbUl > li:hover > a::before { opacity: 1; } 
 #gnb .gnbUl .subDepth {position:fixed; top:174px; left:0; right:0; overflow-y:auto; padding:16px 0 40px; max-height:calc(100vh - 174px);; background:#fff; border-bottom: 1px solid #CCC;} 
 #gnb .gnbUl .subDepth { display: none; } 
@@ -284,6 +285,9 @@
 #quickmenu button { display: flex; margin: 16px auto 0; border-radius: 100%; width: 30px; height: 30px; } 
 #quickmenu .btnTop { background: #333 url(../images/common/btn-top.png) no-repeat center / 20px; } 
 #quickmenu .btnQuick { background: #333 url(../images/common/btn-quick-on.png) no-repeat center / 10px; } 
+#quickmenu .quick li a:focus,
+#quickmenu .btnTop:focus,
+#quickmenu .btnQuick:focus {outline-color: var(--color-secondary);}
 #quickmenu .quick.open {padding:5px 0; border-radius: 999px; background:rgba(0, 0, 0, 0.6)}
 #quickmenu .quick.open .btnQuick { background: #333 url(../images/common/btn-quick-off.png) no-repeat center / 8px; }
 
