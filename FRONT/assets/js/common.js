@@ -896,6 +896,18 @@ const sodamMap_layer = (name, width) => {
     $(`#${name}`).css('width', width)
     $(`#${name}`).fadeIn(200).addClass('on')
     $(`#${name}`).find('> .popCont').attr('tabindex', 0).focus();
+
+    // 2025-12-04
+    $('.popContClick').click(function(){
+    if($(this).hasClass('open')){
+        $(this).removeClass('open').text('더보기');
+        $(this).siblings('p').removeClass('open');
+    }else{
+        $(this).addClass('open').text('접기');
+        $(this).siblings('p').addClass('open');
+    }
+    //-- 2025-12-04
+})
 }
 
 // 소담인프라 팝업 닫기

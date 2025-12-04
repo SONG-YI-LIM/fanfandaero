@@ -282,14 +282,14 @@
 #quickmenu .quick li.m3::before { background-image: url(../images/common/ico-quick03.png); } 
 #quickmenu .quick li.m4::before { background-image: url(../images/common/ico-quick04.png); } 
 #quickmenu .quick li a {display:block; text-align:center; color:var(--color-white)}
-#quickmenu button { display: flex; margin: 16px auto 0; border-radius: 100%; width: 30px; height: 30px; } 
+#quickmenu button { display: flex; margin: 16px auto 0; border-radius: 100%; width: 42px; height: 42px; } 
 #quickmenu .btnTop { background: #333 url(../images/common/btn-top.png) no-repeat center / 20px; } 
-#quickmenu .btnQuick { background: #333 url(../images/common/btn-quick-on.png) no-repeat center / 10px; } 
+#quickmenu .btnQuick { background: #333 url(../images/common/btn-quick-on.png) no-repeat center / 12px; } 
 #quickmenu .quick li a:focus,
 #quickmenu .btnTop:focus,
 #quickmenu .btnQuick:focus {outline-color: var(--color-secondary);}
 #quickmenu .quick.open {padding:5px 0; border-radius: 999px; background:rgba(0, 0, 0, 0.6)}
-#quickmenu .quick.open .btnQuick { background: #333 url(../images/common/btn-quick-off.png) no-repeat center / 8px; }
+#quickmenu .quick.open .btnQuick { background: #333 url(../images/common/btn-quick-off.png) no-repeat center / 10px; }
 
 @media (min-width: 1161px) { } 
 @media (max-width: 1160px) { } 
