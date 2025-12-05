@@ -217,6 +217,7 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 .btnShortcut:after {width:16px; height:16px; background-image: url("../images/component/ico-shortcut.svg");}
 .btnSearchDetail:before { background-image: url(../images/component/ico-btn-search-detail.png); }
 .btnSearchDetail.open:before { background-image: url(../images/component/ico-btn-search-default.png); }
+.icoFolder:after {width:16px; height:16px; background:url(../images/content/ico-expand-white.svg) no-repeat center/100% auto}
 
 /* 아이콘 + 텍스트(버튼 라인 없는) */
 .btnTxt { position: relative; padding-left: 20px; line-height: 16px; font-size: 15px; color: var(--color-gray-70); }
