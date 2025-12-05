@@ -339,15 +339,15 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 .accordion dl dt::before { display: flex; align-items: center; justify-content: center; content: "Q"; position: absolute; top: 50%; left: -56px; margin-top: -20px; border-radius: 100%; width: 40px; height: 40px; font-size: 21px; font-weight: 700; color: #023CA4; background-color: #ECECEC; } 
 .accordion dl dt button { display: flex; align-items: center; gap: 16px; position: relative; padding: 4px 0 4px 16px; border: 0; width: 100%; min-height: 70px; text-align: left; font-weight: 700; background-color: #fff; } 
 .accordion dl dt button .badge { flex-shrink: 0; } 
-.accordion dl dt button::after { display: block; content: ""; position: absolute; top: 0; right: -80px; width: 24px; height: 100%; background: url(../images/component/ico-accordion-arr.svg) no-repeat center / 24px; transition: all 0.2s ease; -webkit-transition: all 0.2s ease; } 
-.accordion dl dd { display: none; position: relative; border-top: 1px solid #ccc; min-height: 76px; } 
+.accordion dl dt button::after { display: block; content: ""; position: absolute; top: 0; right: -80px; width: 24px; height: 100%; background: url(../images/component/ico-accordion-arr.svg) no-repeat center / 24px; /* transition: all 0.2s ease; -webkit-transition: all 0.2s ease;  */} 
+.accordion dl dd { display: none; position: relative; border-top: 1px solid #ccc; /* min-height: 76px; */ } 
 .accordion dl dd::before { display: flex; align-items: center; justify-content: center; content: "A"; position: absolute; top: 16px; left: 16px; border-radius: 100%; width: 40px; height: 40px; font-size: 21px; font-weight: 700; color: #FF3600; background-color: #ECECEC; } 
-.accordion dl dd > div { display: flex; flex-direction: column; gap: 5px; padding: 18px 0 18px 82px; } 
+.accordion dl dd > div { display: flex; flex-direction: column; gap: 5px; padding: 18px 0 18px 82px; min-height:76px;} 
 .accordion dl dd > div span {font-weight:700;}
 .accordion dl dd > div ul li { display: flex; gap: 5px; } 
 .accordion dl dd > div ul li > strong { flex-shrink: 0; } 
 .accordion dl.curr dt button::after { transform: rotate(180deg); } 
-.accordion dl.curr dd { display: block; }
+/* .accordion dl.curr dd { display: block; } */
 @media(max-width:1160px) {
     .accordion dl dd {margin:0 -96px 0 -66px; padding-left:66px;}
     .accordion dl dd::before {left:66px;}
