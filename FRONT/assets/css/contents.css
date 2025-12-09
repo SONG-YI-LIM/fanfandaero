@@ -71,7 +71,9 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 .full { width: 100% !important; max-width: 100% !important; }
 .w100 {width:100px !important}
 .wAuto {width:auto !important;}
+.mx160 {max-width:160px !important;} 
 .mw220 {max-width:220px !important;} 
+.mxwd600 {max-width:600px !important;} 
 .mx400 { max-width: 400px !important; }
 .mx600 { max-width: 596px !important; }
 .mx1000 { max-width: 1000px !important; }
@@ -1194,7 +1196,7 @@ v9 고객지원
 .blueBox .inFlex .fileArea .tit {color:var(--color-base);}
 .blueBox .inFlex .fileArea .date {font-size:15px; color:var(--color-gray-70);}
 .lineBoxList02 {display:flex; flex-wrap:wrap; gap:16px 24px;}
-.lineBoxList02 > li {display:flex; justify-content:space-between; align-items:center; padding:30px; border:1px solid #ccc; border-radius:12px; width:calc(100%/2 - 12px)}
+.lineBoxList02 > li {display:flex; justify-content:space-between; align-items:center; gap:20px; padding:30px; border:1px solid #ccc; border-radius:12px; width:calc(100%/2 - 12px)}
 .lineBoxList02 .topArea {display:flex; flex-direction: column; height:100%;}
 .lineBoxList02 .topArea strong {display:-webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow:hidden; margin-bottom:26px; max-height: 54px; text-overflow: ellipsis; line-height:1.3; font-size:21px; font-weight:600;}
 .lineBoxList02 .topArea p {display:block; line-height:1.5; font-size:15px; color:var(--color-gray-70); font-weight:700;}
@@ -1218,7 +1220,7 @@ v9 고객지원
     .mroInfoArea .cntList .txtBox ul li {flex:1 0 100%;}
 }
 @media (max-width:1470px) {
-    .lineBoxList02 > li {flex-direction: column; align-items: stretch; gap:20px}
+    .lineBoxList02 > li {flex-direction: column; align-items: stretch;}
     .lineBoxList02 .bottomArea .btnBox {flex-direction: column;}
     .lineBoxList02 .bottomArea .btnBox .btn {flex:none; width:100%;}
 }
@@ -2773,7 +2775,7 @@ table.treetable tr.expanded span.indenter a { display: inline-flex; align-items:
 .itemView .imgWrap:after { content: ""; position: absolute; bottom: 0; width: 100%; height: 160px; background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 5%, rgba(255, 255, 255, 0.8)); }
 .itemView .imgWrap img { display: block; width:100%; }
 .itemView .imgWrap .videoWrap {position:relative; aspect-ratio:1920/1080}
-.itemClick { border: 2px solid var(--color-primary); border-radius: 8px; width: 100%; line-height: 44px; font-size: 17px; font-weight: 700; color: var(--color-primary); }
+.itemClick { border: 2px solid var(--color-primary); border-radius: 8px; width: 100%; height:48px; line-height: 44px; font-size: 17px; font-weight: 700; color: var(--color-primary); }
 .itemClick span { position: relative; padding-right: 22px; }
 .itemClick span:before { content: ""; position: absolute; top: calc(50% - 6px); right: 0; width: 12px; height: 12px; background: url("../images/component/ico-lnb-arr01.png") no-repeat center/contain; }
 .itemClick.open { margin-top: 40px; }
