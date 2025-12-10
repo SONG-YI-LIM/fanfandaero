@@ -117,7 +117,8 @@
 .infoBoard { display:flex; flex-direction:column; gap:16px; padding:50px 60px 0 56px; width:40%;} 
 .infoBoard .bannerBox { /* width:520px; height:412px; */ aspect-ratio: 520/412; } 
 .infoBoard .bannerBox a { display:block; height: auto;} 
-.infoBoard .bannerBox a img {position:absolute; left:50%; top:50%; width:100%; height:100%; object-fit: cover; transform: translate(-50%, -50%);} 
+.infoBoard .bannerBox a:focus {border-radius:20px;}
+.infoBoard .bannerBox a img {position:absolute; left:50%; top:50%; z-index:-1; width:100%; height:100%; object-fit: cover; transform: translate(-50%, -50%);} 
 .infoBoard .noticeBox { position:relative; padding:30px 136px 37px 40px; border-radius:20px; width:100%; background:url("../images/main/img-notice.png") #31477E no-repeat right center/cover;} 
 .infoBoard .noticeBox .txtMore { position: absolute; top: 32px; left: 206px; font-size: 15px; color: var(--color-white); }
 #container .mainCont .infoBoard .noticeBox h2 {margin-bottom:16px; line-height:1; font-size:25px; color:var(--color-white) } 
@@ -137,7 +138,7 @@
 .bannerSwiperWrap .swiper-button-next:after {background-image: url("../images/main/ico-main-banner-next.svg");}
 .bannerSwiperWrap .swiper-button-prev:after {background-image: url("../images/main/ico-main-banner-prev.svg");}
 .bannerSwiperWrap .swiperAutoplayBtn {background: url("../images/main/ico-main-banner-stop.svg") no-repeat center;}
-.bannerSwiperWrap .swiperPlayBtn {background: url("../images/main/ico-main-banner-play.svg") no-repeat center;}
+.bannerSwiperWrap .swiperAutoplayBtn.on {background-image: url("../images/main/ico-main-banner-play.svg"); background-position: right -1px center;}
 .bannerSwiperWrap .swiper-pagination {display:flex; align-items:center; top:0; left:0; z-index:1; position:relative; padding:0 16px; height:100%}
 .bannerSwiperWrap .swiper-pagination span {font-size: 15px; color:var(--color-gray-70)}
 .bannerSwiperWrap .swiper-pagination .swiper-pagination-current {color:#622D80; font-weight:700;}
@@ -391,7 +392,7 @@
 .promoNotiWrap .btnBottom.borderT {padding-top:24px;}
 .promotionNoticeList {display:flex; flex-direction: column; gap:16px;}
 .promotionNoticeList li a {display:flex; gap:24px;}
-.promotionNoticeList li .imgBox {flex:none; display:flex; justify-content: center; align-items: center; position:relative; width:220px; height:124px;}
+.promotionNoticeList li .imgBox {flex:none; display:flex; justify-content: center; align-items: center; position:relative; z-index:-1; width:220px; height:124px;}
 .promotionNoticeList li .imgBox .inBadge {position:absolute; left:0; top:0; padding:3px 6px; line-height:1.3; font-size:13px; color:#fff; background:var(--color-base);}
 .promotionNoticeList li .imgBox img {width:100%; height:100%; object-fit: cover;}
 .promotionNoticeList li .txtBox strong {display:-webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow:hidden; text-overflow:ellipsis; margin-bottom:24px; max-height:54px; line-height:1.3; font-size:21px; font-weight:700;}

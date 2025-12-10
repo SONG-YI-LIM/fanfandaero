@@ -182,6 +182,7 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 .bgSecond:active:not(:disabled) { background-color: var(--color-primary-30) !important; }
 .bgBlack { border-color: var(--color-base); color: var(--color-white); background: var(--color-base); }
 .bgBlack:focus {outline:3px solid var(--color-secondary)}
+.bgGray {border-color:var(--color-gray-70) !important; color: var(--color-white) !important; background:var(--color-gray-70) !important;}
 .viewBtn {border:1px solid #ccc; border-radius:8px; width:40px; height:40px; text-indent:-9999px; background:no-repeat center#fff; transition: all 0.2s;}
 .viewBtn:focus {border-radius:8px;}
 .viewBtn.active {border-color:var(--color-primary); background-color:var(--color-primary-10);}
@@ -220,6 +221,7 @@ h4 { font-size: 19px; font-weight: 700; color: var(--color-base); }
 .btnSearchDetail:before { background-image: url(../images/component/ico-btn-search-detail.png); }
 .btnSearchDetail.open:before { background-image: url(../images/component/ico-btn-search-default.png); }
 .icoFolder:after {width:16px; height:16px; background:url(../images/content/ico-expand-white.svg) no-repeat center/100% auto}
+.icodataLink:before {width:16px; height:16px; background:url("../images/content/ico-data-link.svg") no-repeat center}
 
 /* 아이콘 + 텍스트(버튼 라인 없는) */
 .btnTxt { position: relative; padding-left: 20px; line-height: 16px; font-size: 15px; color: var(--color-gray-70); }
