@@ -208,24 +208,36 @@ const fn_Common = () => {
 
     // 아코디언 (Accordion)
     $('.accordion').each(function () {
-        const accordion = $(this),
-            accordionRow = accordion.find('> dl')
+    const accordion = $(this),
+          accordionRow = accordion.find('> dl');
 
-        accordionRow.not('.curr').find('button').append(`<span class="hide">닫힘</span>`)
-        accordion.on('click', '.btnAccor', function () {
-            let currIndex = $(this).closest('dl').index(),
-                hasClass = $(this).closest('dl').hasClass('curr')
-            currEvent(currIndex, hasClass)
-        })
-        const currEvent = (currIndex, hasClass) => {
-            accordionRow.removeClass('curr').find('> dt .hide').text('닫힘')
-            accordionRow.find('> dd').slideUp(200)
-            if (!hasClass) {
-                accordionRow.eq(currIndex).find('> dd').slideDown(200)
-                accordionRow.eq(currIndex).addClass('curr').find('> dt .hide').text('열림')
-            }
+    accordionRow.not('.curr').find('button').append(`<span class="hide">닫힘</span>`);
+
+    accordion.on('click', '.btnAccor', function () {
+        const currItem = $(this).closest('dl');
+
+        $('.accordion').not(accordion).find('dl.curr').each(function () {
+            $(this).removeClass('curr')
+                .find('> dt .hide').text('닫힘');
+            $(this).find('> dd').slideUp(200);
+        });
+
+        if (currItem.hasClass('curr')) {
+            currItem.removeClass('curr')
+                .find('> dt .hide').text('닫힘');
+            currItem.find('> dd').slideUp(200);
+            return;
         }
-    })
+
+        accordionRow.removeClass('curr')
+            .find('> dt .hide').text('닫힘');
+        accordionRow.find('> dd').slideUp(200);
+
+        currItem.addClass('curr')
+            .find('> dt .hide').text('열림');
+        currItem.find('> dd').slideDown(200);
+    });
+});
 
     // 탭 (Tab)
     $('.tabFunc').each(function () {
