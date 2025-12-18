@@ -22,6 +22,7 @@
 .headBody .util { display: flex; gap: 30px; } 
 .headBody .util > li > :is(a, button) { display: inline-flex; align-items: center; gap: 5px; border-radius: 4px; font-weight: 700; }
 .headBody .util > li > :is(a, button)::before { display: block; content: ""; width: 20px; height: 20px; background-size: 20px; }
+.headBody .util > li > .icoNone::before {content: none !important;}
 .headBody .util > li > :is(a, button):hover { background-color: var(--bg-primary); }
 .btnSearchForm::before { background: url(../images/common/ico-search.png) no-repeat center; } 
 .btnLogin::before { background: url(../images/common/ico-login.png) no-repeat center; } 
@@ -134,7 +135,7 @@
 .gnbMob .headUtil :is(a, button, p) { display: inline-flex; align-items: center; gap: 5px; border-radius: 4px; font-weight: 700; }
 .gnbMob .headUtil :is(a, button, p)::before { display: block; content: ""; margin-top:-3px; width: 20px; height: 20px; background-size: 20px; }
 .gnbMob .headUtil :is(a, button, p):hover { background-color: var(--bg-primary); } 
-.btnHamCls { top: 50px; right: 8px; z-index: 50; width:32px; height:32px; background-image: url(../images/common/ico-search-cls.png); background-size: 24px;}
+.btnHamCls { top: 56px; right: 8px; z-index: 50; width:32px; height:32px; background-image: url(../images/common/ico-search-cls.png); background-size: 24px;}
 .gnbMobOnly {display:none;} 
 .gnbMob .gnbMobOnly {display:block;} 
 @media (min-width: 1161px){
@@ -162,6 +163,7 @@
 .searchInpBot p::before { display: block; content: ""; width: 30px; height: 30px; background: url(../images/common/ico-star.svg) no-repeat center; } 
 .searchInpBot ul { display: flex; flex-wrap: wrap; flex: 1; gap: 16px; } 
 .searchInpBot ul li button { display: inline-flex; border: 0; line-height: 30px; background: transparent; } 
+.searchInpBot ul li > a {display:inline-block; line-height:30px;}
 @media(max-width:1160px) {
     .headSearchWrap {top:111px;}
     .headSearch {padding:70px 0 80px}

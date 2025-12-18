@@ -580,20 +580,24 @@ const fn_Content = () => {
     })
 
     // 모바일 셀렉트
-    let mbSelectBtn = $(".mbSelect > a");
-    mbSelectBtn.on("click", function(e){
+    $(document).on("click", ".mbSelect > a", function(e){
         e.preventDefault();
-        $(this).toggleClass("on");
-        if($(this).hasClass("on")){
-            $(this).next().slideDown(200);
-        }else{
-            $(this).next().slideUp(200);
-        }
+        e.stopPropagation();
+
+        const $btn = $(this);
+        const $wrap = $btn.closest(".mbSelect");
+        const $target = $wrap.find("> ul");
+
+        $btn.toggleClass("on");
+
+        $btn.hasClass("on")
+            ? $target.stop(true, true).slideDown(200)
+            : $target.stop(true, true).slideUp(200);
     });
-    // 영역 밖 클릭 시 닫기
+
     $(document).on("click", function(e) {
         if (!$(e.target).closest(".mbSelect").length) {
-            mbSelectBtn.removeClass("on").next().slideUp(200);
+            $(".mbSelect > a.on").removeClass("on").closest(".mbSelect").find("> ul").stop(true, true).slideUp(200);
         }
     });
 
@@ -776,7 +780,7 @@ const fn_Content = () => {
         })
     })
 
-    var swiper = new Swiper(".categorySwiper", {
+    var categorySwiperw = new Swiper(".categorySwiper", {
 		slidesPerView: "auto",
 		spaceBetween: 5,
 		navigation: {
@@ -931,13 +935,18 @@ const sodamMap_layer_close = (target) => {
 
 // 탭 스와이퍼 버튼 존재 여부에 따라 스와이퍼에 패딩 값 업데이트
 const updatePaddingByLockButton = () => {
-    let $targets = $(".categorySwiper").not(".squareType .categorySwiper");
-    let hasLock = $targets.find(".swiper-button-lock").length > 0;
-    if(hasLock) {
-        $targets.removeClass("btnLock");
-    }else{
-        $targets.addClass("btnLock");
-    }
+    const $targets = $(".categorySwiper").not(".squareType .categorySwiper");
+
+    $targets.each(function () {
+        const $swiper = $(this);
+        const hasLock = $swiper.find(".swiper-button-lock").length > 0;
+
+        if (hasLock) {
+            $swiper.removeClass("btnLock");
+        } else {
+            $swiper.addClass("btnLock");
+        }
+    });
 
     if($(window).width() < 767) {
         $(".squareType .categorySwiper").addClass("btnLock");
